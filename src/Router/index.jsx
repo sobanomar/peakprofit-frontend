@@ -1,7 +1,8 @@
 import React from "react";
+import BasicRoutes from "./BasicRoutes";
 
 const Router = () => {
-  return <div>Router</div>;
+  return <BasicRoutes />;
 };
 
 export default Router;
