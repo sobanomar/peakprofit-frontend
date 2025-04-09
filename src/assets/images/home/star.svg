@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 143 143" id="Star">
+  <path fill="url(#a)" d="M142.5 72C103.6 72 72 103.6 72 142.5c0 .3-.2.5-.5.5s-.5-.2-.5-.5C71 103.6 39.4 72 .5 72c-.3 0-.5-.2-.5-.5s.2-.5.5-.5C39.4 71 71 39.4 71 .5c0-.3.2-.5.5-.5s.5.2.5.5C72 39.4 103.6 71 142.5 71c.3 0 .5.2.5.5s-.2.5-.5.5Z"></path>
+  <path fill="url(#b)" d="M103.5 19.5c10.5 0 19-8.5 19-19 0-.3.2-.5.5-.5s.5.2.5.5c0 10.5 8.5 19 19 19 .3 0 .5.2.5.5s-.2.5-.5.5c-10.5 0-19 8.5-19 19 0 .3-.2.5-.5.5s-.5-.2-.5-.5c0-10.5-8.5-19-19-19-.3 0-.5-.2-.5-.5s.2-.5.5-.5Z"></path>
+  <path fill="url(#c)" d="M33.5 123.5c-7.2 0-13 5.8-13 13 0 .3-.2.5-.5.5s-.5-.2-.5-.5c0-7.2-5.8-13-13-13-.3 0-.5-.2-.5-.5s.2-.5.5-.5c7.2 0 13-5.8 13-13 0-.3.2-.5.5-.5s.5.2.5.5c0 7.2 5.8 13 13 13 .3 0 .5.2.5.5s-.2.5-.5.5Z"></path>
+  <defs>
+    <linearGradient id="a" x1="71.496" x2="71.496" y1="143.003" y2=".003" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0868ff" class="stopColorffae08 svgShape"></stop>
+      <stop offset="1" stop-color="#2177ff" class="stopColorfcd88e svgShape"></stop>
+    </linearGradient>
+    <linearGradient id="b" x1="123" x2="123" y1="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0868ff" class="stopColorffae08 svgShape"></stop>
+      <stop offset="1" stop-color="#2177ff" class="stopColorfcd88e svgShape"></stop>
+    </linearGradient>
+    <linearGradient id="c" x1="19.999" x2="19.999" y1="137" y2="109" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0868ff" class="stopColorffae08 svgShape"></stop>
+      <stop offset="1" stop-color="#2177ff" class="stopColorfcd88e svgShape"></stop>
+    </linearGradient>
+  </defs>
+</svg>

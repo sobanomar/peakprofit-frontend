@@ -4,7 +4,7 @@ import React from "react";
 
 const RawSpreads = () => {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex py-12 items-center justify-center">
       <div className="bg-[#2C1B3C] w-[75%] text-white px-4 rounded-2xl flex flex-col md:flex-row justify-between gap-8">
         {/* Left Side */}
         <div className="flex-1 gap-2 flex flex-col mt-16 pl-10 ">

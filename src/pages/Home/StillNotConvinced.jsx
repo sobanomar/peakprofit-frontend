@@ -58,7 +58,7 @@ const StillNotConvinced = () => {
   );
 
   return (
-    <div className="flex items-center justify-center flex-col text-white text-2xl">
+    <div className="flex pb-12 items-center justify-center flex-col text-white text-2xl">
       <h1 className="text-6xl mb-20 mt-20 font-semibold">
         Still Not Convinced?
       </h1>

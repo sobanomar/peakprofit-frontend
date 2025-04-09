@@ -61,8 +61,11 @@ const Evaluation = () => {
   ];
 
   return (
-    <div className="w-[80%] mx-auto">
-      <div className="p-4 pt-40 grid grid-cols-1 lg:grid-cols-3 gap-6  place-items-center">
+    <div className="w-[80%] mx-auto py-12">
+      <h1 className="text-6xl text-center text-white py-8 font-semibold">
+        Configure Your Evaluation
+      </h1>
+      <div className="p-4 grid grid-cols-1 lg:grid-cols-3 gap-6  place-items-center">
         <div className="lg:col-span-2 space-y-6">
           <ButtonGroup
             buttons={evaluationTypes}

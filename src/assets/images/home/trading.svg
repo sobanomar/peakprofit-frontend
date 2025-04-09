@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="Trading">
+  <path fill="#4285f4" d="M8 30.09a1 1 0 0 1-1-1v-21a1 1 0 0 1 2 0v21A1 1 0 0 1 8 30.09zM16 27.09a1 1 0 0 1-1-1v-23a1 1 0 0 1 2 0v23A1 1 0 0 1 16 27.09zM24 20.09a1 1 0 0 1-1-1v-14a1 1 0 0 1 2 0v14A1 1 0 0 1 24 20.09z" class="color424242 svgShape"></path>
+  <rect width="4" height="13" x="6" y="14.09" fill="#34a853" rx="1" ry="1" class="color66bb6a svgShape"></rect>
+  <rect width="4" height="7" x="14" y="7.09" fill="#ea4335" rx="1" ry="1" class="coloref5350 svgShape"></rect>
+  <rect width="4" height="3" x="22" y="13.09" fill="#ea4335" rx="1" ry="1" class="coloref5350 svgShape"></rect>
+</svg>
