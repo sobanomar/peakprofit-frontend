@@ -2,3 +2,124 @@
 body{
     background-color: #130025;
 }
+
+/* Float animations for multiple icons */
+@keyframes float-1 {
+    0%, 100% {
+      transform: translate(0px, 50px);
+      opacity: 0.2;
+    }
+    50% {
+      transform: translate(0px, -100px);
+      opacity: 0.6;
+    }
+  }
+  
+  @keyframes float-2 {
+    0%, 100% {
+      transform: translate(120px, 0px);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(-70px, 00px);
+      opacity: 0.6;
+    }
+  }
+  
+  @keyframes float-3 {
+    0%, 100% {
+      transform: translate(0px, 0px);
+      opacity: 0.25;
+    }
+    50% {
+      transform: translate(50px, -60px);
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0px, 0px);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(-50px, 70px);
+      opacity: 0.6;
+    }
+  }
+  
+  
+  @keyframes pulseGlow {
+    0%, 100% {
+      opacity: 0.25;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(1.1);
+    }
+  }
+  
+  .floating-logo {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+    opacity: 0.3;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .floating-logo:nth-child(1) {
+    animation-name: float-1;
+    top: 10%;
+    left: 20%;
+  }
+  .floating-logo:nth-child(2) {
+    animation-name: float-2;
+    top: 50%;
+    right: 15%;
+  }
+  .floating-logo:nth-child(3) {
+    animation-name: float-3;
+    bottom: 15%;
+    left: 10%;
+  }
+  .floating-logo:nth-child(4) {
+    animation-name: float;
+    bottom: 20%;
+    right: 8%;
+  }
+  
+  /* Venus planet glow */
+  .venus-glow {
+    position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #AE30FF;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.5; /* bump this up */
+  animation: pulseGlow 5s ease-in-out infinite;
+  z-index: 5; /* should still be behind the planet image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+
+  @keyframes floatPlanet {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .planet-float {
+    animation: floatPlanet 6s ease-in-out infinite;
+  }
