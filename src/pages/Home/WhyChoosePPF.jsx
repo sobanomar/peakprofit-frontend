@@ -29,7 +29,7 @@ const WhyChoosePPF = () => {
       topContent: <FaMoneyCheckAlt className="text-3xl text-white" />,
       title: "Quick and Reliable Rewards",
       description:
-        "At GetCryptoFunded, we process Rewards swiftly and efficiently. We maintain robust reserves to guarantee smooth operations...",
+        "At PeakProfit, we process Rewards swiftly and efficiently. We maintain robust reserves to guarantee smooth operations...",
     },
     {
       topContent: <BsXDiamond className="text-3xl text-white" />,

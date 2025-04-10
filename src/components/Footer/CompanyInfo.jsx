@@ -32,7 +32,7 @@ const CompanyInfo = () => {
   ];
 
   return (
-    <div className="space-y-4 flex flex-col items-center md:items-start">
+    <div className="space-y-4 flex flex-col">
       <Logo />
       <div className="flex space-x-3 text-xl">
         {socialIcons.map((item, index) => (
@@ -41,15 +41,15 @@ const CompanyInfo = () => {
           </div>
         ))}
       </div>
-      <div className="text-center md:text-left ">
+      <div className="md:text-left ">
         <p>PeakProfit LLC</p>
         <p className="font-semibold ">Company registration number: 123xyz</p>
       </div>
-      <div className="flex gap-x-3 flex-row justify-center items-center md:justify-start">
+      <div className="flex gap-x-3 flex-row">
         {paymentLogos.map((logo, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg p-2 w-14 h-10 flex items-center justify-center shadow-md"
+            className="bg-white rounded-lg p-2 w-14 h-10 flex shadow-md"
           >
             <img
               src={logo.src}

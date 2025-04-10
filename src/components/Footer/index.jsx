@@ -7,9 +7,9 @@ import Legal from "./Legal";
 
 const Footer = () => {
   return (
-    <footer className="pt-20 md:pt-40 text-white w-full flex flex-col items-center  ">
-      <div className="w-[80%] ">
-        <div className="grid grid-cols-1 md:grid-cols-3  gap-8 md:gap-4 mb-8">
+    <footer className="pt-20 md:pt-40 text-white w-full flex flex-col items-center">
+      <div className="px-6 lg:w-[90%]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 md:gap-4 mb-8">
           <div className="pr-6">
             <CompanyInfo />
           </div>
@@ -18,7 +18,7 @@ const Footer = () => {
             <Contact />
           </div>
 
-          <div className="lg:border-l border-gray-600 pl-6">
+          <div className="lg:border-l border-gray-600 lg:pl-6">
             <NewsLetter />
           </div>
         </div>
@@ -27,7 +27,9 @@ const Footer = () => {
           <Links />
         </div>
       </div>
-      <Legal />
+      <div className="px-6">
+        <Legal />
+      </div>
     </footer>
   );
 };

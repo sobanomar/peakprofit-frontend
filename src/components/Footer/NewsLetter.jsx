@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsLetter = () => {
   return (
-    <div className="flex flex-col items-center md:block">
+    <div className="flex flex-col  md:block">
       <h3 className="text-lg font-semibold mb-4 text-white">
         SIGN UP FOR EMAIL UPDATES
       </h3>
@@ -10,7 +10,7 @@ const NewsLetter = () => {
         Sign up with your email address to receive news and updates
       </p>
 
-      <div className="justify-center md:justify-start bg-white py-1 px-1 rounded-full overflow-hidden flex items-center max-w-md lg:max-w-lg">
+      <div className=" md:justify-start bg-white py-1 px-1 rounded-full overflow-hidden flex  max-w-md lg:max-w-lg">
         <input
           type="email"
           placeholder="Your Email Address"
