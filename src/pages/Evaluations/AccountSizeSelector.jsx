@@ -7,7 +7,7 @@ const AccountSizeSelector = ({ sizes, selected, onSelect }) => {
         <button
           key={size}
           onClick={() => onSelect(size)}
-          className={`px-8 py-2 border rounded-md ${
+          className={`px-8 py-2 border rounded-md cursor-pointer ${
             selected === size
               ? "bg-transparent text-white border border-[#CF59FF]"
               : "bg-[#463858] text-white border-neutral-500"

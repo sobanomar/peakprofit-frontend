@@ -2,7 +2,7 @@ import React from "react";
 
 const BillingDetails = () => {
   return (
-    <div className="bg-[#1A001F] text-white p-6 rounded-xl max-w-2xl mx-auto">
+    <div className=" text-white p-6 rounded-xl max-w-2xl mx-auto">
       <h2 className="text-2xl font-semibold mb-6 border-b border-[#3A2A3D] pb-2">
         Billing details
       </h2>

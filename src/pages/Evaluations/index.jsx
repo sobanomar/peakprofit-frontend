@@ -4,9 +4,11 @@ import AccountSizeSelector from "./AccountSizeSelector";
 import SummaryCard from "./SummaryCard";
 import AddOnsSelector from "./AddOnsSelector";
 import BillingDetails from "./BillingDetails";
+import OrderSummary from "./OrderSummary";
 
 const CheckoutPage = () => {
   const [selectedChallenge, setSelectedChallenge] = useState("1-Step");
+  const [currentStep, setCurrentStep] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedAddOns, setSelectedAddOns] = useState([]);
 
@@ -56,14 +58,26 @@ const CheckoutPage = () => {
         <div className="flex justify-center items-center gap-4 mt-6">
           <div className="flex flex-col md:flex-row items-center   space-x-3 bg-[#2B1A3B] px-4 py-2 rounded-md font-bold">
             <div className="flex items-center space-x-3  py-2 rounded-full font-bold ">
-              <span className="bg-[#B557F1] rounded-full text-white w-9 h-9 flex items-center justify-center ">
+              <span
+                className={`rounded-full w-9 h-9 flex items-center justify-center font-bold ${
+                  currentStep === 1
+                    ? "bg-[#B557F1] text-white"
+                    : "bg-white text-black"
+                }`}
+              >
                 1
               </span>
               <span>Select Account</span>
             </div>
-            <div className="h-0.5 rotate-90 md:rotate-0 w-6 md:w-12 bg-white" />
+            <div className="h-0.5 rotate-90 md:rotate-0 w-6 md:w-20 md:ml-0 ml-6 bg-white" />
             <div className="flex items-center space-x-3  py-2 rounded-full font-bold ">
-              <span className="bg-white  rounded-full text-black w-9 h-9 text-base flex items-center justify-center ">
+              <span
+                className={`rounded-full w-9 h-9 flex items-center justify-center font-bold ${
+                  currentStep === 2
+                    ? "bg-[#B557F1] text-white"
+                    : "bg-white text-black"
+                }`}
+              >
                 2
               </span>
               <span>Checkout Billing</span>
@@ -72,50 +86,70 @@ const CheckoutPage = () => {
         </div>
       </div>
 
-      {/* <div className="flex  justify-center items-center mt-10 gap-8">
-        <div className="w-[90%] md:w-[85%] lg:w-[80%] xl:w-[70%] flex-col lg:flex-row items-center flex gap-8">
-          <div className="bg-[#2B1A3F] p-6 rounded-3xl h-fit  lg:w-2/3">
-            <h2 className="text-xl font-bold mb-8 text-center lg:text-left">
-              Evaluation
-            </h2>
+      {currentStep === 1 ? (
+        <div className="flex  justify-center items-center mt-10 gap-8">
+          <div className="w-[90%] md:w-[85%] lg:w-[80%] xl:w-[70%] flex-col lg:flex-row items-center lg:items-start flex gap-8">
+            <div className="bg-[#2B1A3F] p-6 rounded-3xl h-fit  lg:w-2/3">
+              <h2 className="text-xl font-bold mb-8 text-center lg:text-left">
+                Evaluation
+              </h2>
 
-            <label className="flex font-bold items-center gap-2  mb-2">
-              Select Challenge <span className=" text-red-600">*</span>
-            </label>
-            <ChallengeSelector
-              options={challengeOptions}
-              selected={selectedChallenge}
-              onSelect={setSelectedChallenge}
-            />
-
-            <label className="flex font-bold items-center mt-5 gap-2  mb-2">
-              Account Size <span className=" text-red-600">*</span>
-            </label>
-            <AccountSizeSelector
-              sizes={accountSizes}
-              selected={selectedSize}
-              onSelect={setSelectedSize}
-            />
-
-            {selectedSize && (
-              <AddOnsSelector
-                addOns={addOns}
-                selected={selectedAddOns}
-                onToggle={handleAddonToggle}
+              <label className="flex font-bold items-center gap-2  mb-2">
+                Select Challenge <span className=" text-red-600">*</span>
+              </label>
+              <ChallengeSelector
+                options={challengeOptions}
+                selected={selectedChallenge}
+                onSelect={setSelectedChallenge}
               />
-            )}
+
+              <label className="flex font-bold items-center mt-5 gap-2  mb-2">
+                Account Size <span className=" text-red-600">*</span>
+              </label>
+              <AccountSizeSelector
+                sizes={accountSizes}
+                selected={selectedSize}
+                onSelect={setSelectedSize}
+              />
+
+              {selectedSize && (
+                <AddOnsSelector
+                  addOns={addOns}
+                  selected={selectedAddOns}
+                  onToggle={handleAddonToggle}
+                />
+              )}
+            </div>
+            <SummaryCard
+              challenge={selectedChallenge}
+              accountSize={selectedSize}
+              total={priceMap[selectedSize] || 0}
+              addOns={selectedAddOnDetails}
+              addOnsTotal={addOnsTotal}
+              grandTotal={grandTotal}
+              onContinue={() => setCurrentStep(2)}
+            />
           </div>
-          <SummaryCard
-            challenge={selectedChallenge}
-            accountSize={selectedSize}
-            total={priceMap[selectedSize] || 0}
-            addOns={selectedAddOnDetails}
-            addOnsTotal={addOnsTotal}
-            grandTotal={grandTotal}
-          />
         </div>
-      </div> */}
-      <BillingDetails />
+      ) : (
+        <div className="flex justify-center items-center mt-10">
+          <div className="relative w-[90%] md:w-[85%] lg:w-[80%] xl:w-[70%]">
+            <div className="absolute -inset-1 rounded-3xl bg-[#653979] blur-2xl opacity-20"></div>
+
+            <div className="relative bg-[#1A001F] flex flex-col lg:flex-row gap-8 p-6 rounded-3xl z-10">
+              <BillingDetails />
+              <OrderSummary
+                challenge={selectedChallenge}
+                accountSize={selectedSize}
+                total={priceMap[selectedSize] || 0}
+                addOns={selectedAddOnDetails}
+                addOnsTotal={addOnsTotal}
+                grandTotal={grandTotal}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

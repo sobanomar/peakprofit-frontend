@@ -7,7 +7,7 @@ const ChallengeSelector = ({ options, selected, onSelect }) => {
         <button
           key={option}
           onClick={() => onSelect(option)}
-          className={`px-8 py-2 w-fit border  rounded-md ${
+          className={`px-8 py-2 w-fit border  rounded-md cursor-pointer ${
             selected === option
               ? "bg-transparent text-white  border-[#CF59FF]"
               : "bg-[#463858] text-white border-neutral-500"

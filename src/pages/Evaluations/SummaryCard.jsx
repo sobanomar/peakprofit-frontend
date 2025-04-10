@@ -10,6 +10,7 @@ const SummaryCard = ({
   addOns = [],
   addOnsTotal = 0,
   grandTotal = 0,
+  onContinue,
 }) => {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -82,7 +83,10 @@ const SummaryCard = ({
         <span>Grand Total</span>
         <span>${grandTotal.toFixed(2)}</span>
       </div>
-      <button className="bg-[#C945F7] w-full py-2 px-4 mt-6 rounded-full font-semibold">
+      <button
+        className="bg-[#C945F7] w-full py-2 cursor-pointer px-4 mt-6 rounded-full font-semibold"
+        onClick={onContinue}
+      >
         Continue To Checkout
       </button>
     </div>
