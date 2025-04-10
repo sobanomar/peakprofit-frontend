@@ -30,23 +30,21 @@ const CardCarousel = () => {
     verifiedPayout9,
   ];
 
-  // Duplicate images for infinite effect
   const duplicatedImages = [
     ...verifiedPayouts,
     ...verifiedPayouts,
     ...verifiedPayouts,
   ];
 
-  // Card dimensions
-  const cardWidth = 215; // Width + margin
+  const isMobile =
+    typeof window !== "undefined" ? window.innerWidth < 640 : false;
+  const cardWidth = isMobile ? 150 : 215;
   const totalWidth = duplicatedImages.length * cardWidth;
   const carouselWidth =
     typeof window !== "undefined" ? Math.min(window.innerWidth, 1152) : 1152;
 
-  // Custom easing function
   const customEasing = [0.25, 0.1, 0.25, 1.0];
 
-  // Prevent default dragging of images
   useEffect(() => {
     const preventImageDrag = (e) => {
       e.preventDefault();
@@ -65,7 +63,6 @@ const CardCarousel = () => {
     };
   }, []);
 
-  // Detect when we need to reset position for infinite scroll effect
   const handleUpdate = (latest) => {
     if (latest.x < -(cardWidth * verifiedPayouts.length * 2)) {
       x.set(latest.x + cardWidth * verifiedPayouts.length);
@@ -73,7 +70,6 @@ const CardCarousel = () => {
       x.set(latest.x - cardWidth * verifiedPayouts.length);
     }
 
-    // Calculate current index
     const newIndex =
       Math.round(Math.abs(latest.x) / cardWidth) % verifiedPayouts.length;
     if (newIndex !== currentIndex) {
@@ -81,12 +77,10 @@ const CardCarousel = () => {
     }
   };
 
-  // Handle drag start
   const handleDragStart = () => {
     setIsDragging(true);
   };
 
-  // Snap to nearest card on drag end
   const handleDragEnd = (_, info) => {
     const velocity = info.velocity.x;
     const offset = velocity * 0.2;
@@ -107,7 +101,6 @@ const CardCarousel = () => {
     setIsDragging(false);
   };
 
-  // Auto-scroll functionality
   useEffect(() => {
     const autoScroll = () => {
       if (!isDragging) {
@@ -123,20 +116,16 @@ const CardCarousel = () => {
     };
 
     const interval = setInterval(autoScroll, 3000);
-
     return () => clearInterval(interval);
   }, [cardWidth, controls, x, isDragging]);
 
   return (
     <div
       ref={carouselRef}
-      className="relative w-full max-w-6xl mx-auto mb-12 overflow-hidden"
+      className="relative w-full px-2 sm:px-4 md:px-0 max-w-6xl mx-auto mb-8 overflow-hidden"
     >
-      {/* Gradient overlay for left edge */}
-      <div className="absolute left-0 top-0 bottom-0 w-60 bg-gradient-to-r from-[#130025] to-transparent z-10 pointer-events-none"></div>
-
-      {/* Gradient overlay for right edge */}
-      <div className="absolute right-0 top-0 bottom-0 w-60 bg-gradient-to-l from-[#130025] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-40 md:w-60 bg-gradient-to-r from-[#130025] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-40 md:w-60 bg-gradient-to-l from-[#130025] to-transparent z-10 pointer-events-none"></div>
 
       <motion.div
         className="flex cursor-grab"
@@ -155,30 +144,23 @@ const CardCarousel = () => {
         }}
         whileTap={{ cursor: "grabbing" }}
       >
-        {duplicatedImages.map((image, index) => {
-          return (
-            <motion.div
-              key={`image-${index}`}
-              className="flex-shrink-0 w-36 md:w-54"
-              style={{
-                opacity: 1,
-                scale: 1,
-              }}
-            >
-              <div className="rounded-lg select-none">
-                <img
-                  src={image}
-                  alt={`Verified payout ${
-                    (index % verifiedPayouts.length) + 1
-                  }`}
-                  className="w-full h-16 md:h-24 object-cover rounded-lg carousel-image select-none"
-                  draggable="false"
-                  onDragStart={(e) => e.preventDefault()}
-                />
-              </div>
-            </motion.div>
-          );
-        })}
+        {duplicatedImages.map((image, index) => (
+          <motion.div
+            key={`image-${index}`}
+            className="flex-shrink-0 w-36 sm:w-44 md:w-54 px-2"
+            style={{ opacity: 1, scale: 1 }}
+          >
+            <div className="rounded-lg select-none">
+              <img
+                src={image}
+                alt={`Verified payout ${(index % verifiedPayouts.length) + 1}`}
+                className="w-full h-14 sm:h-16 md:h-24 object-cover rounded-lg carousel-image select-none"
+                draggable="false"
+                onDragStart={(e) => e.preventDefault()}
+              />
+            </div>
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );

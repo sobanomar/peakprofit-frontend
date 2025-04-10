@@ -1,18 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../Logo";
 import NavBar from "./NavBar";
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="flex fixed w-full justify-between mt-10 px-8 items-center text-white z-50">
-      <Logo />
-      <NavBar />
-      <div className="bg-[#7F0DDA] rounded-full py-4 px-10 flex gap-x-2 items-center font-semibold">
-        Client Area
-        <FaUser size={20} color="b45ecf" />
+    <header className="fixed w-full z-50 px-4 sm:px-8 mt-6">
+      <div className="flex justify-between items-center text-white">
+        <Logo />
+
+        {/* Desktop Nav */}
+        <div className="hidden lg:flex">
+          <NavBar />
+        </div>
+
+        {/* Desktop Client Area Button */}
+        <div className="hidden lg:flex bg-[#7F0DDA] rounded-full py-2 px-6 md:py-4 md:px-10 gap-x-2 items-center font-semibold">
+          Client Area
+          <FaUser size={18} color="b45ecf" />
+        </div>
+
+        {/* Hamburger Menu Toggle */}
+        <div className="lg:hidden flex items-center gap-4">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-white focus:outline-none"
+          >
+            {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
       </div>
-    </div>
+
+      {/* Mobile Dropdown Menu */}
+      {menuOpen && (
+        <div className="lg:hidden mt-4 bg-[#472C64] rounded-xl py-4 px-6 space-y-4 text-white font-semibold text-lg shadow-lg">
+          <NavBar mobile />
+
+          {/* Client Area button in menu */}
+          <div className="flex items-center justify-center bg-[#7F0DDA] rounded-full py-3 px-6 gap-2">
+            <span>Client Area</span>
+            <FaUser size={18} color="b45ecf" />
+          </div>
+        </div>
+      )}
+    </header>
   );
 };
 

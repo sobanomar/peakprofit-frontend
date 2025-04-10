@@ -6,7 +6,7 @@ const TraderTestimonials = () => {
   return (
     <div className="flex justify-center my-12">
       <div className="w-[80%]">
-        <h1 className="text-5xl text-center text-white font-semibold my-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  text-center text-white font-semibold my-8">
           Traders That Shared Their <br /> Positive Experience
         </h1>
 

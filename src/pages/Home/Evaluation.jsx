@@ -61,12 +61,12 @@ const Evaluation = () => {
   ];
 
   return (
-    <div className="w-[80%] mx-auto py-12">
-      <h1 className="text-6xl text-center text-white py-8 font-semibold">
+    <div className="w-full px-4 md:w-[80%] md:mx-auto py-6 md:py-12">
+      <h1 className="text-3xl md:text-6xl text-center text-white py-4 md:py-8 font-semibold">
         Configure Your Evaluation
       </h1>
-      <div className="p-4 grid grid-cols-1 lg:grid-cols-3 gap-6  place-items-center">
-        <div className="lg:col-span-2 space-y-6">
+      <div className="p-2 md:p-4 grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="lg:col-span-2 space-y-4 md:space-y-6 w-full">
           <ButtonGroup
             buttons={evaluationTypes}
             selectedValue={currentStep}
@@ -85,16 +85,20 @@ const Evaluation = () => {
             onButtonClick={setSelectedTrader}
           />
 
-          <EvaluationTable step={currentStep} />
+          <div className="overflow-x-auto">
+            <EvaluationTable step={currentStep} />
+          </div>
         </div>
-        <EvaluationSidebar
-          selectedAccountSize={
-            accountSize.find((size) => size.value === selectedAccountSize)
-              ?.label || "$10,000"
-          }
-          discountedFee="$39.60"
-          originalFee="$99.00"
-        />
+        <div className="w-full">
+          <EvaluationSidebar
+            selectedAccountSize={
+              accountSize.find((size) => size.value === selectedAccountSize)
+                ?.label || "$10,000"
+            }
+            discountedFee="$39.60"
+            originalFee="$99.00"
+          />
+        </div>
       </div>
     </div>
   );

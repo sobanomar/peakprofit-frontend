@@ -76,8 +76,8 @@ const EvaluationTable = ({ step }) => {
   const currentData = tableData[step] || tableData[1];
 
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <div className="hide-scrollbar overflow-x-auto max-w-full rounded-xl border border-[#472C64]">
+      <table className="min-w-[600px] w-full text-sm text-left text-gray-300 whitespace-nowrap">
         <thead>
           <tr
             className="text-xs uppercase"
@@ -88,8 +88,7 @@ const EvaluationTable = ({ step }) => {
             {currentData.headers.map((header, index) => (
               <th
                 key={index}
-                scope="col"
-                className="px-6 py-3 text-lg text-white"
+                className="px-4 md:px-6 py-3 text-white text-sm md:text-lg"
               >
                 {header}
               </th>
@@ -102,14 +101,15 @@ const EvaluationTable = ({ step }) => {
               key={rowIndex}
               className={`${
                 rowIndex % 2 === 0 ? "bg-[#2C193E]" : "bg-[#472C64]"
-              } border-b dark:border-gray-700 border-gray-200`}
+              } border-b border-gray-700`}
             >
               {row.map((cell, cellIndex) => (
-                <td key={cellIndex} className="px-6 py-4">
+                <td
+                  key={cellIndex}
+                  className="px-4 md:px-6 py-4 text-sm md:text-base"
+                >
                   {cellIndex === 0 ? (
-                    <span className="font-medium text-gray-900 dark:text-white">
-                      {cell}
-                    </span>
+                    <span className="font-medium text-white">{cell}</span>
                   ) : (
                     cell
                   )}

@@ -4,10 +4,10 @@ import React from "react";
 const HowItWorks = () => {
   return (
     <div className="my-20">
-      <h1 className="text-6xl text-center text-white font-semibold">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-white font-semibold">
         How it Works
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-8">
+      <div className="grid grid-cols-1 place-items-center md:grid-cols-4 gap-6 p-8 ">
         {/* Top 4 Steps */}
         <InfoCard
           topContent="1"
