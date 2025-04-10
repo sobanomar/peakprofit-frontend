@@ -1,4 +1,5 @@
 import React from "react";
+import AnimatedButton from "./AnimatedButton";
 
 const EvaluationSidebar = ({
   accountSize = "$10,000",
@@ -75,9 +76,8 @@ const EvaluationSidebar = ({
           <p className="text-base line-through text-gray-400">{originalFee}</p>
           <p className="text-3xl font-bold text-white ">{discountedFee}</p>
         </div>
-        <button className="w-full bg-[#AE30FF] hover:bg-[#7A2EFF] text-white py-3 rounded-xl text-lg font-semibold transition">
-          Start Evaluation →
-        </button>
+
+        <AnimatedButton text={"Start Evaluation →"} />
         <p className="text-xs text-gray-400 mt-2">
           Complete Your Evaluation to Become a Funded Trader
         </p>

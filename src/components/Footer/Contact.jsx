@@ -14,11 +14,11 @@ const Contact = () => {
         </li>
         <li className="text-center text-white text-sm font-semibold ">
           <p className="mb-1">Live chat support during working hours</p>
-          <span>support@getcryptofunded.com</span>
+          <span>support@peakprofitllc.com</span>
         </li>
         <li className="flex items-start"></li>
       </ul>
-      <p className="text-xs mt-16 text-white font-semibold text-center">
+      <p className="text-xs mt-2 md:mt-16 text-white font-semibold text-center">
         Copyright © {new Date().getFullYear()} GCF. All rights reserved.
       </p>
     </div>
