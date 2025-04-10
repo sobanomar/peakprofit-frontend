@@ -48,10 +48,15 @@ export default function HomeHero() {
           <div className="md:w-1/2">
             <AnimatedButton text={"Start Challenge"} />
           </div>
-          <button className="bg-neutral-800 hover:bg-neutral-700 text-white py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center border-1 border-neutral-500 md:w-1/2">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://discord.gg/y9HStRD4"
+            className="bg-neutral-800 hover:bg-neutral-700 text-white py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center border-1 border-neutral-500 md:w-1/2"
+          >
             <img src={discord} className="h-6 w-6 mr-2" alt="dicord.jpeg" />
             Join Our Discord
-          </button>
+          </a>
         </div>
 
         {/* Trust badges */}
