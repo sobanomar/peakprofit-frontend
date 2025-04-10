@@ -23,9 +23,14 @@ const EvaluationSidebar = ({
       src: "https://cdn.visa.com/v2/assets/images/logos/visa/blue/logo.png",
       alt: "Visa",
     },
+
     {
       src: "https://th.bing.com/th/id/R.f732f82b8c21ec5bc31f973e85d2a271?rik=XK%2bgUN7dHpjxhw&pid=ImgRaw&r=0",
       alt: "Bitcoin",
+    },
+    {
+      src: "https://www.mastercard.com/content/dam/public/mastercardcom/mea/za/logos/mc-logo-52.svg",
+      alt: "Mastercard",
     },
   ];
 
@@ -44,7 +49,7 @@ const EvaluationSidebar = ({
               key={index}
               src={logo.src}
               alt={logo.alt}
-              className="floating-logo"
+              className="floating-logo object-contain"
             />
           ))}
         </div>
