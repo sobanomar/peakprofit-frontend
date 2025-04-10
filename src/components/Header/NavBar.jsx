@@ -10,7 +10,7 @@ const NavBar = ({ mobile }) => {
         <Link to="#" className={baseLinkClasses}>
           Home
         </Link>
-        <Link to="#" className={baseLinkClasses}>
+        <Link to="/evaluation" className={baseLinkClasses}>
           Evaluations
         </Link>
         <Link to="#" className={baseLinkClasses}>
@@ -28,7 +28,7 @@ const NavBar = ({ mobile }) => {
       <Link to="#" className={baseLinkClasses}>
         Home
       </Link>
-      <Link to="#" className={baseLinkClasses}>
+      <Link to="/evaluation" className={baseLinkClasses}>
         Evaluations
       </Link>
       <Link to="#" className={baseLinkClasses}>

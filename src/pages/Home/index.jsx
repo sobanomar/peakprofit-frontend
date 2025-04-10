@@ -13,21 +13,17 @@ import Evaluation from "./Evaluation";
 
 const Home = () => {
   return (
-    <div>
-      <Header />
-      <div className="py-20">
-        <HomeHero />
-        <VerifiedPayouts />
-        <HowItWorks />
-        <TradingPairs />
-        <Evaluation />
-        <WhyChoosePPF />
-        <RawSpreads />
-        <TraderTestimonials />
-        <StillNotConvinced />
-        <Footer />
-      </div>
-    </div>
+    <>
+      <HomeHero />
+      <VerifiedPayouts />
+      <HowItWorks />
+      <TradingPairs />
+      <Evaluation />
+      <WhyChoosePPF />
+      <RawSpreads />
+      <TraderTestimonials />
+      <StillNotConvinced />
+    </>
   );
 };
 

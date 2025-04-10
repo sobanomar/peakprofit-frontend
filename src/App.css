@@ -154,3 +154,10 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
 }
+
+.dotted-gap-border {
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  border-image: repeating-linear-gradient(to right, white 0, white 1px, transparent 2px, transparent 4px) 100% 1;
+}
+
