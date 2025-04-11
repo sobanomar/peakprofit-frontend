@@ -48,18 +48,6 @@ export default function Contact() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Dubai Silicon Oasis Map"
               ></iframe>
-
-              {/* Fallback in case API key is not set */}
-              {!googleMapsApiKey.includes("YOUR_API_KEY") ? null : (
-                <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
-                  <div className="text-black text-center p-4">
-                    <p className="font-bold">Google Maps</p>
-                    <p className="text-sm">
-                      Please add your Google Maps API key
-                    </p>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
 
