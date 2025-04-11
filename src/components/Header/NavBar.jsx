@@ -16,7 +16,7 @@ const NavBar = ({ mobile }) => {
         <Link to="#" className={baseLinkClasses}>
           FAQ
         </Link>
-        <Link to="#" className={baseLinkClasses}>
+        <Link to="/contact" className={baseLinkClasses}>
           Contact
         </Link>
       </nav>
@@ -34,7 +34,7 @@ const NavBar = ({ mobile }) => {
       <Link to="#" className={baseLinkClasses}>
         FAQ
       </Link>
-      <Link to="#" className={baseLinkClasses}>
+      <Link to="/contact" className={baseLinkClasses}>
         Contact
       </Link>
     </nav>
