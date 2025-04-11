@@ -25,31 +25,31 @@ const CollectionPage = () => {
   }
 
   return (
-    <div className="max-w-4xl relative mx-auto px-6 py-10">
+    <div className="max-w-4xl relative mx-auto px-6 ">
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-4">
-        <Link to="/" className="hover:underline text-gray-400">
+        <Link to="/faq" className="hover:underline  text-black">
           All Collections
         </Link>{" "}
-        &gt; <span className="text-black">{category.title}</span>
+        &gt; <span className="text-gray-600">{category.title}</span>
       </nav>
 
       {/* Heading */}
       <h1 className="text-3xl font-bold mb-1">{category.title}</h1>
-      <p className="text-gray-500 mb-2">{category.description}</p>
-      <p className="text-sm text-gray-400 mb-6">
+      <p className=" mb-2">{category.description}</p>
+      <p className="text-sm text-gray-600 mb-6">
         {category.articles.length} articles
       </p>
 
       {/* Article List */}
-      <div className="bg-white border border-gray-200 rounded-xl divide-y">
+      <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200">
         {category.articles.map((article, idx) => (
           <Link
-            to={`/faq/${slug}/${slugify(article.title)}`}
+            to={`/collections/${slug}/${slugify(article.title)}`}
             key={idx}
-            className="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition"
+            className="flex items-center justify-between rounded-md  px-6 py-4 hover:bg-[#e5f4f9] text-black hover:text-[#63c0df] transition duration-150"
           >
-            <span className="text-black">{article.title}</span>
+            <span className="">{article.title}</span>
             <HiOutlineChevronRight className="text-blue-500" />
           </Link>
         ))}

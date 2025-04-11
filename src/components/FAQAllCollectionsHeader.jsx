@@ -2,13 +2,13 @@ import React from "react";
 import Logo from "./Logo";
 import { CiGlobe } from "react-icons/ci";
 
-const FAQHeader = () => {
+const FAQAllCollectionsHeader = () => {
   return (
     <header
-      className="absolute -z-0 w-full h-[45vh] px-10 sm:px-20 md:px-40 py-10 overflow-hidden"
+      className="absolute -z-0 w-full h-[45vh] px-10 sm:px-20 md:px-40 lg:px-76 py-5 overflow-hidden"
       style={{
         backgroundImage: `
-          linear-gradient(to bottom, rgba(255,255,255,0) 35%, white 100%),
+          linear-gradient(to bottom, rgba(255,255,255,0) 25%, white 100%),
           linear-gradient(to bottom right, #5500ff, #ff00a5)
         `,
         backgroundBlendMode: "normal",
@@ -36,4 +36,4 @@ const FAQHeader = () => {
   );
 };
 
-export default FAQHeader;
+export default FAQAllCollectionsHeader;
