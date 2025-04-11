@@ -1,6 +1,4 @@
-import React from "react";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import React, { useRef } from "react";
 import HomeHero from "./HomeHero";
 import HowItWorks from "./HowItWorks";
 import RawSpreads from "./RawSpreads";
@@ -12,13 +10,19 @@ import TraderTestimonials from "./TraderTestimonials";
 import Evaluation from "./Evaluation";
 
 const Home = () => {
+  const evaluationRef = useRef(null);
+
+  const scrollToEvaluation = () => {
+    evaluationRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
-      <HomeHero />
+      <HomeHero onStartChallengeClick={scrollToEvaluation} />
       <VerifiedPayouts />
       <HowItWorks />
       <TradingPairs />
-      <Evaluation />
+      <Evaluation ref={evaluationRef} />
       <WhyChoosePPF />
       <RawSpreads />
       <TraderTestimonials />

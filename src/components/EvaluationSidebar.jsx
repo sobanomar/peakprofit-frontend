@@ -1,5 +1,6 @@
 import React from "react";
 import AnimatedButton from "./AnimatedButton";
+import { useNavigate } from "react-router";
 
 const EvaluationSidebar = ({
   accountSize = "$10,000",
@@ -7,6 +8,21 @@ const EvaluationSidebar = ({
   originalFee = "$99.00",
   selectedAccountSize = "$100K", // New prop for selected account size
 }) => {
+  const navigate = useNavigate();
+
+  const handleStartEvaluation = () => {
+    navigate("/evaluation");
+  };
+
+  // Helper function to convert "$100K" to "$100,000"
+  const formatAccountSize = (size) => {
+    const match = size.match(/\$?([\d.]+)([kK])/); // match "$100K" or "100k"
+    if (!match) return size;
+
+    const number = parseFloat(match[1]) * 1000;
+    return `$${number.toLocaleString()}`;
+  };
+
   const addOns = [
     { label: "Daily Drawdown 6%", price: "15%" },
     { label: "Max Drawdown 12%", price: "25%" },
@@ -71,18 +87,23 @@ const EvaluationSidebar = ({
       {/* Account Size Card - Now shows the selected account size */}
       <p className="text-xl font-semibold mb-2 text-white">Account size</p>
       <div className="bg-[#2C193E] p-6 rounded-2xl text-white text-center shadow-md">
-        <p className="text-3xl font-bold">{selectedAccountSize}</p>
+        <p className="text-5xl font-bold">
+          {formatAccountSize(selectedAccountSize)}
+        </p>
       </div>
 
       {/* Refundable Fee Card */}
       <div className="bg-[#2C193E] p-6 rounded-2xl text-white text-center shadow-md">
         <p className="text-xl font-semibold mb-2">*Refundable fee</p>
         <div className="flex gap-2 items-center justify-center mb-4">
-          <p className="text-base line-through text-gray-400">{originalFee}</p>
-          <p className="text-3xl font-bold text-white ">{discountedFee}</p>
+          <p className="text-xl line-through text-gray-400">{originalFee}</p>
+          <p className="text-5xl font-bold text-white ">{discountedFee}</p>
         </div>
 
-        <AnimatedButton text={"Start Evaluation →"} />
+        <AnimatedButton
+          text={"Start Evaluation →"}
+          action={handleStartEvaluation}
+        />
         <p className="text-xs text-gray-400 mt-2">
           Complete Your Evaluation to Become a Funded Trader
         </p>

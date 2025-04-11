@@ -22,7 +22,7 @@ const smallCardsData = [
   },
 ];
 
-export default function HomeHero() {
+export default function HomeHero({ onStartChallengeClick }) {
   return (
     <div className="text-white  w-full flex flex-col py-12 lg:flex-row items-center justify-between px-6 lg:px-12 overflow-hidden relative">
       {/* Left content */}
@@ -46,7 +46,10 @@ export default function HomeHero() {
         {/* Buttons */}
         <div className="flex flex-col md:flex-row gap-2 mb-4 md:w-[85%] w-full ">
           <div className="md:w-1/2">
-            <AnimatedButton text={"Start Challenge"} />
+            <AnimatedButton
+              text={"Start Challenge"}
+              action={onStartChallengeClick}
+            />
           </div>
           <a
             target="_blank"
