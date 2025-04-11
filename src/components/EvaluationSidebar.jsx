@@ -37,7 +37,7 @@ const EvaluationSidebar = ({
   return (
     <div className="space-y-6">
       {/* Venus Challenge Card */}
-      <div className="relative rounded-2xl overflow-hidden p-4 bg-[#1D0D2F] border border-[#3A245A] shadow-[0_0_30px_5px_rgba(174,48,255,0.3)]">
+      <div className="relative rounded-xl overflow-hidden p-4 bg-[#1D0D2F] border border-[#3A245A] shadow-[0_0_30px_5px_rgba(174,48,255,0.3)]">
         {/* Floating label */}
         <div className="absolute top-4 left-4 z-10 bg-white/10 backdrop-blur-xl px-4 py-2 rounded-full flex items-center gap-2 text-white text-sm font-semibold">
           <span className="text-blue-300">💎</span> VENUS CHALLENGE

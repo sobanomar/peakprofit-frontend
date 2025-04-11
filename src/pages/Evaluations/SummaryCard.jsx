@@ -15,7 +15,7 @@ const SummaryCard = ({
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="bg-[#2B1A3F] p-6 rounded-3xl h-fit text-white max-w-md w-full transition-all duration-300">
+    <div className="bg-[#2B1A3F] p-8 rounded-4xl h-fit text-white max-w-md w-full transition-all duration-300">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Total Summary</h2>
         <button

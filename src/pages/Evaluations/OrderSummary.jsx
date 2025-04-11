@@ -13,7 +13,7 @@ export default function OrderSummary({
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 transition-all duration-500">
-      <div className="max-w-md w-full text-white rounded-2xl overflow-hidden">
+      <div className="max-w-md w-full text-white  rounded-2xl overflow-hidden">
         {/* Order Summary Section */}
         <div className="mb-4 rounded-2xl border-[#3A2A3D]">
           <h2 className="text-2xl mt-2 pb-2 font-semibold mb-4">Your order</h2>

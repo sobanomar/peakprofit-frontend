@@ -47,7 +47,7 @@ const CheckoutPage = () => {
   const grandTotal = (priceMap[selectedSize] || 0) + addOnsTotal;
 
   return (
-    <div className="min-h-screen  text-white px-6 py-12">
+    <div className="min-h-screen  text-white md:px-6 pt-20">
       <div className="text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl  xl:text-6xl font-bold">
           Complete Your Order
@@ -56,7 +56,7 @@ const CheckoutPage = () => {
           Almost there, please fill-up all the information and get funded.
         </p>
         <div className="flex justify-center items-center gap-4 mt-6">
-          <div className="flex flex-col md:flex-row items-center   space-x-3 bg-[#2B1A3B] px-4 py-2 rounded-md font-bold">
+          <div className="flex flex-col md:flex-row items-center   space-x-3 bg-[#2B1A3B] px-4 py-2 rounded-lg font-bold">
             <div className="flex items-center space-x-3  py-2 rounded-full font-bold ">
               <span
                 className={`rounded-full w-9 h-9 flex items-center justify-center font-bold ${
@@ -89,7 +89,7 @@ const CheckoutPage = () => {
       {currentStep === 1 ? (
         <div className="flex  justify-center items-center mt-10 gap-8">
           <div className="w-[90%] md:w-[85%] lg:w-[80%] xl:w-[70%] flex-col lg:flex-row items-center lg:items-start flex gap-8">
-            <div className="bg-[#2B1A3F] p-6 rounded-3xl h-fit  lg:w-2/3">
+            <div className="bg-[#2B1A3F] p-8 rounded-4xl h-fit  lg:w-2/3">
               <h2 className="text-xl font-bold mb-8 text-center lg:text-left">
                 Evaluation
               </h2>
