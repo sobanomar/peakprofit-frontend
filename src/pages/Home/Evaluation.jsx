@@ -40,27 +40,20 @@ const Evaluation = () => {
     { value: 8, label: "$500k" },
   ];
 
-  // const traders = [
-  //   {
-  //     value: 1,
-  //     label: "METATRADER 5",
-  //     img: "https://getcryptofunded.com/wp-content/uploads/2025/02/Untitled-design-8.png",
-  //   },
-  //   {
-  //     value: 2,
-  //     label: "CTRADER",
-  //     img: "https://getcryptofunded.com/wp-content/uploads/2025/02/Untitled-design-8.png",
-  //     badgeText: "Coming Soon",
-  //     badgeColor: "orange",
-  //   },
-  //   {
-  //     value: 3,
-  //     label: "MATCHTRADER",
-  //     img: "https://getcryptofunded.com/wp-content/uploads/2025/02/Untitled-design-8.png",
-  //     badgeText: "Coming Soon",
-  //     badgeColor: "orange",
-  //   },
-  // ];
+  const traders = [
+    {
+      value: 1,
+      label: "METATRADER 5",
+      img: "https://getcryptofunded.com/wp-content/uploads/2025/02/Untitled-design-8.png",
+    },
+    {
+      value: 2,
+      label: "TRADE LOCKER",
+      img: "https://getcryptofunded.com/wp-content/uploads/2025/02/Untitled-design-8.png",
+      // badgeText: "Coming Soon",
+      // badgeColor: "orange",
+    },
+  ];
 
   return (
     <div className="w-full px-4 md:w-[80%] md:mx-auto py-6 md:py-12">
@@ -81,11 +74,11 @@ const Evaluation = () => {
             onButtonClick={setSelectedAccountSize}
           />
 
-          {/* <ButtonGroup
+          <ButtonGroup
             buttons={traders}
             selectedValue={selectedTrader}
             onButtonClick={setSelectedTrader}
-          /> */}
+          />
 
           <div className="overflow-x-auto">
             <EvaluationTable step={currentStep} />
