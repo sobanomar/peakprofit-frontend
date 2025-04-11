@@ -13,7 +13,16 @@ const CheckoutPage = () => {
   const [selectedAddOns, setSelectedAddOns] = useState([]);
 
   const challengeOptions = ["1-Step", "2-Step", "3-Step"];
-  const accountSizes = ["5K", "10K", "25K", "50K", "100K", "200K"];
+  const accountSizes = [
+    "5K",
+    "10K",
+    "25K",
+    "50K",
+    "100K",
+    "200K",
+    "300K",
+    "500K",
+  ];
 
   const addOns = [
     { id: 1, name: "95% Profit Split", price: 25 },
@@ -29,6 +38,8 @@ const CheckoutPage = () => {
     "50K": 199,
     "100K": 349,
     "200K": 599,
+    "300K": 749,
+    "500K": 1200,
   };
 
   const handleAddonToggle = (id) => {
