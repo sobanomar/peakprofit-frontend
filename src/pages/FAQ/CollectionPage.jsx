@@ -45,7 +45,7 @@ const CollectionPage = () => {
       <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200">
         {category.articles.map((article, idx) => (
           <Link
-            to={`/collections/${slug}/${slugify(article.title)}`}
+            // to={`/collections/${slug}/${slugify(article.title)}`}
             key={idx}
             className="flex items-center justify-between rounded-md  px-6 py-4 hover:bg-[#e5f4f9] text-black hover:text-[#63c0df] transition duration-150"
           >
