@@ -11,7 +11,7 @@ const StillNotConvinced = () => {
       minDays: "5",
       targets: "7% Phase 1 | 5% Phase 2",
       pairs: "235+ Pairs",
-      mt5: "Yes",
+      tradelocker: "Yes",
       payoutFreq: "14 Days",
       highlight: true,
     },
@@ -24,7 +24,7 @@ const StillNotConvinced = () => {
       minDays: "5",
       targets: "8% Phase 1 | 5% Phase 2",
       pairs: "250+ Pairs",
-      mt5: "Yes",
+      tradelocker: "Yes",
       payoutFreq: "30 Days",
     },
     {
@@ -36,7 +36,7 @@ const StillNotConvinced = () => {
       minDays: "0",
       targets: "10% Phase 1 | 5% Phase 2",
       pairs: "160+ Pairs",
-      mt5: "No",
+      tradelocker: "No",
       payoutFreq: "14 Days",
     },
     {
@@ -48,7 +48,7 @@ const StillNotConvinced = () => {
       minDays: "10",
       targets: "10% Phase 1 | 5% Phase 2",
       pairs: "500+ Pairs",
-      mt5: "No",
+      tradelocker: "No",
       payoutFreq: "30 Days",
     },
   ];
