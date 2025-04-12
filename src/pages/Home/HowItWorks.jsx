@@ -3,6 +3,7 @@ import React from "react";
 import Support from "../../assets/images/home/how_it_works/support.webp";
 import Withdrawl from "../../assets/images/home/how_it_works/withdrawl.webp";
 import Investment from "../../assets/images/home/how_it_works/investment-growth.webp";
+import { Link } from "react-router";
 
 const HowItWorks = () => {
   return (
@@ -55,9 +56,9 @@ const HowItWorks = () => {
             description="Have questions? Our support team is always here for you!"
             status="Online"
             bottomContent={
-              <a href="#" className="text-purple-300 hover:underline">
+              <Link to={"/contact"} className="text-purple-300 hover:underline">
                 Help Center
-              </a>
+              </Link>
             }
           />
 
