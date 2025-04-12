@@ -19,7 +19,7 @@ export const FAQArticles = [
       {
         title: "Which countries are allowed?",
         description:
-          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the MetaTrader 5. You must be at least 18 years old.",
+          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the TradeLocker. You must be at least 18 years old.",
         lastUpdated: "Over 3 months ago",
       },
       {
@@ -67,7 +67,7 @@ No, PPF is not a broker.
  
 
 What trading platforms do you support?
-We offer accounts on  MetaTrader 5 (MT5).
+We offer accounts on  TradeLocker (MT5).
 
  
 
@@ -91,7 +91,7 @@ Currently, we do not offer free trials. Traders must purchase a challenge to par
       {
         title: "Which countries are allowed?",
         description:
-          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the MetaTrader 5. You must be at least 18 years old.",
+          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the TradeLocker. You must be at least 18 years old.",
         lastUpdated: "Over 3 months ago",
       },
       {
@@ -139,7 +139,7 @@ No, PPF is not a broker.
  
 
 What trading platforms do you support?
-We offer accounts on  MetaTrader 5 (MT5).
+We offer accounts on  TradeLocker (MT5).
 
  
 
@@ -163,7 +163,7 @@ Currently, we do not offer free trials. Traders must purchase a challenge to par
       {
         title: "Which countries are allowed?",
         description:
-          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the MetaTrader 5. You must be at least 18 years old.",
+          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the TradeLocker. You must be at least 18 years old.",
         lastUpdated: "Over 3 months ago",
       },
       {
@@ -211,7 +211,7 @@ No, PPF is not a broker.
  
 
 What trading platforms do you support?
-We offer accounts on  MetaTrader 5 (MT5).
+We offer accounts on  TradeLocker (MT5).
 
  
 
@@ -235,7 +235,7 @@ Currently, we do not offer free trials. Traders must purchase a challenge to par
       {
         title: "Which countries are allowed?",
         description:
-          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the MetaTrader 5. You must be at least 18 years old.",
+          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the TradeLocker. You must be at least 18 years old.",
         lastUpdated: "Over 3 months ago",
       },
       {
@@ -283,7 +283,7 @@ No, PPF is not a broker.
  
 
 What trading platforms do you support?
-We offer accounts on  MetaTrader 5 (MT5).
+We offer accounts on  TradeLocker (MT5).
 
  
 
@@ -307,7 +307,7 @@ Currently, we do not offer free trials. Traders must purchase a challenge to par
       {
         title: "Which countries are allowed?",
         description:
-          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the MetaTrader 5. You must be at least 18 years old.",
+          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the TradeLocker. You must be at least 18 years old.",
         lastUpdated: "Over 3 months ago",
       },
       {
@@ -355,7 +355,7 @@ No, PPF is not a broker.
  
 
 What trading platforms do you support?
-We offer accounts on  MetaTrader 5 (MT5).
+We offer accounts on  TradeLocker (MT5).
 
  
 
