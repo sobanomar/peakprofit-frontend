@@ -137,9 +137,9 @@ export default function OrderSummary({
         </div>
 
         {/* Branding Logos */}
-        <div className="flex justify-between items-center p-4">
-          <img src={UnlistedFirm} alt="Unlisted Firm" className="h-14" />
-          <img src={UnlistedFirm} alt="Trading Pilot" className="h-14" />
+        <div className="flex flex-col sm:flex-row items-center sm:justify-between sm:items-center p-4">
+          <img src={UnlistedFirm} alt="Unlisted Firm" className="h-14 w-fit" />
+          <img src={UnlistedFirm} alt="Trading Pilot" className="h-14 w-fit" />
         </div>
       </div>
     </div>

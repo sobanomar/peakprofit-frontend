@@ -58,12 +58,12 @@ const CheckoutPage = () => {
   const grandTotal = (priceMap[selectedSize] || 0) + addOnsTotal;
 
   return (
-    <div className="min-h-screen  text-white md:px-6 pt-20">
+    <div className="min-h-screen  text-white md:px-6 pt-10 md:pt-20">
       <div className="text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl  xl:text-6xl font-bold">
           Complete Your Order
         </h1>
-        <p className="text-base md:text-lg lg:text-xl text-white/70 mt-2">
+        <p className="text-base md:text-lg px-2 lg:text-xl text-white/70 mt-2">
           Almost there, please fill-up all the information and get funded.
         </p>
         <div className="flex justify-center items-center gap-4 mt-6">
@@ -147,7 +147,7 @@ const CheckoutPage = () => {
           <div className="relative w-[90%] md:w-[85%] lg:w-[80%] xl:w-[70%]">
             <div className="absolute -inset-1 rounded-3xl bg-[#653979] blur-2xl opacity-20"></div>
 
-            <div className="relative bg-[#1A001F] flex flex-col lg:flex-row gap-8 p-6 rounded-3xl z-10">
+            <div className="relative bg-[#1A001F] flex flex-col lg:flex-row gap-8 p-3 sm:p-4 md:p-6 rounded-3xl z-10">
               <BillingDetails />
               <OrderSummary
                 challenge={selectedChallenge}
