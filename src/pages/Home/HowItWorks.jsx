@@ -37,6 +37,7 @@ const HowItWorks = () => {
         <div className="md:col-span-4 flex flex-wrap justify-center gap-6">
           <InfoCard
             topContent={Withdrawl}
+            isImage
             title="Swift Withdrawals"
             description="Withdraw instantly, anytime you need it. Withdraw your rewards without any delays."
             bottomContent={
@@ -49,6 +50,7 @@ const HowItWorks = () => {
 
           <InfoCard
             topContent={Support}
+            isImage
             title="24/7 Support"
             description="Have questions? Our support team is always here for you!"
             status="Online"
@@ -60,6 +62,7 @@ const HowItWorks = () => {
           />
 
           <InfoCard
+            isImage
             topContent={Investment}
             title="50,000$+ Paid To Funded Traders This Month"
             description="Join a community of successful traders who have achieved their funding goals with our platform."

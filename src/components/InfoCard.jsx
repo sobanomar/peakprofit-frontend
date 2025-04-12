@@ -3,18 +3,13 @@ import { FaCircle } from "react-icons/fa";
 
 const InfoCard = ({
   topContent,
+  isImage = false,
   title,
   description,
   bottomContent,
   align = "center",
   status,
 }) => {
-  const isImage =
-    typeof topContent === "string" &&
-    ["png", "svg", "jpg", "webp", "jpeg"].some((ext) =>
-      topContent.toLowerCase().endsWith(ext)
-    );
-
   return (
     <div className="bg-[#2E1D3D] rounded-2xl p-6 shadow-md text-white max-w-sm w-full">
       <div
@@ -39,7 +34,6 @@ const InfoCard = ({
         )}
       </div>
 
-      {/* ✅ This section now conditionally aligns based on `align` prop */}
       <div className={align === "left" ? "text-left" : "text-center"}>
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-sm text-gray-300 mb-2">{description}</p>
