@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import EvaluationTable from "../../components/EvaluationTable";
 import ButtonGroup from "../../components/ButtonGroup";
 import EvaluationSidebar from "../../components/EvaluationSidebar";
+import METATRADER from "../../assets/images/home/traders/metaTraderLogo.webp";
 
 const Evaluation = forwardRef((props, ref) => {
   const [currentStep, setCurrentStep] = React.useState(3);
@@ -83,7 +84,7 @@ const Evaluation = forwardRef((props, ref) => {
     {
       value: 1,
       label: "METATRADER 5",
-      img: "https://getcryptofunded.com/wp-content/uploads/2025/02/Untitled-design-8.png",
+      img: METATRADER,
       badgeText: "Coming Soon",
       badgeColor: "orange",
     },

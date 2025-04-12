@@ -10,7 +10,10 @@ const InfoCard = ({
   status,
 }) => {
   const isImage =
-    typeof topContent === "string" && topContent.startsWith("http");
+    typeof topContent === "string" &&
+    ["png", "svg", "jpg", "webp", "jpeg"].some((ext) =>
+      topContent.toLowerCase().endsWith(ext)
+    );
 
   return (
     <div className="bg-[#2E1D3D] rounded-2xl p-6 shadow-md text-white max-w-sm w-full">

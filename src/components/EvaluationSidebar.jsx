@@ -1,6 +1,7 @@
 import React from "react";
 import AnimatedButton from "./AnimatedButton";
 import { useNavigate } from "react-router";
+import Venus from "../assets/images/home/planets/venus.webp";
 
 const EvaluationSidebar = ({
   accountSize = "$10,000",
@@ -74,7 +75,7 @@ const EvaluationSidebar = ({
         <div className="relative z-20 flex justify-center py-10">
           <div className="venus-glow" />
           <img
-            src="https://getcryptofunded.com/wp-content/uploads/2025/02/planet-3.png"
+            src={Venus}
             alt="Venus"
             className="w-40 h-40 relative planet-float"
           />

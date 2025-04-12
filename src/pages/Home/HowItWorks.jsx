@@ -1,5 +1,8 @@
 import InfoCard from "../../components/InfoCard";
 import React from "react";
+import Support from "../../assets/images/home/how_it_works/support.webp";
+import Withdrawl from "../../assets/images/home/how_it_works/withdrawl.webp";
+import Investment from "../../assets/images/home/how_it_works/investment-growth.webp";
 
 const HowItWorks = () => {
   return (
@@ -33,7 +36,7 @@ const HowItWorks = () => {
         {/* Bottom 3 Centered Cards */}
         <div className="md:col-span-4 flex flex-wrap justify-center gap-6">
           <InfoCard
-            topContent="https://getcryptofunded.com/wp-content/uploads/2025/02/Screenshot_2025-01-15_at_19.13.08-removebg-preview-e1736961283300.png"
+            topContent={Withdrawl}
             title="Swift Withdrawals"
             description="Withdraw instantly, anytime you need it. Withdraw your rewards without any delays."
             bottomContent={
@@ -45,7 +48,7 @@ const HowItWorks = () => {
           />
 
           <InfoCard
-            topContent="https://getcryptofunded.com/wp-content/uploads/2025/02/support.png"
+            topContent={Support}
             title="24/7 Support"
             description="Have questions? Our support team is always here for you!"
             status="Online"
@@ -57,7 +60,7 @@ const HowItWorks = () => {
           />
 
           <InfoCard
-            topContent="https://getcryptofunded.com/wp-content/uploads/2025/01/investment-growth.png"
+            topContent={Investment}
             title="50,000$+ Paid To Funded Traders This Month"
             description="Join a community of successful traders who have achieved their funding goals with our platform."
           />
