@@ -14,7 +14,7 @@ const NavBar = ({ mobile }) => {
         <Link to="/evaluation" className={baseLinkClasses}>
           Evaluations
         </Link>
-        <Link to="#" className={baseLinkClasses}>
+        <Link to="/faq" className={baseLinkClasses}>
           FAQ
         </Link>
         <Link to="/contact" className={baseLinkClasses}>
