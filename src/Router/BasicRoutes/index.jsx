@@ -11,26 +11,29 @@ import Contact from "../../pages/Contact";
 import FAQSingleCollectionLayout from "../../Layouts/FAQSingleCollectionLayout";
 import ArticlePage from "../../pages/FAQ/ArticlePage";
 import SearchResults from "../../pages/FAQ/SearchResults";
+import { ScrollToTopWrapper } from "../../utils/ScrollToTop";
 
 const BasicRoutes = () => {
   return (
     <FAQProvider>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path="evaluation" element={<Evaluations />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
+      <ScrollToTopWrapper>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />} />
+            <Route path="evaluation" element={<Evaluations />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
 
-        <Route path="/faq" element={<FAQLayout />}>
-          <Route index element={<FAQListing />} />
-          <Route path="search/:q" element={<SearchResults />} />
-        </Route>
-        <Route path="/collections" element={<FAQSingleCollectionLayout />}>
-          <Route path=":slug" element={<CollectionPage />} />
-          <Route path=":slug/:articleSlug" element={<ArticlePage />} />
-        </Route>
-      </Routes>
+          <Route path="/faq" element={<FAQLayout />}>
+            <Route index element={<FAQListing />} />
+            <Route path="search/:q" element={<SearchResults />} />
+          </Route>
+          <Route path="/collections" element={<FAQSingleCollectionLayout />}>
+            <Route path=":slug" element={<CollectionPage />} />
+            <Route path=":slug/:articleSlug" element={<ArticlePage />} />
+          </Route>
+        </Routes>
+      </ScrollToTopWrapper>
     </FAQProvider>
   );
 };

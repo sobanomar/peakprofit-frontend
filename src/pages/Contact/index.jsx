@@ -24,7 +24,7 @@ export default function Contact() {
 
   // Replace with your actual Google Maps API key
 
-  const mapLocation = "Dubai Silicon Oasis, Dubai, UAE";
+  const mapLocation = "1111 South Bayshore Drive, Miami, FL, USA";
 
   return (
     <div className="text-white flex flex-col">

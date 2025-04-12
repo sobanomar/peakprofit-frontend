@@ -12,7 +12,7 @@ const RawSpreads = () => {
             Try Our Raw Spreads!
           </h2>
           <p className="mt-2 md:mt-3 lg:mt-5 text-sm sm:text-base md:text-lg lg:text-xl">
-            Try out near zero sharp spreads at GCF. Use these credentials to
+            Try out near zero sharp spreads at PPF. Use these credentials to
             login to the Platform5 trading platform.
           </p>
           <ul className="mb-2 md:mb-4 text-sm sm:text-base md:text-lg lg:text-xl space-y-1">
@@ -30,7 +30,7 @@ const RawSpreads = () => {
         {/* Right Side */}
         <div className="bg-white text-black p-3 md:p-4 lg:p-6 mt-2 mb-4 md:mb-6 lg:mb-8 rounded-xl md:rounded-2xl w-full lg:max-w-sm shadow-lg">
           <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium mb-2 md:mb-3 lg:mb-4">
-            MetaTrader 5
+            TradeLocker
           </h3>
           <CopyField label="Login ID" value="98814844" />
           <CopyField label="Password" value="Ja0Ka8w*A" />

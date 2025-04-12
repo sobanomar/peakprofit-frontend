@@ -19,7 +19,7 @@ const Contact = () => {
         <li className="flex items-start"></li>
       </ul>
       <p className="text-xs mt-2 md:mt-16 text-white font-semibold ">
-        Copyright © {new Date().getFullYear()} GCF. All rights reserved.
+        Copyright © {new Date().getFullYear()} PPF. All rights reserved.
       </p>
     </div>
   );

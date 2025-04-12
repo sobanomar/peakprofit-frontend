@@ -41,10 +41,10 @@ export const FAQArticles = [
         lastUpdated: "Over 3 months ago",
       },
       {
-        title: "What is GetCryptoFunded (GCF)?",
-        description: `GetCryptoFunded (GCF) is a proprietary trading firm that funds talented traders with simulated capital. Traders can participate in an evaluation phase to prove their trading skills, and upon passing, they receive a funded account to trade and earn profit splits.
+        title: "What is PeakProfit (PPF)?",
+        description: `PeakProfit (PPF) is a proprietary trading firm that funds talented traders with simulated capital. Traders can participate in an evaluation phase to prove their trading skills, and upon passing, they receive a funded account to trade and earn profit splits.
 
-How does GCF work?
+How does PPF work?
 1️⃣ Choose a challenge – Select from our evaluation models.
 2️⃣ Pass the challenge – Meet the profit targets while following risk management rules.
 3️⃣ Receive funding – Get access to a funded account and trade with capital.
@@ -54,15 +54,15 @@ How does GCF work?
 
  
 
-Who can trade with GCF?
+Who can trade with PPF?
 Anyone worldwide can participate, except residents of restricted countries due to regulatory limitations.
 
  
 
  
 
-Is GCF a regulated broker?
-No, GCF is not a broker. 
+Is PPF a regulated broker?
+No, PPF is not a broker. 
 
  
 
@@ -113,10 +113,10 @@ Currently, we do not offer free trials. Traders must purchase a challenge to par
         lastUpdated: "Over 3 months ago",
       },
       {
-        title: "What is GetCryptoFunded (GCF)?",
-        description: `GetCryptoFunded (GCF) is a proprietary trading firm that funds talented traders with simulated capital. Traders can participate in an evaluation phase to prove their trading skills, and upon passing, they receive a funded account to trade and earn profit splits.
+        title: "What is PeakProfit (PPF)?",
+        description: `PeakProfit (PPF) is a proprietary trading firm that funds talented traders with simulated capital. Traders can participate in an evaluation phase to prove their trading skills, and upon passing, they receive a funded account to trade and earn profit splits.
 
-How does GCF work?
+How does PPF work?
 1️⃣ Choose a challenge – Select from our evaluation models.
 2️⃣ Pass the challenge – Meet the profit targets while following risk management rules.
 3️⃣ Receive funding – Get access to a funded account and trade with capital.
@@ -126,15 +126,15 @@ How does GCF work?
 
  
 
-Who can trade with GCF?
+Who can trade with PPF?
 Anyone worldwide can participate, except residents of restricted countries due to regulatory limitations.
 
  
 
  
 
-Is GCF a regulated broker?
-No, GCF is not a broker. 
+Is PPF a regulated broker?
+No, PPF is not a broker. 
 
  
 
@@ -185,10 +185,10 @@ Currently, we do not offer free trials. Traders must purchase a challenge to par
         lastUpdated: "Over 3 months ago",
       },
       {
-        title: "What is GetCryptoFunded (GCF)?",
-        description: `GetCryptoFunded (GCF) is a proprietary trading firm that funds talented traders with simulated capital. Traders can participate in an evaluation phase to prove their trading skills, and upon passing, they receive a funded account to trade and earn profit splits.
+        title: "What is PeakProfit (PPF)?",
+        description: `PeakProfit (PPF) is a proprietary trading firm that funds talented traders with simulated capital. Traders can participate in an evaluation phase to prove their trading skills, and upon passing, they receive a funded account to trade and earn profit splits.
 
-How does GCF work?
+How does PPF work?
 1️⃣ Choose a challenge – Select from our evaluation models.
 2️⃣ Pass the challenge – Meet the profit targets while following risk management rules.
 3️⃣ Receive funding – Get access to a funded account and trade with capital.
@@ -198,15 +198,15 @@ How does GCF work?
 
  
 
-Who can trade with GCF?
+Who can trade with PPF?
 Anyone worldwide can participate, except residents of restricted countries due to regulatory limitations.
 
  
 
  
 
-Is GCF a regulated broker?
-No, GCF is not a broker. 
+Is PPF a regulated broker?
+No, PPF is not a broker. 
 
  
 
@@ -257,10 +257,10 @@ Currently, we do not offer free trials. Traders must purchase a challenge to par
         lastUpdated: "Over 3 months ago",
       },
       {
-        title: "What is GetCryptoFunded (GCF)?",
-        description: `GetCryptoFunded (GCF) is a proprietary trading firm that funds talented traders with simulated capital. Traders can participate in an evaluation phase to prove their trading skills, and upon passing, they receive a funded account to trade and earn profit splits.
+        title: "What is PeakProfit (PPF)?",
+        description: `PeakProfit (PPF) is a proprietary trading firm that funds talented traders with simulated capital. Traders can participate in an evaluation phase to prove their trading skills, and upon passing, they receive a funded account to trade and earn profit splits.
 
-How does GCF work?
+How does PPF work?
 1️⃣ Choose a challenge – Select from our evaluation models.
 2️⃣ Pass the challenge – Meet the profit targets while following risk management rules.
 3️⃣ Receive funding – Get access to a funded account and trade with capital.
@@ -270,15 +270,15 @@ How does GCF work?
 
  
 
-Who can trade with GCF?
+Who can trade with PPF?
 Anyone worldwide can participate, except residents of restricted countries due to regulatory limitations.
 
  
 
  
 
-Is GCF a regulated broker?
-No, GCF is not a broker. 
+Is PPF a regulated broker?
+No, PPF is not a broker. 
 
  
 
@@ -329,10 +329,10 @@ Currently, we do not offer free trials. Traders must purchase a challenge to par
         lastUpdated: "Over 3 months ago",
       },
       {
-        title: "What is GetCryptoFunded (GCF)?",
-        description: `GetCryptoFunded (GCF) is a proprietary trading firm that funds talented traders with simulated capital. Traders can participate in an evaluation phase to prove their trading skills, and upon passing, they receive a funded account to trade and earn profit splits.
+        title: "What is PeakProfit (PPF)?",
+        description: `PeakProfit (PPF) is a proprietary trading firm that funds talented traders with simulated capital. Traders can participate in an evaluation phase to prove their trading skills, and upon passing, they receive a funded account to trade and earn profit splits.
 
-How does GCF work?
+How does PPF work?
 1️⃣ Choose a challenge – Select from our evaluation models.
 2️⃣ Pass the challenge – Meet the profit targets while following risk management rules.
 3️⃣ Receive funding – Get access to a funded account and trade with capital.
@@ -342,15 +342,15 @@ How does GCF work?
 
  
 
-Who can trade with GCF?
+Who can trade with PPF?
 Anyone worldwide can participate, except residents of restricted countries due to regulatory limitations.
 
  
 
  
 
-Is GCF a regulated broker?
-No, GCF is not a broker. 
+Is PPF a regulated broker?
+No, PPF is not a broker. 
 
  
 
