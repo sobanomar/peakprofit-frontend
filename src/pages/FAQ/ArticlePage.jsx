@@ -27,13 +27,14 @@ const ArticlePage = () => {
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-6">
+    <div className="max-w-4xl mx-auto px-6">
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-6">
         {/* <Link to="/faq" className="hover:underline text-black"> */}
-        <Link className="hover:underline text-black">
+        <Link to={"/faq"} className="hover:underline text-black">
           All Collections
-        </Link> &gt;{" "}
+        </Link>{" "}
+        &gt;{" "}
         <Link
           to={`/collections/${slug}`}
           className="hover:underline text-black"

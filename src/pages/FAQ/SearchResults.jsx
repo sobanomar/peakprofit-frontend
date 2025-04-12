@@ -54,10 +54,9 @@ const SearchResults = () => {
         {results.map((article, idx) => (
           <Link
             key={idx}
-            // to={`/collections/${slugify(article.sectionTitle)}/${slugify(
-            //   article.title
-            // )}`}
-            to={"#"}
+            to={`/collections/${slugify(article.sectionTitle)}/${slugify(
+              article.title
+            )}`}
             className="block border border-gray-200 hover:border-teal-500 rounded-xl px-6 py-4 mb-4 transition-colors duration-200 group"
           >
             <h3 className="text-lg font-semibold group-hover:text-teal-600 mb-1">
