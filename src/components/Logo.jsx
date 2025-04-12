@@ -1,9 +1,11 @@
 import React from "react";
 
-const Logo = () => {
+const Logo = ({ color }) => {
+  let logoColor;
+  color ? (logoColor = `text-${color}`) : "text-black";
   return (
     <div>
-      <h1 className="text-2xl font-semibold">PeakProfit</h1>
+      <h1 className={"text-2xl font-semibold " + logoColor}>PeakProfit</h1>
     </div>
   );
 };
