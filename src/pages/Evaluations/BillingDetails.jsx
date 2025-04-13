@@ -1,4 +1,5 @@
 import React from "react";
+import { countries } from "../../utils/countries";
 
 const BillingDetails = () => {
   return (
@@ -44,8 +45,11 @@ const BillingDetails = () => {
             Country / Region <span className="text-red-500">*</span>
           </label>
           <select className="w-full bg-[#0F101E] border border-gray-700 focus:border-[#5C6728] focus:outline-none px-4 py-2 rounded-md">
-            <option>Uganda</option>
-            {/* Add more countries if needed */}
+            {countries.map((country) => (
+              <option key={country} value={country}>
+                {country}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -73,10 +77,10 @@ const BillingDetails = () => {
           <label className="block mb-1 text-sm font-medium">
             District <span className="text-red-500">*</span>
           </label>
-          <select className="w-full bg-[#0F101E] border border-gray-700 focus:border-[#5C6728] focus:outline-none px-4 py-2 rounded-md">
-            <option>Nakasongola</option>
-            {/* Add more districts as needed */}
-          </select>
+          <input
+            type="text"
+            className="w-full bg-[#0F101E] border border-gray-700 focus:border-[#5C6728] focus:outline-none px-4 py-2 rounded-md"
+          />
         </div>
 
         <div>
