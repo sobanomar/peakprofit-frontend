@@ -12,6 +12,7 @@ import FAQSingleCollectionLayout from "../../Layouts/FAQSingleCollectionLayout";
 import ArticlePage from "../../pages/FAQ/ArticlePage";
 import SearchResults from "../../pages/FAQ/SearchResults";
 import { ScrollToTopWrapper } from "../../utils/ScrollToTop";
+import TradingPairs from "../../pages/TradingPairs";
 
 const BasicRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const BasicRoutes = () => {
             <Route index element={<Home />} />
             <Route path="evaluation" element={<Evaluations />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="trading-pairs" element={<TradingPairs />} />
           </Route>
 
           <Route path="/faq" element={<FAQLayout />}>

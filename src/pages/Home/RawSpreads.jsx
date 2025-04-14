@@ -1,6 +1,7 @@
 import { FaChevronRight } from "react-icons/fa";
 import CopyField from "../../components/CopyField";
 import React from "react";
+import { Link } from "react-router";
 
 const RawSpreads = () => {
   return (
@@ -21,10 +22,13 @@ const RawSpreads = () => {
             <li>Metals commissions: 5 USD per Lot</li>
             <li>Indices commissions: 5 USD per Lot</li>
           </ul>
-          <button className="mt-4 md:mt-8 mb-0 lg:mb-10 lg:mt-10 xl:mt-14 w-fit flex items-center gap-1 md:gap-2 bg-white text-black py-1.5 px-2 md:py-2 md:px-3 lg:py-3 lg:px-4 rounded-md font-semibold hover:bg-neutral-300 transition-all duration-250 text-xs sm:text-sm md:text-base">
+          <Link
+            to="trading-pairs"
+            className="mt-4 md:mt-8 mb-0 lg:mb-10 lg:mt-10 xl:mt-14 w-fit flex items-center gap-1 md:gap-2 bg-white text-black py-1.5 px-2 md:py-2 md:px-3 lg:py-3 lg:px-4 rounded-md font-semibold hover:bg-neutral-300 transition-all duration-250 text-xs sm:text-sm md:text-base"
+          >
             All our Trading Pairs{" "}
             <FaChevronRight color="black" className="mt-0.5" size={12} />
-          </button>
+          </Link>
         </div>
 
         {/* Right Side */}

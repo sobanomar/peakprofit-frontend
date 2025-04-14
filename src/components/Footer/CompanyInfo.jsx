@@ -49,7 +49,7 @@ const CompanyInfo = () => {
         {paymentLogos.map((logo, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg p-2 w-14 h-10 flex shadow-md"
+            className="bg-white rounded-lg p-2 w-14 h-10 flex shadow-md justify-center"
           >
             <img
               src={logo.src}
