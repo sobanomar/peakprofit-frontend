@@ -17,10 +17,15 @@ const Header = () => {
         </div>
 
         {/* Desktop Client Area Button */}
-        <div className="hidden lg:flex cursor-pointer bg-[#7F0DDA] rounded-full py-2 px-6 md:py-4 md:px-10 gap-x-2 items-center font-semibold">
+        <a
+          href="https://peakprofit-client-dashboard.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden lg:flex cursor-pointer bg-[#7F0DDA] rounded-full py-2 px-6 md:py-4 md:px-10 gap-x-2 items-center font-semibold"
+        >
           Client Area
           <FaUser size={18} color="b45ecf" />
-        </div>
+        </a>
 
         {/* Hamburger Menu Toggle */}
         <div className="lg:hidden flex items-center gap-4">
@@ -39,10 +44,15 @@ const Header = () => {
           <NavBar mobile />
 
           {/* Client Area button in menu */}
-          <div className="flex items-center justify-center cursor-pointer bg-[#7F0DDA] rounded-full py-3 px-6 gap-2">
+          <a
+            href="https://peakprofit-client-dashboard.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center cursor-pointer bg-[#7F0DDA] rounded-full py-3 px-6 gap-2"
+          >
             <span>Client Area</span>
             <FaUser size={18} color="b45ecf" />
-          </div>
+          </a>
         </div>
       )}
     </header>
