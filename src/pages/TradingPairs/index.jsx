@@ -116,7 +116,7 @@ const TradingPairs = () => {
         >
           <div className="p-2">
             <h1 className="text-4xl font-semibold">
-              GetCrypto Funded Tradable Pairs
+              Peak Profit Tradable Pairs
             </h1>
             <p className="py-2 text-lg">
               Trade with confidence across a wide range of Crypto, Forex, and
@@ -136,7 +136,7 @@ const TradingPairs = () => {
         >
           <h1 className="text-3xl font-bold">Ready to Start Trading?</h1>
           <p className="text-lg font-light">
-            Join GetCrypto Funded and access top-tier trading pairs with instant
+            Join PeakProfit and access top-tier trading pairs with instant
             funding. Maximize your potential today!
           </p>
 
