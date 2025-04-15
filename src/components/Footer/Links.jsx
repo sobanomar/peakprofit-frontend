@@ -4,10 +4,9 @@ import { Link } from "react-router"; // Fixed import from "react-router"
 
 const Links = () => {
   const links = [
-    { name: "Affiliate Program", path: "#" },
-    { name: "Terms & Services", path: "#" },
-    { name: "Privacy Policy", path: "#" },
-    { name: "Refund Policy", path: "#" },
+    { name: "Terms & Services", path: "/terms-and-services" },
+    { name: "Privacy Policy", path: "/privacy-policy" },
+    { name: "Refund Policy", path: "/refund-policy" },
   ];
 
   return (

@@ -13,6 +13,9 @@ import ArticlePage from "../../pages/FAQ/ArticlePage";
 import SearchResults from "../../pages/FAQ/SearchResults";
 import { ScrollToTopWrapper } from "../../utils/ScrollToTop";
 import TradingPairs from "../../pages/TradingPairs";
+import TermsAndServices from "../../pages/TermsAndServices";
+import PrivacyPolicy from "../../pages/PrivacyPolicy";
+import RefundPolicy from "../../pages/RefundPolicy";
 
 const BasicRoutes = () => {
   return (
@@ -24,6 +27,9 @@ const BasicRoutes = () => {
             <Route path="evaluation" element={<Evaluations />} />
             <Route path="contact" element={<Contact />} />
             <Route path="trading-pairs" element={<TradingPairs />} />
+            <Route path="terms-and-services" element={<TermsAndServices />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="refund-policy" element={<RefundPolicy />} />
           </Route>
 
           <Route path="/faq" element={<FAQLayout />}>
