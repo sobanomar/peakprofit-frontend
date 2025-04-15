@@ -5,6 +5,7 @@ import SummaryCard from "./SummaryCard";
 import AddOnsSelector from "./AddOnsSelector";
 import BillingDetails from "./BillingDetails";
 import OrderSummary from "./OrderSummary";
+import { useNavigate } from "react-router";
 
 const CheckoutPage = () => {
   const [selectedChallenge, setSelectedChallenge] = useState("1-Step");
@@ -12,7 +13,10 @@ const CheckoutPage = () => {
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedAddOns, setSelectedAddOns] = useState([]);
 
-  const challengeOptions = ["1-Step", "2-Step", "3-Step"];
+  const navigate = useNavigate();
+
+  // const challengeOptions = ["1-Step", "2-Step", "3-Step"];
+  const challengeOptions = ["1-Step"];
   const accountSizes = [
     "5K",
     "10K",
@@ -24,22 +28,42 @@ const CheckoutPage = () => {
     "500K",
   ];
 
+  const accountOptions = [
+    { size: "5K", url: "https://buy.stripe.com/eVa01UgNT5gU4PmcNf" },
+    { size: "10K", url: "https://buy.stripe.com/cN2cOGeFL5gU2HeaFc" },
+    { size: "25K", url: "https://buy.stripe.com/dR6bKC4177p20z64gK" },
+    { size: "50K", url: "https://buy.stripe.com/3csdSKapv9xaepW3cM" },
+    { size: "100K", url: "https://buy.stripe.com/00geWO69fbFiepW00r" },
+    { size: "200K", url: "https://buy.stripe.com/aEU15YdBHbFi81y3cH" },
+    { size: "300K", url: "https://buy.stripe.com/dR66qi8hn38MepWdRm" },
+    { size: "500K", url: "https://buy.stripe.com/cN27um69fdNq3Li4gN" },
+  ];
+
   const addOns = [
     { id: 1, name: "95% Profit Split", price: 25 },
     { id: 2, name: "0 Minimum Trading Days", price: 15 },
     { id: 3, name: "Daily Drawdown 6%", price: 15 },
     { id: 4, name: "Max Drawdown 12%", price: 25 },
   ];
-  // Dummy pricing logic
+  // pricing logic
   const priceMap = {
     "5K": 25,
-    "10K": 49,
+    "10K": 60,
     "25K": 99,
-    "50K": 199,
+    "50K": 150,
     "100K": 349,
     "200K": 599,
     "300K": 749,
     "500K": 1200,
+  };
+
+  const onContinue = () => {
+    const selected = accountOptions.find((opt) => opt.size === selectedSize);
+    if (selected) {
+      window.location.href = selected.url;
+    } else {
+      alert("Please select a valid account size.");
+    }
   };
 
   const handleAddonToggle = (id) => {
@@ -78,9 +102,9 @@ const CheckoutPage = () => {
               >
                 1
               </span>
-              <span>Select Account</span>
+              <span>Select Account and checkout</span>
             </div>
-            <div className="h-0.5 rotate-90 md:rotate-0 w-6 md:w-20 md:ml-0 ml-6 bg-white" />
+            {/* <div className="h-0.5 rotate-90 md:rotate-0 w-6 md:w-20 md:ml-0 ml-6 bg-white" />
             <div className="flex items-center space-x-3  py-2 rounded-full font-bold ">
               <span
                 className={`rounded-full w-9 h-9 flex items-center justify-center font-bold ${
@@ -92,7 +116,7 @@ const CheckoutPage = () => {
                 2
               </span>
               <span>Checkout Billing</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -123,13 +147,13 @@ const CheckoutPage = () => {
                 onSelect={setSelectedSize}
               />
 
-              {selectedSize && (
+              {/* {selectedSize && (
                 <AddOnsSelector
                   addOns={addOns}
                   selected={selectedAddOns}
                   onToggle={handleAddonToggle}
                 />
-              )}
+              )} */}
             </div>
             <SummaryCard
               challenge={selectedChallenge}
@@ -138,7 +162,8 @@ const CheckoutPage = () => {
               addOns={selectedAddOnDetails}
               addOnsTotal={addOnsTotal}
               grandTotal={grandTotal}
-              onContinue={() => setCurrentStep(2)}
+              onContinue={onContinue}
+              selectedSize={selectedSize}
             />
           </div>
         </div>

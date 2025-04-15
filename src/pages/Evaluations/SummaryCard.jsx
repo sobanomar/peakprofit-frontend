@@ -11,6 +11,7 @@ const SummaryCard = ({
   addOnsTotal = 0,
   grandTotal = 0,
   onContinue,
+  selectedSize,
 }) => {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -84,7 +85,14 @@ const SummaryCard = ({
         <span>${grandTotal.toFixed(2)}</span>
       </div>
       <button
-        className="bg-[#C945F7] w-full py-2 cursor-pointer px-4 mt-6 rounded-full font-semibold"
+        disabled={!selectedSize}
+        className={`w-full py-2 px-4 mt-6 rounded-full font-semibold transition 
+    ${
+      selectedSize
+        ? "bg-[#C945F7] text-white cursor-pointer hover:bg-[#b534e2]"
+        : "bg-purple-700 text-gray-400 cursor-not-allowed"
+    }
+  `}
         onClick={onContinue}
       >
         Continue To Checkout
