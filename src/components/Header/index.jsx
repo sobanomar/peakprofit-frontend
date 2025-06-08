@@ -18,7 +18,7 @@ const Header = () => {
 
         {/* Desktop Client Area Button */}
         <a
-          href="https://peakprofit-client-dashboard.vercel.app/"
+          href="https://dashboard.peakprofitfunding.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden lg:flex cursor-pointer bg-[#7F0DDA] rounded-full py-2 px-6 md:py-4 md:px-10 gap-x-2 items-center font-semibold"
@@ -45,7 +45,7 @@ const Header = () => {
 
           {/* Client Area button in menu */}
           <a
-            href="https://peakprofit-client-dashboard.vercel.app/"
+            href="https://dashboard.peakprofitfunding.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center cursor-pointer bg-[#7F0DDA] rounded-full py-3 px-6 gap-2"

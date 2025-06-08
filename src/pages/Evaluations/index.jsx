@@ -29,14 +29,14 @@ const CheckoutPage = () => {
   ];
 
   const accountOptions = [
-    { size: "5K", url: "https://buy.stripe.com/eVa01UgNT5gU4PmcNf" },
-    { size: "10K", url: "https://buy.stripe.com/cN2cOGeFL5gU2HeaFc" },
-    { size: "25K", url: "https://buy.stripe.com/dR6bKC4177p20z64gK" },
-    { size: "50K", url: "https://buy.stripe.com/3csdSKapv9xaepW3cM" },
-    { size: "100K", url: "https://buy.stripe.com/00geWO69fbFiepW00r" },
-    { size: "200K", url: "https://buy.stripe.com/aEU15YdBHbFi81y3cH" },
-    { size: "300K", url: "https://buy.stripe.com/dR66qi8hn38MepWdRm" },
-    { size: "500K", url: "https://buy.stripe.com/cN27um69fdNq3Li4gN" },
+    { size: "5K", url: "https://buy.stripe.com/5kQ6oH4XW5TX4xF8a4gEg09" },
+    { size: "10K", url: "https://buy.stripe.com/3cIdR9gGEeqtc07cqkgEg08" },
+    { size: "25K", url: "https://buy.stripe.com/eVq3cv7648257JRbmggEg07" },
+    { size: "50K", url: "https://buy.stripe.com/bJecN5fCA9699RZ61WgEg06" },
+    { size: "100K", url: "https://buy.stripe.com/8x23cv4XW2HLaW3gGAgEg05" },
+    { size: "200K", url: "https://buy.stripe.com/3cI7sL4XW3LPaW39e8gEg04" },
+    { size: "300K", url: "https://buy.stripe.com/bJe4gzaig969ggngGAgEg03" },
+    { size: "500K", url: "https://buy.stripe.com/28E28r2PObehggngGAgEg02" },
   ];
 
   const addOns = [
@@ -49,10 +49,10 @@ const CheckoutPage = () => {
   const priceMap = {
     "5K": 25,
     "10K": 60,
-    "25K": 99,
+    "25K": 100,
     "50K": 150,
-    "100K": 349,
-    "200K": 599,
+    "100K": 350,
+    "200K": 600,
     "300K": 749,
     "500K": 1200,
   };
