@@ -14,7 +14,7 @@ const Contact = () => {
         </li>
         <li className=" text-white text-sm font-semibold ">
           <p className="mb-1">Live chat support during working hours</p>
-          <span>support@peakprofitllc.com</span>
+          <span>support@peakprofitfunding.com</span>
         </li>
         <li className="flex items-start"></li>
       </ul>

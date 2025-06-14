@@ -1,6 +1,5 @@
 import React from "react";
-
-import heroImage from "../../../assets/images/home/home_hero.webp";
+import heroImage from "../../../assets/images/home/home_hero_2.png";
 import discord from "../../../assets/images/home/discord.webp";
 import ListedTTP from "../../../assets/images/home/Listed_TTP.webp";
 import UnlistedFirm from "../../../assets/images/home/Unlisted_Firm.webp";
@@ -73,7 +72,7 @@ export default function HomeHero({ onStartChallengeClick }) {
       <div className="w-full lg:w-5/12 ">
         <div className="relative justify-center items-center ">
           {/* You would replace these with your actual image sources */}
-          <div className="w-full h-[120%] rounded-full bg-[radial-gradient(circle,_white,_transparent_70%)] opacity-50 absolute  left-0 -z-10 -bottom-7 md:-bottom-10 " />
+          <div className="w-full h-[120%] rounded-full bg-[radial-gradient(circle,_white,_transparent_70%)] opacity-40 absolute  left-0 -z-10 -bottom-7 md:-bottom-10 " />
           <img
             src={heroImage}
             alt="Trading app mockups"

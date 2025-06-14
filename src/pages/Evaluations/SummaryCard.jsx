@@ -20,7 +20,7 @@ const SummaryCard = ({
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Total Summary</h2>
         <button
-          className="bg-[#CF59FF] rounded-full px-0.5 py-0.5"
+          className="bg-[#CF59FF] cursor-pointer rounded-full px-0.5 py-0.5"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           {isOpen ? <HiChevronUp size={22} /> : <HiChevronDown size={22} />}

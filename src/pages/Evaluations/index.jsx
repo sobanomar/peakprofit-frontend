@@ -15,8 +15,8 @@ const CheckoutPage = () => {
 
   const navigate = useNavigate();
 
-  // const challengeOptions = ["1-Step", "2-Step", "3-Step"];
-  const challengeOptions = ["1-Step"];
+  const challengeOptions = ["1-Step", "2-Step", "3-Step"];
+  // const challengeOptions = ["1-Step"];
   const accountSizes = [
     "5K",
     "10K",
@@ -29,21 +29,45 @@ const CheckoutPage = () => {
   ];
 
   const accountOptions = [
-    { size: "5K", url: "https://buy.stripe.com/5kQ6oH4XW5TX4xF8a4gEg09" },
-    { size: "10K", url: "https://buy.stripe.com/3cIdR9gGEeqtc07cqkgEg08" },
-    { size: "25K", url: "https://buy.stripe.com/eVq3cv7648257JRbmggEg07" },
-    { size: "50K", url: "https://buy.stripe.com/bJecN5fCA9699RZ61WgEg06" },
-    { size: "100K", url: "https://buy.stripe.com/8x23cv4XW2HLaW3gGAgEg05" },
-    { size: "200K", url: "https://buy.stripe.com/3cI7sL4XW3LPaW39e8gEg04" },
-    { size: "300K", url: "https://buy.stripe.com/bJe4gzaig969ggngGAgEg03" },
-    { size: "500K", url: "https://buy.stripe.com/28E28r2PObehggngGAgEg02" },
+    {
+      size: "5K",
+      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/5KFUNDED",
+    },
+    {
+      size: "10K",
+      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/10KFUNDED",
+    },
+    {
+      size: "25K",
+      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/25KFUNDED",
+    },
+    {
+      size: "50K",
+      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/50KFUNDED",
+    },
+    {
+      size: "100K",
+      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/100KFUNDED",
+    },
+    {
+      size: "200K",
+      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/200KFUNDED",
+    },
+    {
+      size: "300K",
+      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/300KFUNDED",
+    },
+    {
+      size: "500K",
+      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/500KFUNDED",
+    },
   ];
 
   const addOns = [
-    { id: 1, name: "95% Profit Split", price: 25 },
-    { id: 2, name: "0 Minimum Trading Days", price: 15 },
-    { id: 3, name: "Daily Drawdown 6%", price: 15 },
-    { id: 4, name: "Max Drawdown 12%", price: 25 },
+    { id: 1, name: "95% Profit Split", price: 0 },
+    { id: 2, name: "0 Minimum Trading Days", price: 0 },
+    { id: 3, name: "Daily Drawdown 6%", price: 0 },
+    { id: 4, name: "Max Drawdown 12%", price: 0 },
   ];
   // pricing logic
   const priceMap = {
@@ -53,7 +77,7 @@ const CheckoutPage = () => {
     "50K": 150,
     "100K": 350,
     "200K": 600,
-    "300K": 749,
+    "300K": 750,
     "500K": 1200,
   };
 
@@ -116,7 +140,7 @@ const CheckoutPage = () => {
                 2
               </span>
               <span>Checkout Billing</span>
-            </div> */}
+            </div>  */}
           </div>
         </div>
       </div>
@@ -147,13 +171,13 @@ const CheckoutPage = () => {
                 onSelect={setSelectedSize}
               />
 
-              {/* {selectedSize && (
+              {selectedSize && (
                 <AddOnsSelector
                   addOns={addOns}
                   selected={selectedAddOns}
                   onToggle={handleAddonToggle}
                 />
-              )} */}
+              )}
             </div>
             <SummaryCard
               challenge={selectedChallenge}
