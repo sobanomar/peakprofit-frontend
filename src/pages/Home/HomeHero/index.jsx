@@ -53,7 +53,7 @@ export default function HomeHero({ onStartChallengeClick }) {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://discord.gg/KxBpeNmf"
+            href="https://discord.gg/pF6H8G6yjY"
             className="bg-neutral-800 hover:bg-neutral-700 text-white py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center border-1 border-neutral-500 md:w-1/2"
           >
             <img src={discord} className="h-6 w-6 mr-2" alt="dicord.jpeg" />
@@ -69,7 +69,7 @@ export default function HomeHero({ onStartChallengeClick }) {
       </div>
 
       {/* Right content - Device mockups */}
-      <div className="w-full lg:w-5/12 ">
+      <div className="w-full lg:w-7/12 ">
         <div className="relative justify-center items-center ">
           {/* You would replace these with your actual image sources */}
           <div className="w-full h-[120%] rounded-full bg-[radial-gradient(circle,_white,_transparent_70%)] opacity-40 absolute  left-0 -z-10 -bottom-7 md:-bottom-10 " />
