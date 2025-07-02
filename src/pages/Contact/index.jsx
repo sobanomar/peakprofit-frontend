@@ -7,19 +7,44 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [responseMsg, setResponseMsg] = useState("");
+  const [responseType, setResponseType] = useState(""); // 'success' or 'error'
   const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Here you would handle the form submission
-    alert("Message sent successfully!");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setLoading(true);
+    setResponseMsg("");
+    setResponseType("");
+    try {
+      const res = await fetch(`${apiBaseUrl}/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.message || "Failed to send message.");
+      }
+
+      setResponseMsg("Message sent successfully!");
+      setResponseType("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      setResponseMsg("An error occurred. Please try again.");
+      setResponseType("error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   // Replace with your actual Google Maps API key
@@ -54,6 +79,18 @@ export default function Contact() {
           {/* Contact Form Section */}
           <div className="w-full md:w-7/12 p-8 md:p-12">
             <h2 className="text-2xl font-semibold mb-4">Send a message</h2>
+
+            {responseMsg && (
+              <div
+                className={`mb-4 p-3 rounded-lg text-center ${
+                  responseType === "success"
+                    ? "bg-green-600 text-white"
+                    : "bg-red-600 text-white"
+                }`}
+              >
+                {responseMsg}
+              </div>
+            )}
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -123,9 +160,38 @@ export default function Contact() {
               <div>
                 <button
                   type="submit"
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-8 rounded-lg transition duration-300"
+                  className={`bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-8 rounded-lg transition duration-300 flex items-center justify-center ${
+                    loading ? "opacity-60 cursor-not-allowed" : ""
+                  }`}
+                  disabled={loading}
                 >
-                  Send Message
+                  {loading ? (
+                    <span className="flex items-center gap-2">
+                      <svg
+                        className="animate-spin h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8v8z"
+                        ></path>
+                      </svg>
+                      Sending...
+                    </span>
+                  ) : (
+                    "Send Message"
+                  )}
                 </button>
               </div>
             </form>
