@@ -1,15 +1,48 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../Logo";
 import NavBar from "./NavBar";
 import { FaUser, FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showLogo, setShowLogo] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (window.innerWidth < 1024) {
+        // Only apply for mobile/tablets
+        if (currentScrollY > lastScrollY && currentScrollY > 50) {
+          // scrolling down
+          setShowLogo(false);
+        } else {
+          // scrolling up
+          setShowLogo(true);
+        }
+        setLastScrollY(currentScrollY);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
     <header className="fixed w-full z-50 px-4 sm:px-8 mt-8">
-      <div className="flex justify-between items-center text-white">
-        <Logo />
+      <div className="flex justify-between items-center text-white transition-all duration-300 ease-in-out">
+        {/* Conditionally render logo on scroll */}
+        <div
+          className={`${
+            showLogo ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-300 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24`}
+        >
+          <Logo />
+        </div>
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex">
@@ -42,8 +75,6 @@ const Header = () => {
       {menuOpen && (
         <div className="lg:hidden mt-4 bg-[#472C64] rounded-xl py-4 px-6 space-y-4 text-white font-semibold text-lg shadow-lg">
           <NavBar mobile />
-
-          {/* Client Area button in menu */}
           <a
             href="https://dashboard.peakprofitfunding.com/"
             target="_blank"
