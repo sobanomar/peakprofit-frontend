@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axiosInstance from "../../api/axios";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -23,23 +24,19 @@ export default function Contact() {
     setLoading(true);
     setResponseMsg("");
     setResponseType("");
+
     try {
-      const res = await fetch(`${apiBaseUrl}/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.message || "Failed to send message.");
-      }
+      const res = await axiosInstance.post(
+        "/contact",
+        formData,
+        { withCredentials: true } // ✅ Important for cookies / CORS credentials
+      );
 
       setResponseMsg("Message sent successfully!");
       setResponseType("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (err) {
+      console.error("Contact form error:", err);
       setResponseMsg("An error occurred. Please try again.");
       setResponseType("error");
     } finally {

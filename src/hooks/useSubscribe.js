@@ -12,7 +12,7 @@ const useSubscribe = () => {
     setResponse(null);
 
     try {
-      const res = await axios.post("/api/subscription/subscribe", { email });
+      const res = await axios.post("/subscription/subscribe", { email });
       setResponse(res.data.message);
       return { success: true, message: res.data.message };
     } catch (err) {

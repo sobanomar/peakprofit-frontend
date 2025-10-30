@@ -1,11 +1,13 @@
 import axios from "axios";
-import { BACKEND_BASEURL } from "../constants/BACKEND_BASEURL";
+
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
 const axiosInstance = axios.create({
-  baseURL: BACKEND_BASEURL,
+  baseURL: apiBaseUrl,
   headers: {
     "Content-Type": "application/json",
   },
+  withCredentials: true, // ✅ ensures cookies & auth headers are sent
 });
 
 export default axiosInstance;
