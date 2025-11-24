@@ -10,19 +10,17 @@ import TraderTestimonials from "./TraderTestimonials";
 import Evaluation from "./Evaluation";
 
 const Home = () => {
-  const evaluationRef = useRef(null);
-
-  const scrollToEvaluation = () => {
-    evaluationRef.current?.scrollIntoView({ behavior: "smooth" });
+  const handleChallengeClick = () => {
+    window.location.href = "https://dashboard.peakprofitfunding.com/login";
   };
 
   return (
     <>
-      <HomeHero onStartChallengeClick={scrollToEvaluation} />
+      <HomeHero onStartChallengeClick={handleChallengeClick} />
       <VerifiedPayouts />
       <HowItWorks />
       <TradingPairs />
-      <Evaluation ref={evaluationRef} />
+      <Evaluation />
       <WhyChoosePPF />
       <RawSpreads />
       <TraderTestimonials />

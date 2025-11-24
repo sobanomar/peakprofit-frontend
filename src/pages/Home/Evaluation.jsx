@@ -4,7 +4,7 @@ import ButtonGroup from "../../components/ButtonGroup";
 import EvaluationSidebar from "../../components/EvaluationSidebar";
 import METATRADER from "../../assets/images/home/traders/metaTraderLogo.webp";
 
-const Evaluation = forwardRef((props, ref) => {
+const Evaluation = (props) => {
   const [currentStep, setCurrentStep] = React.useState(3);
   const [selectedAccountSize, setSelectedAccountSize] = React.useState(5);
   const [selectedTrader, setSelectedTrader] = React.useState(1);
@@ -98,7 +98,7 @@ const Evaluation = forwardRef((props, ref) => {
   ];
 
   return (
-    <div ref={ref}>
+    <div>
       <div className="w-full px-4 md:w-[80%] md:mx-auto py-6 md:py-12">
         <h1 className="text-3xl md:text-6xl text-center text-white py-4 md:py-8 font-semibold">
           Configure Your Evaluation
@@ -141,6 +141,6 @@ const Evaluation = forwardRef((props, ref) => {
       </div>
     </div>
   );
-});
+};
 
 export default Evaluation;
