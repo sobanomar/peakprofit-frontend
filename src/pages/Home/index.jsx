@@ -11,7 +11,7 @@ import Evaluation from "./Evaluation";
 
 const Home = () => {
   const handleChallengeClick = () => {
-    window.location.href = "https://dashboard.peakprofitfunding.com/login";
+    window.location.href = import.meta.env.VITE_DASHBOARD_URL + "/login";
   };
 
   return (

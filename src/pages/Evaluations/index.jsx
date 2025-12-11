@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ChallengeSelector from "./ChallengeSelector";
 import AccountSizeSelector from "./AccountSizeSelector";
 import SummaryCard from "./SummaryCard";
@@ -6,210 +6,138 @@ import AddOnsSelector from "./AddOnsSelector";
 import BillingDetails from "./BillingDetails";
 import OrderSummary from "./OrderSummary";
 import { useNavigate } from "react-router";
+import LoadingSpinner from "../../components/LoadingSpinner";
+import axiosInstance from "../../api/axios";
 
 const CheckoutPage = () => {
-  const [selectedChallenge, setSelectedChallenge] = useState("1-Step");
-  const [currentStep, setCurrentStep] = useState(1);
-  const [selectedSize, setSelectedSize] = useState(null);
-  const [selectedAddOns, setSelectedAddOns] = useState([]);
+  const [challenges, setChallenges] = useState([]);
+  const [loadingChallenges, setLoadingChallenges] = useState(true);
+  const [selectedChallenge, setSelectedChallenge] = useState(null);
+  const [checkoutLoading, setCheckoutLoading] = useState(false);
+  const [isSummaryOpen, setIsSummaryOpen] = useState(true);
 
   const navigate = useNavigate();
 
-  const challengeOptions = ["1-Step", "2-Step", "3-Step"];
-  // const challengeOptions = ["1-Step"];
-  const accountSizes = [
-    "5K",
-    "10K",
-    "25K",
-    "50K",
-    "100K",
-    "200K",
-    "300K",
-    "500K",
-  ];
+  useEffect(() => {
+    const fetchChallenges = async () => {
+      try {
+        setLoadingChallenges(true);
+        const res = await axiosInstance.get("/challenge/challenges");
+        const data = res.data.result.data;
+        setChallenges(data || []);
+        if (data.length > 0) setSelectedChallenge(data[0]);
+      } catch (err) {
+        console.error(err);
+        // toast.error("Failed to load challenges");
+      } finally {
+        setLoadingChallenges(false);
+      }
+    };
+    fetchChallenges();
+  }, []);
 
-  const accountOptions = [
-    {
-      size: "5K",
-      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/5KFUNDED",
-    },
-    {
-      size: "10K",
-      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/10KFUNDED",
-    },
-    {
-      size: "25K",
-      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/25KFUNDED",
-    },
-    {
-      size: "50K",
-      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/50KFUNDED",
-    },
-    {
-      size: "100K",
-      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/100KFUNDED",
-    },
-    {
-      size: "200K",
-      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/200KFUNDED",
-    },
-    {
-      size: "300K",
-      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/300KFUNDED",
-    },
-    {
-      size: "500K",
-      url: "https://401627de-f0a4-453a-98c1-6ebfe83fb258.paylinks.godaddy.com/500KFUNDED",
-    },
-  ];
-
-  const addOns = [
-    { id: 1, name: "95% Profit Split", price: 0 },
-    { id: 2, name: "0 Minimum Trading Days", price: 0 },
-    { id: 3, name: "Daily Drawdown 6%", price: 0 },
-    { id: 4, name: "Max Drawdown 12%", price: 0 },
-  ];
-  // pricing logic
-  const priceMap = {
-    "5K": 25,
-    "10K": 60,
-    "25K": 100,
-    "50K": 150,
-    "100K": 350,
-    "200K": 600,
-    "300K": 750,
-    "500K": 1200,
-  };
-
-  const onContinue = () => {
-    const selected = accountOptions.find((opt) => opt.size === selectedSize);
-    if (selected) {
-      window.location.href = selected.url;
-    } else {
-      alert("Please select a valid account size.");
+  const onContinue = async () => {
+    if (!selectedChallenge) {
+      toast.error("Please select a challenge");
+      return;
     }
+
+    window.location.href =
+      import.meta.env.VITE_DASHBOARD_URL +
+      "/signup?challengeId=" +
+      selectedChallenge._id;
   };
 
-  const handleAddonToggle = (id) => {
-    setSelectedAddOns((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+  if (loadingChallenges) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <LoadingSpinner />
+      </div>
     );
-  };
+  }
 
-  const selectedAddOnDetails = addOns.filter((addon) =>
-    selectedAddOns.includes(addon.id)
-  );
-  const addOnsTotal = selectedAddOnDetails.reduce(
-    (sum, item) => sum + item.price,
-    0
-  );
-  const grandTotal = (priceMap[selectedSize] || 0) + addOnsTotal;
+  if (!challenges || challenges.length === 0) {
+    return (
+      <div className="h-full flex flex-col items-center justify-center text-center p-6">
+        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-1">
+          No Challenges Available
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-2 max-w-sm">
+          There are currently no challenges available. Please check back later.
+        </p>
+        <button
+          className="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600"
+          onClick={() => navigate("/")}
+        >
+          Go Back
+        </button>
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen  text-white md:px-6 pt-10 md:pt-20">
-      <div className="text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl  xl:text-6xl font-bold">
-          Complete Your Order
+    <div className="pt-12 text-black dark:text-white">
+      <div className="text-center mt-2">
+        <h1 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold">
+          Select Your Challenge
         </h1>
-        <p className="text-base md:text-lg px-2 lg:text-xl text-white/70 mt-2">
-          Almost there, please fill-up all the information and get funded.
+        <p className="text-base md:text-lg px-2 lg:text-xl mt-2">
+          Fill-up all the information and get funded.
         </p>
-        <div className="flex justify-center items-center gap-4 mt-6">
-          <div className="flex flex-col md:flex-row items-center   space-x-3 bg-[#2B1A3B] px-4 py-2 rounded-lg font-bold">
-            <div className="flex items-center space-x-3  py-2 rounded-full font-bold ">
-              <span
-                className={`rounded-full w-9 h-9 flex items-center justify-center font-bold ${
-                  currentStep === 1
-                    ? "bg-[#B557F1] text-white"
-                    : "bg-white text-black"
-                }`}
-              >
-                1
-              </span>
-              <span>Select Account and checkout</span>
-            </div>
-            {/* <div className="h-0.5 rotate-90 md:rotate-0 w-6 md:w-20 md:ml-0 ml-6 bg-white" />
-            <div className="flex items-center space-x-3  py-2 rounded-full font-bold ">
-              <span
-                className={`rounded-full w-9 h-9 flex items-center justify-center font-bold ${
-                  currentStep === 2
-                    ? "bg-[#B557F1] text-white"
-                    : "bg-white text-black"
-                }`}
-              >
-                2
-              </span>
-              <span>Checkout Billing</span>
-            </div>  */}
-          </div>
-        </div>
       </div>
 
-      {currentStep === 1 ? (
-        <div className="flex  justify-center items-center mt-10 gap-8">
-          <div className="w-[90%] md:w-[85%] lg:w-[80%] xl:w-[70%] flex-col lg:flex-row items-center lg:items-start flex gap-8">
-            <div className="bg-[#2B1A3F] p-8 rounded-4xl h-fit  lg:w-2/3">
-              <h2 className="text-xl font-bold mb-8 text-center lg:text-left">
-                Evaluation
-              </h2>
+      <div className="flex justify-center items-start mt-6 gap-8">
+        <div className="w-[95%] md:w-[90%] lg:w-[85%] xl:w-[80%] flex flex-col lg:flex-row gap-8">
+          {/* Challenge List */}
+          <div className="bg-white dark:border-white/[0.05] dark:bg-white/[0.03] shadow-lg border border-gray-200 p-8 rounded-2xl h-fit lg:w-2/3">
+            <label className="flex text-xl pb-2 font-semibold items-center gap-2 mb-4">
+              Select Account <span className="text-red-600">*</span>
+            </label>
 
-              <label className="flex font-bold items-center gap-2  mb-2">
-                Select Challenge <span className=" text-red-600">*</span>
-              </label>
-              <ChallengeSelector
-                options={challengeOptions}
-                selected={selectedChallenge}
-                onSelect={setSelectedChallenge}
-              />
+            <div className="flex flex-col gap-3 h-76 overflow-y-auto pr-2">
+              {challenges.map((challenge) => {
+                const isSelected = selectedChallenge?._id === challenge._id;
 
-              <label className="flex font-bold items-center mt-5 gap-2  mb-2">
-                Account Size <span className=" text-red-600">*</span>
-              </label>
-              <AccountSizeSelector
-                sizes={accountSizes}
-                selected={selectedSize}
-                onSelect={setSelectedSize}
-              />
-
-              {selectedSize && (
-                <AddOnsSelector
-                  addOns={addOns}
-                  selected={selectedAddOns}
-                  onToggle={handleAddonToggle}
-                />
-              )}
-            </div>
-            <SummaryCard
-              challenge={selectedChallenge}
-              accountSize={selectedSize}
-              total={priceMap[selectedSize] || 0}
-              addOns={selectedAddOnDetails}
-              addOnsTotal={addOnsTotal}
-              grandTotal={grandTotal}
-              onContinue={onContinue}
-              selectedSize={selectedSize}
-            />
-          </div>
-        </div>
-      ) : (
-        <div className="flex justify-center items-center mt-10">
-          <div className="relative w-[90%] md:w-[85%] lg:w-[80%] xl:w-[70%]">
-            <div className="absolute -inset-1 rounded-3xl bg-[#653979] blur-2xl opacity-20"></div>
-
-            <div className="relative bg-[#1A001F] flex flex-col lg:flex-row gap-8 p-3 sm:p-4 md:p-6 rounded-3xl z-10">
-              <BillingDetails />
-              <OrderSummary
-                challenge={selectedChallenge}
-                accountSize={selectedSize}
-                total={priceMap[selectedSize] || 0}
-                addOns={selectedAddOnDetails}
-                addOnsTotal={addOnsTotal}
-                grandTotal={grandTotal}
-              />
+                return (
+                  <button
+                    key={challenge._id}
+                    onClick={() => setSelectedChallenge(challenge)}
+                    className={`w-full flex justify-between items-center p-4 border rounded-lg cursor-pointer transition-all ${
+                      isSelected
+                        ? "border-purple-600 bg-purple-50 dark:bg-purple-900/20"
+                        : "border-gray-300 bg-gray-100 dark:border-neutral-600 dark:bg-white/[0.05]"
+                    }`}
+                  >
+                    <div className="flex flex-col items-start">
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        {challenge.name}
+                      </span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                        Account Size: ${challenge.accountSize.toLocaleString()}
+                      </span>
+                    </div>
+                    <span className="text-sm font-semibold text-gray-800 dark:text-white/90">
+                      ${challenge.cost.toLocaleString()}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
+
+          {/* Order Summary and Checkout */}
+          <OrderSummary
+            isOpen={isSummaryOpen}
+            toggleOpen={() => setIsSummaryOpen((prev) => !prev)}
+            selectedName={selectedChallenge?.name || ""}
+            accountSize={selectedChallenge?.accountSize || 0}
+            cost={selectedChallenge?.cost || 0}
+            isDisabled={!selectedChallenge}
+            loading={checkoutLoading}
+            onContinue={onContinue}
+          />
         </div>
-      )}
+      </div>
     </div>
   );
 };
