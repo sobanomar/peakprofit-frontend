@@ -36,7 +36,7 @@ const HowItWorks = () => {
 
         {/* Bottom 3 Centered Cards */}
         <div className="md:col-span-4 flex flex-wrap justify-center gap-6">
-          <InfoCard
+          {/* <InfoCard
             topContent={Withdrawl}
             isImage
             title="Swift Withdrawals"
@@ -47,7 +47,7 @@ const HowItWorks = () => {
                 <span className="text-white font-semibold">2–12 Hours</span>
               </div>
             }
-          />
+          /> */}
 
           <InfoCard
             topContent={Support}
@@ -62,12 +62,12 @@ const HowItWorks = () => {
             }
           />
 
-          <InfoCard
+          {/* <InfoCard
             isImage
             topContent={Investment}
             title="50,000$+ Paid To Funded Traders This Month"
             description="Join a community of successful traders who have achieved their funding goals with our platform."
-          />
+          /> */}
         </div>
       </div>
     </div>

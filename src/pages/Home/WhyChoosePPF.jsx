@@ -25,24 +25,24 @@ const WhyChoosePPF = () => {
       description:
         "We offer our Funded traders the ability to scale their account up to $1,000,000. Simply make 15% profit over 3 months...",
     },
-    {
-      topContent: <FaMoneyCheckAlt className="text-3xl text-white" />,
-      title: "Quick and Reliable Rewards",
-      description:
-        "At PeakProfit, we process Rewards swiftly and efficiently. We maintain robust reserves to guarantee smooth operations...",
-    },
+    // {
+    //   topContent: <FaMoneyCheckAlt className="text-3xl text-white" />,
+    //   title: "Quick and Reliable Rewards",
+    //   description:
+    //     "At PeakProfit, we process Rewards swiftly and efficiently. We maintain robust reserves to guarantee smooth operations...",
+    // },
     // {
     //   topContent: <BsXDiamond className="text-3xl text-white" />,
     //   title: "Up To 95% Reward Split",
     //   description:
     //     "Our traders receive an 80% default Reward split, with an option to boost it to 95% at checkout...",
     // },
-    {
-      topContent: <FaCalendarAlt className="text-3xl text-white" />,
-      title: "Bi-Weekly Rewards",
-      description:
-        "We offer bi-weekly Rewards as default, allowing traders to receive profits every 14 days...",
-    },
+    // {
+    //   topContent: <FaCalendarAlt className="text-3xl text-white" />,
+    //   title: "Bi-Weekly Rewards",
+    //   description:
+    //     "We offer bi-weekly Rewards as default, allowing traders to receive profits every 14 days...",
+    // },
     {
       topContent: <FaHeadset className="text-3xl text-white" />,
       title: "Customer Support",
@@ -58,13 +58,15 @@ const WhyChoosePPF = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-5 md:px-0 md:w-[90%] place-items-center lg:w-[80%]">
         {cardData.map((card, index) => (
-          <InfoCard
-            key={index}
-            topContent={card.topContent}
-            title={card.title}
-            description={card.description}
-            align="left"
-          />
+          <div className="h-52">
+            <InfoCard
+              key={index}
+              topContent={card.topContent}
+              title={card.title}
+              description={card.description}
+              align="left"
+            />
+          </div>
         ))}
       </div>
     </section>
