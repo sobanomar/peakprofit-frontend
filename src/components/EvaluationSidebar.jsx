@@ -27,7 +27,7 @@ const EvaluationSidebar = ({
   const addOns = [
     { label: "Daily Drawdown 6%", price: "15%" },
     { label: "Max Drawdown 12%", price: "25%" },
-    { label: "95% Profit Split", price: "25%" },
+    // { label: "95% Profit Split", price: "25%" },
     { label: "0 Minimum Days", price: "15%" },
   ];
 

@@ -31,12 +31,12 @@ const WhyChoosePPF = () => {
       description:
         "At PeakProfit, we process Rewards swiftly and efficiently. We maintain robust reserves to guarantee smooth operations...",
     },
-    {
-      topContent: <BsXDiamond className="text-3xl text-white" />,
-      title: "Up To 95% Reward Split",
-      description:
-        "Our traders receive an 80% default Reward split, with an option to boost it to 95% at checkout...",
-    },
+    // {
+    //   topContent: <BsXDiamond className="text-3xl text-white" />,
+    //   title: "Up To 95% Reward Split",
+    //   description:
+    //     "Our traders receive an 80% default Reward split, with an option to boost it to 95% at checkout...",
+    // },
     {
       topContent: <FaCalendarAlt className="text-3xl text-white" />,
       title: "Bi-Weekly Rewards",

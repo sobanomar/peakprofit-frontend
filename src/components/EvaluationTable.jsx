@@ -19,7 +19,7 @@ const EvaluationTable = ({ step }) => {
         ["Challenge Leverage ", "Up to 1:50", "Up to 1:30"],
         ["Weekend Holding ", "✅ Yes", "✅ Yes"],
         ["Reward Schedule ", "N/A", "Bi-Weekly"],
-        ["Profit Split ", "N/A", "80%"],
+        // ["Profit Split ", "N/A", "80%"],
       ],
     },
     2: {
@@ -34,7 +34,7 @@ const EvaluationTable = ({ step }) => {
         ["Challenge Leverage", "Up to 1:100", "Up to 1:100", "Up to 1:100"],
         ["Weekend Holding", "✅ Yes", "✅ Yes", "✅ Yes"],
         ["Reward Schedule", "N/A", "N/A", "Bi-Weekly"],
-        ["Profit Split", "N/A", "N/A", "80%"],
+        // ["Profit Split", "N/A", "N/A", "80%"],
       ],
     },
     3: {
@@ -67,7 +67,7 @@ const EvaluationTable = ({ step }) => {
         ],
         ["Weekend Holding", "✅ Yes", "✅ Yes", "✅ Yes", "✅ Yes"],
         ["Reward Schedule", "N/A", "N/A", "N/A", "Bi-Weekly"],
-        ["Profit Split", "N/A", "N/A", "N/A", "80%"],
+        // ["Profit Split", "N/A", "N/A", "N/A", "80%"],
       ],
     },
   };

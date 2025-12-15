@@ -18,7 +18,7 @@ const TraderTestimonials = () => {
           </video>
         </div>
 
-        <TraderCarousel />
+        {/* <TraderCarousel /> */}
       </div>
     </div>
   );

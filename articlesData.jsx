@@ -29,24 +29,22 @@ export const FAQArticles = [
           "We accept Cryptocurrency payments and Credit Card Payments at our checkout. If you have any issues please contact our live chat support.",
         lastUpdated: "Over 3 months ago",
       },
-      {
-        title: "Payouts & Scaling",
-        description: `When do I get paid?
-          - First payout: 714 days
-          - Recurring: Bi-weekly/monthly
-          - Minimum withdrawal: $100
-          - Methods: Crypto (USDT), Wise, Bank Transfer
- 
- 
-          Whats the profit split?
-          - Standard: 80/20
-          - Top-tier: Up to 90/10
- 
- 
-          How does scaling work?
-          After 3 profitable months, request capital increases up to $400,000.`,
-        lastUpdated: "Over 3 months ago",
-      },
+      // {
+      //   title: "Payouts & Scaling",
+      //   description: `When do I get paid?
+      //     - First payout: 714 days
+      //     - Recurring: Bi-weekly/monthly
+      //     - Minimum withdrawal: $100
+      //     - Methods: Crypto (USDT), Wise, Bank Transfer
+
+      //     Whats the profit split?
+      //     - Standard: 80/20
+      //     - Top-tier: Up to 90/10
+
+      //     How does scaling work?
+      //     After 3 profitable months, request capital increases up to $400,000.`,
+      //   lastUpdated: "Over 3 months ago",
+      // },
       {
         title: "Rule Changes",
         description:
@@ -72,28 +70,26 @@ export const FAQArticles = [
         lastUpdated: "Over 3 months ago",
       },
 
-      {
-        lastUpdated: "Over 3 months ago",
-        title: " Evaluation & Account Types",
-        description: `
-         How does the evaluation work?
- We offer both:
- - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
- - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
- 
- 
- What are the rules?
- Typical parameters:
- - Daily Drawdown: 45%
- - Max Drawdown: 810%
- - Profit Target: 810%
- - No consistency rule
- - Minimum trading days: 5
- 
- 
- Can I hold trades over the weekend?
- Yes, unless stated otherwise on the account type.`,
-      },
+      //       {
+      //         lastUpdated: "Over 3 months ago",
+      //         title: " Evaluation & Account Types",
+      //         description: `
+      //          How does the evaluation work?
+      //  We offer both:
+      //  - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
+      //  - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
+
+      //  What are the rules?
+      //  Typical parameters:
+      //  - Daily Drawdown: 45%
+      //  - Max Drawdown: 810%
+      //  - Profit Target: 810%
+      //  - No consistency rule
+      //  - Minimum trading days: 5
+
+      //  Can I hold trades over the weekend?
+      //  Yes, unless stated otherwise on the account type.`,
+      //       },
       {
         lastUpdated: "Over 3 months ago",
         title: "Platforms and Execution",
@@ -109,24 +105,24 @@ export const FAQArticles = [
         What instruments can I trade?
         - Forex, Crypto, Indices, Commodities, Metals`,
       },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Disclaimers and Legals",
-        description: `  Do you offer financial advice?
-         No. We do not offer personalized investment or trading advice.
- 
-         What are the risks?
-         Trading leveraged products involves substantial risk of loss.
- 
-         Are payouts guaranteed?
-         No. All payouts depend on rule compliance.
- 
-         Refund Policy
-         All sales are final. Refunds only for double charges or technical issues.
- 
-         Terms and Conditions: www.peakprofitfunding.com/terms
-         Privacy Policy: www.peakprofitfunding.com/privacy`,
-      },
+      // {
+      //   lastUpdated: "Over 3 months ago",
+      //   title: "Disclaimers and Legals",
+      //   description: `  Do you offer financial advice?
+      //    No. We do not offer personalized investment or trading advice.
+
+      //    What are the risks?
+      //    Trading leveraged products involves substantial risk of loss.
+
+      //    Are payouts guaranteed?
+      //    No. All payouts depend on rule compliance.
+
+      //    Refund Policy
+      //    All sales are final. Refunds only for double charges or technical issues.
+
+      //    Terms and Conditions: www.peakprofitfunding.com/terms
+      //    Privacy Policy: www.peakprofitfunding.com/privacy`,
+      // },
       {
         lastUpdated: "Over 3 months ago",
         title: "Community and Support",
@@ -140,25 +136,22 @@ export const FAQArticles = [
  
         Support email: support@peakprofitfunding.com`,
       },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Miscellaneous",
-        description: `  Can I have multiple accounts?
-        Yes, up to 3.
- 
- 
-        Do I need KYC?
-        Yes, for payout.
- 
- 
-        Can I use EAs?
-        Yes, no latency arbitrage or tick manipulation.
-        
-        
-         Do you offer affiliate programs?
-         Yes. Email partnerships@peakprofitfunding.com for more.
-        `,
-      },
+      // {
+      //   lastUpdated: "Over 3 months ago",
+      //   title: "Miscellaneous",
+      //   description: `  Can I have multiple accounts?
+      //   Yes, up to 3.
+
+      //   Do I need KYC?
+      //   Yes, for payout.
+
+      //   Can I use EAs?
+      //   Yes, no latency arbitrage or tick manipulation.
+
+      //    Do you offer affiliate programs?
+      //    Yes. Email partnerships@peakprofitfunding.com for more.
+      //   `,
+      // },
     ],
   },
   {
@@ -184,24 +177,22 @@ export const FAQArticles = [
           "We accept Cryptocurrency payments and Credit Card Payments at our checkout. If you have any issues please contact our live chat support.",
         lastUpdated: "Over 3 months ago",
       },
-      {
-        title: "Payouts & Scaling",
-        description: `When do I get paid?
-          - First payout: 714 days
-          - Recurring: Bi-weekly/monthly
-          - Minimum withdrawal: $100
-          - Methods: Crypto (USDT), Wise, Bank Transfer
- 
- 
-          Whats the profit split?
-          - Standard: 80/20
-          - Top-tier: Up to 90/10
- 
- 
-          How does scaling work?
-          After 3 profitable months, request capital increases up to $400,000.`,
-        lastUpdated: "Over 3 months ago",
-      },
+      // {
+      //   title: "Payouts & Scaling",
+      //   description: `When do I get paid?
+      //     - First payout: 714 days
+      //     - Recurring: Bi-weekly/monthly
+      //     - Minimum withdrawal: $100
+      //     - Methods: Crypto (USDT), Wise, Bank Transfer
+
+      //     Whats the profit split?
+      //     - Standard: 80/20
+      //     - Top-tier: Up to 90/10
+
+      //     How does scaling work?
+      //     After 3 profitable months, request capital increases up to $400,000.`,
+      //   lastUpdated: "Over 3 months ago",
+      // },
       {
         title: "Rule Changes",
         description:
@@ -227,28 +218,26 @@ export const FAQArticles = [
         lastUpdated: "Over 3 months ago",
       },
 
-      {
-        lastUpdated: "Over 3 months ago",
-        title: " Evaluation & Account Types",
-        description: `
-         How does the evaluation work?
- We offer both:
- - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
- - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
- 
- 
- What are the rules?
- Typical parameters:
- - Daily Drawdown: 45%
- - Max Drawdown: 810%
- - Profit Target: 810%
- - No consistency rule
- - Minimum trading days: 5
- 
- 
- Can I hold trades over the weekend?
- Yes, unless stated otherwise on the account type.`,
-      },
+      //       {
+      //         lastUpdated: "Over 3 months ago",
+      //         title: " Evaluation & Account Types",
+      //         description: `
+      //          How does the evaluation work?
+      //  We offer both:
+      //  - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
+      //  - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
+
+      //  What are the rules?
+      //  Typical parameters:
+      //  - Daily Drawdown: 45%
+      //  - Max Drawdown: 810%
+      //  - Profit Target: 810%
+      //  - No consistency rule
+      //  - Minimum trading days: 5
+
+      //  Can I hold trades over the weekend?
+      //  Yes, unless stated otherwise on the account type.`,
+      //       },
       {
         lastUpdated: "Over 3 months ago",
         title: "Platforms and Execution",
@@ -264,24 +253,24 @@ export const FAQArticles = [
         What instruments can I trade?
         - Forex, Crypto, Indices, Commodities, Metals`,
       },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Disclaimers and Legals",
-        description: `  Do you offer financial advice?
-         No. We do not offer personalized investment or trading advice.
- 
-         What are the risks?
-         Trading leveraged products involves substantial risk of loss.
- 
-         Are payouts guaranteed?
-         No. All payouts depend on rule compliance.
- 
-         Refund Policy
-         All sales are final. Refunds only for double charges or technical issues.
- 
-         Terms and Conditions: www.peakprofitfunding.com/terms
-         Privacy Policy: www.peakprofitfunding.com/privacy`,
-      },
+      // {
+      //   lastUpdated: "Over 3 months ago",
+      //   title: "Disclaimers and Legals",
+      //   description: `  Do you offer financial advice?
+      //    No. We do not offer personalized investment or trading advice.
+
+      //    What are the risks?
+      //    Trading leveraged products involves substantial risk of loss.
+
+      //    Are payouts guaranteed?
+      //    No. All payouts depend on rule compliance.
+
+      //    Refund Policy
+      //    All sales are final. Refunds only for double charges or technical issues.
+
+      //    Terms and Conditions: www.peakprofitfunding.com/terms
+      //    Privacy Policy: www.peakprofitfunding.com/privacy`,
+      // },
       {
         lastUpdated: "Over 3 months ago",
         title: "Community and Support",
@@ -295,25 +284,22 @@ export const FAQArticles = [
  
         Support email: support@peakprofitfunding.com`,
       },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Miscellaneous",
-        description: `  Can I have multiple accounts?
-        Yes, up to 3.
- 
- 
-        Do I need KYC?
-        Yes, for payout.
- 
- 
-        Can I use EAs?
-        Yes, no latency arbitrage or tick manipulation.
-        
-        
-         Do you offer affiliate programs?
-         Yes. Email partnerships@peakprofitfunding.com for more.
-        `,
-      },
+      // {
+      //   lastUpdated: "Over 3 months ago",
+      //   title: "Miscellaneous",
+      //   description: `  Can I have multiple accounts?
+      //   Yes, up to 3.
+
+      //   Do I need KYC?
+      //   Yes, for payout.
+
+      //   Can I use EAs?
+      //   Yes, no latency arbitrage or tick manipulation.
+
+      //    Do you offer affiliate programs?
+      //    Yes. Email partnerships@peakprofitfunding.com for more.
+      //   `,
+      // },
     ],
   },
   {
@@ -339,24 +325,22 @@ export const FAQArticles = [
           "We accept Cryptocurrency payments and Credit Card Payments at our checkout. If you have any issues please contact our live chat support.",
         lastUpdated: "Over 3 months ago",
       },
-      {
-        title: "Payouts & Scaling",
-        description: `When do I get paid?
-          - First payout: 714 days
-          - Recurring: Bi-weekly/monthly
-          - Minimum withdrawal: $100
-          - Methods: Crypto (USDT), Wise, Bank Transfer
- 
- 
-          Whats the profit split?
-          - Standard: 80/20
-          - Top-tier: Up to 90/10
- 
- 
-          How does scaling work?
-          After 3 profitable months, request capital increases up to $400,000.`,
-        lastUpdated: "Over 3 months ago",
-      },
+      // {
+      //   title: "Payouts & Scaling",
+      //   description: `When do I get paid?
+      //     - First payout: 714 days
+      //     - Recurring: Bi-weekly/monthly
+      //     - Minimum withdrawal: $100
+      //     - Methods: Crypto (USDT), Wise, Bank Transfer
+
+      //     Whats the profit split?
+      //     - Standard: 80/20
+      //     - Top-tier: Up to 90/10
+
+      //     How does scaling work?
+      //     After 3 profitable months, request capital increases up to $400,000.`,
+      //   lastUpdated: "Over 3 months ago",
+      // },
       {
         title: "Rule Changes",
         description:
@@ -382,28 +366,26 @@ export const FAQArticles = [
         lastUpdated: "Over 3 months ago",
       },
 
-      {
-        lastUpdated: "Over 3 months ago",
-        title: " Evaluation & Account Types",
-        description: `
-         How does the evaluation work?
- We offer both:
- - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
- - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
- 
- 
- What are the rules?
- Typical parameters:
- - Daily Drawdown: 45%
- - Max Drawdown: 810%
- - Profit Target: 810%
- - No consistency rule
- - Minimum trading days: 5
- 
- 
- Can I hold trades over the weekend?
- Yes, unless stated otherwise on the account type.`,
-      },
+      //       {
+      //         lastUpdated: "Over 3 months ago",
+      //         title: " Evaluation & Account Types",
+      //         description: `
+      //          How does the evaluation work?
+      //  We offer both:
+      //  - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
+      //  - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
+
+      //  What are the rules?
+      //  Typical parameters:
+      //  - Daily Drawdown: 45%
+      //  - Max Drawdown: 810%
+      //  - Profit Target: 810%
+      //  - No consistency rule
+      //  - Minimum trading days: 5
+
+      //  Can I hold trades over the weekend?
+      //  Yes, unless stated otherwise on the account type.`,
+      //       },
       {
         lastUpdated: "Over 3 months ago",
         title: "Platforms and Execution",
@@ -419,24 +401,24 @@ export const FAQArticles = [
         What instruments can I trade?
         - Forex, Crypto, Indices, Commodities, Metals`,
       },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Disclaimers and Legals",
-        description: `  Do you offer financial advice?
-         No. We do not offer personalized investment or trading advice.
- 
-         What are the risks?
-         Trading leveraged products involves substantial risk of loss.
- 
-         Are payouts guaranteed?
-         No. All payouts depend on rule compliance.
- 
-         Refund Policy
-         All sales are final. Refunds only for double charges or technical issues.
- 
-         Terms and Conditions: www.peakprofitfunding.com/terms
-         Privacy Policy: www.peakprofitfunding.com/privacy`,
-      },
+      // {
+      //   lastUpdated: "Over 3 months ago",
+      //   title: "Disclaimers and Legals",
+      //   description: `  Do you offer financial advice?
+      //    No. We do not offer personalized investment or trading advice.
+
+      //    What are the risks?
+      //    Trading leveraged products involves substantial risk of loss.
+
+      //    Are payouts guaranteed?
+      //    No. All payouts depend on rule compliance.
+
+      //    Refund Policy
+      //    All sales are final. Refunds only for double charges or technical issues.
+
+      //    Terms and Conditions: www.peakprofitfunding.com/terms
+      //    Privacy Policy: www.peakprofitfunding.com/privacy`,
+      // },
       {
         lastUpdated: "Over 3 months ago",
         title: "Community and Support",
@@ -450,25 +432,22 @@ export const FAQArticles = [
  
         Support email: support@peakprofitfunding.com`,
       },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Miscellaneous",
-        description: `  Can I have multiple accounts?
-        Yes, up to 3.
- 
- 
-        Do I need KYC?
-        Yes, for payout.
- 
- 
-        Can I use EAs?
-        Yes, no latency arbitrage or tick manipulation.
-        
-        
-         Do you offer affiliate programs?
-         Yes. Email partnerships@peakprofitfunding.com for more.
-        `,
-      },
+      // {
+      //   lastUpdated: "Over 3 months ago",
+      //   title: "Miscellaneous",
+      //   description: `  Can I have multiple accounts?
+      //   Yes, up to 3.
+
+      //   Do I need KYC?
+      //   Yes, for payout.
+
+      //   Can I use EAs?
+      //   Yes, no latency arbitrage or tick manipulation.
+
+      //    Do you offer affiliate programs?
+      //    Yes. Email partnerships@peakprofitfunding.com for more.
+      //   `,
+      // },
     ],
   },
   {
@@ -494,24 +473,22 @@ export const FAQArticles = [
           "We accept Cryptocurrency payments and Credit Card Payments at our checkout. If you have any issues please contact our live chat support.",
         lastUpdated: "Over 3 months ago",
       },
-      {
-        title: "Payouts & Scaling",
-        description: `When do I get paid?
-          - First payout: 714 days
-          - Recurring: Bi-weekly/monthly
-          - Minimum withdrawal: $100
-          - Methods: Crypto (USDT), Wise, Bank Transfer
- 
- 
-          Whats the profit split?
-          - Standard: 80/20
-          - Top-tier: Up to 90/10
- 
- 
-          How does scaling work?
-          After 3 profitable months, request capital increases up to $400,000.`,
-        lastUpdated: "Over 3 months ago",
-      },
+      // {
+      //   title: "Payouts & Scaling",
+      //   description: `When do I get paid?
+      //     - First payout: 714 days
+      //     - Recurring: Bi-weekly/monthly
+      //     - Minimum withdrawal: $100
+      //     - Methods: Crypto (USDT), Wise, Bank Transfer
+
+      //     Whats the profit split?
+      //     - Standard: 80/20
+      //     - Top-tier: Up to 90/10
+
+      //     How does scaling work?
+      //     After 3 profitable months, request capital increases up to $400,000.`,
+      //   lastUpdated: "Over 3 months ago",
+      // },
       {
         title: "Rule Changes",
         description:
@@ -537,28 +514,26 @@ export const FAQArticles = [
         lastUpdated: "Over 3 months ago",
       },
 
-      {
-        lastUpdated: "Over 3 months ago",
-        title: " Evaluation & Account Types",
-        description: `
-         How does the evaluation work?
- We offer both:
- - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
- - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
- 
- 
- What are the rules?
- Typical parameters:
- - Daily Drawdown: 45%
- - Max Drawdown: 810%
- - Profit Target: 810%
- - No consistency rule
- - Minimum trading days: 5
- 
- 
- Can I hold trades over the weekend?
- Yes, unless stated otherwise on the account type.`,
-      },
+      //       {
+      //         lastUpdated: "Over 3 months ago",
+      //         title: " Evaluation & Account Types",
+      //         description: `
+      //          How does the evaluation work?
+      //  We offer both:
+      //  - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
+      //  - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
+
+      //  What are the rules?
+      //  Typical parameters:
+      //  - Daily Drawdown: 45%
+      //  - Max Drawdown: 810%
+      //  - Profit Target: 810%
+      //  - No consistency rule
+      //  - Minimum trading days: 5
+
+      //  Can I hold trades over the weekend?
+      //  Yes, unless stated otherwise on the account type.`,
+      //       },
       {
         lastUpdated: "Over 3 months ago",
         title: "Platforms and Execution",
@@ -574,24 +549,24 @@ export const FAQArticles = [
         What instruments can I trade?
         - Forex, Crypto, Indices, Commodities, Metals`,
       },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Disclaimers and Legals",
-        description: `  Do you offer financial advice?
-         No. We do not offer personalized investment or trading advice.
- 
-         What are the risks?
-         Trading leveraged products involves substantial risk of loss.
- 
-         Are payouts guaranteed?
-         No. All payouts depend on rule compliance.
- 
-         Refund Policy
-         All sales are final. Refunds only for double charges or technical issues.
- 
-         Terms and Conditions: www.peakprofitfunding.com/terms
-         Privacy Policy: www.peakprofitfunding.com/privacy`,
-      },
+      // {
+      //   lastUpdated: "Over 3 months ago",
+      //   title: "Disclaimers and Legals",
+      //   description: `  Do you offer financial advice?
+      //    No. We do not offer personalized investment or trading advice.
+
+      //    What are the risks?
+      //    Trading leveraged products involves substantial risk of loss.
+
+      //    Are payouts guaranteed?
+      //    No. All payouts depend on rule compliance.
+
+      //    Refund Policy
+      //    All sales are final. Refunds only for double charges or technical issues.
+
+      //    Terms and Conditions: www.peakprofitfunding.com/terms
+      //    Privacy Policy: www.peakprofitfunding.com/privacy`,
+      // },
       {
         lastUpdated: "Over 3 months ago",
         title: "Community and Support",
@@ -605,25 +580,22 @@ export const FAQArticles = [
  
         Support email: support@peakprofitfunding.com`,
       },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Miscellaneous",
-        description: `  Can I have multiple accounts?
-        Yes, up to 3.
- 
- 
-        Do I need KYC?
-        Yes, for payout.
- 
- 
-        Can I use EAs?
-        Yes, no latency arbitrage or tick manipulation.
-        
-        
-         Do you offer affiliate programs?
-         Yes. Email partnerships@peakprofitfunding.com for more.
-        `,
-      },
+      // {
+      //   lastUpdated: "Over 3 months ago",
+      //   title: "Miscellaneous",
+      //   description: `  Can I have multiple accounts?
+      //   Yes, up to 3.
+
+      //   Do I need KYC?
+      //   Yes, for payout.
+
+      //   Can I use EAs?
+      //   Yes, no latency arbitrage or tick manipulation.
+
+      //    Do you offer affiliate programs?
+      //    Yes. Email partnerships@peakprofitfunding.com for more.
+      //   `,
+      // },
     ],
   },
   {
@@ -649,24 +621,22 @@ export const FAQArticles = [
           "We accept Cryptocurrency payments and Credit Card Payments at our checkout. If you have any issues please contact our live chat support.",
         lastUpdated: "Over 3 months ago",
       },
-      {
-        title: "Payouts & Scaling",
-        description: `When do I get paid?
-          - First payout: 714 days
-          - Recurring: Bi-weekly/monthly
-          - Minimum withdrawal: $100
-          - Methods: Crypto (USDT), Wise, Bank Transfer
- 
- 
-          Whats the profit split?
-          - Standard: 80/20
-          - Top-tier: Up to 90/10
- 
- 
-          How does scaling work?
-          After 3 profitable months, request capital increases up to $400,000.`,
-        lastUpdated: "Over 3 months ago",
-      },
+      // {
+      //   title: "Payouts & Scaling",
+      //   description: `When do I get paid?
+      //     - First payout: 714 days
+      //     - Recurring: Bi-weekly/monthly
+      //     - Minimum withdrawal: $100
+      //     - Methods: Crypto (USDT), Wise, Bank Transfer
+
+      //     Whats the profit split?
+      //     - Standard: 80/20
+      //     - Top-tier: Up to 90/10
+
+      //     How does scaling work?
+      //     After 3 profitable months, request capital increases up to $400,000.`,
+      //   lastUpdated: "Over 3 months ago",
+      // },
       {
         title: "Rule Changes",
         description:
@@ -692,28 +662,26 @@ export const FAQArticles = [
         lastUpdated: "Over 3 months ago",
       },
 
-      {
-        lastUpdated: "Over 3 months ago",
-        title: " Evaluation & Account Types",
-        description: `
-         How does the evaluation work?
- We offer both:
- - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
- - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
- 
- 
- What are the rules?
- Typical parameters:
- - Daily Drawdown: 45%
- - Max Drawdown: 810%
- - Profit Target: 810%
- - No consistency rule
- - Minimum trading days: 5
- 
- 
- Can I hold trades over the weekend?
- Yes, unless stated otherwise on the account type.`,
-      },
+      //       {
+      //         lastUpdated: "Over 3 months ago",
+      //         title: " Evaluation & Account Types",
+      //         description: `
+      //          How does the evaluation work?
+      //  We offer both:
+      //  - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
+      //  - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
+
+      //  What are the rules?
+      //  Typical parameters:
+      //  - Daily Drawdown: 45%
+      //  - Max Drawdown: 810%
+      //  - Profit Target: 810%
+      //  - No consistency rule
+      //  - Minimum trading days: 5
+
+      //  Can I hold trades over the weekend?
+      //  Yes, unless stated otherwise on the account type.`,
+      //       },
       {
         lastUpdated: "Over 3 months ago",
         title: "Platforms and Execution",
@@ -729,24 +697,24 @@ export const FAQArticles = [
         What instruments can I trade?
         - Forex, Crypto, Indices, Commodities, Metals`,
       },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Disclaimers and Legals",
-        description: `  Do you offer financial advice?
-         No. We do not offer personalized investment or trading advice.
- 
-         What are the risks?
-         Trading leveraged products involves substantial risk of loss.
- 
-         Are payouts guaranteed?
-         No. All payouts depend on rule compliance.
- 
-         Refund Policy
-         All sales are final. Refunds only for double charges or technical issues.
- 
-         Terms and Conditions: www.peakprofitfunding.com/terms
-         Privacy Policy: www.peakprofitfunding.com/privacy`,
-      },
+      // {
+      //   lastUpdated: "Over 3 months ago",
+      //   title: "Disclaimers and Legals",
+      //   description: `  Do you offer financial advice?
+      //    No. We do not offer personalized investment or trading advice.
+
+      //    What are the risks?
+      //    Trading leveraged products involves substantial risk of loss.
+
+      //    Are payouts guaranteed?
+      //    No. All payouts depend on rule compliance.
+
+      //    Refund Policy
+      //    All sales are final. Refunds only for double charges or technical issues.
+
+      //    Terms and Conditions: www.peakprofitfunding.com/terms
+      //    Privacy Policy: www.peakprofitfunding.com/privacy`,
+      // },
       {
         lastUpdated: "Over 3 months ago",
         title: "Community and Support",
@@ -760,25 +728,22 @@ export const FAQArticles = [
  
         Support email: support@peakprofitfunding.com`,
       },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Miscellaneous",
-        description: `  Can I have multiple accounts?
-        Yes, up to 3.
- 
- 
-        Do I need KYC?
-        Yes, for payout.
- 
- 
-        Can I use EAs?
-        Yes, no latency arbitrage or tick manipulation.
-        
-        
-         Do you offer affiliate programs?
-         Yes. Email partnerships@peakprofitfunding.com for more.
-        `,
-      },
+      // {
+      //   lastUpdated: "Over 3 months ago",
+      //   title: "Miscellaneous",
+      //   description: `  Can I have multiple accounts?
+      //   Yes, up to 3.
+
+      //   Do I need KYC?
+      //   Yes, for payout.
+
+      //   Can I use EAs?
+      //   Yes, no latency arbitrage or tick manipulation.
+
+      //    Do you offer affiliate programs?
+      //    Yes. Email partnerships@peakprofitfunding.com for more.
+      //   `,
+      // },
     ],
   },
   {
@@ -809,29 +774,29 @@ When someone buys a funded account using your code, you’ll earn a commission.
 Commissions apply only to paid funded accounts (not free trials or invalid orders).`,
         lastUpdated: "Over 3 months ago",
       },
-      {
-        title: "Do affiliates get bonus rewards?",
-        description: `Yes, we reward our top partners!
+      //       {
+      //         title: "Do affiliates get bonus rewards?",
+      //         description: `Yes, we reward our top partners!
 
-For every milestone you hit in referred members, you’ll earn a bonus payout.
-Milestone goals and bonus amounts will be explained in your affiliate dashboard and onboarding email.`,
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "How can I get paid?",
-        description: `We offer flexible payout methods:
+      // For every milestone you hit in referred members, you’ll earn a bonus payout.
+      // Milestone goals and bonus amounts will be explained in your affiliate dashboard and onboarding email.`,
+      //         lastUpdated: "Over 3 months ago",
+      //       },
+      //       {
+      //         title: "How can I get paid?",
+      //         description: `We offer flexible payout methods:
 
-• Wire Transfer / ACH
-• Crypto (USDT, BTC, ETH, etc.)
-• Funded Accounts (Want trading capital instead of cash? No problem.)`,
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "When do payouts happen?",
-        description: `Payouts are processed monthly, within the first 7 business days of each month.
-Commissions are paid out after successful sales are verified.`,
-        lastUpdated: "Over 3 months ago",
-      },
+      // • Wire Transfer / ACH
+      // • Crypto (USDT, BTC, ETH, etc.)
+      // • Funded Accounts (Want trading capital instead of cash? No problem.)`,
+      //         lastUpdated: "Over 3 months ago",
+      //       },
+      //       {
+      //         title: "When do payouts happen?",
+      //         description: `Payouts are processed monthly, within the first 7 business days of each month.
+      // Commissions are paid out after successful sales are verified.`,
+      //         lastUpdated: "Over 3 months ago",
+      //       },
       {
         title: "Where do I track my affiliate stats?",
         description: `Check your Affiliate Dashboard for real-time data:

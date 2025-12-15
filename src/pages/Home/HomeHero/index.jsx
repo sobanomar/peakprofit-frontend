@@ -11,9 +11,9 @@ import SmallCard from "./SmallCard";
 import AnimatedButton from "../../../components/AnimatedButton";
 
 const smallCardsData = [
-  { imgSrc: coins, mainText: "Up to 95%", subText: "Reward Split" },
+  // { imgSrc: coins, mainText: "Up to 95%", subText: "Reward Split" },
   { imgSrc: trading, mainText: "Up to $500k", subText: "Trading Accounts" },
-  { imgSrc: star, mainText: "Add ons", subText: "95% Split + more" },
+  // { imgSrc: star, mainText: "Add ons", subText: "95% Split + more" },
   {
     imgSrc: timeLimitFeature,
     mainText: "No time limit",

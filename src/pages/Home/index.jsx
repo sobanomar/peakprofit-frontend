@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <HomeHero onStartChallengeClick={handleChallengeClick} />
-      <VerifiedPayouts />
+      {/* <VerifiedPayouts /> */}
       <HowItWorks />
       <TradingPairs />
       <Evaluation />
