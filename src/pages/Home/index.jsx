@@ -23,7 +23,7 @@ const Home = () => {
       <Evaluation />
       <WhyChoosePPF />
       <RawSpreads />
-      <TraderTestimonials />
+      {/* <TraderTestimonials /> */}
       <StillNotConvinced />
     </>
   );
