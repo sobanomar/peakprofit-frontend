@@ -11,12 +11,12 @@ const TraderTestimonials = () => {
         </h1>
 
         {/* Video Section */}
-        <div className="my-12 rounded-xl overflow-hidden  justify-center flex">
+        {/* <div className="my-12 rounded-xl overflow-hidden  justify-center flex">
           <video controls className="w-96">
             <source src={TestimonialVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        </div>
+        </div> */}
 
         <TraderCarousel />
       </div>

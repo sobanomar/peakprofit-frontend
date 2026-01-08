@@ -6,7 +6,7 @@ import StillNotConvinced from "./StillNotConvinced";
 import VerifiedPayouts from "./VerifiedPayouts";
 import TradingPairs from "./TradingPairs";
 import WhyChoosePPF from "./WhyChoosePPF";
-// import TraderTestimonials from "./TraderTestimonials";
+import TraderTestimonials from "./TraderTestimonials";
 import Evaluation from "./Evaluation";
 
 const Home = () => {
@@ -23,7 +23,7 @@ const Home = () => {
       <Evaluation />
       <WhyChoosePPF />
       <RawSpreads />
-      {/* <TraderTestimonials /> */}
+      <TraderTestimonials />
       <StillNotConvinced />
     </>
   );
