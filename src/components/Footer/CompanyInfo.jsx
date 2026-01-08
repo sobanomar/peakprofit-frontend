@@ -42,8 +42,10 @@ const CompanyInfo = () => {
         ))}
       </div>
       <div className="md:text-left ">
-        <p>PeakProfit LLC</p>
-        <p className="font-semibold ">Company registration number: 123xyz</p>
+        <p>PPEAK PROFIT FUNDING LLC</p>
+        <p className="font-semibold ">
+          Company registration number: L25000539599
+        </p>
       </div>
       <div className="flex gap-x-3 flex-row">
         {paymentLogos.map((logo, index) => (
