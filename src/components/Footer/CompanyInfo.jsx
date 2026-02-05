@@ -42,7 +42,7 @@ const CompanyInfo = () => {
         ))}
       </div>
       <div className="md:text-left ">
-        <p>PPEAK PROFIT FUNDING LLC</p>
+        <p>PEAK PROFIT FUNDING LLC</p>
         <p className="font-semibold ">
           Company registration number: L25000539599
         </p>
