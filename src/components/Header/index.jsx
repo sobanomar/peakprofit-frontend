@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <header className="fixed w-full z-50 ">
-      <CountdownTimer />
+      {/* <CountdownTimer /> */}
       <div className="px-4 sm:px-8 mt-2">
         <div className="flex justify-between items-center text-white transition-all duration-300 ease-in-out">
           {/* Conditionally render logo on scroll */}
