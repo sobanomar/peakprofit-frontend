@@ -32,7 +32,7 @@ export const FAQArticles = [
       {
         title: "Payouts & Scaling",
         description: `When do I get paid?
-          - First payout: 714 days
+          - First payout: 7-14 days
           - Recurring: Bi-weekly/monthly
           - Minimum withdrawal: $100
           - Methods: Crypto (USDT), Wise, Bank Transfer
@@ -187,7 +187,7 @@ export const FAQArticles = [
       {
         title: "Payouts & Scaling",
         description: `When do I get paid?
-          - First payout: 714 days
+          - First payout: 7-14 days
           - Recurring: Bi-weekly/monthly
           - Minimum withdrawal: $100
           - Methods: Crypto (USDT), Wise, Bank Transfer
@@ -342,7 +342,7 @@ export const FAQArticles = [
       {
         title: "Payouts & Scaling",
         description: `When do I get paid?
-          - First payout: 714 days
+          - First payout: 7-14 days
           - Recurring: Bi-weekly/monthly
           - Minimum withdrawal: $100
           - Methods: Crypto (USDT), Wise, Bank Transfer
@@ -497,7 +497,7 @@ export const FAQArticles = [
       {
         title: "Payouts & Scaling",
         description: `When do I get paid?
-          - First payout: 714 days
+          - First payout: 7-14 days
           - Recurring: Bi-weekly/monthly
           - Minimum withdrawal: $100
           - Methods: Crypto (USDT), Wise, Bank Transfer
@@ -652,7 +652,7 @@ export const FAQArticles = [
       {
         title: "Payouts & Scaling",
         description: `When do I get paid?
-          - First payout: 714 days
+          - First payout: 7-14 days
           - Recurring: Bi-weekly/monthly
           - Minimum withdrawal: $100
           - Methods: Crypto (USDT), Wise, Bank Transfer
