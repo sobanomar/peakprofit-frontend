@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
-import LogoImage from "../assets/logo.jpg";
+import LogoImage from "../assets/PeakProfitLogo2.0.png";
 
 const Logo = ({ color }) => {
   let logoColor;
