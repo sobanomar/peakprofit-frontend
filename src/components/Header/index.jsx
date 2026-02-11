@@ -34,13 +34,12 @@ const Header = () => {
   }, [lastScrollY]);
 
   return (
-    <header className="fixed w-full z-50 ">
-      <CountdownTimer />
-      <div className="px-4 sm:px-8 mt-2">
+    <header className="fixed w-full z-50 backdrop-filter backdrop-blur-lg  py-4 bg-purple-600/5">
+      <div className="px-4 sm:px-8">
         <div className="flex justify-between items-center text-white transition-all duration-300 ease-in-out">
           {/* Conditionally render logo on scroll */}
           <div
-            className={`transition-opacity duration-300 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24`}
+            className={`transition-opacity duration-300 w-40 sm:w-60 md:w-80`}
           >
             <img src="/logo/PeakProfitLogoHorizontal.png" />
           </div>
