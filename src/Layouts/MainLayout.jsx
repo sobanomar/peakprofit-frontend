@@ -7,9 +7,9 @@ const MainLayout = () => {
   return (
     <div>
       <Header />
-      <div className="py-20">
-        <Outlet />
-      </div>
+      {/* <div className="py-20"> */}
+      <Outlet />
+      {/* </div> */}
       <Footer />
     </div>
   );

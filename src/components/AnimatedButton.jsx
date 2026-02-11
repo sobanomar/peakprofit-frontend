@@ -4,7 +4,7 @@ const AnimatedButton = ({ text, action }) => {
   return (
     <button
       onClick={action}
-      className="relative bg-purple-600 cursor-pointer hover:bg-purple-700 text-white py-2 rounded-lg font-semibold transition-colors duration-200 overflow-hidden border-1 border-purple-500 w-full"
+      className="relative  hover:shadow-[0_0_50px_5px_rgba(174,48,255,0.5)] bg-purple-600 cursor-pointer  text-white py-6 px-8 rounded-2xl font-semibold transition-all duration-300 overflow-hidden border-1 border-purple-500 whitespace-nowrap"
     >
       {/* Gradient overlay */}
       <div className="absolute inset-0 overflow-hidden">
@@ -12,7 +12,7 @@ const AnimatedButton = ({ text, action }) => {
       </div>
 
       {/* Button text */}
-      <span className="relative z-10">{text}</span>
+      <span className="relative z-10 xl:text-3xl font-bold">{text}</span>
     </button>
   );
 };

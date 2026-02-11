@@ -16,7 +16,7 @@ const HowItWorks = () => {
         <InfoCard
           topContent="1"
           title="Sign Up"
-          description="Sign up to receive your account and start trading in as little as 5 minutes."
+          description="Sign up, select your challenge, and start trading immediately."
         />
         <InfoCard
           topContent="2"
@@ -26,7 +26,7 @@ const HowItWorks = () => {
         <InfoCard
           topContent="3"
           title="Get Funding"
-          description="Pass our challenge and you can trade a Simulated funded account in as little as 2 days."
+          description="Pass our challenge and you can trade a Simulated funded account in as little as 3 days."
         />
         <InfoCard
           topContent="4"

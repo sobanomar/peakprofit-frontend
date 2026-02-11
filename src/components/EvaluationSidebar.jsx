@@ -111,7 +111,7 @@ const EvaluationSidebar = ({
       </div>
 
       {/* Add-ons */}
-      <p className="text-xl text-white font-semibold mb-4">Add-ons</p>
+      {/* <p className="text-xl text-white font-semibold mb-4">Add-ons</p>
       <div className="flex flex-col gap-0.5">
         {addOns.map((addon, index) => (
           <div
@@ -124,7 +124,7 @@ const EvaluationSidebar = ({
             </span>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

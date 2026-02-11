@@ -11,7 +11,7 @@ const InfoCard = ({
   status,
 }) => {
   return (
-    <div className="bg-[#2E1D3D] rounded-2xl p-6 shadow-md text-white max-w-sm w-full">
+    <div className="bg-[#2E1D3D] rounded-2xl min-h-[220px] p-6 shadow-md text-white max-w-sm w-full">
       <div
         className={`flex ${
           align === "left" ? "justify-start" : "justify-center"
