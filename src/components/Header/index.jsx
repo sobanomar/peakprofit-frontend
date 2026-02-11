@@ -35,16 +35,14 @@ const Header = () => {
 
   return (
     <header className="fixed w-full z-50 ">
-      {/* <CountdownTimer /> */}
+      <CountdownTimer />
       <div className="px-4 sm:px-8 mt-2">
         <div className="flex justify-between items-center text-white transition-all duration-300 ease-in-out">
           {/* Conditionally render logo on scroll */}
           <div
-            className={`${
-              showLogo ? "opacity-100" : "opacity-0"
-            } transition-opacity duration-300 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24`}
+            className={`transition-opacity duration-300 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24`}
           >
-            <Logo />
+            <img src="/logo/PeakProfitLogoHorizontal.png" />
           </div>
 
           {/* Desktop Nav */}
