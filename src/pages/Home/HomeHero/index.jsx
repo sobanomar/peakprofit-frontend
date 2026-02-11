@@ -2,6 +2,7 @@ import AnimatedButton from "../../../components/AnimatedButton";
 import HeroBGVideo from "../../../assets/videos/heroBGVideo.mp4";
 import discord from "../../../assets/images/home/discord.webp";
 import React from "react";
+import { TextEffect } from "../../../components/ui/text-effect";
 
 export default function HomeHero({ onStartChallengeClick }) {
   return (
@@ -30,8 +31,10 @@ export default function HomeHero({ onStartChallengeClick }) {
 
       {/* Content */}
       <div className="z-10 text-center flex flex-col justify-center items-center">
-        <h1 className="w-[70%] mx-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
-          Fueling the Next Generation of Traders
+        <h1 className="w-[75%] mx-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
+          <TextEffect per="line" preset="fade">
+            Fueling the Next Generation of Traders
+          </TextEffect>
         </h1>
 
         <div className="flex justify-center items-center mt-12 gap-4 w-full">
