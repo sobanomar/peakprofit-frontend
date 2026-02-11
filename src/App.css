@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 body {
   background-color: #130025;
+  font-family: "Outfit", sans-serif;
 }
 @keyframes delayed-sweep {
   0%,
@@ -162,7 +163,14 @@ body {
 .dotted-gap-border {
   border-bottom-style: dotted;
   border-bottom-width: 1px;
-  border-image: repeating-linear-gradient(to right, white 0, white 1px, transparent 2px, transparent 4px) 100% 1;
+  border-image: repeating-linear-gradient(
+      to right,
+      white 0,
+      white 1px,
+      transparent 2px,
+      transparent 4px
+    )
+    100% 1;
 }
 
 @theme inline {
