@@ -7,7 +7,7 @@ const Logo = ({ color }) => {
   return (
     <Link className="" to={"/"}>
       <img
-        className="w-60 md:w-80 object-cover"
+        className="w-60 md:w-60 object-cover"
         src="/logo/PeakProfitLogoHorizontal.png"
       />
     </Link>
