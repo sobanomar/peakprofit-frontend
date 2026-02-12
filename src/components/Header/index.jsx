@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
-import { FaUser } from "react-icons/fa";
 import Logo from "../Logo";
-import { X, Menu, User } from "lucide-react";
+import { X, Menu, User, User2 } from "lucide-react";
 import LiquidGlassButton from "../ui/LiquidGlassButton";
 
 const Header = () => {
@@ -50,27 +49,30 @@ const Header = () => {
               {navLinks.map((link) => (
                 <div
                   key={link.to}
-                  className="relative group px-0 items-center py-3 space-x-0 "
+                  className="relative group items-center py-3 "
                 >
                   {isActive(link.to) ? (
                     // Active nav link is a LiquidGlassButton
-                    <LiquidGlassButton
-                      className="text-lg bg-blue-600/10 w-32 h-12"
-                      onClick={() =>
-                        window.open(
-                          import.meta.env.VITE_DASHBOARD_URL + "/signup",
-                          "_blank",
-                          "noopener,noreferrer",
-                        )
-                      }
+                    <Link
+                      to={link.to}
+                      className="relative group py-3 cursor-pointer w-24 flex mx-0 items-center justify-center"
                     >
-                      {link.label}
-                    </LiquidGlassButton>
+                      {/* Hover background */}
+                      {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-700/10 to-blue-500/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" /> */}
+
+                      {/* Link text */}
+                      <span className="relative z-10 text-lg font-semibold text-gray-300 group-hover:text-white transition-colors duration-300">
+                        {link.label}
+                      </span>
+
+                      {/* Underline animation */}
+                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-blue-500/40 to-blue-500 w-0 w-full transition-all duration-300" />
+                    </Link>
                   ) : (
                     // Inactive nav link
                     <Link
                       to={link.to}
-                      className="relative group py-3 cursor-pointer w-32 h-12 flex mx-0 items-center justify-center"
+                      className="relative group py-3 cursor-pointer w-24 flex mx-0 items-center justify-center"
                     >
                       {/* Hover background */}
                       {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-700/10 to-blue-500/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" /> */}
@@ -101,7 +103,7 @@ const Header = () => {
                 <LiquidGlassButton
                   width={200}
                   height={50}
-                  className={"text-lg bg-blue-400/50 w-50 h-12"}
+                  className={"text-lg bg-blue-400/50 w-40 h-12"}
                   onClick={() =>
                     window.open(
                       import.meta.env.VITE_DASHBOARD_URL + "/signup",
@@ -166,19 +168,25 @@ const Header = () => {
         {/* Backdrop */}
         <div
           onClick={() => setIsMobileMenuOpen(false)}
-          className={`absolute inset-0 bg-black/80 backdrop-blur-xs transition-opacity duration-500 ${
+          className={`absolute inset-0 bg-black/70 backdrop-blur-xs transition-opacity duration-500 ${
             isMobileMenuOpen ? "opacity-100" : "opacity-0"
           }`}
         />
 
         {/* Sidebar */}
         <div
-          className={`absolute top-0 right-0 h-full w-[280px] sm:w-[320px] bg-gradient-to-br from-black via-purple-950/20 to-black border-l border-purple-500/30 backdrop-blur-2xl transition-transform duration-500 ${
+          className={`absolute top-0 right-0 h-full w-[280px] sm:w-[320px] bg-gradient-to-br from-black  to-blue-800/15 backdrop-blur-xl transition-transform duration-500 ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
+          style={{
+            borderLeftWidth: "1px",
+            borderStyle: "solid",
+            borderImage:
+              "linear-gradient(to bottom, black 0%, black 15%, #3b82f6 100%) 1",
+          }}
         >
           {/* Animated background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 via-transparent to-blue-600/5 animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 via-transparent to-blue-600/5 animate-gradient-shift" />
 
           {/* Content */}
           <div className="relative h-full flex flex-col pt-28 px-8">
@@ -197,7 +205,7 @@ const Header = () => {
                   }}
                 >
                   {isActive(link.to) && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-xl border border-purple-500/30" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-blue-500/20 rounded-full" />
                   )}
 
                   <div className="relative px-6 py-4 rounded-xl transition-all duration-300 group-hover:bg-white/5">
@@ -216,25 +224,41 @@ const Header = () => {
             </nav>
 
             {/* CTA Section */}
-            <div className="mt-auto mb-12 space-y-4">
-              <a
-                href={`${import.meta.env.VITE_DASHBOARD_URL}/login`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" relative group overflow-hidden px-8 py-4 flex items-center gap-2 rounded-xl border w-full justify-center border-purple-400 text-white font-bold text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+            <div className="mt-auto mb-4 space-y-3">
+              {/* Login Button */}
+              <LiquidGlassButton
+                width={280}
+                height={50}
+                className="w-full text-white bg-blue-400/10 h-12"
+                onClick={() =>
+                  window.open(
+                    import.meta.env.VITE_DASHBOARD_URL + "/login",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )
+                }
               >
-                <User size={26} />
-                <span className="relative z-10">Login</span>
-              </a>
-              <a
-                href={`${import.meta.env.VITE_DASHBOARD_URL}/signup`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block relative group overflow-hidden px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                <div className="flex items-center justify-center gap-2">
+                  <User2 size={22} />
+                  <span>Access Dashboard</span>
+                </div>
+              </LiquidGlassButton>
+
+              {/* Get Started Button */}
+              <LiquidGlassButton
+                width={280}
+                height={50}
+                className="w-full text-white bg-purple-600/10 h-12"
+                onClick={() =>
+                  window.open(
+                    import.meta.env.VITE_DASHBOARD_URL + "/signup",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )
+                }
               >
-                <span className="relative z-10">Get Started Now</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
+                Get Started
+              </LiquidGlassButton>
             </div>
           </div>
 
