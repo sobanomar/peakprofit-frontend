@@ -62,7 +62,7 @@ export default function HomeHero({ onStartChallengeClick }) {
             target="_blank"
             rel="noopener noreferrer"
             href="https://discord.gg/peakprofit"
-            className="bg-purple-900/20 gap-2 w-full hover:shadow-[0_0_50px_5px_rgba(174,48,255,0.5)] hover:bg-purple-500/30 text-white cursor-pointer 
+            className="bg-purple-900/20 gap-2 w-full hover:shadow-[0_0_30px_2px_rgba(174,48,255,0.5)] hover:bg-purple-500/30 text-white cursor-pointer 
   py-5 px-8 rounded-2xl font-semibold 
   transition-all duration-300 
   flex items-center justify-center 
