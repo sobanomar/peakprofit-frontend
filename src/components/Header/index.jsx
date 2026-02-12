@@ -89,7 +89,13 @@ const Header = () => {
                   width={200}
                   height={50}
                   className={"text-lg bg-blue-600/10"}
-                  // onClick={onStartChallengeClick}
+                  onClick={() =>
+                    window.open(
+                      import.meta.env.VITE_DASHBOARD_URL + "/signup",
+                      "_blank",
+                      "noopener,noreferrer",
+                    )
+                  }
                 >
                   Get Started
                 </LiquidGlassButton>
@@ -109,7 +115,13 @@ const Header = () => {
                   className={
                     "text-lg bg-blue-700/10 items-center flex justify-center"
                   }
-                  // onClick={onStartChallengeClick}
+                  onClick={() =>
+                    window.open(
+                      import.meta.env.VITE_DASHBOARD_URL + "/login",
+                      "_blank",
+                      "noopener,noreferrer",
+                    )
+                  }
                 >
                   <User size={26} />
                 </LiquidGlassButton>
@@ -127,7 +139,7 @@ const Header = () => {
         </div>
 
         {/* Animated border bottom */}
-        <div className="h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent animate-pulse-slow" />
+        {/* <div className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent animate-pulse-slow" /> */}
       </header>
 
       {/* Mobile Sidebar */}

@@ -57,7 +57,9 @@ export default function HomeHero({ onStartChallengeClick }) {
         <LiquidGlassButton
           width={400}
           height={80}
-          className={"text-2xl bg-purple-500/5 font-extrabold"}
+          className={
+            "text-2xl bg-gradient-to-r from-purple-600/10 to-blue-600/10 font-extrabold"
+          }
           onClick={onStartChallengeClick}
         >
           START NEW CHALLENGE
