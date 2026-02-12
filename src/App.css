@@ -29,26 +29,26 @@ body {
 @keyframes glow {
   0% {
     text-shadow:
-      0 0 4px #7e22ce,
+      0 0 8px #7e22ce,
       /* always present */ 0 0 8px #6b21a8;
   }
 
   50% {
     text-shadow:
-      0 0 4px #7e22ce,
+      0 0 8px #7e22ce,
       /* always present */ 0 0 16px #a855f7,
       0 0 32px #9333ea;
   }
 
   100% {
     text-shadow:
-      0 0 4px #7e22ce,
+      0 0 8px #7e22ce,
       /* always present */ 0 0 10px #9333ea;
   }
 }
 
 .animate-delayed-sweep {
-  animation: delayed-sweep 0s linear infinite;
+  animation: delayed-sweep 1s linear infinite;
 }
 
 /* Float animations for multiple icons */

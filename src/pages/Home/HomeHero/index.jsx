@@ -53,7 +53,7 @@ export default function HomeHero({ onStartChallengeClick }) {
           />
         </h1>
 
-        <div className="flex justify-center items-center mt-12 gap-4 w-full">
+        <div className="flex sm:flex-row flex-col justify-center items-center mt-12 gap-4 w-full">
           <AnimatedButton
             text={"Start Challenge"}
             action={onStartChallengeClick}
@@ -62,8 +62,8 @@ export default function HomeHero({ onStartChallengeClick }) {
             target="_blank"
             rel="noopener noreferrer"
             href="https://discord.gg/peakprofit"
-            className="bg-purple-900/20 gap-2 hover:shadow-[0_0_50px_5px_rgba(174,48,255,0.5)] hover:bg-purple-500/30 text-white cursor-pointer 
-  py-6 px-8 rounded-2xl font-semibold 
+            className="bg-purple-900/20 gap-2 w-full hover:shadow-[0_0_50px_5px_rgba(174,48,255,0.5)] hover:bg-purple-500/30 text-white cursor-pointer 
+  py-5 px-8 rounded-2xl font-semibold 
   transition-all duration-300 
   flex items-center justify-center 
   border border-purple-500 whitespace-nowrap"
