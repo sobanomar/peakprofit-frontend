@@ -35,7 +35,7 @@ const Header = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-black/40 backdrop-blur-2xl shadow-lg shadow-purple-500/10"
+            ? "bg-black/40 backdrop-blur-lg shadow-lg shadow-blue-400/5"
             : "bg-transparent"
         }`}
       >
@@ -175,7 +175,7 @@ const Header = () => {
 
         {/* Sidebar */}
         <div
-          className={`absolute top-0 right-0 h-full w-[280px] sm:w-[320px] bg-gradient-to-br from-black  to-blue-800/15 backdrop-blur-xl transition-transform duration-500 ${
+          className={`absolute top-0 right-0 h-full w-[280px] sm:w-[320px] bg-gradient-to-br from-black/60  to-blue-800/15 backdrop-blur-lg transition-transform duration-500 ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           style={{
