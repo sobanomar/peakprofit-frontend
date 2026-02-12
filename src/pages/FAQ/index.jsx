@@ -10,11 +10,11 @@ const ArticleListing = () => {
 
   return (
     <div className="min-h-screen bg-white p-6 z-50">
-      <div className="max-w-3xl mx-auto relative text-center text-white mb-5">
+      {/* <div className="max-w-3xl mx-auto relative text-center text-white mb-5">
         <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6">
           Advice and answers from the PeakProfit Team
         </h1>
-      </div>
+      </div> */}
 
       {/* Search Bar */}
       <SearchBar />

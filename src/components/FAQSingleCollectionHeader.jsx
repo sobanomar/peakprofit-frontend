@@ -16,10 +16,10 @@ const FAQSingleCollectionsHeader = () => {
       }}
     >
       <div className="relative z-0 h-full flex flex-col">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-center mt-4 items-center">
           <Logo color={"white"} />
 
-          <div className="flex items-center space-x-2 text-white">
+          {/* <div className="flex items-center space-x-2 text-white">
             <CiGlobe size={24} className="opacity-90" />
             <select
               className="bg-transparent text-white text-sm focus:outline-none cursor-pointer hover:opacity-80 transition-opacity"
@@ -29,7 +29,7 @@ const FAQSingleCollectionsHeader = () => {
                 English
               </option>
             </select>
-          </div>
+          </div> */}
         </div>
         <SearchBar SingleCollection={true} />
       </div>
