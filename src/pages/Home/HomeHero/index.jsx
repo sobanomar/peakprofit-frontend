@@ -66,7 +66,7 @@ export default function HomeHero({ onStartChallengeClick }) {
   flex items-center justify-center 
   border border-purple-500 whitespace-nowrap"
           >
-            <BsDiscord size={32} className=" text-purple-400" />
+            <BsDiscord size={32} className=" text-[#7289da]" />
             <span className="xl:text-3xl font-bold">Join Our Discord</span>
           </a>
         </div>

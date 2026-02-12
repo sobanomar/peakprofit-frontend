@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router";
-import LogoImage from "../assets/PeakProfitLogo2.0.png";
 
 const LogoBlack = ({ color }) => {
   let logoColor;
