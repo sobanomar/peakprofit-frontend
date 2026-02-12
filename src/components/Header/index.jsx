@@ -46,36 +46,49 @@ const Header = () => {
             <Logo />
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-6">
+            <nav className="hidden lg:flex items-center gap-4">
               {navLinks.map((link) => (
-                <Link
+                <div
                   key={link.to}
-                  to={link.to}
-                  className="relative group px-6 py-3"
+                  className="relative group px-0 items-center py-3 space-x-0 "
                 >
-                  {isActive(link.to) && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-full border border-purple-500/30 backdrop-blur-sm" />
+                  {isActive(link.to) ? (
+                    // Active nav link is a LiquidGlassButton
+                    <LiquidGlassButton
+                      className="text-lg bg-blue-600/10 w-32 h-12"
+                      onClick={() =>
+                        window.open(
+                          import.meta.env.VITE_DASHBOARD_URL + "/signup",
+                          "_blank",
+                          "noopener,noreferrer",
+                        )
+                      }
+                    >
+                      {link.label}
+                    </LiquidGlassButton>
+                  ) : (
+                    // Inactive nav link
+                    <Link
+                      to={link.to}
+                      className="relative group py-3 cursor-pointer w-32 h-12 flex mx-0 items-center justify-center"
+                    >
+                      {/* Hover background */}
+                      {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-700/10 to-blue-500/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" /> */}
+
+                      {/* Link text */}
+                      <span className="relative z-10 text-lg font-semibold text-gray-300 group-hover:text-white transition-colors duration-300">
+                        {link.label}
+                      </span>
+
+                      {/* Underline animation */}
+                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-blue-500/40 to-blue-500 w-0 group-hover:w-full transition-all duration-300" />
+                    </Link>
                   )}
-                  <span
-                    className={`relative z-10 text-lg font-semibold transition-all duration-300 ${
-                      isActive(link.to)
-                        ? "text-white"
-                        : "text-gray-300 group-hover:text-white"
-                    }`}
-                  >
-                    {link.label}
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
-                  <div
-                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 ${
-                      isActive(link.to) ? "w-0" : "w-0 group-hover:w-full"
-                    }`}
-                  />
-                </Link>
+                </div>
               ))}
 
               {/* CTA Buttons */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 {/* <a
                   href={`${import.meta.env.VITE_DASHBOARD_URL}/signup`}
                   target="_blank"
@@ -88,7 +101,7 @@ const Header = () => {
                 <LiquidGlassButton
                   width={200}
                   height={50}
-                  className={"text-lg bg-blue-600/10"}
+                  className={"text-lg bg-blue-400/50 w-50 h-12"}
                   onClick={() =>
                     window.open(
                       import.meta.env.VITE_DASHBOARD_URL + "/signup",
@@ -113,7 +126,7 @@ const Header = () => {
                   width={50}
                   height={50}
                   className={
-                    "text-lg bg-blue-700/10 items-center flex justify-center"
+                    "text-lg bg-blue-400/50 items-center flex justify-center w-12 h-12"
                   }
                   onClick={() =>
                     window.open(

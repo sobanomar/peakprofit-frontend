@@ -124,7 +124,7 @@ const LiquidGlassButton = forwardRef(
 
     return (
       <>
-        <svg width="0" height="0" style={{ position: "absolute" }}>
+        {/* <svg width="0" height="0" style={{ position: "absolute" }}>
           <defs>
             <filter id={filterId} x="-50%" y="-50%" width="200%" height="200%">
               <feGaussianBlur
@@ -157,15 +157,13 @@ const LiquidGlassButton = forwardRef(
               />
             </filter>
           </defs>
-        </svg>
+        </svg> */}
 
         <button
           ref={buttonRef}
           className={`${className}`}
           disabled={disabled}
           style={{
-            width: width + "px",
-            height: height + "px",
             border: "none",
             borderRadius: "100px",
             background:
