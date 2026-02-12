@@ -32,7 +32,7 @@ export default function HomeHero({ onStartChallengeClick }) {
   to-[#130025]"
       />
 
-      <div className="absolute theme-ambient-glow -right-60 top-40 opacity-60" />
+      <div className="absolute theme-ambient-glow -right-80 top-40 opacity-60" />
 
       {/* Content */}
       <div className="z-10 text-center flex flex-col justify-center items-center">
@@ -57,10 +57,10 @@ export default function HomeHero({ onStartChallengeClick }) {
         <LiquidGlassButton
           width={400}
           height={80}
-          className={"text-4xl bg-purple-500/2"}
+          className={"text-2xl bg-purple-500/5 font-extrabold"}
           onClick={onStartChallengeClick}
         >
-          Start New Challenge
+          START NEW CHALLENGE
         </LiquidGlassButton>
 
         {/* <div className="flex sm:flex-row flex-col w-fix justify-center items-center mt-12 gap-4 ">

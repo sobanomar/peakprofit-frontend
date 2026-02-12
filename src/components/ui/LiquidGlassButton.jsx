@@ -184,7 +184,6 @@ const LiquidGlassButton = forwardRef(
 
             cursor: disabled ? "not-allowed" : "pointer",
             color: "#fff",
-            fontSize: "30px",
             fontWeight: "600",
             fontFamily: "system-ui, -apple-system, sans-serif",
             filter: `url(#${filterId})`,

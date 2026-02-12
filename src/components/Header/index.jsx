@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router";
 import { FaUser } from "react-icons/fa";
 import Logo from "../Logo";
 import { X, Menu, User } from "lucide-react";
+import LiquidGlassButton from "../ui/LiquidGlassButton";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -75,7 +76,7 @@ const Header = () => {
 
               {/* CTA Buttons */}
               <div className="flex items-center gap-4">
-                <a
+                {/* <a
                   href={`${import.meta.env.VITE_DASHBOARD_URL}/signup`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -83,17 +84,35 @@ const Header = () => {
                 >
                   <span className="relative z-10">Get Started</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </a>
+                </a> */}
+                <LiquidGlassButton
+                  width={200}
+                  height={50}
+                  className={"text-lg bg-blue-600/10"}
+                  // onClick={onStartChallengeClick}
+                >
+                  Get Started
+                </LiquidGlassButton>
 
                 {/* Profile Icon Button */}
-                <a
+                {/* <a
                   href={`${import.meta.env.VITE_DASHBOARD_URL}/login`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 rounded-full bg-[#33e4f6]/20 border border-[#33e4f6] cursor-pointer hover:bg-[#33e4f6]/30 text-white transition-all duration-300"
                 >
                   <User size={26} />
-                </a>
+                </a> */}
+                <LiquidGlassButton
+                  width={50}
+                  height={50}
+                  className={
+                    "text-lg bg-blue-700/10 items-center flex justify-center"
+                  }
+                  // onClick={onStartChallengeClick}
+                >
+                  <User size={26} />
+                </LiquidGlassButton>
               </div>
             </nav>
 
@@ -122,7 +141,7 @@ const Header = () => {
         {/* Backdrop */}
         <div
           onClick={() => setIsMobileMenuOpen(false)}
-          className={`absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-500 ${
+          className={`absolute inset-0 bg-black/80 backdrop-blur-xs transition-opacity duration-500 ${
             isMobileMenuOpen ? "opacity-100" : "opacity-0"
           }`}
         />
