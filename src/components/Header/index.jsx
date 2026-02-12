@@ -173,13 +173,24 @@ const Header = () => {
 
             {/* CTA Section */}
             <div className="mt-auto mb-12 space-y-4">
-              <Link
-                to="/evaluation"
+              <a
+                href="https://dashboard.peakprofitfunding.com/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" relative group overflow-hidden px-8 py-4 flex items-center gap-2 rounded-xl border w-full justify-center border-purple-400 text-white font-bold text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+              >
+                <User size={26} />
+                <span className="relative z-10">Login</span>
+              </a>
+              <a
+                href="https://dashboard.peakprofitfunding.com/signup"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block relative group overflow-hidden px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
               >
                 <span className="relative z-10">Get Started Now</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </Link>
+              </a>
             </div>
           </div>
 
