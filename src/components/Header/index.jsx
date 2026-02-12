@@ -103,7 +103,9 @@ const Header = () => {
                 <LiquidGlassButton
                   width={200}
                   height={50}
-                  className={"text-lg bg-blue-400/50 w-40 h-12"}
+                  className={
+                    "text-lg bg-blue-400/10 hover:bg-[#33e4f6]/60 w-40 h-12"
+                  }
                   onClick={() =>
                     window.open(
                       import.meta.env.VITE_DASHBOARD_URL + "/signup",
@@ -128,7 +130,7 @@ const Header = () => {
                   width={50}
                   height={50}
                   className={
-                    "text-lg bg-blue-400/50 items-center flex justify-center w-12 h-12"
+                    "text-lg  bg-blue-400/10 hover:bg-[#33e4f6]/60 items-center flex justify-center w-12 h-12"
                   }
                   onClick={() =>
                     window.open(
@@ -138,7 +140,7 @@ const Header = () => {
                     )
                   }
                 >
-                  <User size={26} />
+                  <User2 size={26} />
                 </LiquidGlassButton>
               </div>
             </nav>
