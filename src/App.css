@@ -22,7 +22,26 @@ body {
   }
 }
 
-.animate-delayed-sweep {
+.theme-ambient-glow {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(51, 228, 246, 0.6) 0%,
+    rgba(51, 228, 246, 0.4) 30%,
+    rgba(51, 228, 246, 0.2) 55%,
+    rgba(51, 228, 246, 0.08) 75%,
+    transparent 100%
+  );
+
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+how to use this .animate-delayed-sweep {
   animation: delayed-sweep 4s linear infinite;
 }
 
@@ -299,21 +318,4 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-}
-
-@keyframes rotate-border {
-  0% {
-    transform: rotate(0deg) scale(10);
-  }
-  100% {
-    transform: rotate(-360deg) scale(10);
-  }
-}
-
-.animate-border {
-  animation: rotate-border 10s linear infinite;
-}
-
-.bg-conic-beam {
-  background: conic-gradient(#c27bff 20deg, transparent 120deg);
 }

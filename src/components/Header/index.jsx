@@ -12,7 +12,7 @@ const Header = () => {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/evaluation", label: "Evaluations" },
-    { to: "/faq", label: "FAQ" },
+    { to: "/faq", label: "FAQs" },
     { to: "/contact", label: "Contact" },
   ];
 
@@ -90,7 +90,7 @@ const Header = () => {
                   href={`${import.meta.env.VITE_DASHBOARD_URL}/login`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-purple-600/20 border border-purple-400 cursor-pointer hover:bg-purple-600/50 text-white transition-all duration-300"
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-[#33e4f6]/20 border border-[#33e4f6] cursor-pointer hover:bg-[#33e4f6]/30 text-white transition-all duration-300"
                 >
                   <User size={26} />
                 </a>

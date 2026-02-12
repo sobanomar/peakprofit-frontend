@@ -61,7 +61,7 @@ export function Typewriter({
   return (
     <span className={className}>
       {displayText}
-      <span className="animate-pulse text-purple-400">{cursor}</span>
+      <span className="animate-pulse text-[#2596be]">{cursor}</span>
     </span>
   );
 }

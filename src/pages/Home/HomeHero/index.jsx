@@ -5,10 +5,11 @@ import React from "react";
 
 import { Typewriter } from "@/components/ui/typewriter-text";
 import { BsDiscord } from "react-icons/bs";
+import LiquidGlassButton from "../../../components/ui/LiquidGlassButton";
 
 export default function HomeHero({ onStartChallengeClick }) {
   return (
-    <div className="relative w-full min-h-screen  flex flex-col items-center justify-center px-6 lg:px-12 overflow-hidden text-white">
+    <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-6 lg:px-12 overflow-hidden text-white">
       {/* Background Video */}
       <video
         autoPlay
@@ -29,14 +30,16 @@ export default function HomeHero({ onStartChallengeClick }) {
   bg-gradient-to-b 
   from-transparent 
   to-[#130025]"
-      ></div>
+      />
+
+      <div className="absolute theme-ambient-glow -right-60 top-40 opacity-60" />
 
       {/* Content */}
       <div className="z-10 text-center flex flex-col justify-center items-center">
         <h1 className="h-40 sm:h-96 w-full text-center flex flex-col justify-center">
-          <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white">
+          <span className="text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold leading-tight text-white">
             We are{" "}
-            <span className="text-purple-400 font-extrabold">FUELING</span>
+            <span className="text-[#33e4f6] font-extrabold">Fueling</span>
             <br />
           </span>
           <Typewriter
@@ -51,11 +54,21 @@ export default function HomeHero({ onStartChallengeClick }) {
           />
         </h1>
 
-        <div className="flex sm:flex-row flex-col w-fix justify-center items-center mt-12 gap-4 ">
+        <LiquidGlassButton
+          width={400}
+          height={80}
+          className={"text-4xl bg-purple-500/2"}
+          onClick={onStartChallengeClick}
+        >
+          Start New Challenge
+        </LiquidGlassButton>
+
+        {/* <div className="flex sm:flex-row flex-col w-fix justify-center items-center mt-12 gap-4 ">
           <AnimatedButton
             text={"Start New Challenge"}
             action={onStartChallengeClick}
           />
+
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -69,7 +82,7 @@ export default function HomeHero({ onStartChallengeClick }) {
             <BsDiscord size={32} className=" text-[#7289da]" />
             <span className="xl:text-3xl font-bold">Join Our Discord</span>
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
