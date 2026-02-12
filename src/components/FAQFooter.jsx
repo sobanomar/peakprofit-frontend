@@ -1,10 +1,9 @@
-import React from "react";
-import Logo from "./Logo";
+import LogoBlack from "./LogoBlack";
 
 const FAQFooter = () => {
   return (
     <footer className="flex justify-center items-center py-10 bg-white">
-      <Logo />
+      <LogoBlack />
     </footer>
   );
 };

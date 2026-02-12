@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Logo from "../Logo";
+import { useState, useEffect } from "react";
+
 import NavBar from "./NavBar";
 import { FaUser, FaBars, FaTimes } from "react-icons/fa";
-import { CountdownTimer } from "../CountdownTimer";
+import Logo from "../Logo";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,15 +34,11 @@ const Header = () => {
   }, [lastScrollY]);
 
   return (
-    <header className="fixed w-full z-50 backdrop-filter backdrop-blur-lg  py-4 bg-purple-600/5">
+    <header className="fixed w-full z-50 backdrop-filter backdrop-blur-lg  py-4 bg-gray-950/10">
       <div className="px-4 sm:px-8">
         <div className="flex justify-between items-center text-white transition-all duration-300 ease-in-out">
           {/* Conditionally render logo on scroll */}
-          <div
-            className={`transition-opacity duration-300 w-40 sm:w-60 md:w-80`}
-          >
-            <img src="/logo/PeakProfitLogoHorizontal.png" />
-          </div>
+          <Logo />
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex">
