@@ -23,17 +23,18 @@ const Home = () => {
       <div className="relative overflow-x-hidden">
         <HomeHero onStartChallengeClick={handleChallengeClick} />
 
-        <div className="absolute theme-ambient-glow -right-80 top-40 opacity-60" />
+        <div className="absolute theme-ambient-glow -right-80 top-80 opacity-60" />
         <HowItWorks />
-      </div>
 
-      <VerifiedPayouts />
-      <TradingPairs />
-      <Evaluation />
-      <WhyChoosePPF />
-      <RawSpreads />
-      <TraderTestimonials />
-      <StillNotConvinced />
+        <TradingPairs />
+
+        {/* <Evaluation /> */}
+        <WhyChoosePPF />
+        <VerifiedPayouts />
+        <RawSpreads />
+        <TraderTestimonials />
+        {/* <StillNotConvinced /> */}
+      </div>
     </>
   );
 };

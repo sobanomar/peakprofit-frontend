@@ -4,15 +4,16 @@ import Support from "../../assets/images/home/how_it_works/support.webp";
 import Withdrawl from "../../assets/images/home/how_it_works/withdrawl.webp";
 import Investment from "../../assets/images/home/how_it_works/investment-growth.webp";
 import { Link } from "react-router";
+import { GlowingCardsGrid } from "./GlowingCardsGrid";
 
 const HowItWorks = () => {
   return (
-    <div className="my-20">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-white font-semibold">
+    <div className="my-20 px-12 md:px-20">
+      <h1 className="text-3xl sm:text-4xl mb-20 md:text-5xl lg:text-6xl text-center text-white font-semibold">
         How it Works
       </h1>
-      <div className="grid grid-cols-1 place-items-center md:grid-cols-4 gap-6 p-8 ">
-        {/* Top 4 Steps */}
+      {/* <div className="grid grid-cols-1 place-items-center md:grid-cols-4 gap-6 p-8 ">
+      
         <InfoCard
           topContent="1"
           title="Sign Up"
@@ -34,7 +35,7 @@ const HowItWorks = () => {
           description="Scale Your Account up to $1Million in Simulated Funding."
         />
 
-        {/* Bottom 3 Centered Cards */}
+       
         <div className="md:col-span-4 flex flex-wrap justify-center gap-6">
           <InfoCard
             topContent={Withdrawl}
@@ -69,7 +70,8 @@ const HowItWorks = () => {
             description="Join a community of successful traders who have achieved their funding goals with our platform."
           />
         </div>
-      </div>
+      </div> */}
+      <GlowingCardsGrid />
     </div>
   );
 };
