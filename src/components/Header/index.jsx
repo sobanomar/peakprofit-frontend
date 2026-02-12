@@ -66,7 +66,7 @@ const Header = () => {
                       </span>
 
                       {/* Underline animation */}
-                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-blue-500/40 to-blue-500 w-full transition-all duration-300" />
+                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-[#33e4f6]/40 to-[#33e4f6] w-full transition-all duration-300" />
                     </Link>
                   ) : (
                     // Inactive nav link
@@ -83,7 +83,7 @@ const Header = () => {
                       </span>
 
                       {/* Underline animation */}
-                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-blue-500/40 to-blue-500 w-0 group-hover:w-full transition-all duration-300" />
+                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-[#33e4f6]/40 to-[#33e4f6] w-0 group-hover:w-full transition-all duration-300" />
                     </Link>
                   )}
                 </div>
@@ -177,18 +177,18 @@ const Header = () => {
 
         {/* Sidebar */}
         <div
-          className={`absolute top-0 right-0 h-full w-[280px] sm:w-[320px] bg-gradient-to-br from-black/60  to-blue-800/15 backdrop-blur-lg transition-transform duration-500 ${
+          className={`absolute top-0 right-0 h-full w-[280px] sm:w-[320px] bg-gradient-to-br from-black/60  to-blue-800/10 backdrop-blur-lg transition-transform duration-500 ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           style={{
-            borderLeftWidth: "1px",
+            borderLeftWidth: 0.5,
             borderStyle: "solid",
             borderImage:
-              "linear-gradient(to bottom, black 0%, black 15%, #3b82f6 100%) 1",
+              "linear-gradient(to bottom, black 0%, black 15%, #33e4f6 100%) 1",
           }}
         >
           {/* Animated background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 via-transparent to-blue-600/5 animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-br  via-transparent to-[#33e4f6]/5 animate-gradient-shift" />
 
           {/* Content */}
           <div className="relative h-full flex flex-col pt-28 px-8">
@@ -207,7 +207,7 @@ const Header = () => {
                   }}
                 >
                   {isActive(link.to) && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-blue-500/20 rounded-full" />
+                    <div className="absolute inset-0 bg-[#33e4f6]/80  rounded-full" />
                   )}
 
                   <div className="relative px-6 py-4 rounded-xl transition-all duration-300 group-hover:bg-white/5">
@@ -231,7 +231,7 @@ const Header = () => {
               <LiquidGlassButton
                 width={280}
                 height={50}
-                className="w-full text-white bg-blue-400/10 h-12"
+                className="w-full text-white bg-[#33e4f6]/10 h-12"
                 onClick={() =>
                   window.open(
                     import.meta.env.VITE_DASHBOARD_URL + "/login",
@@ -240,7 +240,7 @@ const Header = () => {
                   )
                 }
               >
-                <div className="flex items-center justify-center gap-2">
+                <div className="flex items-center  justify-center gap-2">
                   <User2 size={22} />
                   <span>Access Dashboard</span>
                 </div>
@@ -250,7 +250,7 @@ const Header = () => {
               <LiquidGlassButton
                 width={280}
                 height={50}
-                className="w-full text-white bg-purple-600/10 h-12"
+                className="w-full text-white  bg-[#33e4f6]/10 h-12"
                 onClick={() =>
                   window.open(
                     import.meta.env.VITE_DASHBOARD_URL + "/signup",
@@ -259,7 +259,7 @@ const Header = () => {
                   )
                 }
               >
-                Get Started
+                Get Started to Trade
               </LiquidGlassButton>
             </div>
           </div>
