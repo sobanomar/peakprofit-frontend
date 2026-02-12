@@ -1,89 +1,235 @@
 import { useState, useEffect } from "react";
-
-import NavBar from "./NavBar";
-import { FaUser, FaBars, FaTimes } from "react-icons/fa";
+import { Link, useLocation } from "react-router";
+import { FaUser } from "react-icons/fa";
 import Logo from "../Logo";
+import { X, Menu, User } from "lucide-react";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [showLogo, setShowLogo] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/evaluation", label: "Evaluations" },
+    { to: "/faq", label: "FAQ" },
+    { to: "/contact", label: "Contact" },
+  ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (window.innerWidth < 1024) {
-        // Only apply for mobile/tablets
-        if (currentScrollY > lastScrollY && currentScrollY > 50) {
-          // scrolling down
-          setShowLogo(false);
-        } else {
-          // scrolling up
-          setShowLogo(true);
-        }
-        setLastScrollY(currentScrollY);
-      }
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="fixed w-full z-50 backdrop-filter backdrop-blur-lg py-6 sm:py-6 bg-gray-950/10">
-      <div className="px-4 sm:px-8">
-        <div className="flex justify-between items-center text-white transition-all duration-300 ease-in-out">
-          {/* Conditionally render logo on scroll */}
-          <Logo />
+    <>
+      {/* Desktop & Mobile Header */}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled
+            ? "bg-black/40 backdrop-blur-2xl shadow-lg shadow-purple-500/10"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20 md:h-24">
+            {/* Logo */}
+            <Logo />
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex">
-            <NavBar />
-          </div>
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="relative group px-6 py-3"
+                >
+                  {isActive(link.to) && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-full border border-purple-500/30 backdrop-blur-sm" />
+                  )}
+                  <span
+                    className={`relative z-10 text-lg font-semibold transition-all duration-300 ${
+                      isActive(link.to)
+                        ? "text-white"
+                        : "text-gray-300 group-hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+                  <div
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 ${
+                      isActive(link.to) ? "w-0" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </Link>
+              ))}
 
-          {/* Desktop Client Area Button */}
-          <a
-            href="https://dashboard.peakprofitfunding.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden lg:flex cursor-pointer bg-[#7F0DDA] rounded-full py-2 px-6 md:py-4 md:px-10 gap-x-2 items-center font-semibold"
-          >
-            Client Area
-            <FaUser size={18} color="b45ecf" />
-          </a>
+              {/* CTA Buttons */}
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://dashboard.peakprofitfunding.com/signup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative group overflow-hidden px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold transition-all duration-300 hover:scale-105"
+                >
+                  <span className="relative z-10">Get Started</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </a>
 
-          {/* Hamburger Menu Toggle */}
-          <div className="lg:hidden flex items-center gap-4">
+                {/* Profile Icon Button */}
+                <a
+                  href="https://dashboard.peakprofitfunding.com/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-purple-600/20 border border-purple-400 cursor-pointer hover:bg-purple-600/50 text-white transition-all duration-300"
+                >
+                  <User size={26} />
+                </a>
+              </div>
+            </nav>
+
+            {/* Mobile Menu Button */}
             <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-white focus:outline-none"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden relative z-50 p-2 text-white hover:text-purple-400 transition-colors duration-300"
             >
-              {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
-        {menuOpen && (
-          <div className="lg:hidden mt-4 bg-[#472C64] rounded-xl py-4 px-6 space-y-4 text-white font-semibold text-lg shadow-lg">
-            <NavBar mobile />
-            <a
-              href="https://dashboard.peakprofitfunding.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center cursor-pointer bg-[#7F0DDA] rounded-full py-3 px-6 gap-2"
-            >
-              <span>Client Area</span>
-              <FaUser size={18} color="b45ecf" />
-            </a>
+        {/* Animated border bottom */}
+        <div className="h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent animate-pulse-slow" />
+      </header>
+
+      {/* Mobile Sidebar */}
+      <div
+        className={`fixed inset-0 z-40 lg:hidden transition-all duration-500 ${
+          isMobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
+        {/* Backdrop */}
+        <div
+          onClick={() => setIsMobileMenuOpen(false)}
+          className={`absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-500 ${
+            isMobileMenuOpen ? "opacity-100" : "opacity-0"
+          }`}
+        />
+
+        {/* Sidebar */}
+        <div
+          className={`absolute top-0 right-0 h-full w-[280px] sm:w-[320px] bg-gradient-to-br from-black via-purple-950/20 to-black border-l border-purple-500/30 backdrop-blur-2xl transition-transform duration-500 ${
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          {/* Animated background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 via-transparent to-blue-600/5 animate-gradient-shift" />
+
+          {/* Content */}
+          <div className="relative h-full flex flex-col pt-28 px-8">
+            {/* Navigation Links */}
+            <nav className="flex flex-col gap-2">
+              {navLinks.map((link, index) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="relative group"
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                    animation: isMobileMenuOpen
+                      ? "slideInRight 0.5s ease-out forwards"
+                      : "none",
+                  }}
+                >
+                  {isActive(link.to) && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-xl border border-purple-500/30" />
+                  )}
+
+                  <div className="relative px-6 py-4 rounded-xl transition-all duration-300 group-hover:bg-white/5">
+                    <span
+                      className={`text-xl font-semibold transition-all duration-300 ${
+                        isActive(link.to)
+                          ? "text-white"
+                          : "text-gray-300 group-hover:text-white group-hover:translate-x-2"
+                      }`}
+                    >
+                      {link.label}
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </nav>
+
+            {/* CTA Section */}
+            <div className="mt-auto mb-12 space-y-4">
+              <Link
+                to="/evaluation"
+                className="block relative group overflow-hidden px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+              >
+                <span className="relative z-10">Get Started Now</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </Link>
+            </div>
           </div>
-        )}
+
+          {/* Decorative elements */}
+          <div className="absolute top-20 right-8 w-32 h-32 bg-purple-600/10 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-40 left-8 w-24 h-24 bg-blue-600/10 rounded-full blur-3xl animate-pulse-slow" />
+        </div>
       </div>
-    </header>
+
+      <style jsx>{`
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes gradient-shift {
+          0%,
+          100% {
+            opacity: 0.3;
+          }
+          50% {
+            opacity: 0.6;
+          }
+        }
+
+        @keyframes pulse {
+          0%,
+          100% {
+            opacity: 0.5;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+
+        .animate-pulse-slow {
+          animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .animate-gradient-shift {
+          animation: gradient-shift 8s ease-in-out infinite;
+        }
+      `}</style>
+    </>
   );
 };
 
