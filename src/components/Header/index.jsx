@@ -34,7 +34,7 @@ const Header = () => {
   }, [lastScrollY]);
 
   return (
-    <header className="fixed w-full z-50 backdrop-filter backdrop-blur-lg py-4 sm:py-6 bg-gray-950/10">
+    <header className="fixed w-full z-50 backdrop-filter backdrop-blur-lg py-6 sm:py-6 bg-gray-950/10">
       <div className="px-4 sm:px-8">
         <div className="flex justify-between items-center text-white transition-all duration-300 ease-in-out">
           {/* Conditionally render logo on scroll */}

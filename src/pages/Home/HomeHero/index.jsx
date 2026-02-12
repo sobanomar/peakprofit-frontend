@@ -33,7 +33,7 @@ export default function HomeHero({ onStartChallengeClick }) {
 
       {/* Content */}
       <div className="z-10 text-center flex flex-col justify-center items-center">
-        <h1 className=" h-96 text-center flex flex-col justify-center">
+        <h1 className="h-40 sm:h-96 w-full text-center flex flex-col justify-center">
           <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white">
             We are{" "}
             <span className="text-purple-300 neon-text font-extrabold">
@@ -53,7 +53,7 @@ export default function HomeHero({ onStartChallengeClick }) {
           />
         </h1>
 
-        <div className="flex sm:flex-row flex-col justify-center items-center mt-12 gap-4 w-full">
+        <div className="flex sm:flex-row flex-col w-fix justify-center items-center mt-12 gap-4 ">
           <AnimatedButton
             text={"Start Challenge"}
             action={onStartChallengeClick}

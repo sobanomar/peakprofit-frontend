@@ -48,7 +48,7 @@ body {
 }
 
 .animate-delayed-sweep {
-  animation: delayed-sweep 1s linear infinite;
+  animation: delayed-sweep 4s linear infinite;
 }
 
 /* Float animations for multiple icons */
