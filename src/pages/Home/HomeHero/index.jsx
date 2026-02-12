@@ -4,6 +4,7 @@ import discord from "../../../assets/images/home/discord.webp";
 import React from "react";
 
 import { Typewriter } from "@/components/ui/typewriter-text";
+import { BsDiscord } from "react-icons/bs";
 
 export default function HomeHero({ onStartChallengeClick }) {
   return (
@@ -34,7 +35,10 @@ export default function HomeHero({ onStartChallengeClick }) {
       <div className="z-10 text-center flex flex-col justify-center items-center">
         <h1 className=" h-96 text-center flex flex-col justify-center">
           <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white">
-            We are <span className="text-purple-400 neon-text"> fueling</span>{" "}
+            We are{" "}
+            <span className="text-purple-300 neon-text font-extrabold">
+              FUELING
+            </span>
             <br />
           </span>
           <Typewriter
@@ -58,13 +62,13 @@ export default function HomeHero({ onStartChallengeClick }) {
             target="_blank"
             rel="noopener noreferrer"
             href="https://discord.gg/peakprofit"
-            className="bg-neutral-800 hover:bg-neutral-700 text-white cursor-pointer 
+            className="bg-purple-900/20 gap-2 hover:shadow-[0_0_50px_5px_rgba(174,48,255,0.5)] hover:bg-purple-500/30 text-white cursor-pointer 
   py-6 px-8 rounded-2xl font-semibold 
   transition-all duration-300 
   flex items-center justify-center 
-  border border-neutral-500 whitespace-nowrap"
+  border border-purple-500 whitespace-nowrap"
           >
-            <img src={discord} className="h-6 w-6 mr-2" alt="discord" />
+            <BsDiscord size={32} className=" text-purple-400" />
             <span className="xl:text-3xl font-bold">Join Our Discord</span>
           </a>
         </div>
