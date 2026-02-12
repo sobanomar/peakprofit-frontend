@@ -58,7 +58,7 @@ export default function HomeHero({ onStartChallengeClick }) {
           width={400}
           height={80}
           className={
-            "md:text-xl mt-4 md:mt-4 lg:text-2xl w-60 md:w-88 lg:w-96 h-12 lg:h-20 bg-gradient-to-r from-purple-400/5 to-blue-400/30 font-extrabold"
+            "md:text-xl mt-4 md:mt-4 lg:text-2xl w-60 md:w-88 lg:w-96 h-12 lg:h-20 bg-gradient-to-r from-purple-400/10 to-blue-400/30 font-extrabold"
           }
           onClick={onStartChallengeClick}
         >
