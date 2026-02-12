@@ -58,7 +58,7 @@ const CheckoutPage = () => {
 
   if (!challenges || challenges.length === 0) {
     return (
-      <div className="h-full flex flex-col items-center justify-center text-center p-6">
+      <div className="mt-32 h-full flex flex-col items-center justify-center text-center p-6">
         <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-1">
           No Challenges Available
         </h2>
@@ -76,7 +76,7 @@ const CheckoutPage = () => {
   }
 
   return (
-    <div className="pt-12 text-black dark:text-white">
+    <div className="mt-32 text-white dark:text-white">
       <div className="text-center mt-2">
         <h1 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold">
           Select Your Challenge
@@ -89,7 +89,7 @@ const CheckoutPage = () => {
       <div className="flex justify-center items-start mt-6 gap-8">
         <div className="w-[95%] md:w-[90%] lg:w-[85%] xl:w-[80%] flex flex-col lg:flex-row gap-8">
           {/* Challenge List */}
-          <div className="bg-white dark:border-white/[0.05] dark:bg-white/[0.03] shadow-lg border border-gray-200 p-8 rounded-2xl h-fit lg:w-2/3">
+          <div className="bg-[#1A082C] border-white/[0.05] shadow-lg border  p-8 rounded-2xl h-fit lg:w-2/3">
             <label className="flex text-xl pb-2 font-semibold items-center gap-2 mb-4">
               Select Account <span className="text-red-600">*</span>
             </label>
@@ -104,8 +104,8 @@ const CheckoutPage = () => {
                     onClick={() => setSelectedChallenge(challenge)}
                     className={`w-full flex justify-between items-center p-4 border rounded-lg cursor-pointer transition-all ${
                       isSelected
-                        ? "border-purple-600 bg-purple-50 dark:bg-purple-900/20"
-                        : "border-gray-300 bg-gray-100 dark:border-neutral-600 dark:bg-white/[0.05]"
+                        ? "border-purple-600 bg-purple-600/20 dark:bg-purple-900/20"
+                        : "border-gray-300 bg-purple-400 dark:border-neutral-600 dark:bg-white/[0.05]"
                     }`}
                   >
                     <div className="flex flex-col items-start">

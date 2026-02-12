@@ -29,7 +29,7 @@ export default function Contact() {
       const res = await axiosInstance.post(
         "/contact",
         formData,
-        { withCredentials: true } // ✅ Important for cookies / CORS credentials
+        { withCredentials: true }, // ✅ Important for cookies / CORS credentials
       );
 
       setResponseMsg("Message sent successfully!");
@@ -49,7 +49,7 @@ export default function Contact() {
   const mapLocation = "1111 South Bayshore Drive, Miami, FL, USA";
 
   return (
-    <div className="text-white flex flex-col">
+    <div className="text-white flex flex-col mt-20">
       <div className="container mx-auto px-4 pt-4 md:pt-20 flex items-center flex-col">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12">
           Contact Us
@@ -63,7 +63,7 @@ export default function Contact() {
               <iframe
                 className="w-full h-full border-0"
                 src={`https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}&q=${encodeURIComponent(
-                  mapLocation
+                  mapLocation,
                 )}&zoom=15`}
                 allowFullScreen
                 loading="lazy"

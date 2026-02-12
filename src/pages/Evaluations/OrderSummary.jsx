@@ -13,7 +13,7 @@ export default function OrderSummary({
   loading,
 }) {
   return (
-    <div className="bg-[#1A082C] dark:text-white text-black shadow-lg border border-white/[0.05]  p-8 rounded-2xl h-fit max-w-md w-full transition-all duration-300">
+    <div className="bg-[#1A082C] dark:text-white text-white shadow-lg border border-white/[0.05]  p-8 rounded-2xl h-fit max-w-md w-full transition-all duration-300">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Total Summary</h2>
