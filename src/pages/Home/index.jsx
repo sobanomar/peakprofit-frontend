@@ -20,8 +20,13 @@ const Home = () => {
 
   return (
     <>
-      <HomeHero onStartChallengeClick={handleChallengeClick} />
-      <HowItWorks />
+      <div className="relative overflow-x-hidden">
+        <HomeHero onStartChallengeClick={handleChallengeClick} />
+
+        <div className="absolute theme-ambient-glow -right-80 top-40 opacity-60" />
+        <HowItWorks />
+      </div>
+
       <VerifiedPayouts />
       <TradingPairs />
       <Evaluation />

@@ -66,7 +66,7 @@ const Header = () => {
                       </span>
 
                       {/* Underline animation */}
-                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-[#33e4f6]/40 to-[#33e4f6] w-full transition-all duration-300" />
+                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-brand/40 to-brand w-full transition-all duration-300" />
                     </Link>
                   ) : (
                     // Inactive nav link
@@ -83,7 +83,7 @@ const Header = () => {
                       </span>
 
                       {/* Underline animation */}
-                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-[#33e4f6]/40 to-[#33e4f6] w-0 group-hover:w-full transition-all duration-300" />
+                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-brand/40 to-brand w-0 group-hover:w-full transition-all duration-300" />
                     </Link>
                   )}
                 </div>
@@ -104,7 +104,7 @@ const Header = () => {
                   width={200}
                   height={50}
                   className={
-                    "text-lg bg-blue-400/10 hover:bg-[#33e4f6]/60 w-40 h-12"
+                    "text-lg bg-blue-400/10 hover:bg-brand/60 w-40 h-12"
                   }
                   onClick={() =>
                     window.open(
@@ -122,7 +122,7 @@ const Header = () => {
                   href={`${import.meta.env.VITE_DASHBOARD_URL}/login`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-[#33e4f6]/20 border border-[#33e4f6] cursor-pointer hover:bg-[#33e4f6]/30 text-white transition-all duration-300"
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-brand/20 border border-brand cursor-pointer hover:bg-brand/30 text-white transition-all duration-300"
                 >
                   <User size={26} />
                 </a> */}
@@ -130,7 +130,7 @@ const Header = () => {
                   width={50}
                   height={50}
                   className={
-                    "text-lg  bg-blue-400/10 hover:bg-[#33e4f6]/60 items-center flex justify-center w-12 h-12"
+                    "text-lg  bg-blue-400/10 hover:bg-brand/60 items-center flex justify-center w-12 h-12"
                   }
                   onClick={() =>
                     window.open(
@@ -188,7 +188,7 @@ const Header = () => {
           }}
         >
           {/* Animated background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br  via-transparent to-[#33e4f6]/5 animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-br  via-transparent to-brand/5 animate-gradient-shift" />
 
           {/* Content */}
           <div className="relative h-full flex flex-col pt-28 px-8">
@@ -207,7 +207,7 @@ const Header = () => {
                   }}
                 >
                   {isActive(link.to) && (
-                    <div className="absolute inset-0 bg-[#33e4f6]/80  rounded-full" />
+                    <div className="absolute inset-0 bg-brand/80  rounded-full" />
                   )}
 
                   <div className="relative px-6 py-4 rounded-xl transition-all duration-300 group-hover:bg-white/5">
@@ -231,7 +231,7 @@ const Header = () => {
               <LiquidGlassButton
                 width={280}
                 height={50}
-                className="w-full text-white bg-[#33e4f6]/10 h-12"
+                className="w-full text-white bg-brand/10 h-12"
                 onClick={() =>
                   window.open(
                     import.meta.env.VITE_DASHBOARD_URL + "/login",
@@ -250,7 +250,7 @@ const Header = () => {
               <LiquidGlassButton
                 width={280}
                 height={50}
-                className="w-full text-white  bg-[#33e4f6]/10 h-12"
+                className="w-full text-white  bg-brand/10 h-12"
                 onClick={() =>
                   window.open(
                     import.meta.env.VITE_DASHBOARD_URL + "/signup",

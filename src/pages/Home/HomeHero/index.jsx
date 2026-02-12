@@ -32,14 +32,11 @@ export default function HomeHero({ onStartChallengeClick }) {
   to-[#130025]"
       />
 
-      <div className="absolute theme-ambient-glow -right-80 top-40 opacity-60" />
-
       {/* Content */}
       <div className="z-10 text-center flex flex-col justify-center items-center">
         <h1 className="h-40 md:h-60 w-full text-center flex flex-col justify-center">
           <span className="text-4xl md:text-5xl lg:text-8xl font-bold leading-tight text-white">
-            We are{" "}
-            <span className="text-[#33e4f6] font-extrabold">Fueling</span>
+            We are <span className="text-brand font-extrabold">Fueling</span>
             <br />
           </span>
           <Typewriter
@@ -58,7 +55,7 @@ export default function HomeHero({ onStartChallengeClick }) {
           width={400}
           height={80}
           className={
-            "md:text-xl mt-4 md:mt-4 lg:text-2xl w-60 md:w-88 lg:w-96 h-12 lg:h-20 bg-gradient-to-r from-purple-400/5 to-blue-400/5 hover:bg-[#33e4f6]/60 font-extrabold"
+            "md:text-xl mt-4 md:mt-4 lg:text-2xl w-60 md:w-88 lg:w-96 h-12 lg:h-20 bg-gradient-to-r from-purple-400/5 to-blue-400/5 hover:bg-brand/60 font-extrabold"
           }
           onClick={onStartChallengeClick}
         >

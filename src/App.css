@@ -22,6 +22,10 @@ body {
   }
 }
 
+@theme inline {
+  --color-brand: #33e4f6;
+}
+
 .theme-ambient-glow {
   position: absolute;
   width: 800px;
