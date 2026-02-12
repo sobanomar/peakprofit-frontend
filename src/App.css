@@ -22,6 +22,36 @@ body {
   }
 }
 
+.neon-text {
+  animation: glow 6s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow:
+      0 0 4px #7e22ce,
+      0 0 8px #7e22ce,
+      0 0 16px #6b21a8,
+      0 0 32px #581c87;
+  }
+
+  50% {
+    text-shadow:
+      0 0 8px #c084fc,
+      0 0 16px #a855f7,
+      0 0 32px #9333ea,
+      0 0 64px #7e22ce;
+  }
+
+  100% {
+    text-shadow:
+      0 0 4px #6b21a8,
+      0 0 10px #7e22ce,
+      0 0 20px #9333ea,
+      0 0 40px #a855f7;
+  }
+}
+
 .animate-delayed-sweep {
   animation: delayed-sweep 4s linear infinite;
 }
@@ -214,11 +244,11 @@ body {
   --color-sidebar-ring: var(--sidebar-ring);
   --animate-star-btn: star-btn calc(var(--duration) * 1s) linear infinite;
   @keyframes star-btn {
-  0% {
-    offset-distance: 0%;
+    0% {
+      offset-distance: 0%;
     }
-  100% {
-    offset-distance: 100%;
+    100% {
+      offset-distance: 100%;
     }
   }
 }

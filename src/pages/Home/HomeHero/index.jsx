@@ -32,10 +32,18 @@ export default function HomeHero({ onStartChallengeClick }) {
 
       {/* Content */}
       <div className="z-10 text-center flex flex-col justify-center items-center">
-        <h1 className="w-full  mb-6">
+        <h1 className=" h-96 text-center flex flex-col justify-center">
+          <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white">
+            We are <span className="text-purple-400 neon-text"> fueling</span>{" "}
+            <br />
+          </span>
           <Typewriter
-            text={["Fueling the Next Generation of Traders"]}
-            speed={250}
+            text={[
+              "Next Generation of Traders",
+              "Tomorrow's Market Leaders",
+              "Future of Financial Freedom",
+            ]}
+            speed={200}
             loop={true}
             className=" text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white"
           />
