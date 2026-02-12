@@ -22,31 +22,6 @@ body {
   }
 }
 
-.neon-text {
-  animation: glow 6s ease-in-out infinite;
-}
-
-@keyframes glow {
-  0% {
-    text-shadow:
-      0 0 8px #7e22ce,
-      /* always present */ 0 0 8px #6b21a8;
-  }
-
-  50% {
-    text-shadow:
-      0 0 8px #7e22ce,
-      /* always present */ 0 0 16px #a855f7,
-      0 0 32px #9333ea;
-  }
-
-  100% {
-    text-shadow:
-      0 0 8px #7e22ce,
-      /* always present */ 0 0 10px #9333ea;
-  }
-}
-
 .animate-delayed-sweep {
   animation: delayed-sweep 4s linear infinite;
 }
@@ -324,4 +299,21 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg) scale(10);
+  }
+  100% {
+    transform: rotate(-360deg) scale(10);
+  }
+}
+
+.animate-border {
+  animation: rotate-border 10s linear infinite;
+}
+
+.bg-conic-beam {
+  background: conic-gradient(#c27bff 20deg, transparent 120deg);
 }
