@@ -11,7 +11,11 @@ import Evaluation from "./Evaluation";
 
 const Home = () => {
   const handleChallengeClick = () => {
-    window.location.href = import.meta.env.VITE_DASHBOARD_URL + "/login";
+    window.open(
+      import.meta.env.VITE_DASHBOARD_URL + "/login",
+      "_blank",
+      "noopener,noreferrer",
+    );
   };
 
   return (

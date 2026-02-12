@@ -76,7 +76,7 @@ const Header = () => {
               {/* CTA Buttons */}
               <div className="flex items-center gap-4">
                 <a
-                  href="https://dashboard.peakprofitfunding.com/signup"
+                  href={`${import.meta.env.VITE_DASHBOARD_URL}/signup`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative group overflow-hidden px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold transition-all duration-300 hover:scale-105"
@@ -87,7 +87,7 @@ const Header = () => {
 
                 {/* Profile Icon Button */}
                 <a
-                  href="https://dashboard.peakprofitfunding.com/login"
+                  href={`${import.meta.env.VITE_DASHBOARD_URL}/login`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 rounded-full bg-purple-600/20 border border-purple-400 cursor-pointer hover:bg-purple-600/50 text-white transition-all duration-300"
@@ -174,7 +174,7 @@ const Header = () => {
             {/* CTA Section */}
             <div className="mt-auto mb-12 space-y-4">
               <a
-                href="https://dashboard.peakprofitfunding.com/signup"
+                href={`${import.meta.env.VITE_DASHBOARD_URL}/login`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" relative group overflow-hidden px-8 py-4 flex items-center gap-2 rounded-xl border w-full justify-center border-purple-400 text-white font-bold text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
@@ -183,7 +183,7 @@ const Header = () => {
                 <span className="relative z-10">Login</span>
               </a>
               <a
-                href="https://dashboard.peakprofitfunding.com/signup"
+                href={`${import.meta.env.VITE_DASHBOARD_URL}/signup`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block relative group overflow-hidden px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
