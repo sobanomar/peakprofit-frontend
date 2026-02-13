@@ -100,7 +100,7 @@ const JoinCommunity = () => {
             <LiquidGlassButton
               width={400}
               height={80}
-              className="md:text-xl lg:text-2xl w-60 sm:w-72 md:w-88 lg:w-[450px] h-14 lg:h-24 border border-white/10 font-extrabold"
+              className="md:text-xl lg:text-2xl w-60 sm:w-72 md:w-80 rounded-full lg:w-md h-14 lg:h-22 border border-white/10 font-extrabold"
             >
               <span className="flex items-center justify-center gap-4">
                 <FaDiscord className="text-2xl lg:text-4xl text-[#5865F2]" />

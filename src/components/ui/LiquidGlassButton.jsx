@@ -190,7 +190,6 @@ const LiquidGlassButton = forwardRef(
           disabled={disabled}
           style={{
             border: "none",
-            borderRadius: "100px",
 
             backdropFilter: "blur(10px)",
             WebkitBackdropFilter: "blur(10px)",
