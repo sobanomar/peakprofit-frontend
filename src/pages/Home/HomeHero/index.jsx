@@ -54,8 +54,8 @@ export default function HomeHero({ onStartChallengeClick }) {
       <div className="absolute bottom-0 left-0 w-full h-64 -z-5 bg-gradient-to-b from-transparent to-[#130025]" />
 
       {/* Content */}
-      <div className="z-10 text-center flex flex-col justify-center items-center">
-        <h1 className="h-32 md:h-60 w-full text-center flex flex-col justify-center">
+      <div className="z-10 text-center mt-32 lg:mt-24 flex flex-col justify-center items-center">
+        <h1 className=" w-full text-center flex flex-col justify-center">
           <span className="text-5xl md:text-6xl lg:text-8xl font-bold leading-tight text-white">
             We are <span className="text-brand font-extrabold">Fueling</span>
             <br />
@@ -69,14 +69,14 @@ export default function HomeHero({ onStartChallengeClick }) {
         </h1>
 
         {/* Subheading */}
-        <p className="my-6 text-base md:text-lg lg:text-xl text-white max-w-3xl">
+        <p className="my-4 text-base md:text-lg lg:text-xl text-white max-w-3xl">
           Your capital shouldn't limit your potential. <br /> We provide the
           funding — you deliver the performance.
         </p>
 
         <LiquidGlassButton
           className={
-            "text-lg md:text-xl mt-4 rounded-full lg:text-2xl w-60 md:w-80 h-14 md:h-20 bg-linear-to-r from-purple-400/5 to-blue-400/5 hover:bg-brand/60 font-extrabold"
+            "text-white hover:text-brand-900 text-lg md:text-xl mt-4 rounded-full lg:text-2xl w-60 md:w-80 h-14 md:h-20 bg-linear-to-r from-purple-400/5 to-blue-400/5 hover:bg-brand font-extrabold"
           }
           onClick={onStartChallengeClick}
         >
@@ -84,22 +84,20 @@ export default function HomeHero({ onStartChallengeClick }) {
         </LiquidGlassButton>
 
         {/* Key Values Section with Animated Icons */}
-        <div className="mt-12 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-5xl w-full">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-5xl w-full">
           {keyValues.map((item, index) => (
             <div
               key={index}
-              className="group flex flex-col items-center justify-center p-4 md:p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-brand/50 transition-all duration-300 hover:bg-white/10 hover:scale-105"
+              className="group flex flex-col items-center justify-center p-4 md:p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-brand/50 hover:bg-white/10  transition-all duration-300 hover:scale-105"
             >
               <item.Icon
-                className={`w-10 h-10 md:w-12 md:h-12 mb-3 ${item.color} 
+                className={`w-6 h-6 mb-3 ${item.color} 
     group-hover:scale-110 transition-transform duration-300
     icon-float icon-glow`}
                 strokeWidth={2}
                 style={{ animationDelay: `${index * 0.2}s` }}
               />
-              <div className="text-lg font-bold text-white mb-1">
-                {item.value}
-              </div>
+              <div className="text-base font-bold text-white">{item.value}</div>
               <div className="text-xs md:text-sm text-white/70 font-medium">
                 {item.label}
               </div>

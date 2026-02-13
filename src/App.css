@@ -24,6 +24,16 @@ body {
 
 @theme inline {
   --color-brand: #33e4f6;
+  --color-brand-50: #e6faff;
+  --color-brand-100: #c8f0ff;
+  --color-brand-200: #a0e6ff;
+  --color-brand-300: #78dcff;
+  --color-brand-400: #50d2ff;
+  --color-brand-500: #33e4f6; /* main brand */
+  --color-brand-600: #28b4d2;
+  --color-brand-700: #1e82a0;
+  --color-brand-800: #145a6e;
+  --color-brand-900: #0a283c;
 }
 
 @keyframes float {

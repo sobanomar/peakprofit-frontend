@@ -101,10 +101,8 @@ const Header = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </a> */}
                 <LiquidGlassButton
-                  width={200}
-                  height={50}
                   className={
-                    "text-lg bg-blue-400/10 rounded-full hover:bg-brand/60 w-40 h-12"
+                    "text-lg bg-blue-400/10 text-white hover:text-brand-900 rounded-full hover:bg-brand w-40 h-12"
                   }
                   onClick={() =>
                     window.open(
@@ -127,10 +125,8 @@ const Header = () => {
                   <User size={26} />
                 </a> */}
                 <LiquidGlassButton
-                  width={50}
-                  height={50}
                   className={
-                    "text-lg  bg-blue-400/10 rounded-full hover:bg-brand/60 items-center flex justify-center w-12 h-12"
+                    "text-lg  bg-blue-400/10  text-white hover:text-brand-900 rounded-full hover:bg-brand items-center flex justify-center w-12 h-12"
                   }
                   onClick={() =>
                     window.open(
