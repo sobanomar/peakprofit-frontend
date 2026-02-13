@@ -34,7 +34,7 @@ export default function HomeHero({ onStartChallengeClick }) {
 
       {/* Content */}
       <div className="z-10 text-center flex flex-col justify-center items-center">
-        <h1 className="h-40 md:h-60 w-full text-center flex flex-col justify-center">
+        <h1 className="h-40 md:h-60 w-full text-center flex flex-col justify-center ">
           <span className="text-5xl md:text-6xl lg:text-8xl font-bold leading-tight text-white">
             We are <span className="text-brand font-extrabold">Fueling</span>
             <br />

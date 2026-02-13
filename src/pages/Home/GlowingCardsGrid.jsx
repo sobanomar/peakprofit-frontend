@@ -8,7 +8,7 @@ export function GlowingCardsGrid() {
       className="grid grid-cols-1 grid-rows-none gap-4 
                md:grid-cols-12 md:grid-rows-2 
                lg:grid-cols-12 lg:grid-rows-2 lg:gap-4 
-               xl:max-h-[34rem] xl:grid-rows-2"
+               xl:max-h-136 xl:grid-rows-2"
     >
       <GridItem
         area="md:[grid-area:1/1/2/7] lg:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/7]"
@@ -40,7 +40,7 @@ export function GlowingCardsGrid() {
 
 const GridItem = ({ area, icon, title, description }) => {
   return (
-    <li className={cn("min-h-[14rem] list-none", area)}>
+    <li className={cn("min-h-56 list-none", area)}>
       {/* Changes made:
         1. bg-white/5 (or bg-black/20) for the semi-transparent base
         2. backdrop-blur-md for the frosted effect
@@ -48,7 +48,7 @@ const GridItem = ({ area, icon, title, description }) => {
       */}
       <div
         className={cn(
-          "relative h-full rounded-[1.25rem] border-[0.75px] p-2 md:rounded-[1.5rem] md:p-3",
+          "relative h-full rounded-4xl border-[0.75px] p-2 md:rounded-[1.5rem] md:p-3",
           "transition-all duration-300",
           " backdrop-blur-3xl border-white/10 hover:bg-white/[0.08] bg-gradient-to-b from-white/[0.08] to-transparent shadow-2xl",
         )}
