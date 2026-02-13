@@ -53,8 +53,8 @@ const WhyChoosePPF = () => {
 
   return (
     <section className="py-12 w-full flex flex-col items-center">
-      <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center mb-10">
-        Why Choose PPF?
+      <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tight bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent">
+        WHY CHOOSE PPF
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-5 md:px-0 md:w-[90%] place-items-center lg:w-[80%]">
         {cardData.map((card, index) => (

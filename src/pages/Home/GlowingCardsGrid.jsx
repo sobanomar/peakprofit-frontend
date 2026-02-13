@@ -18,15 +18,15 @@ export function GlowingCardsGrid() {
       />
       <GridItem
         area="md:[grid-area:1/7/2/13] lg:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/7]"
-        icon={<BarChart3 className="h-6 w-6 text-brand" />}
-        title="Trade"
-        description="Trade your account using your strategy and following our trading guidelines."
-      />
-      <GridItem
-        area="md:[grid-area:2/1/3/7] lg:[grid-area:2/1/3/7] xl:[grid-area:1/7/2/13]"
         icon={<Wallet className="h-6 w-6 text-brand" />}
         title="Get Funding"
         description="Pass our challenge and you can trade a Simulated funded account in as little as 3 days."
+      />
+      <GridItem
+        area="md:[grid-area:2/1/3/7] lg:[grid-area:2/1/3/7] xl:[grid-area:1/7/2/13]"
+        icon={<BarChart3 className="h-6 w-6 text-brand" />}
+        title="Trade"
+        description="Trade your account using your strategy and following our trading guidelines."
       />
       <GridItem
         area="md:[grid-area:2/7/3/13] lg:[grid-area:2/7/3/13] xl:[grid-area:2/7/3/13]"
@@ -50,7 +50,7 @@ const GridItem = ({ area, icon, title, description }) => {
         className={cn(
           "relative h-full rounded-[1.25rem] border-[0.75px] p-2 md:rounded-[1.5rem] md:p-3",
           "transition-all duration-300",
-          "bg-white/[0.01] backdrop-blur-md border-white/10 hover:bg-white/[0.08]",
+          " backdrop-blur-3xl border-white/10 hover:bg-white/[0.08] bg-gradient-to-b from-white/[0.08] to-transparent shadow-2xl",
         )}
       >
         <GlowingEffect
@@ -67,7 +67,7 @@ const GridItem = ({ area, icon, title, description }) => {
             <div className="w-fit rounded-lg border-[0.75px] border-white/10  p-2 backdrop-blur-lg">
               {icon}
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 text-left">
               <h3 className="pt-0.5 text-xl leading-[1.375rem] font-semibold font-sans tracking-[-0.04em] md:text-2xl md:leading-[1.875rem] text-balance text-white">
                 {title}
               </h3>

@@ -8,10 +8,10 @@ import { GlowingCardsGrid } from "./GlowingCardsGrid";
 
 const HowItWorks = () => {
   return (
-    <div className="my-20 px-12 md:px-20">
-      <h1 className="text-3xl sm:text-4xl mb-20 md:text-5xl lg:text-6xl text-center text-white font-semibold">
-        How it Works
-      </h1>
+    <div className="my-20 px-12 md:px-20 text-center">
+      <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tight bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent">
+        HOW IT WORKS
+      </h2>
       {/* <div className="grid grid-cols-1 place-items-center md:grid-cols-4 gap-6 p-8 ">
       
         <InfoCard

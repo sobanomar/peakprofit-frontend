@@ -8,6 +8,7 @@ import TradingPairs from "./TradingPairs";
 import WhyChoosePPF from "./WhyChoosePPF";
 import TraderTestimonials from "./TraderTestimonials";
 import Evaluation from "./Evaluation";
+import JoinCommunity from "./JoinCommunity";
 
 const Home = () => {
   const handleChallengeClick = () => {
@@ -25,16 +26,20 @@ const Home = () => {
 
         <div className="absolute theme-ambient-glow -right-80 top-80 opacity-60" />
         <HowItWorks />
-
-        <TradingPairs />
-
-        {/* <Evaluation /> */}
-        <WhyChoosePPF />
-        <VerifiedPayouts />
-        <RawSpreads />
-        <TraderTestimonials />
-        {/* <StillNotConvinced /> */}
       </div>
+
+      <TradingPairs />
+
+      {/* <Evaluation /> */}
+      <div className="relative overflow-x-hidden">
+        <JoinCommunity />
+        <div className="absolute theme-ambient-glow -left-80 top-40 opacity-60" />
+        <WhyChoosePPF />
+      </div>
+      {/* <VerifiedPayouts /> */}
+      {/* <RawSpreads /> */}
+      <TraderTestimonials />
+      {/* <StillNotConvinced /> */}
     </>
   );
 };
