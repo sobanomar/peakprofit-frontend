@@ -5,6 +5,7 @@ import LiquidGlassButton from "../../../components/ui/LiquidGlassButton";
 import { Radio, Users, TrendingUp } from "lucide-react";
 import { FaDiscord } from "react-icons/fa";
 import StatCard from "./StatCard";
+import MainHeading from "../../../components/MainHeading";
 
 // --- STAT CARD COMPONENT ---
 
@@ -30,7 +31,7 @@ const JoinCommunity = () => {
   }, []);
 
   return (
-    <section className="relative text-white py-32 px-6">
+    <section className="relative text-white py-32 px-6 z-20">
       <div className="max-w-6xl mx-auto text-center">
         {/* Header Section */}
         <motion.div
@@ -43,9 +44,7 @@ const JoinCommunity = () => {
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-blue-400 uppercase bg-blue-400/10 border border-blue-400/20 rounded-full">
             The Inner Circle
           </span>
-          <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tight bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent">
-            TRADE WITH THE ELITE
-          </h2>
+          <MainHeading>TRADE WITH THE ELITE</MainHeading>
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Stop guessing. Start winning. Join{" "}
             <span className="text-white font-bold">Peak Profit</span> and trade

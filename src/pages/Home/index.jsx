@@ -24,7 +24,7 @@ const Home = () => {
       <div className="relative overflow-x-hidden">
         <HomeHero onStartChallengeClick={handleChallengeClick} />
 
-        <div className="absolute theme-ambient-glow -right-80 top-80 opacity-60" />
+        <div className="absolute theme-ambient-glow -right-80 top-80 opacity-40 z-10" />
         <HowItWorks />
       </div>
 
@@ -33,7 +33,7 @@ const Home = () => {
       {/* <Evaluation /> */}
       <div className="relative overflow-x-hidden">
         <JoinCommunity />
-        <div className="absolute theme-ambient-glow -left-80 top-40 opacity-60" />
+        <div className="z-10 absolute theme-ambient-glow -left-80 top-40 opacity-40" />
         <WhyChoosePPF />
       </div>
       {/* <VerifiedPayouts /> */}

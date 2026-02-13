@@ -5,13 +5,12 @@ import Withdrawl from "../../assets/images/home/how_it_works/withdrawl.webp";
 import Investment from "../../assets/images/home/how_it_works/investment-growth.webp";
 import { Link } from "react-router";
 import { GlowingCardsGrid } from "./GlowingCardsGrid";
+import MainHeading from "../../components/MainHeading";
 
 const HowItWorks = () => {
   return (
-    <div className="my-20 px-12 md:px-20 text-center">
-      <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tight bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent">
-        HOW IT WORKS
-      </h2>
+    <div className="my-20 px-12 md:px-20 text-center z-50">
+      <MainHeading>HOW IT WORKS</MainHeading>
       {/* <div className="grid grid-cols-1 place-items-center md:grid-cols-4 gap-6 p-8 ">
       
         <InfoCard

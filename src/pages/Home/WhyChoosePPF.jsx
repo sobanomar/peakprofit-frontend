@@ -10,6 +10,7 @@ import {
   FaHeadset,
 } from "react-icons/fa";
 import { BsXDiamond } from "react-icons/bs";
+import MainHeading from "../../components/MainHeading";
 
 const WhyChoosePPF = () => {
   const cardData = [
@@ -53,9 +54,7 @@ const WhyChoosePPF = () => {
 
   return (
     <section className="py-12 w-full flex flex-col items-center">
-      <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tight bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent">
-        WHY CHOOSE PPF
-      </h2>
+      <MainHeading>WHY CHOOSE PPF</MainHeading>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-5 md:px-0 md:w-[90%] place-items-center lg:w-[80%]">
         {cardData.map((card, index) => (
           <InfoCard

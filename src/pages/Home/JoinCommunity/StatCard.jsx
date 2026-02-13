@@ -19,7 +19,7 @@ const StatCard = ({
         },
       }}
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
-      className="group p-8 rounded-3xl bg-gradient-to-b from-white/[0.08] to-transparent border border-white/20 backdrop-blur-md hover:border-purple-500/50 transition-all duration-300 shadow-2xl relative overflow-hidden"
+      className="group p-8 rounded-3xl bg-linear-to-b from-white/8 to-transparent border border-white/20 backdrop-blur-md hover:border-purple-500/50 transition-all duration-300 shadow-2xl relative overflow-hidden"
     >
       {/* Background Glow Effect */}
       <div className="absolute -top-4 -right-4 bg-white/5 p-8 rounded-full blur-2xl group-hover:bg-white/10 transition-colors" />
