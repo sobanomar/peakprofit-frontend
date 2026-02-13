@@ -27,7 +27,7 @@ export default function HomeHero({ onStartChallengeClick }) {
       <div className="absolute  inset-0 -z-10 bg-[#000]/20 "></div>
       <div
         className="absolute bottom-0 left-0 w-full h-64 -z-5
-  bg-gradient-to-b 
+  bg-linear-to-b 
   from-transparent 
   to-[#130025]"
       />
@@ -35,7 +35,7 @@ export default function HomeHero({ onStartChallengeClick }) {
       {/* Content */}
       <div className="z-10 text-center flex flex-col justify-center items-center">
         <h1 className="h-40 md:h-60 w-full text-center flex flex-col justify-center">
-          <span className="text-4xl md:text-5xl lg:text-8xl font-bold leading-tight text-white">
+          <span className="text-5xl md:text-6xl lg:text-8xl font-bold leading-tight text-white">
             We are <span className="text-brand font-extrabold">Fueling</span>
             <br />
           </span>
@@ -45,21 +45,19 @@ export default function HomeHero({ onStartChallengeClick }) {
               "Tomorrow's Market Leaders",
               "Future of Financial Freedom",
             ]}
-            speed={200}
+            speed={300}
             loop={true}
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white"
           />
         </h1>
 
         <LiquidGlassButton
-          width={400}
-          height={80}
           className={
-            "md:text-xl mt-4 md:mt-4 lg:text-2xl w-60 md:w-88 lg:w-96 h-12 lg:h-20 bg-linear-to-r from-purple-400/5 to-blue-400/5 hover:bg-brand/60 font-extrabold"
+            "text-lg md:text-xl mt-4 md:mt-4 lg:text-2xl w-60 md:w-80 h-14 md:h-20 bg-linear-to-r from-purple-400/5 to-blue-400/5 hover:bg-brand/60 font-extrabold"
           }
           onClick={onStartChallengeClick}
         >
-          START NEW CHALLENGE
+          START TRADING
         </LiquidGlassButton>
 
         {/* <div className="flex sm:flex-row flex-col w-fix justify-center items-center mt-12 gap-4 ">

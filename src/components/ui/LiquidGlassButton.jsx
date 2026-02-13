@@ -5,7 +5,7 @@ const LiquidGlassButton = forwardRef(
   (
     {
       children,
-      width = 300,
+      width,
       height = 56,
       className = "",
       style = {},

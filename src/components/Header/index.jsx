@@ -259,7 +259,7 @@ const Header = () => {
                   )
                 }
               >
-                Get Started to Trade
+                START TRADING
               </LiquidGlassButton>
             </div>
           </div>
