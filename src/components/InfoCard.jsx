@@ -28,7 +28,7 @@ const InfoCard = ({
       className="relative group bg-gradient-to-b from-white/[0.08] to-transparent backdrop-blur-md border border-white/10 p-8 rounded-3xl shadow-2xl text-white max-w-sm w-full transition-all duration-300 hover:border-purple-500/50"
     >
       {/* Background Glow matching the StatCard style */}
-      <div className="absolute -top-4 -right-4 bg-white/5 p-8 rounded-full blur-2xl group-hover:bg-white/10 transition-colors" />
+      <div className="absolute -top-4 -right-4 bg-white/5 p-8 rounded-full blur-2xl  group-hover:bg-white/10 transition-colors" />
 
       <div
         className={`flex ${
@@ -59,7 +59,7 @@ const InfoCard = ({
             />
           </div>
         ) : (
-          <div className="text-5xl font-mono font-bold text-white mb-4 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent">
+          <div className="text-5xl font-mono font-bold text-transparent mb-4 bg-gradient-to-b from-white to-gray-400 bg-clip-text ">
             {topContent}
           </div>
         )}
