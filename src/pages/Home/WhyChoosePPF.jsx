@@ -34,9 +34,9 @@ const WhyChoosePPF = () => {
     },
     {
       topContent: <BsXDiamond className="text-3xl text-white" />,
-      title: "Up To 95% Reward Split",
+      title: "Upto 85% Reward Split",
       description:
-        "Our traders receive an 80% default Reward split, with an option to boost it to 95% at checkout...",
+        "Our traders receive an 80% default Reward split, with an option to boost it to 85%...",
     },
     {
       topContent: <FaCalendarAlt className="text-3xl text-white" />,

@@ -6,32 +6,40 @@ import React from "react";
 import { Typewriter } from "@/components/ui/typewriter-text";
 import { BsDiscord } from "react-icons/bs";
 import LiquidGlassButton from "../../../components/ui/LiquidGlassButton";
-import { TrendingUp, Shield, DollarSign, Zap } from "lucide-react";
+import {
+  TrendingUp,
+  Shield,
+  DollarSign,
+  Zap,
+  Rocket,
+  FileCheck,
+  BookOpen,
+} from "lucide-react";
 
 export default function HomeHero({ onStartChallengeClick }) {
   const keyValues = [
     {
-      value: "Up to 95%",
+      value: "Up to 85%",
       label: "Profit Split",
       Icon: TrendingUp,
       color: "text-brand",
     },
     {
-      value: "No Risk",
-      label: "Your Capital Safe",
-      Icon: Shield,
+      value: "100%",
+      label: "Transparent Rules",
+      Icon: BookOpen, // or CheckCircle
       color: "text-brand",
     },
     {
-      value: "Up to $300K",
+      value: "Up to $500K",
       label: "Account Size",
       Icon: DollarSign,
       color: "text-brand",
     },
     {
-      value: "Instant",
-      label: "Account Access",
-      Icon: Zap,
+      value: "24-48hrs",
+      label: "Fast Payouts",
+      Icon: Rocket, // or Rocket
       color: "text-brand",
     },
   ];

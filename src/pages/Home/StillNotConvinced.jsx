@@ -7,7 +7,7 @@ const StillNotConvinced = () => {
       accountSize: "100K",
       price: "$333",
       drawdown: "5% Daily | 10% Total",
-      payoutSplit: "Up to 95%",
+      payoutSplit: "Upto 85%",
       minDays: "5",
       targets: "7% Phase 1 | 5% Phase 2",
       pairs: "235+ Pairs",
@@ -54,7 +54,7 @@ const StillNotConvinced = () => {
   ];
 
   const rowHeaders = Object.keys(data[0]).filter(
-    (key) => key !== "firm" && key !== "highlight"
+    (key) => key !== "firm" && key !== "highlight",
   );
 
   return (
