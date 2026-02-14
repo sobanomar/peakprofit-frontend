@@ -39,7 +39,7 @@ const JoinCommunity = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-20"
+          className="sm:mb-20"
         >
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-brand-400 uppercase bg-brand-400/10 border border-brand-400/20 rounded-full">
             The Inner Circle
@@ -53,6 +53,31 @@ const JoinCommunity = () => {
           </p>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="w-full block sm:hidden my-12"
+        >
+          <motion.a
+            href="https://discord.gg/peakprofit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LiquidGlassButton
+              width={400}
+              height={80}
+              className="md:text-xl text-white hover:text-brand-900 lg:text-2xl w-60 sm:w-72 md:w-80 rounded-full lg:w-md h-14 lg:h-22 border border-white/10 hover:bg-brand font-extrabold"
+            >
+              <span className="flex items-center justify-center gap-4">
+                <FaDiscord className="text-2xl lg:text-4xl text-[#5865F2]" />
+                JOIN OUR DISCORD
+              </span>
+            </LiquidGlassButton>
+          </motion.a>
+        </motion.div>
+
         {/* Stats Grid with Staggered Children */}
         <motion.div
           initial="hidden"
@@ -61,7 +86,7 @@ const JoinCommunity = () => {
           variants={{
             visible: { transition: { staggerChildren: 0.15 } },
           }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 sm:mb-20"
         >
           <StatCard
             icon={Users}
@@ -91,7 +116,7 @@ const JoinCommunity = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full block"
+          className="w-full hidden sm:block"
         >
           <motion.a
             href="https://discord.gg/peakprofit"
