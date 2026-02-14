@@ -14,48 +14,50 @@ export default function HomeHero({ onStartChallengeClick }) {
       value: "Up to 95%",
       label: "Profit Split",
       Icon: TrendingUp,
-      color: "text-green-400",
+      color: "text-brand",
     },
     {
       value: "No Risk",
       label: "Your Capital Safe",
       Icon: Shield,
-      color: "text-blue-400",
+      color: "text-brand",
     },
     {
       value: "Up to $300K",
       label: "Account Size",
       Icon: DollarSign,
-      color: "text-yellow-400",
+      color: "text-brand",
     },
     {
       value: "Instant",
       label: "Account Access",
       Icon: Zap,
-      color: "text-purple-400",
+      color: "text-brand",
     },
   ];
 
+  // Then in t
+
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-6 lg:px-12 overflow-hidden text-white">
+    <div className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 lg:px-12 overflow-hidden text-white">
       {/* Background Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full opacity-30 object-cover -z-20 saturate-50"
+        className="absolute top-0 left-0 w-full h-full opacity-25 object-cover -z-20 saturate-50"
       >
         <source src={HeroBGVideo} type="video/mp4" />
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 -z-10 bg-[#000]/20"></div>
-      <div className="absolute bottom-0 left-0 w-full h-64 -z-5 bg-gradient-to-b from-transparent to-[#130025]" />
+      <div className="absolute inset-0 -z-10 bg-black/20"></div>
+      <div className="absolute bottom-0 left-0 w-full h-64 -z-5 bg-linear-to-b from-transparent to-[#130025]" />
 
       {/* Content */}
-      <div className="z-10 text-center mt-32 lg:mt-24 flex flex-col justify-center items-center">
-        <h1 className=" w-full text-center flex flex-col justify-center">
+      <div className="z-10 text-center mt-32 lg:mt-28 flex flex-col justify-center items-center">
+        <h1 className=" w-full text-center flex flex-col justify-center mb-4 sm:mb-0">
           <span className="text-5xl md:text-6xl lg:text-8xl font-bold leading-tight text-white">
             We are <span className="text-brand font-extrabold">Fueling</span>
             <br />
@@ -76,7 +78,7 @@ export default function HomeHero({ onStartChallengeClick }) {
 
         <LiquidGlassButton
           className={
-            "text-white hover:text-brand-900 text-lg md:text-xl mt-4 rounded-full lg:text-2xl w-60 md:w-80 h-14 md:h-20 bg-linear-to-r from-purple-400/5 to-blue-400/5 hover:bg-brand font-extrabold"
+            "text-white hover:text-brand-900 text-lg md:text-xl my-8 rounded-full lg:text-2xl w-60 md:w-80 h-14 md:h-20 bg-linear-to-r from-purple-400/5 to-blue-400/5 hover:bg-brand font-extrabold"
           }
           onClick={onStartChallengeClick}
         >
@@ -84,11 +86,21 @@ export default function HomeHero({ onStartChallengeClick }) {
         </LiquidGlassButton>
 
         {/* Key Values Section with Animated Icons */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-5xl w-full">
+        <div className=" grid grid-cols-2  sm:grid-cols-4 gap-6 md:gap-8 max-w-5xl w-full">
           {keyValues.map((item, index) => (
             <div
               key={index}
-              className="group flex flex-col items-center justify-center p-4 md:p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-brand/50 hover:bg-white/10  transition-all duration-300 hover:scale-105"
+              // className="group flex flex-col items-center justify-center p-4 md:p-6 rounded-2xl transition-all backdrop-blur-sm border border-white/10 hover:border-white/20  duration-300 hover:scale-105"
+              className="group flex flex-col items-center justify-center p-4 md:p-6 rounded-2xl transition-all duration-300 hover:scale-105"
+              //           style={{
+              //             background: `
+              //   radial-gradient(at 0% 0%, rgba(51, 228, 246, 0.05) 0px, transparent 50%),
+              //   radial-gradient(at 100% 0%, rgba(51, 228, 246, 0.1) 0px, transparent 50%),
+              //   radial-gradient(at 100% 100%, rgba(51, 228, 246, 0.05) 0px, transparent 50%),
+              //   radial-gradient(at 0% 100%, rgba(51, 228, 246, 0.1) 0px, transparent 50%),
+              //   rgba(255, 255, 255, 0.05)
+              // `,
+              //           }}
             >
               <item.Icon
                 className={`w-6 h-6 mb-3 ${item.color} 
