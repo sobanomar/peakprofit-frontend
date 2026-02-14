@@ -41,14 +41,15 @@ const JoinCommunity = () => {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="mb-20"
         >
-          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-blue-400 uppercase bg-blue-400/10 border border-blue-400/20 rounded-full">
+          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-brand-400 uppercase bg-brand-400/10 border border-brand-400/20 rounded-full">
             The Inner Circle
           </span>
           <MainHeading>TRADE WITH THE ELITE</MainHeading>
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Stop guessing. Start winning. Join{" "}
             <span className="text-white font-bold">Peak Profit</span> and trade
-            alongside {stats.members.toLocaleString()}+ professionals.
+            alongside {(Math.floor(stats.members / 100) * 100).toLocaleString()}
+            + professionals.
           </p>
         </motion.div>
 

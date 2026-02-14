@@ -9,9 +9,10 @@ import MainHeading from "../../components/MainHeading";
 
 const HowItWorks = () => {
   return (
-    <div className="my-20 px-12 md:px-20 text-center z-50">
-      <MainHeading>HOW IT WORKS</MainHeading>
-      {/* <div className="grid grid-cols-1 place-items-center md:grid-cols-4 gap-6 p-8 ">
+    <div className="my-20 text-center flex justify-center z-50">
+      <div className="max-w-7xl">
+        <MainHeading>HOW IT WORKS</MainHeading>
+        {/* <div className="grid grid-cols-1 place-items-center md:grid-cols-4 gap-6 p-8 ">
       
         <InfoCard
           topContent="1"
@@ -70,7 +71,8 @@ const HowItWorks = () => {
           />
         </div>
       </div> */}
-      <GlowingCardsGrid />
+        <GlowingCardsGrid />
+      </div>
     </div>
   );
 };
