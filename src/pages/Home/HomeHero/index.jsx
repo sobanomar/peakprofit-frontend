@@ -47,20 +47,21 @@ export default function HomeHero({ onStartChallengeClick }) {
   // Then in t
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 lg:px-12 overflow-hidden text-white">
+    <div className="relative w-full min-h-screen flex  flex-col justify-center items-center px-6 lg:px-12 overflow-hidden text-white ">
       {/* Background Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full opacity-25 object-cover -z-20 saturate-50"
+        className="absolute top-0 left-0 w-full h-full object-cover  opacity-30  -z-20 saturate-50"
       >
         <source src={HeroBGVideo} type="video/mp4" />
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 -z-10 bg-black/20"></div>
+      <div className="absolute inset-0 -z-30 bg-[#130025]"></div>
+      <div className="absolute inset-0 -z-10 bg-black/10"></div>
       <div className="absolute bottom-0 left-0 w-full h-64 -z-5 bg-linear-to-b from-transparent to-[#130025]" />
 
       {/* Content */}

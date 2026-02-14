@@ -9,6 +9,7 @@ import WhyChoosePPF from "./WhyChoosePPF";
 import TraderTestimonials from "./TraderTestimonials";
 import Evaluation from "./Evaluation";
 import JoinCommunity from "./JoinCommunity";
+import AmbientGlowBackground from "../../components/AmbientGlowBackground";
 
 const Home = () => {
   const handleChallengeClick = () => {
@@ -21,14 +22,14 @@ const Home = () => {
 
   return (
     <>
-      <div className="relative overflow-x-hidden">
+      <div className="relative overflow-x-hidden ">
+        {/* <AmbientGlowBackground /> */}
         <HomeHero onStartChallengeClick={handleChallengeClick} />
 
-        <div className="absolute theme-ambient-glow -right-80 top-80 opacity-40 z-10" />
+        <div className="absolute theme-ambient-glow -right-80 -top-80 opacity-40 z-10" />
         <HowItWorks />
+        <TradingPairs />
       </div>
-
-      <TradingPairs />
 
       {/* <Evaluation /> */}
       <div className="relative overflow-x-hidden">

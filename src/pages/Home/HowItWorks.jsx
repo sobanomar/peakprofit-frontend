@@ -9,7 +9,8 @@ import MainHeading from "../../components/MainHeading";
 
 const HowItWorks = () => {
   return (
-    <div className="my-20 text-center flex justify-center z-50">
+    <div className="py-20 text-center flex justify-center z-50 relative ">
+      <div className="absolute top-0 left-0 w-full h-64 -z-10  bg-linear-to-b from-[#130025] to-transparent" />
       <div className="max-w-7xl">
         <MainHeading>HOW IT WORKS</MainHeading>
         {/* <div className="grid grid-cols-1 place-items-center md:grid-cols-4 gap-6 p-8 ">
