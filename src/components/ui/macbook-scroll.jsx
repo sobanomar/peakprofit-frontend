@@ -28,7 +28,7 @@ export const MacbookScroll = ({ src, showGradient, title, badge }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ["start 30vh", "end start"],
   });
 
   const [isMobile, setIsMobile] = useState(false);
@@ -42,12 +42,12 @@ export const MacbookScroll = ({ src, showGradient, title, badge }) => {
   const scaleX = useTransform(
     scrollYProgress,
     [0, 0.3],
-    [1.2, isMobile ? 1 : 1.5],
+    [1.2, isMobile ? 1 : 2],
   );
   const scaleY = useTransform(
     scrollYProgress,
     [0, 0.3],
-    [0.6, isMobile ? 1 : 1.5],
+    [0.6, isMobile ? 1 : 2],
   );
   const translate = useTransform(scrollYProgress, [0, 1], [0, 1500]);
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
@@ -57,21 +57,14 @@ export const MacbookScroll = ({ src, showGradient, title, badge }) => {
   return (
     <div
       ref={ref}
-      className="flex min-h-[200vh] shrink-0 scale-[0.35] transform flex-col items-center justify-start py-0 [perspective:800px] sm:scale-50 md:scale-100 md:pb-80"
+      className={cn(
+        "flex flex-col items-center justify-start py-0 [perspective:800px] shrink-0 transform",
+        // Base classes for mobile (less height, higher origin)
+        "min-h-[120vh] mt-10 scale-[0.6] origin-top sm:scale-50 md:scale-100",
+        // Desktop overrides
+        "md:min-h-[200vh] md:mt-20 md:pb-80",
+      )}
     >
-      <motion.h2
-        style={{
-          translateY: textTransform,
-          opacity: textOpacity,
-        }}
-        className="mb-20 text-center text-3xl font-bold text-neutral-800 dark:text-white"
-      >
-        {title || (
-          <span>
-            This Macbook is built with Tailwindcss. <br /> No kidding.
-          </span>
-        )}
-      </motion.h2>
       {/* Lid */}
       <Lid
         src={src}

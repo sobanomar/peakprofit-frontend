@@ -37,7 +37,7 @@ export default function HomeHero({ onStartChallengeClick }) {
       color: "text-brand",
     },
     {
-      value: "24-48hrs",
+      value: "1-12 hrs",
       label: "Fast Payouts",
       Icon: Rocket, // or Rocket
       color: "text-brand",

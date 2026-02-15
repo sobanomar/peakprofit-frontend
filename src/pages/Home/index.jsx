@@ -10,6 +10,7 @@ import TraderTestimonials from "./TraderTestimonials";
 import Evaluation from "./Evaluation";
 import JoinCommunity from "./JoinCommunity";
 import AmbientGlowBackground from "../../components/AmbientGlowBackground";
+import PeakMarkets from "./PeakMarkets";
 
 const Home = () => {
   const handleChallengeClick = () => {
@@ -35,6 +36,9 @@ const Home = () => {
       <div className="relative overflow-x-hidden">
         <JoinCommunity />
         <div className="z-10 absolute theme-ambient-glow -left-80 top-40 opacity-40" />
+
+        <PeakMarkets />
+
         <WhyChoosePPF />
       </div>
       {/* <VerifiedPayouts /> */}

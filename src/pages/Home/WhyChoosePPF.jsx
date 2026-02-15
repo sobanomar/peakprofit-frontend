@@ -18,7 +18,7 @@ const WhyChoosePPF = () => {
       topContent: <FaBullseye className="text-3xl text-white" />,
       title: "Realistic Targets",
       description:
-        "Our model has the most competitive and realistic targets in the market. A profit target of 7% & 5% is the lowest in the industry...",
+        "Our model has the most competitive and realistic targets in the market. A profit target of 8% is the lowest in the industry...",
     },
     {
       topContent: <FaRocket className="text-3xl text-white" />,
@@ -40,9 +40,9 @@ const WhyChoosePPF = () => {
     },
     {
       topContent: <FaCalendarAlt className="text-3xl text-white" />,
-      title: "Bi-Weekly Rewards",
+      title: "Weekly Rewards",
       description:
-        "We offer bi-weekly Rewards as default, allowing traders to receive profits every 14 days...",
+        "We offer weekly Rewards as default, allowing traders to receive profits every 5-7 days...",
     },
     {
       topContent: <FaHeadset className="text-3xl text-white" />,
