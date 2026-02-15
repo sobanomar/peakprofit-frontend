@@ -62,7 +62,7 @@ const FeatureCard = ({ feature, index, cardVariants }) => {
           </p>
 
           <div className="mt-auto pt-6">
-            <div className="h-[2px] w-0 bg-gradient-to-r from-brand-400 via-purple-500 to-transparent transition-all duration-700 ease-in-out group-hover:w-full" />
+            <div className="h-0.5 w-0 bg-gradient-to-r from-brand-400 via-purple-500 to-transparent transition-all duration-700 ease-in-out group-hover:w-full" />
           </div>
         </div>
       </Link>

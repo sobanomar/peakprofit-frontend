@@ -112,7 +112,7 @@ const PeakMarkets = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-5xl md:text-7xl font-black tracking-tighter mb-8 bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-black tracking-tighter mb-8 bg-linear-to-b from-white to-zinc-500 bg-clip-text text-transparent"
           >
             PEAKMARKETS.
           </motion.h2>

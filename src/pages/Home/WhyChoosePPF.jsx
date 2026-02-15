@@ -53,9 +53,9 @@ const WhyChoosePPF = () => {
   ];
 
   return (
-    <section className="py-12 w-full flex flex-col items-center">
+    <section className=" w-full px-6 py-20 flex flex-col items-center">
       <MainHeading>WHY CHOOSE PPF</MainHeading>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-5 md:px-0 md:w-[90%] place-items-center lg:w-[80%]">
+      <div className="grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 gap-6  max-w-7xl   ">
         {cardData.map((card, index) => (
           <InfoCard
             key={index}

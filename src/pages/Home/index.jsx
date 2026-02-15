@@ -38,9 +38,8 @@ const Home = () => {
         <div className="z-10 absolute theme-ambient-glow -left-80 top-40 opacity-40" />
 
         <PeakMarkets />
-
-        <WhyChoosePPF />
       </div>
+      <WhyChoosePPF />
       {/* <VerifiedPayouts /> */}
       {/* <RawSpreads /> */}
       <TraderTestimonials />
