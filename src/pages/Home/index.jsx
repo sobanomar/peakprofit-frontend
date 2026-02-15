@@ -11,6 +11,7 @@ import Evaluation from "./Evaluation";
 import JoinCommunity from "./JoinCommunity";
 import AmbientGlowBackground from "../../components/AmbientGlowBackground";
 import PeakMarkets from "./PeakMarkets";
+import TradingJourney from "./TradingJourney";
 
 const Home = () => {
   const handleChallengeClick = () => {
@@ -40,6 +41,7 @@ const Home = () => {
         <PeakMarkets />
       </div>
       <WhyChoosePPF />
+      <TradingJourney />
       {/* <VerifiedPayouts /> */}
       {/* <RawSpreads /> */}
       <TraderTestimonials />

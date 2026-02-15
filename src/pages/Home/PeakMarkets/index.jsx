@@ -1,7 +1,5 @@
-"use client";
-
 import React from "react";
-import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Zap,
   LineChart,
@@ -14,7 +12,6 @@ import {
 } from "lucide-react";
 import TradingVideo from "../../../assets/videos/DashboardTrading.mp4";
 import { MacbookScroll } from "../../../components/ui/macbook-scroll";
-import { Link } from "react-router";
 import FeatureCard from "./FeatureCard";
 
 // --- Components ---
