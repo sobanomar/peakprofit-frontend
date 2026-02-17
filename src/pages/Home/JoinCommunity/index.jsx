@@ -11,7 +11,7 @@ import MainHeading from "../../../components/MainHeading";
 
 // --- MAIN SECTION ---
 const JoinCommunity = () => {
-  const [stats, setStats] = useState({ members: 0, online: 0 });
+  const [stats, setStats] = useState({ members: 3000, online: 200 });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,8 +20,8 @@ const JoinCommunity = () => {
           "https://discord.com/api/v9/invites/peakprofit?with_counts=true",
         );
         setStats({
-          members: response.data.approximate_member_count || 3092,
-          online: response.data.approximate_presence_count || 284,
+          members: response.data.approximate_member_count,
+          online: response.data.approximate_presence_count,
         });
       } catch (error) {
         console.error("Discord API Error:", error);

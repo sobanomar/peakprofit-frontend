@@ -1,20 +1,11 @@
 import AnimatedButton from "../../../components/AnimatedButton";
-import HeroBGVideo from "../../../assets/videos/heroBGVideo.mp4";
-import discord from "../../../assets/images/home/discord.webp";
+// import HeroBGVideo from "../../../assets/videos/heroBGVideo.mp4";
+import HeroBGVideo from "../../../assets/videos/heroBGVideoCompressed.mp4";
 import React from "react";
 
 import { Typewriter } from "@/components/ui/typewriter-text";
-import { BsDiscord } from "react-icons/bs";
 import LiquidGlassButton from "../../../components/ui/LiquidGlassButton";
-import {
-  TrendingUp,
-  Shield,
-  DollarSign,
-  Zap,
-  Rocket,
-  FileCheck,
-  BookOpen,
-} from "lucide-react";
+import { TrendingUp, DollarSign, Rocket, BookOpen } from "lucide-react";
 
 export default function HomeHero({ onStartChallengeClick }) {
   const keyValues = [

@@ -89,7 +89,9 @@ const TradingJourney = () => {
 
   const handleChallengeStart = () => {
     window.open(
-      import.meta.env.VITE_DASHBOARD_URL + "/" + selectedChallenge._id,
+      import.meta.env.VITE_DASHBOARD_URL +
+        "/signup?challengeId=" +
+        selectedChallenge._id,
       "_blank",
       "noopener,noreferrer",
     );

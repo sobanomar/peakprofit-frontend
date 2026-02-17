@@ -24,7 +24,14 @@ const ArticleListing = () => {
           const slug = slugify(section.title);
 
           return (
-            <Link to={`/collections/${slug}`} key={idx}>
+            <Link
+              to={
+                section.articles.length > 1
+                  ? `/collections/${slug}`
+                  : `/collections/${slug}/${slug}`
+              }
+              key={idx}
+            >
               <div className="flex items-center bg-white rounded-lg shadow-md p-6 space-x-6 mb-4 border border-neutral-200 hover:border-[#63c0e0] transition-all duration-300 cursor-pointer">
                 <div>{section.icon}</div>
                 <div>

@@ -1,783 +1,491 @@
-import { FaChartBar, FaInfoCircle } from "react-icons/fa";
+import {
+  FaInfoCircle,
+  FaMoneyBillWave,
+  FaFileContract,
+  FaUsers,
+  FaDesktop,
+} from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
 import { GiRuleBook } from "react-icons/gi";
-import { MdTimeline } from "react-icons/md";
 import { TbAffiliate } from "react-icons/tb";
 import React from "react";
 
 export const FAQArticles = [
+  // ─── 1. GETTING STARTED ───────────────────────────────────────────────────
   {
     icon: <FaInfoCircle size={52} className="text-4xl text-[#780dff]" />,
     title: "Getting Started",
-    description: "Getting Started",
+    description: "Everything you need to know before you begin",
     articles: [
       {
-        title: "How to get started",
-        description:
-          "First, choose the desired test in the program section. After completing your purchase, you will receive your credentials within a few minutes, allowing you to start trading and proceed with the evaluation",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Which countries are allowed?",
-        description:
-          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the TradeLocker. You must be at least 18 years old.",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "What Payment Methods Are Available?",
-        description:
-          "We accept Cryptocurrency payments and Credit Card Payments at our checkout. If you have any issues please contact our live chat support.",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Payouts & Scaling",
-        description: `When do I get paid?
-          - First payout: 7-14 days
-          - Recurring: Bi-weekly/monthly
-          - Minimum withdrawal: $100
-          - Methods: Crypto (USDT), Wise, Bank Transfer
- 
- 
-          Whats the profit split?
-          - Standard: 80/20
-          - Top-tier: Up to 90/10
- 
- 
-          How does scaling work?
-          After 3 profitable months, request capital increases up to $400,000.`,
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Rule Changes",
-        description:
-          "Traders must stay informed on new rules and changes that are going to be announced by email or on our social media platforms. Rules are active 24h after they are announced to public",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "What is PeakProfit (PPF)?",
-        description: ` What is Peak Profit Funding?
- Peak Profit Funding is a prop trading firm that funds traders with capital to trade Forex, Crypto, and Indices. We provide
- a real trading environment for disciplined traders to scale and profit  without risking personal capital.
- 
- Is Peak Profit Funding legit?
- Yes. We operate transparently, with real capital allocations, strict risk parameters, and a robust evaluation process.
- 
- What makes Peak Profit Funding different?
- - Instant funding options & fast evaluations
- - Transparent rules with no hidden traps
- - Crypto & Forex funded accounts
- - Tight spreads and reliable platforms (MT5, TradeLocker)
- - Community-first approach with Discord access and trading education
-`,
-        lastUpdated: "Over 3 months ago",
-      },
+        title: "What Is Peak Profit Funding™?",
+        description: `Peak Profit Funding™ is a proprietary trading firm that funds traders with institutional bank-backed capital to trade global markets.
 
-      {
+We provide serious traders access to large capital allocations without requiring them to risk large personal deposits.
+
+There are:
+- No hidden rules
+- No monthly fees
+- No activation fees
+- No multi-step phases
+- No strategy restrictions
+
+We operate one of the only prop firms with a fully built-in proprietary trading platform.`,
         lastUpdated: "Over 3 months ago",
-        title: " Evaluation & Account Types",
-        description: `
-         How does the evaluation work?
- We offer both:
- - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
- - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
- 
- 
- What are the rules?
- Typical parameters:
- - Daily Drawdown: 45%
- - Max Drawdown: 810%
- - Profit Target: 810%
- - No consistency rule
- - Minimum trading days: 5
- 
- 
- Can I hold trades over the weekend?
- Yes, unless stated otherwise on the account type.`,
       },
       {
+        title: "Which Countries Are Allowed?",
+        description: `All countries are allowed to trade with Peak Profit Funding™.
+
+There are no geographic restrictions on funded accounts or payouts.`,
         lastUpdated: "Over 3 months ago",
-        title: "Platforms and Execution",
-        description: ` What platforms can I trade on?
-        - MetaTrader 5 (MT5)
-        - TradeLocker
- 
- 
-        Is there a time limit to pass?
-        No, trade at your own pace.
- 
- 
-        What instruments can I trade?
-        - Forex, Crypto, Indices, Commodities, Metals`,
       },
       {
+        title: "What Markets Can I Trade?",
+        description: `We offer access to 2000+ symbols, including:
+- Forex pairs (USD/CAD, EUR/USD, GBP/JPY, etc.)
+- Crypto markets
+- Meme coins
+- Major & minor currency pairs
+
+All inside one integrated platform.`,
         lastUpdated: "Over 3 months ago",
-        title: "Disclaimers and Legals",
-        description: `  Do you offer financial advice?
-         No. We do not offer personalized investment or trading advice.
- 
-         What are the risks?
-         Trading leveraged products involves substantial risk of loss.
- 
-         Are payouts guaranteed?
-         No. All payouts depend on rule compliance.
- 
-         Refund Policy
-         All sales are final. Refunds only for double charges or technical issues.
- 
-         Terms and Conditions: www.peakprofitfunding.com/terms
-         Privacy Policy: www.peakprofitfunding.com/privacy`,
       },
       {
+        title: "How Do I Sign Up & Get Started?",
+        description: `Step 1 – Sign Up in the Client Area
+Create your account on our website.
+
+Step 2 – Buy a Challenge
+Choose your account size (100K or 200K recommended).
+
+Step 3 – Complete Checkout
+Enter your card details, billing information, and confirm your email. Payments are encrypted and securely processed via Authorize.net. We do NOT store card numbers, billing data, or payment credentials.
+
+Step 4 – Access Your Client Area
+After payment, log into your Client Portal.
+
+Step 5 – Open the Trading Platform
+Access your funded dashboard and platform login credentials.
+
+Step 6 – Read the Rules
+Understand all risk parameters before placing trades.
+
+Step 7 – Join Our Discord
+Connect with our 5,000+ trader community. Then begin trading.`,
         lastUpdated: "Over 3 months ago",
-        title: "Community and Support",
-        description: `   Where can I get help?
- 
-        Join our Discord: https://discord.gg/peakprofit
- 
-        YouTube: https://www.youtube.com/@PeakProfitFunding
- 
-        Instagram: https://www.instagram.com/PeakProfitFunding
- 
-        Support email: support@peakprofitfunding.com`,
       },
       {
+        title: "Trouble Verifying Your Account?",
+        description: `Many traders miss the verification email.
+
+If you do not receive your login or verification:
+- Search for: Verify@peakprofitfunding.com
+- Check Junk folder
+- Check Spam folder
+- Check Promotions tab
+- Check "Other" inbox
+
+If still unresolved, contact:
+📩 support@peakprofitfunding.com
+
+We respond quickly.`,
         lastUpdated: "Over 3 months ago",
-        title: "Miscellaneous",
-        description: `  Can I have multiple accounts?
-        Yes, up to 3.
- 
- 
-        Do I need KYC?
-        Yes, for payout.
- 
- 
-        Can I use EAs?
-        Yes, no latency arbitrage or tick manipulation.
-        
-        
-         Do you offer affiliate programs?
-         Yes. Email partnerships@peakprofitfunding.com for more.
-        `,
+      },
+      {
+        title: "Example Timeline from Sign-Up to Payout",
+        description: `Day 1–3 → Trade the Evaluation
+Day 4–6 → Hit the 8% profit target
+Day 7 → Account review begins
+Complete KYC → Live account upgrade
+Receive your PEAK PROFIT FUNDED TRADER™ certificate
+
+Live Account:
+Complete 5 profitable days (at least 0.5% each)
+Request payout → Receive payout`,
+        lastUpdated: "Over 3 months ago",
       },
     ],
   },
-  {
-    icon: <MdTimeline size={52} className="text-4xl text-[#780dff]" />,
-    title: "Evaluation Process",
-    description: "Evaluation Process",
-    articles: [
-      {
-        title: "How to get started",
-        description:
-          "First, choose the desired test in the program section. After completing your purchase, you will receive your credentials within a few minutes, allowing you to start trading and proceed with the evaluation",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Which countries are allowed?",
-        description:
-          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the TradeLocker. You must be at least 18 years old.",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "What Payment Methods Are Available?",
-        description:
-          "We accept Cryptocurrency payments and Credit Card Payments at our checkout. If you have any issues please contact our live chat support.",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Payouts & Scaling",
-        description: `When do I get paid?
-          - First payout: 7-14 days
-          - Recurring: Bi-weekly/monthly
-          - Minimum withdrawal: $100
-          - Methods: Crypto (USDT), Wise, Bank Transfer
- 
- 
-          Whats the profit split?
-          - Standard: 80/20
-          - Top-tier: Up to 90/10
- 
- 
-          How does scaling work?
-          After 3 profitable months, request capital increases up to $400,000.`,
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Rule Changes",
-        description:
-          "Traders must stay informed on new rules and changes that are going to be announced by email or on our social media platforms. Rules are active 24h after they are announced to public",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "What is PeakProfit (PPF)?",
-        description: ` What is Peak Profit Funding?
- Peak Profit Funding is a prop trading firm that funds traders with capital to trade Forex, Crypto, and Indices. We provide
- a real trading environment for disciplined traders to scale and profit  without risking personal capital.
- 
- Is Peak Profit Funding legit?
- Yes. We operate transparently, with real capital allocations, strict risk parameters, and a robust evaluation process.
- 
- What makes Peak Profit Funding different?
- - Instant funding options & fast evaluations
- - Transparent rules with no hidden traps
- - Crypto & Forex funded accounts
- - Tight spreads and reliable platforms (MT5, TradeLocker)
- - Community-first approach with Discord access and trading education
-`,
-        lastUpdated: "Over 3 months ago",
-      },
 
-      {
-        lastUpdated: "Over 3 months ago",
-        title: " Evaluation & Account Types",
-        description: `
-         How does the evaluation work?
- We offer both:
- - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
- - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
- 
- 
- What are the rules?
- Typical parameters:
- - Daily Drawdown: 45%
- - Max Drawdown: 810%
- - Profit Target: 810%
- - No consistency rule
- - Minimum trading days: 5
- 
- 
- Can I hold trades over the weekend?
- Yes, unless stated otherwise on the account type.`,
-      },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Platforms and Execution",
-        description: ` What platforms can I trade on?
-        - MetaTrader 5 (MT5)
-        - TradeLocker
- 
- 
-        Is there a time limit to pass?
-        No, trade at your own pace.
- 
- 
-        What instruments can I trade?
-        - Forex, Crypto, Indices, Commodities, Metals`,
-      },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Disclaimers and Legals",
-        description: `  Do you offer financial advice?
-         No. We do not offer personalized investment or trading advice.
- 
-         What are the risks?
-         Trading leveraged products involves substantial risk of loss.
- 
-         Are payouts guaranteed?
-         No. All payouts depend on rule compliance.
- 
-         Refund Policy
-         All sales are final. Refunds only for double charges or technical issues.
- 
-         Terms and Conditions: www.peakprofitfunding.com/terms
-         Privacy Policy: www.peakprofitfunding.com/privacy`,
-      },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Community and Support",
-        description: `   Where can I get help?
- 
-        Join our Discord: https://discord.gg/peakprofit
- 
-        YouTube: https://www.youtube.com/@PeakProfitFunding
- 
-        Instagram: https://www.instagram.com/PeakProfitFunding
- 
-        Support email: support@peakprofitfunding.com`,
-      },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Miscellaneous",
-        description: `  Can I have multiple accounts?
-        Yes, up to 3.
- 
- 
-        Do I need KYC?
-        Yes, for payout.
- 
- 
-        Can I use EAs?
-        Yes, no latency arbitrage or tick manipulation.
-        
-        
-         Do you offer affiliate programs?
-         Yes. Email partnerships@peakprofitfunding.com for more.
-        `,
-      },
-    ],
-  },
-  {
-    icon: <FaChartBar size={52} className="text-4xl text-[#780dff]" />,
-    title: "Trading Conditions",
-    description: "Trading Conditions",
-    articles: [
-      {
-        title: "How to get started",
-        description:
-          "First, choose the desired test in the program section. After completing your purchase, you will receive your credentials within a few minutes, allowing you to start trading and proceed with the evaluation",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Which countries are allowed?",
-        description:
-          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the TradeLocker. You must be at least 18 years old.",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "What Payment Methods Are Available?",
-        description:
-          "We accept Cryptocurrency payments and Credit Card Payments at our checkout. If you have any issues please contact our live chat support.",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Payouts & Scaling",
-        description: `When do I get paid?
-          - First payout: 7-14 days
-          - Recurring: Bi-weekly/monthly
-          - Minimum withdrawal: $100
-          - Methods: Crypto (USDT), Wise, Bank Transfer
- 
- 
-          Whats the profit split?
-          - Standard: 80/20
-          - Top-tier: Up to 90/10
- 
- 
-          How does scaling work?
-          After 3 profitable months, request capital increases up to $400,000.`,
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Rule Changes",
-        description:
-          "Traders must stay informed on new rules and changes that are going to be announced by email or on our social media platforms. Rules are active 24h after they are announced to public",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "What is PeakProfit (PPF)?",
-        description: ` What is Peak Profit Funding?
- Peak Profit Funding is a prop trading firm that funds traders with capital to trade Forex, Crypto, and Indices. We provide
- a real trading environment for disciplined traders to scale and profit  without risking personal capital.
- 
- Is Peak Profit Funding legit?
- Yes. We operate transparently, with real capital allocations, strict risk parameters, and a robust evaluation process.
- 
- What makes Peak Profit Funding different?
- - Instant funding options & fast evaluations
- - Transparent rules with no hidden traps
- - Crypto & Forex funded accounts
- - Tight spreads and reliable platforms (MT5, TradeLocker)
- - Community-first approach with Discord access and trading education
-`,
-        lastUpdated: "Over 3 months ago",
-      },
-
-      {
-        lastUpdated: "Over 3 months ago",
-        title: " Evaluation & Account Types",
-        description: `
-         How does the evaluation work?
- We offer both:
- - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
- - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
- 
- 
- What are the rules?
- Typical parameters:
- - Daily Drawdown: 45%
- - Max Drawdown: 810%
- - Profit Target: 810%
- - No consistency rule
- - Minimum trading days: 5
- 
- 
- Can I hold trades over the weekend?
- Yes, unless stated otherwise on the account type.`,
-      },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Platforms and Execution",
-        description: ` What platforms can I trade on?
-        - MetaTrader 5 (MT5)
-        - TradeLocker
- 
- 
-        Is there a time limit to pass?
-        No, trade at your own pace.
- 
- 
-        What instruments can I trade?
-        - Forex, Crypto, Indices, Commodities, Metals`,
-      },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Disclaimers and Legals",
-        description: `  Do you offer financial advice?
-         No. We do not offer personalized investment or trading advice.
- 
-         What are the risks?
-         Trading leveraged products involves substantial risk of loss.
- 
-         Are payouts guaranteed?
-         No. All payouts depend on rule compliance.
- 
-         Refund Policy
-         All sales are final. Refunds only for double charges or technical issues.
- 
-         Terms and Conditions: www.peakprofitfunding.com/terms
-         Privacy Policy: www.peakprofitfunding.com/privacy`,
-      },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Community and Support",
-        description: `   Where can I get help?
- 
-        Join our Discord: https://discord.gg/peakprofit
- 
-        YouTube: https://www.youtube.com/@PeakProfitFunding
- 
-        Instagram: https://www.instagram.com/PeakProfitFunding
- 
-        Support email: support@peakprofitfunding.com`,
-      },
-      {
-        lastUpdated: "Over 3 months ago",
-        title: "Miscellaneous",
-        description: `  Can I have multiple accounts?
-        Yes, up to 3.
- 
- 
-        Do I need KYC?
-        Yes, for payout.
- 
- 
-        Can I use EAs?
-        Yes, no latency arbitrage or tick manipulation.
-        
-        
-         Do you offer affiliate programs?
-         Yes. Email partnerships@peakprofitfunding.com for more.
-        `,
-      },
-    ],
-  },
+  // ─── 2. BECOMING A FUNDED TRADER ─────────────────────────────────────────
   {
     icon: <FiUser size={52} className="text-4xl text-[#780dff]" />,
-    title: "Funded Account",
-    description: "Funded Account",
+    title: "Becoming a Funded Trader",
+    description: "The path from challenge to live funded account",
     articles: [
       {
-        title: "How to get started",
-        description:
-          "First, choose the desired test in the program section. After completing your purchase, you will receive your credentials within a few minutes, allowing you to start trading and proceed with the evaluation",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Which countries are allowed?",
-        description:
-          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the TradeLocker. You must be at least 18 years old.",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "What Payment Methods Are Available?",
-        description:
-          "We accept Cryptocurrency payments and Credit Card Payments at our checkout. If you have any issues please contact our live chat support.",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Payouts & Scaling",
-        description: `When do I get paid?
-          - First payout: 7-14 days
-          - Recurring: Bi-weekly/monthly
-          - Minimum withdrawal: $100
-          - Methods: Crypto (USDT), Wise, Bank Transfer
- 
- 
-          Whats the profit split?
-          - Standard: 80/20
-          - Top-tier: Up to 90/10
- 
- 
-          How does scaling work?
-          After 3 profitable months, request capital increases up to $400,000.`,
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Rule Changes",
-        description:
-          "Traders must stay informed on new rules and changes that are going to be announced by email or on our social media platforms. Rules are active 24h after they are announced to public",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "What is PeakProfit (PPF)?",
-        description: ` What is Peak Profit Funding?
- Peak Profit Funding is a prop trading firm that funds traders with capital to trade Forex, Crypto, and Indices. We provide
- a real trading environment for disciplined traders to scale and profit  without risking personal capital.
- 
- Is Peak Profit Funding legit?
- Yes. We operate transparently, with real capital allocations, strict risk parameters, and a robust evaluation process.
- 
- What makes Peak Profit Funding different?
- - Instant funding options & fast evaluations
- - Transparent rules with no hidden traps
- - Crypto & Forex funded accounts
- - Tight spreads and reliable platforms (MT5, TradeLocker)
- - Community-first approach with Discord access and trading education
-`,
-        lastUpdated: "Over 3 months ago",
-      },
+        title: "How Do I Become a Peak Profit Funded Trader™?",
+        description: `1. Sign up in the Client Area
+2. Buy a Challenge
+3. Pass the Single-Phase Evaluation
+4. Complete KYC verification
+5. Receive your official PEAK PROFIT FUNDED TRADER™ certificate
+6. Receive your Live Funded Account
+7. Start requesting payouts
 
-      {
+We offer only a Single-Phase Evaluation — there is no 2-step or 3-step process.`,
         lastUpdated: "Over 3 months ago",
-        title: " Evaluation & Account Types",
-        description: `
-         How does the evaluation work?
- We offer both:
- - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
- - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
- 
- 
- What are the rules?
- Typical parameters:
- - Daily Drawdown: 45%
- - Max Drawdown: 810%
- - Profit Target: 810%
- - No consistency rule
- - Minimum trading days: 5
- 
- 
- Can I hold trades over the weekend?
- Yes, unless stated otherwise on the account type.`,
       },
       {
+        title: "Evaluation Rules (Single Phase)",
+        description: `- Profit Target: 8%
+- Daily Loss Limit: 2.5%
+- Maximum Drawdown: 7%
+- Minimum Trading Days: 3
+- Consistency Rule: 33%
+
+Breach of any rule = immediate failure. No refunds.`,
         lastUpdated: "Over 3 months ago",
-        title: "Platforms and Execution",
-        description: ` What platforms can I trade on?
-        - MetaTrader 5 (MT5)
-        - TradeLocker
- 
- 
-        Is there a time limit to pass?
-        No, trade at your own pace.
- 
- 
-        What instruments can I trade?
-        - Forex, Crypto, Indices, Commodities, Metals`,
       },
       {
+        title: "What Happens If I Fail the Evaluation?",
+        description: `If you breach any Evaluation rule:
+- Your evaluation account will be terminated immediately
+- The challenge will be marked as failed
+- No refunds will be issued
+
+You may purchase a new evaluation and try again. The only amount you risk is the one-time evaluation fee. You are never liable for trading losses beyond that fee.`,
         lastUpdated: "Over 3 months ago",
-        title: "Disclaimers and Legals",
-        description: `  Do you offer financial advice?
-         No. We do not offer personalized investment or trading advice.
- 
-         What are the risks?
-         Trading leveraged products involves substantial risk of loss.
- 
-         Are payouts guaranteed?
-         No. All payouts depend on rule compliance.
- 
-         Refund Policy
-         All sales are final. Refunds only for double charges or technical issues.
- 
-         Terms and Conditions: www.peakprofitfunding.com/terms
-         Privacy Policy: www.peakprofitfunding.com/privacy`,
       },
       {
+        title: "Funded Account Rules",
+        description: `Once you pass the evaluation and go live, the following rules apply:
+
+- Daily Loss Limit: 2%
+- Maximum Drawdown: 6%`,
         lastUpdated: "Over 3 months ago",
-        title: "Community and Support",
-        description: `   Where can I get help?
- 
-        Join our Discord: https://discord.gg/peakprofit
- 
-        YouTube: https://www.youtube.com/@PeakProfitFunding
- 
-        Instagram: https://www.instagram.com/PeakProfitFunding
- 
-        Support email: support@peakprofitfunding.com`,
       },
       {
+        title: "What Happens If I Fail the Funded Account?",
+        description: `If you breach any funded account rule:
+- The funded account will be permanently deleted
+- You will lose access to that capital allocation
+- Any pending profits may be forfeited depending on violation type
+
+You are not liable for any trading losses. You will never owe the firm money. The maximum you can ever lose is your original evaluation fee.`,
         lastUpdated: "Over 3 months ago",
-        title: "Miscellaneous",
-        description: `  Can I have multiple accounts?
-        Yes, up to 3.
- 
- 
-        Do I need KYC?
-        Yes, for payout.
- 
- 
-        Can I use EAs?
-        Yes, no latency arbitrage or tick manipulation.
-        
-        
-         Do you offer affiliate programs?
-         Yes. Email partnerships@peakprofitfunding.com for more.
-        `,
       },
     ],
   },
+
+  // ─── 3. TRADING ON THE PLATFORM ──────────────────────────────────────────
   {
-    icon: <GiRuleBook size={52} className="text-4xl text-[#780dff]" />,
-    title: "Evaluation/Funded Rules",
-    description: "Evaluation rules",
+    icon: <FaDesktop size={52} className="text-4xl text-[#780dff]" />,
+    title: "Trading on PEAK MARKETS™",
+    description: "Our proprietary platform — built for funded traders",
     articles: [
       {
-        title: "How to get started",
-        description:
-          "First, choose the desired test in the program section. After completing your purchase, you will receive your credentials within a few minutes, allowing you to start trading and proceed with the evaluation",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Which countries are allowed?",
-        description:
-          "We welcome traders from around the world, except for U.S. persons, to open an account with us on the TradeLocker. You must be at least 18 years old.",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "What Payment Methods Are Available?",
-        description:
-          "We accept Cryptocurrency payments and Credit Card Payments at our checkout. If you have any issues please contact our live chat support.",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Payouts & Scaling",
-        description: `When do I get paid?
-          - First payout: 7-14 days
-          - Recurring: Bi-weekly/monthly
-          - Minimum withdrawal: $100
-          - Methods: Crypto (USDT), Wise, Bank Transfer
- 
- 
-          Whats the profit split?
-          - Standard: 80/20
-          - Top-tier: Up to 90/10
- 
- 
-          How does scaling work?
-          After 3 profitable months, request capital increases up to $400,000.`,
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "Rule Changes",
-        description:
-          "Traders must stay informed on new rules and changes that are going to be announced by email or on our social media platforms. Rules are active 24h after they are announced to public",
-        lastUpdated: "Over 3 months ago",
-      },
-      {
-        title: "What is PeakProfit (PPF)?",
-        description: ` What is Peak Profit Funding?
- Peak Profit Funding is a prop trading firm that funds traders with capital to trade Forex, Crypto, and Indices. We provide
- a real trading environment for disciplined traders to scale and profit  without risking personal capital.
- 
- Is Peak Profit Funding legit?
- Yes. We operate transparently, with real capital allocations, strict risk parameters, and a robust evaluation process.
- 
- What makes Peak Profit Funding different?
- - Instant funding options & fast evaluations
- - Transparent rules with no hidden traps
- - Crypto & Forex funded accounts
- - Tight spreads and reliable platforms (MT5, TradeLocker)
- - Community-first approach with Discord access and trading education
-`,
-        lastUpdated: "Over 3 months ago",
-      },
+        title: "What is PEAK MARKETS™?",
+        description: `PEAK MARKETS™ is our fully proprietary, in-house trading platform built specifically for funded traders.
 
-      {
+Unlike most prop firms that rely on third-party broker software, Peak Profit Funding™ operates on its own integrated trading infrastructure — giving traders greater control, stability, and performance visibility.
+
+This is not a generic broker terminal. This is a performance-focused trading environment designed by traders.`,
         lastUpdated: "Over 3 months ago",
-        title: " Evaluation & Account Types",
-        description: `
-         How does the evaluation work?
- We offer both:
- - One-Phase Evaluation Accounts: Pass by hitting the profit target within rules.
- - Instant Funding Accounts: Start live trading with real capital immediately under scaled payout terms.
- 
- 
- What are the rules?
- Typical parameters:
- - Daily Drawdown: 45%
- - Max Drawdown: 810%
- - Profit Target: 810%
- - No consistency rule
- - Minimum trading days: 5
- 
- 
- Can I hold trades over the weekend?
- Yes, unless stated otherwise on the account type.`,
       },
       {
+        title: "What Instruments & Charts Are Available?",
+        description: `Integrated directly into PEAK MARKETS™:
+- Industry-leading charting from TradingView
+- Real-time market data powered by Polygon.io
+- 2000+ symbols across Forex & Crypto
+- Everything from USD/CAD to high-volatility meme coins
+
+You get institutional-level charting tools without leaving the platform.`,
         lastUpdated: "Over 3 months ago",
-        title: "Platforms and Execution",
-        description: ` What platforms can I trade on?
-        - MetaTrader 5 (MT5)
-        - TradeLocker
- 
- 
-        Is there a time limit to pass?
-        No, trade at your own pace.
- 
- 
-        What instruments can I trade?
-        - Forex, Crypto, Indices, Commodities, Metals`,
       },
       {
+        title: "What Trading Strategies Are Allowed?",
+        description: `PEAK MARKETS™ supports:
+- Manual trading
+- Algorithmic trading & API connections
+- Copy trading systems
+- High-frequency strategies
+- News trading
+- Scalping
+
+There are no platform-imposed strategy restrictions. Only risk violations trigger enforcement.`,
         lastUpdated: "Over 3 months ago",
-        title: "Disclaimers and Legals",
-        description: `  Do you offer financial advice?
-         No. We do not offer personalized investment or trading advice.
- 
-         What are the risks?
-         Trading leveraged products involves substantial risk of loss.
- 
-         Are payouts guaranteed?
-         No. All payouts depend on rule compliance.
- 
-         Refund Policy
-         All sales are final. Refunds only for double charges or technical issues.
- 
-         Terms and Conditions: www.peakprofitfunding.com/terms
-         Privacy Policy: www.peakprofitfunding.com/privacy`,
       },
       {
+        title: "Copy Trading & Automation Policy",
+        description: `Copy trading: Allowed
+Automation (EAs/bots): Allowed
+Multiple accounts: Allowed (up to 40 simultaneously)
+
+Only fraud, abuse, or exploitation is prohibited.`,
         lastUpdated: "Over 3 months ago",
-        title: "Community and Support",
-        description: `   Where can I get help?
- 
-        Join our Discord: https://discord.gg/peakprofit
- 
-        YouTube: https://www.youtube.com/@PeakProfitFunding
- 
-        Instagram: https://www.instagram.com/PeakProfitFunding
- 
-        Support email: support@peakprofitfunding.com`,
       },
       {
+        title: "How Can I Track My Performance?",
+        description: `Inside PEAK MARKETS™, traders can monitor in real time:
+- Equity tracking & daily drawdown status
+- Maximum drawdown levels
+- Profit factor & win rate
+- Risk-to-reward ratio
+- Profitable vs losing days
+- Equity curve visualization
+
+Your risk compliance is visible at all times. No guessing. No surprises.`,
         lastUpdated: "Over 3 months ago",
-        title: "Miscellaneous",
-        description: `  Can I have multiple accounts?
-        Yes, up to 3.
- 
- 
-        Do I need KYC?
-        Yes, for payout.
- 
- 
-        Can I use EAs?
-        Yes, no latency arbitrage or tick manipulation.
-        
-        
-         Do you offer affiliate programs?
-         Yes. Email partnerships@peakprofitfunding.com for more.
-        `,
+      },
+      {
+        title: "Built-In Trade Journal",
+        description: `Every trade can be reviewed inside the platform. Traders can log:
+- Entry & exit reasoning
+- Strategy notes
+- Screenshots
+- Performance breakdowns
+
+We don't just fund traders — we help them improve.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "How Do I Access the Platform?",
+        description: `PEAK MARKETS™ is accessible via:
+- Desktop browser
+- Mobile browser
+- Tablet
+
+No third-party software required. Access is 24/7.`,
+        lastUpdated: "Over 3 months ago",
+      },
+    ],
+  },
+
+  // ─── 4. GETTING PAID ─────────────────────────────────────────────────────
+  {
+    icon: <FaMoneyBillWave size={52} className="text-4xl text-[#780dff]" />,
+    title: "Getting Paid",
+    description: "Profit splits, payout schedules, and withdrawal methods",
+    articles: [
+      {
+        title: "What Is the Profit Split?",
+        description: `First Payout:
+50% Trader / 50% Firm
+
+All Future Payouts:
+85% Trader / 15% Firm`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "When & How Often Can I Withdraw?",
+        description: `- Payout Frequency: Every 7 days
+- Minimum Withdrawal: $100
+- Maximum Withdrawal: $5,000
+
+To be eligible for a payout you must complete:
+- 5 profitable trading days
+- Each day must generate at least 0.5% profit
+- Days do not need to be consecutive
+
+Payouts are processed quickly once approved. We do not deny payouts unless a trader violates one of our clearly written rules.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "What Payout Methods Are Available?",
+        description: `- Crypto
+- Bank Wire
+- ACH
+- Other supported regional options
+
+All countries are supported.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "How Is Balance vs Equity Calculated?",
+        description: `Balance:
+Changes only when trades close.
+Formula: Deposit − Withdrawals + Realized P/L
+
+Equity:
+Balance + Unrealized (open) P/L
+
+Drawdown rules are always measured using Equity. Balance reflects closed performance only.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "Risk Calculation Examples",
+        description: `On a $100,000 Account:
+- 2% Daily Loss = $2,000
+- 6% Max Drawdown = $6,000
+- 0.5% Daily Profit Requirement (for payout) = $500
+- 8% Evaluation Target = $8,000
+
+On a $200,000 Account:
+- 2% Daily Loss = $4,000
+- 6% Max Drawdown = $12,000
+- 0.5% Daily Profit Requirement = $1,000
+- 8% Evaluation Target = $16,000`,
+        lastUpdated: "Over 3 months ago",
+      },
+    ],
+  },
+
+  // ─── 5. BILLING & ACCOUNTS ───────────────────────────────────────────────
+  {
+    icon: <FaFileContract size={52} className="text-4xl text-[#780dff]" />,
+    title: "Billing & Accounts",
+    description: "Fees, payments, account limits, and refund policy",
+    articles: [
+      {
+        title: "Why Is There a Challenge Fee?",
+        description: `The one-time challenge fee covers:
+- Platform technology
+- Market data infrastructure
+- Risk systems
+- Support staff
+- Capital allocation structure
+
+There are no recurring fees — it's a single payment only.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "When Do I Receive My Account?",
+        description: `Immediately after payment confirmation. Login credentials are sent instantly to your email.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "How Many Accounts Can I Have?",
+        description: `You may operate up to 40 accounts simultaneously.
+
+Capital allocations are reviewed internally. Account merging is not guaranteed. Total exposure limits are determined at firm discretion.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "Is My Payment Secure?",
+        description: `Yes. All payments are encrypted and processed through Authorize.net.
+
+Peak Profit Funding™ does not store:
+- Card numbers
+- Billing credentials
+- Payment data`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "Refund Policy",
+        description: `All purchases are final.
+- No refunds
+- No partial refunds
+- Failed evaluations are not eligible for refunds
+- Chargebacks result in a permanent account ban`,
+        lastUpdated: "Over 3 months ago",
+      },
+    ],
+  },
+
+  // ─── 6. RULES & COMPLIANCE ───────────────────────────────────────────────
+  {
+    icon: <GiRuleBook size={52} className="text-4xl text-[#780dff]" />,
+    title: "Rules & Compliance",
+    description:
+      "Prohibited activity, termination policy, and trader liability",
+    articles: [
+      {
+        title: "What Activity Is Strictly Prohibited?",
+        description: `The following results in immediate account termination, profit forfeiture, and a permanent ban:
+
+- Latency exploitation
+- Infrastructure abuse
+- Identity sharing
+- Fraudulent KYC
+- Reverse engineering
+- Tick manipulation
+- Grid martingale abuse
+- Payout laundering
+
+No hidden enforcement — all rules are clearly written.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "Am I Responsible for Losses on Funded Accounts?",
+        description: `No. Peak Profit Funding™ absorbs all trading losses on funded accounts.
+
+Traders are not personally responsible for:
+- Drawdown losses
+- Market losses
+- Volatility losses
+
+The firm's capital is protected by strict risk parameters. Your personal financial risk is limited strictly to the evaluation fee.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "Capital Risk Structure",
+        description: `To be completely clear:
+- You do not deposit trading capital
+- You do not borrow money
+- You do not assume debt
+- You are not personally liable
+
+You trade under a structured risk system. If rules are breached, the account is closed. No debt. No liability.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "Important Clarification on Violations",
+        description: `Rule violations such as fraud, identity manipulation, or infrastructure exploitation may result in profit forfeiture and a permanent ban.
+
+But even in those cases: you are not financially liable beyond your original evaluation purchase.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "Dispute Resolution",
+        description: `Any disputes arising from participation in the Peak Profit Funding™ program are handled under the governing law outlined in our Terms & Conditions.
+
+All disputes may be subject to binding arbitration where applicable.`,
+        lastUpdated: "Over 3 months ago",
+      },
+    ],
+  },
+
+  // ─── 7. COMMUNITY & SUPPORT ──────────────────────────────────────────────
+  {
+    icon: <FaUsers size={52} className="text-4xl text-[#780dff]" />,
+    title: "Community & Support",
+    description: "How to get help, connect with traders, and keep learning",
+    articles: [
+      {
+        title: "How Can I Contact Support?",
+        description: `Inside your Client Portal:
+- Start a live support chat
+- Open a support ticket
+
+We operate 24/7 support staff.
+
+You may also reach us at:
+📩 support@peakprofitfunding.com
+
+Response times are fast.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "Where Is the Community?",
+        description: `Join our Discord: https://discord.gg/peakprofit
+
+Connect with 5,000+ traders, get rule clarifications, and access live trading sessions.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "Education & Learning Resources",
+        description: `Inside our Discord and platform you'll find:
+- Live trading sessions
+- Rule explanations
+- Risk management breakdowns
+- Strategy discussions
+- Direct support access
+
+We aim to improve traders — not just test them.`,
+        lastUpdated: "Over 3 months ago",
+      },
+      {
+        title: "Transparency & Proof of Payouts",
+        description: `Peak Profit Funding™ publicly showcases:
+- Verified payout confirmations
+- Trader testimonials
+- Performance highlights (with consent)
+
+We believe transparency builds trust.`,
+        lastUpdated: "Over 3 months ago",
       },
     ],
   },

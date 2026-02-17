@@ -7,10 +7,8 @@ import {
   ShieldCheck,
   Users,
   Activity,
-  ArrowUpRight,
-  ArrowRight,
 } from "lucide-react";
-import TradingVideo from "../../../assets/videos/DashboardTrading.mp4";
+import TradingVideo from "../../../assets/videos/peakMarkets.mp4";
 import { MacbookScroll } from "../../../components/ui/macbook-scroll";
 import FeatureCard from "./FeatureCard";
 
@@ -147,7 +145,9 @@ const PeakMarkets = () => {
           ))}
         </motion.div>
       </div>
-      <MacbookScroll src={TradingVideo} />
+      <div className="hidden lg:block">
+        <MacbookScroll src={TradingVideo} />
+      </div>
     </section>
   );
 };

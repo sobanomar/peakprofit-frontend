@@ -2,17 +2,18 @@ import React from "react";
 import { useParams, Link } from "react-router";
 import { useFAQ } from "../../context/FAQContext";
 import { slugify } from "../../utils/slugify";
+import FAQArticleTextParser from "../../utils/FAQArticleTextParser";
 
 const ArticlePage = () => {
   const { slug, articleSlug } = useParams();
   const faqSections = useFAQ();
 
   const category = faqSections.find(
-    (section) => slugify(section.title) === slug
+    (section) => slugify(section.title) === slug,
   );
 
   const article = category?.articles.find(
-    (art) => slugify(art.title) === articleSlug
+    (art) => slugify(art.title) === articleSlug,
   );
 
   if (!category || !article) {
@@ -34,26 +35,23 @@ const ArticlePage = () => {
         <Link to={"/faq"} className="hover:underline text-black">
           All Collections
         </Link>{" "}
-        &gt;{" "}
-        <Link
-          to={`/collections/${slug}`}
-          className="hover:underline text-black"
-        >
-          {category.title}
-        </Link>{" "}
+        {category.articles.length > 1 && (
+          <Link
+            to={`/collections/${slug}`}
+            className="hover:underline text-black"
+          >
+            &gt; {category.title}
+          </Link>
+        )}
         &gt; <span className="text-gray-600">{article.title}</span>
       </nav>
 
       {/* Article Title */}
       <h1 className="text-3xl font-bold mb-2">{article.title}</h1>
 
-      {/* Last Updated */}
-      <p className="text-sm text-gray-500 mb-6">
-        Updated {article.lastUpdated}
-      </p>
-
       {/* Description */}
-      <p className="mb-10 whitespace-pre-line">{article.description}</p>
+      {/* <p className="mb-10 whitespace-pre-line">{article.description}</p> */}
+      <FAQArticleTextParser text={article.description} className="mb-10" />
 
       {/* Feedback Box */}
       <div className="bg-gray-100 p-6 rounded-xl text-center">
