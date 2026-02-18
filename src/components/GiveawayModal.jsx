@@ -6,8 +6,8 @@ const TOTAL_USERS = 10000;
 const CURRENT_USERS = 7420; // 74.2%
 
 const STORAGE_KEY = "peak_profit_giveaway_meta";
-const WAIT_TIME = 10000; // 30 seconds
-const COOLDOWN_MINUTES = 30;
+const WAIT_TIME = 1; // 30 seconds
+const COOLDOWN_MINUTES = 0.1;
 const MAX_DISMISSALS = 10; // Stop forever after 5 closes
 
 export default function GiveawayModal() {
@@ -95,7 +95,7 @@ export default function GiveawayModal() {
       {open && (
         <>
           <motion.div
-            className="fixed z-[250] inset-0 flex items-center justify-center  bg-black/60 backdrop-blur-sm"
+            className="fixed z-[250] inset-0 flex items-center justify-center p-4  bg-black/60 backdrop-blur-sm"
             initial={{ opacity: 0, scale: 0.92, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.94, y: 16 }}
@@ -103,13 +103,11 @@ export default function GiveawayModal() {
             onClick={handleClose}
           >
             <div
-              className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl"
+              className="relative w-full max-w-md max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl no-scrollbar"
               style={{
                 background:
                   "linear-gradient(135deg, #1a1035 0%, #1e1245 40%, #160d30 100%)",
-                border: "1px solid rgba(139, 92, 246, 0.25)",
-                boxShadow:
-                  "0 0 60px rgba(109, 40, 217, 0.3), 0 25px 50px rgba(0,0,0,0.6)",
+                border: "1px solid rgba(139, 92, 246, 0.3)",
               }}
               onClick={(e) => e.stopPropagation()}
             >
@@ -146,7 +144,7 @@ export default function GiveawayModal() {
                     </div>
                     {/* Badge */}
                     <div
-                      className="flex text-sm items-center gap-1.5 px-3 py-1 rounded-full  font-semibold text-purple-200"
+                      className="flex text-[12px] sm:text-sm items-center gap-1.5 w-fit px-3 py-1 rounded-full  font-semibold text-purple-200"
                       style={{
                         background: "rgba(124, 58, 237, 0.2)",
                         border: "1px solid rgba(167, 139, 250, 0.3)",
@@ -165,7 +163,7 @@ export default function GiveawayModal() {
 
                 {/* Title */}
                 <motion.h2
-                  className="text-2xl font-black text-white leading-tight mb-3"
+                  className="text-lg md:text-2xl font-black text-white leading-tight mb-3"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.15, duration: 0.5 }}
@@ -193,7 +191,7 @@ export default function GiveawayModal() {
                 </motion.h2>
 
                 <motion.p
-                  className="text-zinc-400 text-sm leading-relaxed mb-5"
+                  className="text-zinc-400 text-[12px] sm:text-sm leading-relaxed mb-5"
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.22, duration: 0.5 }}
@@ -227,7 +225,7 @@ export default function GiveawayModal() {
                   {/* Prize rows */}
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-white font-semibold text-sm">
+                      <span className="text-white font-semibold text-xs sm:text-sm">
                         $500,000 Funded Account
                       </span>
                       <span className="text-zinc-400 text-xs">
@@ -235,7 +233,7 @@ export default function GiveawayModal() {
                       </span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-white font-semibold text-sm">
+                      <span className="text-white font-semibold text-xs sm:text-sm">
                         $10,000 Cash
                       </span>
                       <span className="text-zinc-400 text-xs">
@@ -246,10 +244,11 @@ export default function GiveawayModal() {
 
                   {/* Progress */}
                   <div>
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="flex sm:flex-row flex-col items-end  sm:items-center sm:justify-between mb-2">
                       <span className="text-zinc-400 text-xs">
                         Progress to 10,000 users (demo)
                       </span>
+
                       <span className="text-violet-300 text-xs font-bold">
                         {((CURRENT_USERS / TOTAL_USERS) * 100).toLocaleString()}
                         %
@@ -286,7 +285,7 @@ export default function GiveawayModal() {
                   transition={{ delay: 0.4, duration: 0.5 }}
                 >
                   <button
-                    className="w-full py-3.5 rounded-xl font-bold text-white text-sm tracking-wide transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                    className="w-full py-3.5 rounded-xl font-bold text-white text-[12px] sm:text-sm tracking-wide transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                     style={{
                       background:
                         "linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%)",
@@ -302,7 +301,7 @@ export default function GiveawayModal() {
                   </button>
 
                   <button
-                    className="w-full py-3.5 rounded-xl hover:scale-[1.02] font-semibold text-zinc-300 text-sm tracking-wide transition-all duration-300 hover:text-white hover:border-violet-500/50"
+                    className="w-full py-3.5 rounded-xl hover:scale-[1.02] font-semibold text-zinc-300 text-[12px] sm:text-sm tracking-wide transition-all duration-300 hover:text-white hover:border-violet-500/50"
                     style={{
                       background: "rgba(255,255,255,0.04)",
                       border: "1px solid rgba(255,255,255,0.1)",
