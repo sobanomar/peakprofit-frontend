@@ -1,5 +1,4 @@
 import React from "react";
-import LiquidGlassButton from "../../../components/ui/LiquidGlassButton";
 import { motion } from "framer-motion";
 import { TrendingUp, Shield, Calendar, Target, DollarSign } from "lucide-react";
 const ChallengeDetails = ({
@@ -113,20 +112,6 @@ const ChallengeDetails = ({
             </motion.div>
           );
         })}
-      </motion.div>
-
-      <motion.div
-        variants={detailItemVariants}
-        className="pt-6 space-y-3 flex items-center justify-center"
-      >
-        <LiquidGlassButton
-          width={400}
-          onClick={handleChallengeStart}
-          height={80}
-          className="md:text-xl text-white hover:text-brand-900 lg:text-2xl w-60 sm:w-72 md:w-80 rounded-full lg:w-md h-14 lg:h-22 border border-white/10 hover:bg-brand font-extrabold shadow-xl shadow-brand-400/20 hover:shadow-2xl hover:shadow-brand-400/40 transition-all duration-300"
-        >
-          BEGIN CHALLENGE
-        </LiquidGlassButton>
       </motion.div>
     </motion.div>
   );

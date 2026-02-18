@@ -10,6 +10,7 @@ import Testimonial6 from "../../../assets/images/home/trader_testimonials/Group-
 import Testimonial8 from "../../../assets/images/home/trader_testimonials/Group-23-8.webp";
 import Testimonial9 from "../../../assets/images/home/trader_testimonials/Group-23-9.webp";
 import AutoCarousel from "../../../components/AutoCarousel";
+import { motion } from "framer-motion";
 
 const TraderCarousel = () => {
   const testimonialImages = [
@@ -22,9 +23,34 @@ const TraderCarousel = () => {
     Testimonial8,
     Testimonial9,
   ];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1.2,
+        ease: "easeOut",
+        // This ensures the auto-scroll starts AFTER the fade is mostly done
+        when: "beforeChildren",
+      },
+    },
+  };
 
   return (
-    <div>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      // Adding a CSS mask creates a professional "fade-out" on the edges
+      className="relative w-full overflow-hidden"
+      style={{
+        maskImage:
+          "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+        WebkitMaskImage:
+          "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+      }}
+    >
       <AutoCarousel
         items={testimonialImages}
         renderItem={(image, index) => (
@@ -44,7 +70,7 @@ const TraderCarousel = () => {
         gap={16} // Adjust gap between items
         pauseOnHover={false}
       />
-    </div>
+    </motion.div>
   );
 };
 

@@ -27,7 +27,7 @@ const Footer = () => {
           <Links />
         </div>
       </div>
-      <div className="px-6">
+      <div className="px-6 pb-6">
         <Legal />
       </div>
     </footer>

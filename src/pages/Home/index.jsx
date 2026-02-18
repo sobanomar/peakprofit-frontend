@@ -29,22 +29,24 @@ const Home = () => {
         <HomeHero onStartChallengeClick={handleChallengeClick} />
 
         <div className="absolute theme-ambient-glow -right-80 -top-80 opacity-40 z-10" />
-        <HowItWorks />
-        <TradingPairs />
+      </div>
+      <HowItWorks />
+      <div className="relative overflow-x-hidden">
+        <PeakMarkets />
+        <div className="z-10 absolute theme-ambient-glow -left-80 top-40 opacity-40" />
+        <TraderTestimonials />
+        <TradingJourney />
       </div>
 
       {/* <Evaluation /> */}
-      <div className="relative overflow-x-hidden">
-        <JoinCommunity />
-        <div className="z-10 absolute theme-ambient-glow -left-80 top-40 opacity-40" />
 
-        <PeakMarkets />
-      </div>
+      <TradingPairs />
       <WhyChoosePPF />
-      <TradingJourney />
+      <JoinCommunity />
+
       {/* <VerifiedPayouts /> */}
       {/* <RawSpreads /> */}
-      <TraderTestimonials />
+
       {/* <StillNotConvinced /> */}
     </>
   );

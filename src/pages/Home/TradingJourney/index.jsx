@@ -15,6 +15,7 @@ import axiosInstance from "../../../api/axios";
 import MainHeading from "../../../components/MainHeading";
 import ChallengeDetails from "./ChallengeDetails";
 import ChallengeCard from "./ChallengeCard";
+import LiquidGlassButton from "../../../components/ui/LiquidGlassButton";
 
 // --- Enhanced Animation Variants ---
 const containerVariants = {
@@ -211,17 +212,24 @@ const TradingJourney = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-400/10 border border-brand-400/20 mb-6 backdrop-blur-sm"
           >
             <motion.div
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [1, 0.8, 1],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="w-2 h-2 rounded-full bg-brand-400 shadow-lg shadow-brand-400/50"
-            />
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+              className="rounded-full bg-brand-400/20 p-1.5 animate-pulse ring-1 ring-brand-400/30"
+            >
+              <motion.div
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [1, 0.8, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="w-2 h-2  rounded-full bg-brand-400 shadow-lg shadow-brand-400/50"
+              />
+            </motion.div>
             <span className="text-sm font-medium text-brand-400">
               FUNDED TRADER PROGRAM
             </span>
@@ -234,13 +242,14 @@ const TradingJourney = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed"
+            className="text-center text-lg md:text-xl mb-8 text-zinc-400 leading-relaxed"
           >
             Choose your challenge, prove your skills, and transform into a{" "}
             <span className="font-bold text-white">
-              professionally funded trader
+              professionally funded trader.
             </span>
-            . Your trading career starts here.
+            <br />
+            Your trading career starts here.
           </motion.p>
         </motion.div>
 
@@ -252,7 +261,7 @@ const TradingJourney = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
-            className="space-y-4 max-h-[450px] lg:max-h-[700px] overflow-y-auto no-scrollbar pr-2 
+            className="space-y-4 max-h-[450px] lg:max-h-[650px] overflow-y-auto no-scrollbar pr-2 
                        scrollbar-thin scrollbar-thumb-brand-400/20 scrollbar-track-transparent
                        hover:scrollbar-thumb-brand-400/40"
           >
@@ -287,6 +296,22 @@ const TradingJourney = () => {
               </motion.div>
             )}
           </div>
+        </div>
+
+        <div className="flex items-center justify-center">
+          <motion.div
+            variants={detailItemVariants}
+            className="pt-6 space-y-3 flex items-center justify-center"
+          >
+            <LiquidGlassButton
+              width={400}
+              onClick={handleChallengeStart}
+              height={80}
+              className="md:text-xl text-white hover:text-brand-900 lg:text-2xl w-60 sm:w-72 md:w-80 rounded-full lg:w-md h-14 lg:h-22 border border-white/10 hover:bg-brand font-extrabold shadow-xl shadow-brand-400/20 hover:shadow-2xl hover:shadow-brand-400/40 transition-all duration-300"
+            >
+              BEGIN CHALLENGE
+            </LiquidGlassButton>
+          </motion.div>
         </div>
       </div>
     </section>
