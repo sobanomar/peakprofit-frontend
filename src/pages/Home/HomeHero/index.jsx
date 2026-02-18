@@ -86,7 +86,7 @@ export default function HomeHero({ onStartChallengeClick }) {
         </LiquidGlassButton>
 
         {/* Key Values Section with Animated Icons */}
-        <div className=" grid grid-cols-2  sm:grid-cols-4 gap-6 md:gap-8 max-w-5xl w-full">
+        {/* <div className=" grid grid-cols-2  sm:grid-cols-4 gap-6 md:gap-8 max-w-5xl w-full">
           {keyValues.map((item, index) => (
             <div
               key={index}
@@ -115,7 +115,7 @@ export default function HomeHero({ onStartChallengeClick }) {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
