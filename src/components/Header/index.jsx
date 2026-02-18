@@ -12,7 +12,6 @@ const Header = () => {
 
   const navLinks = [
     { to: "/", label: "Home" },
-    { to: "/evaluation", label: "Evaluations" },
     { to: "/faq", label: "FAQs" },
     { to: "/contact", label: "Contact" },
   ];
@@ -22,6 +21,17 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -36,7 +46,7 @@ const Header = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-black/40 backdrop-blur-lg shadow-lg shadow-blue-400/5"
+            ? "bg-black/30 backdrop-blur-md shadow-lg shadow-blue-400/5"
             : "bg-transparent"
         }`}
       >
@@ -192,14 +202,14 @@ const Header = () => {
                   }}
                 >
                   {isActive(link.to) && (
-                    <div className="absolute inset-0 bg-brand/80  rounded-full" />
+                    <div className="absolute inset-0 bg-brand rounded-full" />
                   )}
 
-                  <div className="relative px-6 py-4 rounded-xl transition-all duration-300 group-hover:bg-white/5">
+                  <div className="relative px-6 py-2 rounded-xl transition-all duration-300 group-hover:bg-white/5">
                     <span
                       className={`text-xl font-semibold transition-all duration-300 ${
                         isActive(link.to)
-                          ? "text-white"
+                          ? "text-black/80"
                           : "text-gray-300 group-hover:text-white group-hover:translate-x-2"
                       }`}
                     >
@@ -226,14 +236,14 @@ const Header = () => {
               </LiquidGlassButton>
 
               {/* Get Started Button */}
-              <LiquidGlassButton
+              {/* <LiquidGlassButton
                 width={280}
                 height={50}
                 className="w-full rounded-full text-white  bg-brand/10 h-12"
                 onClick={navigateToSignup}
               >
                 START TRADING
-              </LiquidGlassButton>
+              </LiquidGlassButton> */}
             </div>
           </div>
 
