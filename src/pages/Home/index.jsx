@@ -13,6 +13,7 @@ import AmbientGlowBackground from "../../components/AmbientGlowBackground";
 import PeakMarkets from "./PeakMarkets";
 import TradingJourney from "./TradingJourney";
 import Partners from "./Partners";
+import GiveawayModal from "../../components/GiveawayModal";
 
 const Home = () => {
   const handleChallengeClick = () => {
@@ -25,6 +26,7 @@ const Home = () => {
 
   return (
     <>
+      {/* <GiveawayModal /> */}
       <div className="relative overflow-x-hidden ">
         {/* <AmbientGlowBackground /> */}
         <HomeHero onStartChallengeClick={handleChallengeClick} />
