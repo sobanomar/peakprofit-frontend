@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navigateToSignup } from "../utils/navigateToSignUp";
+import { ArrowRight, ArrowUpRight, X } from "lucide-react";
+import InteractiveBg from "./InteractiveBg";
+import LiquidGlassButton from "./ui/LiquidGlassButton";
 
 const TOTAL_USERS = 10000;
 const CURRENT_USERS = 7420; // 74.2%
@@ -104,10 +107,11 @@ export default function GiveawayModal() {
           >
             <div
               className="relative w-full max-w-md max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl no-scrollbar"
+              // Replace the background gradient in the inner div
               style={{
                 background:
-                  "linear-gradient(135deg, #1a1035 0%, #1e1245 40%, #160d30 100%)",
-                border: "1px solid rgba(139, 92, 246, 0.3)",
+                  "linear-gradient(160deg, #1a0f3a 0%, #1b1060 40%, #0f1a45 70%, #12103a 100%)",
+                border: "1px solid rgba(100, 80, 220, 0.4)",
               }}
               onClick={(e) => e.stopPropagation()}
             >
@@ -120,12 +124,15 @@ export default function GiveawayModal() {
                 }}
               />
 
+              <InteractiveBg opacity={0.3} />
+
               {/* Ambient glow */}
               <div
-                className="absolute -top-20 left-1/2 -translate-x-1/2 w-72 h-40 rounded-full opacity-20 pointer-events-none"
+                className="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-60 rounded-full opacity-40 pointer-events-none"
                 style={{
-                  background: "radial-gradient(circle, #7c3aed, transparent)",
-                  filter: "blur(30px)",
+                  background:
+                    "radial-gradient(ellipse, #6d28d9 0%, #3730a3 50%, transparent 75%)",
+                  filter: "blur(50px)",
                 }}
               />
 
@@ -155,9 +162,9 @@ export default function GiveawayModal() {
                   </div>
                   <button
                     onClick={handleClose}
-                    className="text-zinc-400 hover:text-white transition-colors w-7 h-7 flex items-center justify-center rounded-full hover:bg-white/10"
+                    className="text-zinc-300 hover:text-white hover:cursor-pointer transition-colors w-7 h-7 flex items-center justify-center rounded-full hover:bg-white/10"
                   >
-                    ✕
+                    <X size={18} />
                   </button>
                 </div>
 
@@ -285,7 +292,7 @@ export default function GiveawayModal() {
                   transition={{ delay: 0.4, duration: 0.5 }}
                 >
                   <button
-                    className="w-full py-3.5 rounded-xl font-bold text-white text-[12px] sm:text-sm tracking-wide transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                    className="w-full flex items-center gap-2 justify-center py-3.5 rounded-xl font-bold text-white text-[12px] sm:text-sm tracking-wide transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                     style={{
                       background:
                         "linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%)",
@@ -297,11 +304,12 @@ export default function GiveawayModal() {
                       handleAction();
                     }}
                   >
-                    Sign Up in Client Portal ↗
+                    <span>Sign Up in Client Portal</span>
+                    <ArrowUpRight size={18} />
                   </button>
 
                   <button
-                    className="w-full py-3.5 rounded-xl hover:scale-[1.02] font-semibold text-zinc-300 text-[12px] sm:text-sm tracking-wide transition-all duration-300 hover:text-white hover:border-violet-500/50"
+                    className="w-full flex items-center gap-2 justify-center  py-3.5 rounded-xl hover:scale-[1.02] font-semibold text-zinc-300 text-[12px] sm:text-sm tracking-wide transition-all duration-300 hover:text-white hover:border-violet-500/50"
                     style={{
                       background: "rgba(255,255,255,0.04)",
                       border: "1px solid rgba(255,255,255,0.1)",
@@ -311,7 +319,7 @@ export default function GiveawayModal() {
                       handleAction();
                     }}
                   >
-                    Already have an account? Log in →
+                    Already have an account? Log in <ArrowRight size={18} />
                   </button>
                 </motion.div>
 

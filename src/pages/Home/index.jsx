@@ -28,7 +28,6 @@ const Home = () => {
     <>
       {/* <GiveawayModal /> */}
       <div className="relative overflow-x-hidden ">
-        {/* <AmbientGlowBackground /> */}
         <HomeHero onStartChallengeClick={handleChallengeClick} />
 
         <div className="absolute theme-ambient-glow -right-80 -top-80 opacity-40 z-10" />
@@ -37,6 +36,7 @@ const Home = () => {
       <div className="relative overflow-x-hidden">
         <PeakMarkets />
         <div className="z-10 absolute theme-ambient-glow -left-80 top-80 opacity-40" />
+
         <div className="relative overflow-x-hidden">
           <TraderTestimonials />
           <div className="z-10 absolute theme-ambient-glow -right-80 top-80 opacity-40" />
