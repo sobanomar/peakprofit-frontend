@@ -22,10 +22,10 @@ const Partners = () => {
     <div className="w-full flex items-center justify-center py-12 text-center">
       <div className="max-w-7xl w-full px-5 md:px-0">
         <MainHeading>OUR PARTNERS</MainHeading>
-        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+        <p className="text-gray-400 mb-5 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
           PeakProfit is backed by institutional-grade infrastructure, ensuring{" "}
-          <span className="text-white">
-            seamless experience for every trader
+          <span className="text-white font-bold">
+            seamless trading and payout experience for every trader
           </span>
         </p>
         <AutoCarousel
