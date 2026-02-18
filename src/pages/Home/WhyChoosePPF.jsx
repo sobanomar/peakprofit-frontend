@@ -10,6 +10,8 @@ import {
   FaHeadset,
 } from "react-icons/fa";
 import { BsXDiamond } from "react-icons/bs";
+import LiquidGlassButton from "../../components/ui/LiquidGlassButton";
+import { navigateToSignup } from "../../utils/navigateToSignUp";
 
 const features = [
   {
@@ -63,14 +65,19 @@ const features = [
 ];
 
 const WhyChoosePPF = () => {
-  // Default to 0 so the first item is open on mount
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="w-full py-12 md:py-24 flex flex-col items-center ">
+    <section className="w-full py-12 md:py-24 flex flex-col items-center">
       <div className="max-w-7xl w-full px-6 lg:px-8">
-        {/* Mobile Header (Hidden on Desktop) */}
-        <div className="lg:hidden mb-12">
+        {/* Mobile Header */}
+        <motion.div
+          className="lg:hidden mb-12"
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
             Built for <br />
             <span className="text-brand">serious traders.</span>
@@ -78,40 +85,69 @@ const WhyChoosePPF = () => {
           <p className="text-zinc-400 text-base">
             The most trader-friendly conditions in the prop firm industry.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* ── Desktop Left Side (Hidden on Mobile) ── */}
-          <div className="hidden lg:block lg:sticky lg:top-24">
-            <h2 className="text-7xl font-bold text-white leading-tight mb-6">
-              Built for <br />
-              <span className="text-brand">serious traders.</span>
-            </h2>
-            <p className="text-zinc-400 text-lg leading-relaxed max-w-md">
-              PeakProfit Funding offers the most trader-friendly conditions in
-              the prop industry.
-            </p>
+          {/* ── Left column ──
+               RULE: sticky must be on the direct child of the grid cell.
+               motion.div must be INSIDE the sticky div — never on it —
+               because Framer's transform on entry breaks position:sticky.
+          */}
+          <div className="hidden lg:sticky lg:top-24 lg:block">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            >
+              <h2 className="text-7xl font-bold text-white leading-tight mb-6">
+                Built for <br />
+                <span className="text-brand">serious traders.</span>
+              </h2>
+              <p className="text-zinc-400 text-lg leading-relaxed max-w-md">
+                PeakProfit Funding offers the most trader-friendly conditions in
+                the prop firm industry.
+              </p>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={open}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="mt-16"
-              >
-                <div className="text-[120px] font-bold text-brand leading-none tracking-tighter">
-                  {features[open].stat}
-                </div>
-                <div className="text-zinc-400 text-sm mt-2 uppercase tracking-[0.2em]">
-                  {features[open].statLabel}
-                </div>
-              </motion.div>
-            </AnimatePresence>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={open}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                  className="mt-16"
+                >
+                  <div className="text-[120px] font-bold text-brand leading-none tracking-tighter">
+                    {features[open].stat}
+                  </div>
+                  <div className="text-zinc-400 text-sm mt-2 uppercase tracking-[0.2em]">
+                    {features[open].statLabel}
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              <div className="flex mt-8 lg:mt-16">
+                <LiquidGlassButton
+                  width={400}
+                  onClick={navigateToSignup}
+                  height={80}
+                  className="md:text-xl text-white hover:text-brand-900 lg:text-2xl w-60 sm:w-72 md:w-80 rounded-full lg:w-md h-14 lg:h-22 border border-white/10 hover:bg-brand font-extrabold shadow-xl shadow-brand-400/20 hover:shadow-2xl hover:shadow-brand-400/40 transition-all duration-300"
+                >
+                  TRY IT OUT
+                </LiquidGlassButton>
+              </div>
+            </motion.div>
           </div>
 
-          {/* ── Right Side: Mobile-Adaptive Accordion ── */}
-          <div className="flex flex-col">
+          {/* ── Right column ── */}
+          <motion.div
+            className="flex flex-col"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+          >
             {features.map((f, i) => {
               const isActive = open === i;
               return (
@@ -127,18 +163,24 @@ const WhyChoosePPF = () => {
                   >
                     <div className="flex items-center gap-4 md:gap-6">
                       <span
-                        className={`text-xl md:text-2xl transition-all ${isActive ? "text-brand" : "text-zinc-500"}`}
+                        className={`text-xl md:text-2xl transition-all ${
+                          isActive ? "text-brand" : "text-zinc-500"
+                        }`}
                       >
                         {f.icon}
                       </span>
                       <span
-                        className={`text-xl md:text-2xl font-bold ${isActive ? "text-white" : "text-zinc-400"}`}
+                        className={`text-xl md:text-2xl font-bold ${
+                          isActive ? "text-white" : "text-zinc-400"
+                        }`}
                       >
                         {f.title}
                       </span>
                     </div>
                     <span
-                      className={`text-2xl transition-colors ${isActive ? "text-brand" : "text-zinc-500"}`}
+                      className={`text-2xl transition-colors ${
+                        isActive ? "text-brand" : "text-zinc-500"
+                      }`}
                     >
                       {isActive ? "−" : "+"}
                     </span>
@@ -153,7 +195,7 @@ const WhyChoosePPF = () => {
                         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                         className="overflow-hidden"
                       >
-                        {/* Mobile Stat (Visible ONLY on mobile/tablet) */}
+                        {/* Mobile stat */}
                         <div className="lg:hidden mb-6 pl-10 md:pl-12">
                           <div className="text-5xl font-bold text-brand">
                             {f.stat}
@@ -172,7 +214,19 @@ const WhyChoosePPF = () => {
                 </div>
               );
             })}
-          </div>
+          </motion.div>
+        </div>
+
+        {/* Mobile CTA */}
+        <div className="lg:hidden flex items-center w-full justify-center">
+          <LiquidGlassButton
+            width={400}
+            onClick={navigateToSignup}
+            height={80}
+            className="md:text-xl mt-8 md:mt-16 text-white hover:text-brand-900 lg:text-2xl w-60 sm:w-72 md:w-80 rounded-full lg:w-md h-14 lg:h-22 border border-white/10 hover:bg-brand font-extrabold shadow-xl shadow-brand-400/20 hover:shadow-2xl hover:shadow-brand-400/40 transition-all duration-300"
+          >
+            TRY IT OUT
+          </LiquidGlassButton>
         </div>
       </div>
     </section>

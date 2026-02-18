@@ -227,7 +227,7 @@ const TradingJourney = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="w-2 h-2  rounded-full bg-brand-400 shadow-lg shadow-brand-400/50"
+                className="w-2 h-2  rounded-full  shadow-lg shadow-brand-400/50"
               />
             </motion.div>
             <span className="text-sm font-medium text-brand-400">
@@ -307,7 +307,7 @@ const TradingJourney = () => {
               width={400}
               onClick={handleChallengeStart}
               height={80}
-              className="md:text-xl text-white hover:text-brand-900 lg:text-2xl w-60 sm:w-72 md:w-80 rounded-full lg:w-md h-14 lg:h-22 border border-white/10 hover:bg-brand font-extrabold shadow-xl shadow-brand-400/20 hover:shadow-2xl hover:shadow-brand-400/40 transition-all duration-300"
+              className="md:text-xl text-white mt-5 md:mt-10 hover:text-brand-900 lg:text-2xl w-60 sm:w-72 md:w-80 rounded-full lg:w-md h-14 lg:h-22 border border-white/10 hover:bg-brand font-extrabold shadow-xl shadow-brand-400/20 hover:shadow-2xl hover:shadow-brand-400/40 transition-all duration-300"
             >
               BEGIN CHALLENGE
             </LiquidGlassButton>

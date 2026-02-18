@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router";
 import Logo from "../Logo";
 import { X, Menu, User, User2 } from "lucide-react";
 import LiquidGlassButton from "../ui/LiquidGlassButton";
+import { navigateToSignup } from "../../utils/navigateToSignUp";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -104,13 +105,7 @@ const Header = () => {
                   className={
                     "text-lg bg-blue-400/10 text-white hover:text-brand-900 rounded-full hover:bg-brand w-40 h-12"
                   }
-                  onClick={() =>
-                    window.open(
-                      import.meta.env.VITE_DASHBOARD_URL + "/signup",
-                      "_blank",
-                      "noopener,noreferrer",
-                    )
-                  }
+                  onClick={navigateToSignup}
                 >
                   Get Started
                 </LiquidGlassButton>
@@ -128,13 +123,7 @@ const Header = () => {
                   className={
                     "text-lg  bg-blue-400/10  text-white hover:text-brand-900 rounded-full hover:bg-brand items-center flex justify-center w-12 h-12"
                   }
-                  onClick={() =>
-                    window.open(
-                      import.meta.env.VITE_DASHBOARD_URL + "/login",
-                      "_blank",
-                      "noopener,noreferrer",
-                    )
-                  }
+                  onClick={navigateToSignup}
                 >
                   <User2 size={26} />
                 </LiquidGlassButton>
@@ -228,13 +217,7 @@ const Header = () => {
                 width={280}
                 height={50}
                 className="w-full text-white rounded-full bg-brand/10 h-12"
-                onClick={() =>
-                  window.open(
-                    import.meta.env.VITE_DASHBOARD_URL + "/login",
-                    "_blank",
-                    "noopener,noreferrer",
-                  )
-                }
+                onClick={navigateToSignup}
               >
                 <div className="flex items-center  justify-center gap-2">
                   <User2 size={22} />
@@ -247,13 +230,7 @@ const Header = () => {
                 width={280}
                 height={50}
                 className="w-full rounded-full text-white  bg-brand/10 h-12"
-                onClick={() =>
-                  window.open(
-                    import.meta.env.VITE_DASHBOARD_URL + "/signup",
-                    "_blank",
-                    "noopener,noreferrer",
-                  )
-                }
+                onClick={navigateToSignup}
               >
                 START TRADING
               </LiquidGlassButton>

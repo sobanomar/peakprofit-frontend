@@ -8,6 +8,7 @@ import KurvLogo from "../../../assets/images/home/partners/KurvLogo.jpg";
 import PaymentCloudLogo from "../../../assets/images/home/partners/PaymentCloudLogo.svg";
 import AutoCarousel from "../../../components/AutoCarousel";
 import MainHeading from "../../../components/MainHeading";
+import { motion } from "framer-motion";
 
 const Partners = () => {
   const partnersLogos = [
@@ -21,13 +22,29 @@ const Partners = () => {
   return (
     <div className="w-full flex items-center justify-center py-12 text-center">
       <div className="max-w-7xl w-full px-5 md:px-0">
-        <MainHeading>OUR PARTNERS</MainHeading>
-        <p className="text-gray-400 mb-5 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-          PeakProfit is backed by institutional-grade infrastructure, ensuring{" "}
-          <span className="text-white font-bold">
-            seamless trading and payout experience for every trader
-          </span>
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <MainHeading>OUR PARTNERS</MainHeading>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <p className="text-gray-400 mb-5 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            PeakProfit is backed by institutional-grade infrastructure, ensuring{" "}
+            <span className="text-white font-bold">
+              seamless trading and payout experience for every trader
+            </span>
+          </p>
+        </motion.p>
+
         <AutoCarousel
           items={partnersLogos}
           renderItem={(item, index) => (
