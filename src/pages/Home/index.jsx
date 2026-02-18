@@ -12,6 +12,7 @@ import JoinCommunity from "./JoinCommunity";
 import AmbientGlowBackground from "../../components/AmbientGlowBackground";
 import PeakMarkets from "./PeakMarkets";
 import TradingJourney from "./TradingJourney";
+import Partners from "./Partners";
 
 const Home = () => {
   const handleChallengeClick = () => {
@@ -43,6 +44,7 @@ const Home = () => {
       <TradingPairs />
       <WhyChoosePPF />
       <JoinCommunity />
+      {/* <Partners /> */}
 
       {/* <VerifiedPayouts /> */}
       {/* <RawSpreads /> */}
