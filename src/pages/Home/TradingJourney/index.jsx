@@ -227,7 +227,7 @@ const TradingJourney = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="w-2 h-2  rounded-full  shadow-lg shadow-brand-400/50"
+                className="w-2 h-2  ring-1 ring-brand-400/30 bg-brand  rounded-full  shadow-lg shadow-brand-400/50"
               />
             </motion.div>
             <span className="text-sm font-medium text-brand-400">

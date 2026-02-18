@@ -53,7 +53,7 @@ const Partners = () => {
                 src={item.src}
                 alt={item.alt}
                 className="
-                  h-16 md:h-24 w-auto 
+                  h-16 md:h-24 w-auto
                   object-contain 
                   grayscale opacity-80 
                   transition-all duration-500 

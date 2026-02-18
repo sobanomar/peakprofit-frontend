@@ -34,10 +34,10 @@ const Home = () => {
       <HowItWorks />
       <div className="relative overflow-x-hidden">
         <PeakMarkets />
-        <div className="z-10 absolute theme-ambient-glow -left-80 top-40 opacity-40" />
+        <div className="z-10 absolute theme-ambient-glow -left-80 top-80 opacity-40" />
         <div className="relative overflow-x-hidden">
           <TraderTestimonials />
-          <div className="z-10 absolute theme-ambient-glow -right-80 top-40 opacity-40" />
+          <div className="z-10 absolute theme-ambient-glow -right-80 top-80 opacity-40" />
           <TradingJourney />
         </div>
       </div>
@@ -52,7 +52,7 @@ const Home = () => {
       <div className="relative overflow-x-hidden ">
         <JoinCommunity />
         <Partners />
-        <div className="z-10 absolute theme-ambient-glow -right-80 bottom-40 opacity-40" />
+        <div className="z-10 absolute theme-ambient-glow -right-80 bottom-56 opacity-40" />
       </div>
 
       {/* <VerifiedPayouts /> */}
