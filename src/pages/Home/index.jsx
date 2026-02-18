@@ -44,7 +44,7 @@ const Home = () => {
       <TradingPairs />
       <WhyChoosePPF />
       <JoinCommunity />
-      {/* <Partners /> */}
+      <Partners />
 
       {/* <VerifiedPayouts /> */}
       {/* <RawSpreads /> */}
