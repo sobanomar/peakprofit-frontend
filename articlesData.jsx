@@ -460,7 +460,7 @@ Response times are fast.`,
       },
       {
         title: "Where Is the Community?",
-        description: `Join our Discord: https://discord.gg/peakprofit
+        description: `Join our Discord: https://discord.gg/8NaNxdmXYg
 
 Connect with 5,000+ traders, get rule clarifications, and access live trading sessions.`,
         lastUpdated: "Over 3 months ago",
