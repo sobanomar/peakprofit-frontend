@@ -101,13 +101,18 @@ const AutoCarousel = ({
     <div
       ref={carouselRef}
       className="relative w-full overflow-hidden"
-      style={{ height: "auto" }}
+      style={{
+        maskImage:
+          "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+        WebkitMaskImage:
+          "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+      }}
     >
       {/* Gradient overlay for left edge */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-[#130025] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute left-0 top-0 bottom-0 w-24  z-10 pointer-events-none"></div>
 
       {/* Gradient overlay for right edge */}
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-linear-to-l from-[#130025] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-24  z-10 pointer-events-none"></div>
 
       <div className="flex">
         {/* First copy for smooth animation */}

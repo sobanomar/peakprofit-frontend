@@ -9,8 +9,8 @@ const TOTAL_USERS = 10000;
 const CURRENT_USERS = 7420; // 74.2%
 
 const STORAGE_KEY = "peak_profit_giveaway_meta";
-const WAIT_TIME = 1; // 30 seconds
-const COOLDOWN_MINUTES = 0.1;
+const WAIT_TIME = 10000; // 30 seconds
+const COOLDOWN_MINUTES = 30;
 const MAX_DISMISSALS = 10; // Stop forever after 5 closes
 
 export default function GiveawayModal() {
