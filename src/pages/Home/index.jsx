@@ -14,6 +14,7 @@ import PeakMarkets from "./PeakMarkets";
 import TradingJourney from "./TradingJourney";
 import Partners from "./Partners";
 import GiveawayModal from "../../components/GiveawayModal";
+import TrustPilotSection from "../../components/TrustPilotSection";
 
 const Home = () => {
   const handleChallengeClick = () => {
@@ -56,6 +57,7 @@ const Home = () => {
         <Partners />
         <div className="z-10 absolute theme-ambient-glow -right-80 bottom-56 opacity-40" />
       </div>
+      <TrustPilotSection />
 
       {/* <VerifiedPayouts /> */}
       {/* <RawSpreads /> */}

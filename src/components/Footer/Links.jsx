@@ -16,8 +16,8 @@ const Links = () => {
           <li key={index} className="text-[#888794]">
             <Link
               to={link.path}
-              className="text-sm text-gray-300 hover:text-white transition-all duration-100
-                         hover:underline hover:underline-offset-4 hover:decoration-blue-500"
+              className="text-sm text-gray-300 hover:text-brand transition-all duration-100
+                         hover:underline hover:underline-offset-4 "
             >
               {link.name}
             </Link>
