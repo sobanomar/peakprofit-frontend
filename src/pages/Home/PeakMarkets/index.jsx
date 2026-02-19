@@ -12,6 +12,7 @@ import TradingVideo from "../../../assets/videos/peakMarkets.mp4";
 import { MacbookScroll } from "../../../components/ui/macbook-scroll";
 import FeatureCard from "./FeatureCard";
 import MainHeading from "../../../components/MainHeading";
+import MobileHorizontalFeatures from "./MobileHorizontalFeatures";
 
 // --- Components ---
 
@@ -90,8 +91,8 @@ const cardVariants = {
 
 const PeakMarkets = () => {
   return (
-    <section className="relative w-full overflow-hidden flex flex-col items-center  px-6 text-white">
-      <div className="relative max-w-7xl  ">
+    <section className="relative w-full  flex flex-col items-center  px-6 text-white">
+      <div className="relative max-w-7xl w-full ">
         <div className="text-center   ">
           <motion.span
             initial={{ opacity: 0, y: -10 }}
@@ -133,7 +134,7 @@ const PeakMarkets = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+          className="md:grid hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
         >
           {features.map((feature, index) => (
             <FeatureCard
@@ -143,6 +144,18 @@ const PeakMarkets = () => {
               index={index}
             />
           ))}
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 5, ease: [0.22, 1, 0.36, 1] }}
+          className="md:hidden block "
+        >
+          <MobileHorizontalFeatures
+            features={features}
+            cardVariants={cardVariants}
+          />
         </motion.div>
       </div>
       <div className="hidden lg:block">
