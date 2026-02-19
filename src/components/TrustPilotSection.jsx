@@ -13,10 +13,10 @@ const TrustPilotSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full py-16 mt-12 px-6 bg-gradient-to-b  text-white">
+    <section className="relative w-full py-16 mt-12 px-6 bg-gradient-to-b  text-white overflow-hidden">
       {/* Subtle Glow Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 w-xs sm:w-2xl h-100 bg-brand-500/30 sm:bg-brand-500/20 blur-[140px] -translate-x-1/2 -translate-y-1/2 rounded-full" />
+        <div className="absolute top-1/2 left-1/2 w-xs sm:w-2xl h-[600px] bg-brand-500/15 blur-[140px] -translate-x-1/2 -translate-y-1/2 rounded-full" />
       </div>
 
       <div className="relative max-w-5xl mx-auto text-center">
@@ -25,23 +25,24 @@ const TrustPilotSection = () => {
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          className="inline-block py-1 px-4 mb-6 text-xs font-black tracking-[0.2em] text-brand-400 uppercase border border-brand-400/30 rounded-full bg-brand-400/5"
         >
-          <MainHeading>TRUSTED BY TRADERS</MainHeading>
+          Trusted By Traders
         </motion.span>
 
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-bold"
         >
-          <MainHeading size="sm">Real Feedback. Real Performance.</MainHeading>
+          <MainHeading>Real Feedback. Real Performance.</MainHeading>
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-zinc-400 mt-4 max-w-2xl mx-auto"
         >
           PeakProfit traders share their experience with our execution,
           transparency, and funding process.
@@ -53,7 +54,7 @@ const TrustPilotSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-12"
+          className="mt-6"
         >
           <div
             className="trustpilot-widget"
