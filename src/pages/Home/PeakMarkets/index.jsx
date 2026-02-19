@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Zap,
   LineChart,
@@ -90,75 +90,77 @@ const cardVariants = {
 // --- Main Component ---
 
 const PeakMarkets = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
+  // Calculate horizontal shift. "-80%" is an estimate;
+  // it depends on how many items you have and their width.
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-84%"]);
   return (
-    <section className="relative w-full  flex flex-col items-center  px-6 text-white">
-      <div className="relative max-w-7xl w-full ">
-        <div className="text-center   ">
-          <motion.span
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="inline-block py-1 px-4 mb-6 text-xs font-black tracking-[0.2em] text-brand-400 uppercase border border-brand-400/30 rounded-full bg-brand-400/5"
-          >
-            The Platform
-          </motion.span>
+    <section
+      ref={targetRef}
+      className="relative w-full h-[300vh] md:h-auto  text-white"
+    >
+      {/* 2. THE STICKY BUCKET: Pins the content while scrolling on mobile */}
+      <div className="sticky top-0 md:relative h-screen md:h-auto flex flex-col justify-center overflow-hidden px-6">
+        <div className="relative max-w-7xl mx-auto w-full py-20">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <motion.span
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block py-1 px-4 mb-6 text-xs font-black tracking-[0.2em] text-brand-400 uppercase border border-brand-400/30 rounded-full bg-brand-400/5"
+            >
+              The Platform
+            </motion.span>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <MainHeading>PEAKMARKETS.</MainHeading>
-          </motion.h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <MainHeading>PEAKMARKETS.</MainHeading>
+            </motion.h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-lg md:text-xl mb-8 text-zinc-400 leading-relaxed"
-          >
-            The proprietary engine built exclusively for PeakProfit traders.
-            <br />
-            <span className="text-white font-bold">
-              Faster execution. Deeper insights. Total transparency.
-            </span>
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-lg md:text-xl text-zinc-400 leading-relaxed mt-4"
+            >
+              The proprietary engine built exclusively for PeakProfit traders.
+              <br />
+              <span className="text-white font-bold">
+                Faster execution. Deeper insights. Total transparency.
+              </span>
+            </motion.p>
+          </div>
+
+          {/* 3. DESKTOP GRID: Standard 3-column layout */}
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            {features.map((feature, index) => (
+              <FeatureCard key={index} feature={feature} index={index} />
+            ))}
+          </div>
+
+          {/* 4. MOBILE HORIZONTAL: Only visible and animated on small screens */}
+          <div className="md:hidden flex">
+            <motion.div style={{ x }} className="flex gap-4">
+              {features.map((feature, index) => (
+                <div key={index} className="w-[85vw] shrink-0">
+                  <FeatureCard feature={feature} />
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </div>
-
-        {/* Grid Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="md:grid hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
-        >
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              cardVariants={cardVariants}
-              feature={feature}
-              index={index}
-            />
-          ))}
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 5, ease: [0.22, 1, 0.36, 1] }}
-          className="md:hidden block "
-        >
-          <MobileHorizontalFeatures
-            features={features}
-            cardVariants={cardVariants}
-          />
-        </motion.div>
       </div>
-      <div className="hidden lg:block">
+
+      {/* 5. MACBOOK SECTION: Appears after the scroll track on Desktop */}
+      <div className="hidden lg:block w-full overflow-hidden">
         <MacbookScroll src={TradingVideo} />
       </div>
     </section>
