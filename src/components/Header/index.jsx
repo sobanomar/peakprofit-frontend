@@ -165,14 +165,16 @@ const Header = () => {
         {/* Backdrop */}
         <div
           onClick={() => setIsMobileMenuOpen(false)}
-          className={`absolute inset-0 bg-black/70 backdrop-blur-xs transition-opacity duration-500 ${
+          className={`absolute inset-0 bg-black/60 transition-opacity duration-500 ${
             isMobileMenuOpen ? "opacity-100" : "opacity-0"
           }`}
         />
 
+        <div className="absolute inset-0 backdrop-blur-sm bg-black/40" />
+
         {/* Sidebar */}
         <div
-          className={`absolute top-0 right-0 h-full w-[280px] sm:w-[320px] bg-gradient-to-br from-black/60  to-blue-800/10 backdrop-blur-lg transition-transform duration-500 ${
+          className={`absolute top-0 right-0 h-full w-[280px] sm:w-[320px] bg-gradient-to-br  from-black/60  to-blue-800/10 transition-transform duration-500 ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           style={{
@@ -205,7 +207,7 @@ const Header = () => {
                     <div className="absolute inset-0 bg-brand rounded-full" />
                   )}
 
-                  <div className="relative px-6 py-2 rounded-xl transition-all duration-300 group-hover:bg-white/5">
+                  <div className="relative px-6 py-3 rounded-xl transition-all duration-300 group-hover:bg-white/5">
                     <span
                       className={`text-xl font-semibold transition-all duration-300 ${
                         isActive(link.to)
@@ -226,7 +228,7 @@ const Header = () => {
               <LiquidGlassButton
                 width={280}
                 height={50}
-                className="w-full text-white rounded-full bg-brand/10 h-12"
+                className="w-full text-white rounded-full bg-brand/10 h-14"
                 onClick={navigateToSignup}
               >
                 <div className="flex items-center  justify-center gap-2">
