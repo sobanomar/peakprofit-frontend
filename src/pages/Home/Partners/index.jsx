@@ -7,6 +7,7 @@ import AuthorizeNetLogo from "../../../assets/images/home/partners/AuthorizeNetL
 import KurvLogo from "../../../assets/images/home/partners/KurvLogo.jpg";
 import PaymentCloudLogo from "../../../assets/images/home/partners/PaymentCloudLogo.svg";
 import TrustPilotLogo from "../../../assets/images/home/partners/TrustPilotLogo.svg";
+import PropfirmMatchLogo from "../../../assets/images/home/partners/PropfirmMatchLogo.svg";
 import AutoCarousel from "../../../components/AutoCarousel";
 import MainHeading from "../../../components/MainHeading";
 import { motion } from "framer-motion";
@@ -19,6 +20,7 @@ const Partners = () => {
     { src: PaymentCloudLogo, alt: "PaymentCloud" },
     { src: KurvLogo, alt: "Kurv" },
     { src: TrustPilotLogo, alt: "TrustPilot" },
+    { src: PropfirmMatchLogo, alt: "Propfirm Match" },
   ];
 
   return (
