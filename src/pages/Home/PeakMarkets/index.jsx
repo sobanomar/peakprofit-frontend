@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import {
   Zap,
   LineChart,
@@ -93,15 +93,23 @@ const PeakMarkets = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    layoutEffect: false,
+  });
+
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 50,
+    damping: 30,
+    restDelta: 0.0001,
+    restSpeed: 0.0001,
   });
 
   // Calculate horizontal shift. "-80%" is an estimate;
   // it depends on how many items you have and their width.
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-84%"]);
+  const x = useTransform(smoothProgress, [0, 1], ["0%", "-84%"]);
   return (
     <section
       ref={targetRef}
-      className="relative w-full h-[300vh] md:h-auto  text-white"
+      className="relative w-full h-[400vh] md:h-auto  text-white"
     >
       {/* 2. THE STICKY BUCKET: Pins the content while scrolling on mobile */}
       <div className="sticky top-0 md:relative h-screen md:h-auto flex flex-col justify-center overflow-hidden px-6">
@@ -148,9 +156,12 @@ const PeakMarkets = () => {
 
           {/* 4. MOBILE HORIZONTAL: Only visible and animated on small screens */}
           <div className="md:hidden flex">
-            <motion.div style={{ x }} className="flex gap-4">
+            <motion.div
+              style={{ x, willChange: "transform" }}
+              className="flex gap-4 "
+            >
               {features.map((feature, index) => (
-                <div key={index} className="w-[85vw] shrink-0">
+                <div key={index} className="w-[85vw] sm:w-[65vw] shrink-0">
                   <FeatureCard feature={feature} />
                 </div>
               ))}

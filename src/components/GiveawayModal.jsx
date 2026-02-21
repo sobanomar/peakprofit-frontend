@@ -193,7 +193,7 @@ export default function GiveawayModal() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    $10,000 cash?
+                    $5,000 cash?
                   </span>
                 </motion.h2>
 

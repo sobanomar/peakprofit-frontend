@@ -16,6 +16,7 @@ import MainHeading from "../../../components/MainHeading";
 import ChallengeDetails from "./ChallengeDetails";
 import ChallengeCard from "./ChallengeCard";
 import LiquidGlassButton from "../../../components/ui/LiquidGlassButton";
+import MobileChallengeSection from "./MobileChallengeSelector";
 
 // --- Enhanced Animation Variants ---
 const containerVariants = {
@@ -167,7 +168,6 @@ const TradingJourney = () => {
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-brand-900/10 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-grid-white/[0.02]" />
 
       {/* Animated gradient orbs */}
       <motion.div
@@ -254,14 +254,14 @@ const TradingJourney = () => {
         </motion.div>
 
         {/* Two Column Layout with Improved Height Management */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left: Challenge List */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
-            className="space-y-4 max-h-[450px] lg:max-h-[650px] overflow-y-auto no-scrollbar pr-2 
+            className="space-y-4 max-h-[450px] md:max-h-[720px] lg:max-h-[650px] overflow-y-auto no-scrollbar pr-2 
                        scrollbar-thin scrollbar-thumb-brand-400/20 scrollbar-track-transparent
                        hover:scrollbar-thumb-brand-400/40"
           >
@@ -298,7 +298,7 @@ const TradingJourney = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center">
+        <div className="hidden md:flex items-center justify-center">
           <motion.div
             variants={detailItemVariants}
             className="pt-6 space-y-3 flex items-center justify-center"
@@ -313,6 +313,15 @@ const TradingJourney = () => {
             </LiquidGlassButton>
           </motion.div>
         </div>
+      </div>
+
+      <div className="flex md:hidden w-full">
+        <MobileChallengeSection
+          challenges={challenges}
+          onChallengeStart={handleChallengeStart}
+          selectedChallenge={selectedChallenge}
+          setSelectedChallenge={setSelectedChallenge}
+        />
       </div>
     </section>
   );

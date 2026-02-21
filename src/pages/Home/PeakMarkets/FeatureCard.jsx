@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { GlowingEffect } from "../../../components/ui/glowing-effect";
 
 const FeatureCard = ({ feature, index, cardVariants }) => {
   const mouseX = useMotionValue(0);
@@ -20,6 +21,14 @@ const FeatureCard = ({ feature, index, cardVariants }) => {
       onMouseMove={handleMouseMove}
       className="group relative h-full rounded-3xl border border-white/10 p-8 transition-colors duration-500 hover:border-purple-500/50 hover:bg-white/[0.02] transform-gpu will-change-transform"
     >
+      <GlowingEffect
+        spread={40}
+        glow={true}
+        disabled={false}
+        proximity={64}
+        inactiveZone={0.01}
+        borderWidth={3}
+      />
       <Link
         to={`${import.meta.env.VITE_DASHBOARD_URL}`}
         target="_blank"
