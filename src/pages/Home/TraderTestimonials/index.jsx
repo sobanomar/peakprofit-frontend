@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion"; // 1. Import motion
 import TraderCarousel from "./TraderCarousel";
-import TestimonialVideo from "../../../assets/images/home/trader_testimonials/testimonial_video_1.mp4";
+// import TestimonialVideo from "../../../assets/images/home/trader_testimonials/testimonial_video_1.mp4";
 import MainHeading from "../../../components/MainHeading";
 
 const TraderTestimonials = () => {
