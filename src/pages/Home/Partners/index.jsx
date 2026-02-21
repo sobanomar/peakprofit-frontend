@@ -6,6 +6,7 @@ import MassiveLogo from "../../../assets/images/home/partners/MassiveLogo.svg";
 import AuthorizeNetLogo from "../../../assets/images/home/partners/AuthorizeNetLogo.png";
 import KurvLogo from "../../../assets/images/home/partners/KurvLogo.jpg";
 import PaymentCloudLogo from "../../../assets/images/home/partners/PaymentCloudLogo.svg";
+import TrustPilotLogo from "../../../assets/images/home/partners/TrustPilotLogo.svg";
 import AutoCarousel from "../../../components/AutoCarousel";
 import MainHeading from "../../../components/MainHeading";
 import { motion } from "framer-motion";
@@ -17,6 +18,7 @@ const Partners = () => {
     { src: MassiveLogo, alt: "Massive" },
     { src: PaymentCloudLogo, alt: "PaymentCloud" },
     { src: KurvLogo, alt: "Kurv" },
+    { src: TrustPilotLogo, alt: "TrustPilot" },
   ];
 
   return (

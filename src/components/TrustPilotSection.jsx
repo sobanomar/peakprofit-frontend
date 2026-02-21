@@ -43,6 +43,7 @@ const TrustPilotSection = () => {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          className="text-gray-400 mb-5 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
         >
           PeakProfit traders share their experience with our execution,
           transparency, and funding process.
