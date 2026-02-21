@@ -160,12 +160,21 @@ function BottomSheet({ challenge, onClose, onStart }) {
         initial={{ y: "100%" }}
         animate={{ y: 0 }}
         exit={{ y: "100%" }}
-        transition={{ type: "spring", stiffness: 300, damping: 32 }}
+        drag="y"
+        dragConstraints={{ top: 0 }}
+        dragElastic={0.2}
+        onDragEnd={(_, info) => {
+          // If the user drags down more than 100px OR swipes fast (velocity > 500)
+          if (info.offset.y > 100 || info.velocity.y > 500) {
+            onClose();
+          }
+        }}
+        transition={{ type: "spring", stiffness: 400, damping: 40 }}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full bg-[#150128] border-t border-white/10 rounded-t-3xl overflow-hidden z-10 max-h-[90vh] flex flex-col pointer-events-auto"
+        className="relative w-full bg-[#150128] border-t border-white/10 rounded-t-3xl overflow-hidden z-10 max-h-[90vh] flex flex-col pointer-events-auto touch-none"
       >
         {/* Drag handle */}
-        <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
+        <div className="flex justify-center pt-3 pb-1 flex-shrink-0 cursor-grab active:cursor-grabbing">
           <div className="w-10 h-1 rounded-full bg-white/20" />
         </div>
 
