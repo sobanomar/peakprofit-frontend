@@ -106,7 +106,7 @@ export default function GiveawayModal() {
             onClick={handleClose}
           >
             <div
-              className="relative w-full max-w-md max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl no-scrollbar"
+              className="relative w-full max-w-xs  md:max-w-md  overflow-y-auto rounded-2xl shadow-2xl no-scrollbar"
               // Replace the background gradient in the inner div
               style={{
                 background:
@@ -124,8 +124,6 @@ export default function GiveawayModal() {
                 }}
               />
 
-              <InteractiveBg opacity={0.3} />
-
               {/* Ambient glow */}
               <div
                 className="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-60 rounded-full opacity-40 pointer-events-none"
@@ -136,7 +134,8 @@ export default function GiveawayModal() {
                 }}
               />
 
-              <div className="relative p-6">
+              <div className="relative p-6 max-h-[65vh]">
+                {/* <InteractiveBg opacity={0.3} /> */}
                 {/* Header row */}
                 <div className="flex items-center justify-between mb-5">
                   <div className="flex items-center gap-3">
@@ -336,7 +335,7 @@ export default function GiveawayModal() {
                   </span>
                 </motion.div>
 
-                <div className="mt-3 text-xs flex items-center justify-between">
+                <div className="py-4  text-xs flex items-center justify-between">
                   <span className="text-white  font-bold">
                     PeakProfit Funding
                   </span>
