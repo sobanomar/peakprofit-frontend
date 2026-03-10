@@ -32,7 +32,9 @@ const SearchResults = () => {
       .filter(
         (article) =>
           (article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            article.description.toLowerCase().includes(searchQuery.toLowerCase())) &&
+            article.description
+              .toLowerCase()
+              .includes(searchQuery.toLowerCase())) &&
           !seen.has(article.title + article.description) && // Check for duplicates
           seen.add(article.title + article.description), // Add to seen if not already
       )
@@ -45,7 +47,7 @@ const SearchResults = () => {
   return (
     <>
       <div className="px-10 pt-28 sm:px-0">
-        <SearchBar emptySubmitTo="/faq" initialQuery={searchQuery} />
+        <SearchBar emptySubmitTo={-1} initialQuery={searchQuery} />
       </div>
       <div className="max-w-4xl relative mx-auto px-4 py-20">
         <h2 className="text-lg font-semibold text-gray-400 mb-6">

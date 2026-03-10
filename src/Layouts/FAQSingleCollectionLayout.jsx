@@ -1,10 +1,9 @@
-import React from "react";
 import { Outlet } from "react-router";
 import { motion } from "framer-motion";
-import { Shield } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SearchBar from "../pages/FAQ/SearchBar";
+import { FaQ } from "react-icons/fa6";
 
 const FAQSingleCollectionLayout = () => {
   return (
@@ -23,7 +22,7 @@ const FAQSingleCollectionLayout = () => {
       >
         <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-4 sm:mb-6">
-            <Shield className="h-12 w-12 text-brand flex-shrink-0" />
+            <FaQ className="h-12 w-12 text-brand flex-shrink-0" />
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white break-words">
               PEAKPROFIT FUNDING™
             </h1>
