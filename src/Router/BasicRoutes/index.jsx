@@ -16,6 +16,7 @@ import TradingPairs from "../../pages/TradingPairs";
 import TermsAndServices from "../../pages/TermsAndServices";
 import PrivacyPolicy from "../../pages/PrivacyPolicy";
 import RefundPolicy from "../../pages/RefundPolicy";
+import Rulebook from "../../pages/Rulebook";
 
 const BasicRoutes = () => {
   return (
@@ -27,6 +28,7 @@ const BasicRoutes = () => {
             <Route path="evaluation" element={<Evaluations />} />
             <Route path="contact" element={<Contact />} />
             <Route path="trading-pairs" element={<TradingPairs />} />
+            <Route path="rulebook" element={<Rulebook />} />
             <Route path="terms-and-services" element={<TermsAndServices />} />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="refund-policy" element={<RefundPolicy />} />
