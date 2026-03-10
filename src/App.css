@@ -3,6 +3,7 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
+
 body {
   background-color: #130025;
   font-family: "Outfit", sans-serif;
