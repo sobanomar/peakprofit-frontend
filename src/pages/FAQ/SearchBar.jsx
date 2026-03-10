@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import { useNavigate } from "react-router";
 
-const SearchBar = ({ SingleCollection }) => {
-  const [query, setQuery] = useState("");
+const SearchBar = ({ SingleCollection, emptySubmitTo, initialQuery = "" }) => {
+  const [query, setQuery] = useState(initialQuery);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setQuery(initialQuery);
+  }, [initialQuery]);
 
   const handleInputChange = (e) => setQuery(e.target.value);
 
@@ -15,6 +19,11 @@ const SearchBar = ({ SingleCollection }) => {
     e.preventDefault();
     if (query.trim() !== "") {
       navigate(`/faq/search/${encodeURIComponent(query.trim())}`);
+      return;
+    }
+
+    if (emptySubmitTo) {
+      navigate(emptySubmitTo);
     }
   };
 
