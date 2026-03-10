@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function InteractiveBg({ opacity = 1 }) {
+export default function InteractiveGlowingBg({ opacity = 1 }) {
   const interRef = useRef(null);
 
   useEffect(() => {
