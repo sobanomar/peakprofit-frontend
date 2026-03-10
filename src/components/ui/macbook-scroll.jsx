@@ -118,7 +118,7 @@ export const Lid = ({ scaleX, scaleY, rotate, translate, src }) => {
           }}
           className="absolute inset-0 flex items-center justify-center rounded-lg bg-[#010101]"
         >
-          <img src="/logo/PeakProfitLogoHorizontal.png" />
+          <img className="p-12" src="/logo/PeakProfitLogoHorizontal.png" />
         </div>
       </div>
       <motion.div
