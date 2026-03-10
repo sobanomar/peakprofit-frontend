@@ -48,10 +48,12 @@ const sections = [
 
 const RefundPolicy = () => {
   return (
-    <div className="text-white p-6 md:p-8 mt-28 max-w-6xl mx-auto">
-      <h1 className="text-4xl md:text-6xl font-bold text-center mb-8 pb-4 border-b  border-brand-700">
-        Refund Policy
-      </h1>
+    <div className="text-white p-6 md:p-8 mt-28 max-w-6xl mx-auto items-center">
+      <div className="w-full flex items-center justify-center">
+        <h1 className="text-4xl md:text-6xl font-bold text-center mb-8 pb-4 border-b  border-brand-500 w-fit">
+          Refund Policy
+        </h1>
+      </div>
 
       {sections.map((section, index) => (
         <div key={index} className="mb-6">
@@ -63,7 +65,7 @@ const RefundPolicy = () => {
             {section.title}
           </h2>
           {section.content.map((paragraph, pIndex) => (
-            <p key={pIndex} className="mb-2 text-gray-300 last:mb-0">
+            <p key={pIndex} className="mb-2 text-gray-200 last:mb-0">
               {paragraph}
             </p>
           ))}

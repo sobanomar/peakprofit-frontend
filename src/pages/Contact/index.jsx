@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Headset, Mail, MapPin } from "lucide-react";
 import axiosInstance from "../../api/axios";
 
 export default function Contact() {
@@ -12,7 +14,8 @@ export default function Contact() {
   const [responseMsg, setResponseMsg] = useState("");
   const [responseType, setResponseType] = useState(""); // 'success' or 'error'
   const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
-  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
+  const mapLocation = "1111 South Bayshore Drive, Miami, FL, USA";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,11 +29,9 @@ export default function Contact() {
     setResponseType("");
 
     try {
-      const res = await axiosInstance.post(
-        "/contact",
-        formData,
-        { withCredentials: true }, // ✅ Important for cookies / CORS credentials
-      );
+      await axiosInstance.post("/contact", formData, {
+        withCredentials: true,
+      });
 
       setResponseMsg("Message sent successfully!");
       setResponseType("success");
@@ -44,45 +45,102 @@ export default function Contact() {
     }
   };
 
-  // Replace with your actual Google Maps API key
-
-  const mapLocation = "1111 South Bayshore Drive, Miami, FL, USA";
+  const inputClassName =
+    "w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-white placeholder-white/45 outline-none transition-all duration-200 focus:border-brand/60 focus:ring-2 focus:ring-brand/20";
 
   return (
-    <div className="text-white flex flex-col mt-20">
-      <div className="container mx-auto px-4 pt-4 md:pt-20 flex items-center flex-col">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12">
-          Contact Us
-        </h1>
+    <div className="relative min-h-screen overflow-hidden text-white">
+      <div className="pointer-events-none absolute -left-72 top-20 z-0 h-[28rem] w-[28rem] rounded-full bg-brand/15 blur-[120px]" />
+      <div className="pointer-events-none absolute -right-72 top-1/3 z-0 h-[28rem] w-[28rem] rounded-full bg-purple-500/20 blur-[140px]" />
+      <div className="absolute theme-ambient-glow -right-80 -top-80 opacity-40 z-0" />
 
-        <div className="flex flex-col md:flex-row bg-gray-900 w-full lg:w-[80%] rounded-xl">
-          {/* Map Section */}
-          <div className="w-full md:w-5/12 bg-white rounded-lg overflow-hidden shadow-lg">
-            <div className="relative h-96 md:h-full w-full">
-              {/* Google Map Integration */}
-              <iframe
-                className="w-full h-full border-0"
-                src={`https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}&q=${encodeURIComponent(
-                  mapLocation,
-                )}&zoom=15`}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Dubai Silicon Oasis Map"
-              ></iframe>
+      <motion.div
+        initial={{ opacity: 0, y: -15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative z-10 border-y border-white/10 bg-gradient-to-br from-brand-800/30 via-[#1c0d37] to-[#130025] pt-20"
+      >
+        <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:px-8">
+          <div className="mb-4 sm:mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+            <Headset className="h-12 w-12 text-brand flex-shrink-0" />
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white break-words">
+              PEAKPROFIT FUNDING™
+            </h1>
+          </div>
+
+          <p className="text-lg sm:text-xl text-white/85 mb-2">
+            Contact Support
+          </p>
+          <p className="text-xs sm:text-sm text-brand-200/90 mb-4">
+            Questions, Technical Help & Account Assistance
+          </p>
+
+          <div className="inline-block rounded-lg border border-brand-400/30 bg-brand-400/10 px-3 py-2 sm:px-4 text-xs sm:text-sm text-brand-100 backdrop-blur-sm">
+            Typical response time: within 24 hours
+          </div>
+        </div>
+      </motion.div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 py-6 sm:py-8 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="grid items-stretch gap-6 lg:grid-cols-12"
+        >
+          <div className="lg:col-span-5 h-full rounded-2xl border border-brand/10 bg-brand/[0.04] p-5 sm:p-6 backdrop-blur-sm flex flex-col">
+            <div className="mb-4 flex items-center gap-2">
+              <MapPin className="h-5 w-5 text-brand" />
+              <h2 className="text-lg font-semibold text-white">Office</h2>
+            </div>
+
+            <div className="mb-4 overflow-hidden rounded-xl border border-white/10 bg-black/20 flex-1 min-h-[24rem] lg:min-h-0">
+              <div className="h-full w-full">
+                {googleMapsApiKey ? (
+                  <iframe
+                    className="h-full w-full border-0"
+                    src={`https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}&q=${encodeURIComponent(
+                      mapLocation,
+                    )}&zoom=15`}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="PeakProfit Miami Office Map"
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center p-4 text-center text-sm text-white/70">
+                    Map preview unavailable. Configure
+                    `VITE_GOOGLE_MAPS_API_KEY`.
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div className="space-y-2 text-sm text-white/75">
+              <p className="font-medium text-white/90">{mapLocation}</p>
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-brand" />
+                <a
+                  href="mailto:support@peakprofitfunding.com"
+                  className="text-brand-100 hover:text-brand underline underline-offset-2"
+                >
+                  support@peakprofitfunding.com
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Contact Form Section */}
-          <div className="w-full md:w-7/12 p-8 md:p-12">
-            <h2 className="text-2xl font-semibold mb-4">Send a message</h2>
+          <div className="lg:col-span-7 h-full rounded-2xl border border-brand/10 bg-brand/[0.04] p-5 sm:p-7 backdrop-blur-sm">
+            <h2 className="mb-4 text-xl sm:text-2xl font-semibold text-white">
+              Send a message
+            </h2>
 
             {responseMsg && (
               <div
-                className={`mb-4 p-3 rounded-lg text-center ${
+                className={`mb-5 rounded-xl border px-4 py-3 text-sm text-center ${
                   responseType === "success"
-                    ? "bg-green-600 text-white"
-                    : "bg-red-600 text-white"
+                    ? "border-emerald-300/30 bg-emerald-400/10 text-emerald-100"
+                    : "border-rose-300/30 bg-rose-400/10 text-rose-100"
                 }`}
               >
                 {responseMsg}
@@ -91,8 +149,11 @@ export default function Contact() {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block mb-2">
-                  Name <span className="text-red-600">*</span>
+                <label
+                  htmlFor="name"
+                  className="mb-2 block text-sm text-white/85"
+                >
+                  Name <span className="text-rose-300">*</span>
                 </label>
                 <input
                   type="text"
@@ -102,13 +163,16 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Your Name"
                   required
-                  className="w-full px-4 py-2 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                  className={inputClassName}
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block mb-2">
-                  Email <span className="text-red-600">*</span>
+                <label
+                  htmlFor="email"
+                  className="mb-2 block text-sm text-white/85"
+                >
+                  Email <span className="text-rose-300">*</span>
                 </label>
                 <input
                   type="email"
@@ -118,13 +182,16 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="example@email.com"
                   required
-                  className="w-full px-4 py-2 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                  className={inputClassName}
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block mb-2">
-                  Subject <span className="text-red-600">*</span>
+                <label
+                  htmlFor="subject"
+                  className="mb-2 block text-sm text-white/85"
+                >
+                  Subject <span className="text-rose-300">*</span>
                 </label>
                 <input
                   type="text"
@@ -134,13 +201,16 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Your Message Subject"
                   required
-                  className="w-full px-4 py-2 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                  className={inputClassName}
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block mb-2">
-                  Your Message <span className="text-red-600">*</span>
+                <label
+                  htmlFor="message"
+                  className="mb-2 block text-sm text-white/85"
+                >
+                  Your Message <span className="text-rose-300">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -149,23 +219,23 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Your Message Here"
                   required
-                  rows="4"
-                  className="w-full px-4 py-2 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                  rows="5"
+                  className={inputClassName}
                 />
               </div>
 
               <div>
                 <button
                   type="submit"
-                  className={`bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-8 rounded-lg transition duration-300 flex items-center justify-center ${
-                    loading ? "opacity-60 cursor-not-allowed" : ""
+                  className={`inline-flex min-w-40 cursor-pointer items-center justify-center rounded-xl border border-brand-400/30 bg-brand-400/90 px-8 py-3 font-semibold text-[#130025] transition-all duration-300 hover:bg-brand disabled:cursor-not-allowed disabled:opacity-60 ${
+                    loading ? "animate-pulse" : ""
                   }`}
                   disabled={loading}
                 >
                   {loading ? (
                     <span className="flex items-center gap-2">
                       <svg
-                        className="animate-spin h-5 w-5 text-white"
+                        className="h-5 w-5 animate-spin text-[#130025]"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -177,12 +247,12 @@ export default function Contact() {
                           r="10"
                           stroke="currentColor"
                           strokeWidth="4"
-                        ></circle>
+                        />
                         <path
                           className="opacity-75"
                           fill="currentColor"
                           d="M4 12a8 8 0 018-8v8z"
-                        ></path>
+                        />
                       </svg>
                       Sending...
                     </span>
@@ -193,7 +263,7 @@ export default function Contact() {
               </div>
             </form>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
