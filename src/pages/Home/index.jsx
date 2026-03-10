@@ -15,6 +15,7 @@ import TradingJourney from "./TradingJourney";
 import Partners from "./Partners";
 import GiveawayModal from "../../components/GiveawayModal";
 import TrustPilotSection from "../../components/TrustPilotSection";
+import { GlowingEffect } from "../../components/ui/glowing-effect";
 
 const Home = () => {
   const handleChallengeClick = () => {
@@ -27,13 +28,14 @@ const Home = () => {
 
   return (
     <>
-      {/* <GiveawayModal /> */}
+      <GiveawayModal />
       <div className="relative overflow-x-hidden ">
         <HomeHero onStartChallengeClick={handleChallengeClick} />
 
         <div className="absolute theme-ambient-glow -right-80 -top-80 opacity-40 z-10" />
         <HowItWorks />
       </div>
+
       <PeakMarkets />
       <div className="relative overflow-x-hidden">
         {/* <div className="z-10 absolute theme-ambient-glow -left-80 top-80 opacity-40" /> */}

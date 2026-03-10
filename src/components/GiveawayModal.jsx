@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { navigateToSignup } from "../utils/navigateToSignUp";
 import { ArrowRight, ArrowUpRight, X } from "lucide-react";
 import InteractiveBg from "./InteractiveBg";
-import LiquidGlassButton from "./ui/LiquidGlassButton";
 
 const TOTAL_USERS = 10000;
 const CURRENT_USERS = 7420; // 74.2%
@@ -98,7 +97,7 @@ export default function GiveawayModal() {
       {open && (
         <>
           <motion.div
-            className="fixed z-[250] inset-0 flex items-center justify-center p-4  bg-black/60 backdrop-blur-sm"
+            className="fixed z-[250] inset-0 flex items-center justify-center p-4  bg-black/40 backdrop-blur-sm"
             initial={{ opacity: 0, scale: 0.92, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.94, y: 16 }}
@@ -106,7 +105,7 @@ export default function GiveawayModal() {
             onClick={handleClose}
           >
             <div
-              className="relative w-full max-w-xs  md:max-w-md  overflow-y-auto rounded-2xl shadow-2xl no-scrollbar"
+              className="relative w-full max-w-xs md:max-w-md overflow-hidden rounded-2xl shadow-2xl"
               // Replace the background gradient in the inner div
               style={{
                 background:
@@ -115,6 +114,8 @@ export default function GiveawayModal() {
               }}
               onClick={(e) => e.stopPropagation()}
             >
+              <InteractiveBg />
+
               {/* Top glow line */}
               <div
                 className="absolute top-0 left-0 right-0 h-[1px]"
@@ -134,7 +135,7 @@ export default function GiveawayModal() {
                 }}
               />
 
-              <div className="relative p-6 max-h-[65vh]">
+              <div className="relative p-6 max-h-[65vh] overflow-y-auto no-scrollbar">
                 {/* <InteractiveBg opacity={0.3} /> */}
                 {/* Header row */}
                 <div className="flex items-center justify-between mb-5">
