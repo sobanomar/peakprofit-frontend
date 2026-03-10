@@ -6,10 +6,17 @@ import Investment from "../../assets/images/home/how_it_works/investment-growth.
 import { Link } from "react-router";
 import { GlowingCardsGrid } from "./GlowingCardsGrid";
 import MainHeading from "../../components/MainHeading";
+import { motion } from "framer-motion";
 
 const HowItWorks = () => {
   return (
-    <div className="py-20 text-center flex justify-center z-10 relative ">
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className="py-20 text-center flex justify-center z-10 relative "
+    >
       <div className="absolute top-0 left-0 w-full h-64 -z-10  bg-linear-to-b from-[#130025] to-transparent" />
       <div className="max-w-7xl px-6">
         <MainHeading>HOW IT WORKS</MainHeading>
@@ -74,7 +81,7 @@ const HowItWorks = () => {
       </div> */}
         <GlowingCardsGrid />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

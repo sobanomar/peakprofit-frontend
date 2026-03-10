@@ -2,6 +2,7 @@ import AnimatedButton from "../../../components/AnimatedButton";
 // import HeroBGVideo from "../../../assets/videos/heroBGVideo.mp4";
 import HeroBGVideo from "../../../assets/videos/heroBGVideoCompressed.mp4";
 import React from "react";
+import { motion } from "framer-motion";
 
 import { Typewriter } from "@/components/ui/typewriter-text";
 import LiquidGlassButton from "../../../components/ui/LiquidGlassButton";
@@ -57,33 +58,46 @@ export default function HomeHero({ onStartChallengeClick }) {
 
       {/* Content */}
       <div className="z-10 text-center mt-32 lg:mt-28 flex flex-col justify-center items-center">
-        <h1 className=" w-full text-center flex flex-col justify-center mb-4 sm:mb-0">
-          <span className="text-5xl md:text-6xl lg:text-8xl font-bold leading-tight text-white">
-            We are <span className="text-brand font-extrabold">Fueling</span>
-            <br />
-          </span>
-          <Typewriter
-            text={["Future Traders", "Market Leaders", "Financial Freedom"]}
-            speed={300}
-            loop={true}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white"
-          />
-        </h1>
-
-        {/* Subheading */}
-        <p className="my-4 text-base md:text-lg lg:text-xl text-white max-w-3xl">
-          Your capital shouldn't limit your potential. <br /> We provide the
-          funding — you deliver the performance.
-        </p>
-
-        <LiquidGlassButton
-          className={
-            "text-white hover:text-brand-900 text-lg md:text-xl my-8 rounded-full lg:text-2xl w-60 md:w-80 h-14 md:h-20 bg-linear-to-r from-purple-400/5 to-blue-400/5 hover:bg-brand font-extrabold"
-          }
-          onClick={onStartChallengeClick}
+        <motion.div
+          initial={{ opacity: 0, y: -24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          className="w-full flex flex-col items-center"
         >
-          START TRADING
-        </LiquidGlassButton>
+          <h1 className=" w-full text-center flex flex-col justify-center mb-4 sm:mb-0">
+            <span className="text-5xl md:text-6xl lg:text-8xl font-bold leading-tight text-white">
+              We are <span className="text-brand font-extrabold">Fueling</span>
+              <br />
+            </span>
+            <Typewriter
+              text={["Future Traders", "Market Leaders", "Financial Freedom"]}
+              speed={300}
+              loop={true}
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white"
+            />
+          </h1>
+
+          {/* Subheading */}
+          <p className="my-4 text-base md:text-lg lg:text-xl text-white max-w-3xl">
+            Your capital shouldn't limit your potential. <br /> We provide the
+            funding — you deliver the performance.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <LiquidGlassButton
+            className={
+              "text-white hover:text-brand-900 text-lg md:text-xl my-8 rounded-full lg:text-2xl w-60 md:w-80 h-14 md:h-20 bg-linear-to-r from-purple-400/5 to-blue-400/5 hover:bg-brand font-extrabold"
+            }
+            onClick={onStartChallengeClick}
+          >
+            START TRADING
+          </LiquidGlassButton>
+        </motion.div>
 
         {/* Key Values Section with Animated Icons */}
         {/* <div className=" grid grid-cols-2  sm:grid-cols-4 gap-6 md:gap-8 max-w-5xl w-full">

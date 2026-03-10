@@ -60,7 +60,7 @@ const TraderCarousel = () => {
             <img
               src={image}
               alt={`Trader testimonial ${index + 1}`}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-contain rounded-lg"
             />
           </div>
         )}
