@@ -23,17 +23,18 @@ const SearchBar = ({ SingleCollection }) => {
       <form
         onSubmit={handleSubmit}
         className={`
-          relative flex items-center text-white rounded-2xl hover:shadow-xl 
-          transition-all duration-300 backdrop-filter backdrop-blur-lg bg-[rgba(127,13,218,0.1)] shadow-md
+          relative flex items-center rounded-2xl border border-brand-400/25 bg-brand-400/10 text-white
+          shadow-[0_18px_45px_-30px_rgba(51,228,246,0.65)] backdrop-blur-lg transition-all duration-300
+          focus-within:border-brand-400/45 focus-within:bg-brand-400/15
           ${
             SingleCollection
               ? "w-full mt-16 mb-4"
-              : "w-full sm:w-[75%] md:w-[50%] lg:w-[25%] mt-0 mb-10"
+              : "w-full sm:w-[80%] md:w-[70%] lg:w-[60%] mt-0 mb-10"
           }
         `}
       >
-        <div className="absolute left-4">
-          <FiSearch size={20} />
+        <div className="absolute left-4 text-brand">
+          <FiSearch size={19} />
         </div>
 
         <input
@@ -41,14 +42,14 @@ const SearchBar = ({ SingleCollection }) => {
           value={query}
           onChange={handleInputChange}
           placeholder="Search for articles..."
-          className="w-full pl-12 pr-10 p-4 text-white placeholder-white bg-transparent focus:outline-none"
+          className="w-full bg-transparent p-4 pl-12 pr-10 text-white placeholder-white/60 focus:outline-none"
         />
 
         {query && (
           <button
             type="button"
             onClick={handleClear}
-            className="absolute right-4 text-white hover:text-gray-300"
+            className="absolute right-4 text-white/70 hover:text-brand transition-colors"
           >
             <IoMdClose size={20} />
           </button>

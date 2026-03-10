@@ -43,7 +43,7 @@ const SearchResults = () => {
 
   return (
     <>
-      <div className="px-10 sm:px-0">
+      <div className="px-10 pt-28 sm:px-0">
         <SearchBar />
       </div>
       <div className="max-w-4xl relative mx-auto px-4 py-20">
