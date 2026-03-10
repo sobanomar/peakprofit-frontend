@@ -30,7 +30,7 @@ const NewsLetter = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="md:justify-start bg-white py-1 px-1 rounded-full overflow-hidden flex max-w-md lg:max-w-lg"
+        className="flex flex-col md:flex-row gap-3 md:gap-0 max-w-md lg:max-w-lg md:justify-start md:bg-white md:py-1 md:px-1 md:rounded-full md:overflow-hidden"
       >
         <input
           type="email"
@@ -38,11 +38,11 @@ const NewsLetter = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="flex-grow px-5 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none rounded-l-full lg:w-[60%]"
+          className="w-full md:flex-grow px-5 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none bg-white rounded-full md:bg-transparent md:rounded-l-full md:rounded-r-none lg:w-[60%]"
         />
         <button
           type="submit"
-          className="bg-gradient-to-r from-purple-500 to-[#D56BFF] text-white text-sm font-semibold px-6 py-3 rounded-full lg:px-4 lg:text-xs"
+          className="w-full md:w-auto bg-gradient-to-r from-brand-600 to-purple-600/60 text-white text-sm font-semibold px-6 py-3 rounded-full whitespace-nowrap lg:px-4 lg:text-xs"
           disabled={loading}
         >
           {loading ? "Subscribing..." : "Subscribe"}

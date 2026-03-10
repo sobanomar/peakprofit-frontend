@@ -4,6 +4,7 @@ import Router from "./Router";
 import React, { useEffect } from "react";
 
 function App() {
+  //Lenis for smooth scrollling
   useEffect(() => {
     const lenis = new Lenis();
 
