@@ -1,6 +1,7 @@
 // src/pages/FAQCategoryPage.tsx
 import React from "react";
 import { useParams, Link } from "react-router";
+import { motion } from "framer-motion";
 import { useFAQ } from "../../context/FAQContext";
 import { slugify } from "../../utils/slugify";
 import { HiOutlineChevronRight } from "react-icons/hi";
@@ -15,9 +16,9 @@ const CollectionPage = () => {
 
   if (!category) {
     return (
-      <div className="p-10 text-center">
+      <div className="p-10 text-center text-white">
         <h2 className="text-xl font-semibold">Category not found</h2>
-        <Link to="/" className="text-blue-500 underline">
+        <Link to="/faq" className="text-brand underline">
           Go back
         </Link>
       </div>
@@ -25,36 +26,44 @@ const CollectionPage = () => {
   }
 
   return (
-    <div className="max-w-4xl relative mx-auto px-6 ">
+    <motion.div
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="max-w-4xl relative mx-auto px-4 sm:px-6"
+    >
       {/* Breadcrumb */}
-      <nav className="text-sm text-gray-500 mb-4">
-        <Link to="/faq" className="hover:underline  text-black">
+      <nav className="mb-4 flex flex-wrap items-center gap-2 text-xs sm:text-sm text-white/60">
+        <Link to="/faq" className="hover:underline text-brand-100">
           All Collections
-        </Link>{" "}
-        &gt; <span className="text-gray-600">{category.title}</span>
+        </Link>
+        <span>&gt;</span>
+        <span className="text-white/75">{category.title}</span>
       </nav>
 
       {/* Heading */}
-      <h1 className="text-3xl font-bold mb-1">{category.title}</h1>
-      <p className=" mb-2">{category.description}</p>
-      <p className="text-sm text-gray-600 mb-6">
+      <h1 className="mb-1 text-2xl sm:text-3xl font-bold text-white">
+        {category.title}
+      </h1>
+      <p className="mb-3 text-white/75">{category.description}</p>
+      <p className="mb-6 inline-flex rounded-full border border-brand-400/30 bg-brand-400/10 px-3 py-1 text-xs sm:text-sm font-medium text-brand-100">
         {category.articles.length} articles
       </p>
 
       {/* Article List */}
-      <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200">
+      <div className="overflow-hidden rounded-2xl border border-brand/10 bg-brand/[0.04] backdrop-blur-sm">
         {category.articles.map((article, idx) => (
           <Link
             to={`/collections/${slug}/${slugify(article.title)}`}
             key={idx}
-            className="flex items-center justify-between rounded-md  px-6 py-4 hover:bg-[#e5f4f9] text-black hover:text-[#63c0df] transition duration-150"
+            className="group flex items-center justify-between border-b border-white/10 px-5 py-4 text-white transition-colors duration-200 last:border-b-0 hover:bg-brand/[0.08]"
           >
-            <span className="">{article.title}</span>
-            <HiOutlineChevronRight className="text-blue-500" />
+            <span className="pr-4 text-sm sm:text-base">{article.title}</span>
+            <HiOutlineChevronRight className="text-brand transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

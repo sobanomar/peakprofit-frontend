@@ -48,8 +48,8 @@ const sections = [
 
 const RefundPolicy = () => {
   return (
-    <div className="text-white p-6 md:p-8 lg:pt-20 max-w-6xl mx-auto">
-      <h1 className="text-3xl md:text-6xl font-bold text-center mb-8 pb-4 border-b border-purple-500">
+    <div className="text-white p-6 md:p-8 mt-28 max-w-6xl mx-auto">
+      <h1 className="text-4xl md:text-6xl font-bold text-center mb-8 pb-4 border-b  border-brand-700">
         Refund Policy
       </h1>
 
@@ -58,20 +58,26 @@ const RefundPolicy = () => {
           <h2
             className={`${
               index === 0 ? "text-3xl" : "text-2xl"
-            } font-semibold mb-3`}
+            } font-semibold text-brand-500 mb-3`}
           >
             {section.title}
           </h2>
           {section.content.map((paragraph, pIndex) => (
-            <p key={pIndex} className="mb-2 last:mb-0">
+            <p key={pIndex} className="mb-2 text-gray-300 last:mb-0">
               {paragraph}
             </p>
           ))}
         </div>
       ))}
 
-      <p className="text-center mt-8">
-        For more information, feel free to contact us at Support@PeakProfit.com
+      <p className="text-center  mt-8">
+        For more information, feel free to contact us at{" "}
+        <a
+          href="mailto:Support@PeakProfit.com"
+          className="underline text-brand-500"
+        >
+          Support@PeakProfitFunding.com
+        </a>
       </p>
     </div>
   );

@@ -19,7 +19,7 @@ const FAQArticleTextParser = ({ text, className }) => {
               href={part}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#780dff] underline hover:opacity-80 transition-opacity"
+              className="text-brand underline hover:opacity-80 transition-opacity"
             >
               {part}
             </a>
@@ -32,7 +32,7 @@ const FAQArticleTextParser = ({ text, className }) => {
             <a
               key={i}
               href={`mailto:${part}`}
-              className="text-[#780dff] underline hover:opacity-80 transition-opacity"
+              className="text-brand underline hover:opacity-80 transition-opacity"
             >
               {part}
             </a>

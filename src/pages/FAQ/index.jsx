@@ -13,7 +13,7 @@ const ArticleListing = () => {
     if (!React.isValidElement(icon)) return icon;
 
     return React.cloneElement(icon, {
-      size: 42,
+      size: 30,
       className: "text-brand",
     });
   };
