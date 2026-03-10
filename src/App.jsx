@@ -1,25 +1,12 @@
-import Lenis from "@studio-freight/lenis";
-import "./App.css";
 import Router from "./Router";
-import React, { useEffect } from "react";
+import "./App.css";
+import { LenisProvider } from "./utils/LenisContext";
 
 function App() {
-  //Lenis for smooth scrollling
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
-
   return (
-    <>
+    <LenisProvider>
       <Router />
-    </>
+    </LenisProvider>
   );
 }
 
