@@ -32,7 +32,7 @@ const JoinCommunity = () => {
 
   return (
     <section className="relative text-white py-32 px-6 z-20">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}

@@ -16,9 +16,9 @@ const TraderTestimonials = () => {
   };
 
   return (
-    <div className="flex justify-center my-12">
+    <div className="flex justify-center my-12 px-6">
       <motion.div
-        className="w-[90%] md:w-[85%]"
+        className="w-full max-w-7xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }} // 3. Triggers only once when 20% visible

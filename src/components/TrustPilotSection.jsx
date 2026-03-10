@@ -19,7 +19,7 @@ const TrustPilotSection = () => {
         <div className="absolute top-1/2 left-1/2 w-xs sm:w-2xl h-[600px] bg-brand-500/15 blur-[140px] -translate-x-1/2 -translate-y-1/2 rounded-full" />
       </div>
 
-      <div className="relative max-w-5xl mx-auto text-center">
+      <div className="relative max-w-7xl mx-auto text-center">
         {/* Heading */}
         <motion.span
           initial={{ opacity: 0, y: -10 }}

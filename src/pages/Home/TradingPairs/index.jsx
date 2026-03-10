@@ -6,9 +6,9 @@ import MainHeading from "../../../components/MainHeading";
 
 const TradingPairs = () => {
   return (
-    <div className="items-center flex flex-col my-20">
+    <div className="items-center flex flex-col my-20 px-6">
       <MainHeading>TRADE 150+ PAIRS & MORE</MainHeading>
-      <div className="w-[80%] space-y-4">
+      <div className="w-full max-w-7xl space-y-4">
         <RightToLeft />
         <LeftToRight />
       </div>
