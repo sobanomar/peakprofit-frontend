@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router";
 import { motion } from "framer-motion";
 import { useFAQ } from "../../context/FAQContext";
@@ -8,6 +8,7 @@ import FAQArticleTextParser from "../../utils/FAQArticleTextParser";
 const ArticlePage = () => {
   const { slug, articleSlug } = useParams();
   const faqSections = useFAQ();
+  const [selectedReaction, setSelectedReaction] = useState(null);
 
   const category = faqSections.find(
     (section) => slugify(section.title) === slug,
@@ -16,6 +17,10 @@ const ArticlePage = () => {
   const article = category?.articles.find(
     (art) => slugify(art.title) === articleSlug,
   );
+
+  useEffect(() => {
+    setSelectedReaction(null);
+  }, [articleSlug]);
 
   if (!category || !article) {
     return (
@@ -43,7 +48,10 @@ const ArticlePage = () => {
         {category.articles.length > 1 && (
           <>
             <span>&gt;</span>
-            <Link to={`/collections/${slug}`} className="hover:underline text-white/75">
+            <Link
+              to={`/collections/${slug}`}
+              className="hover:underline text-white/75"
+            >
               {category.title}
             </Link>
           </>
@@ -74,16 +82,38 @@ const ArticlePage = () => {
           Did this answer your question?
         </p>
         <div className="flex justify-center gap-4 text-3xl">
-          <button className="rounded-full bg-brand/10 px-3 py-2 hover:scale-110 transition-all duration-300">
-            😞
-          </button>
-          <button className="rounded-full bg-brand/10 px-3 py-2 hover:scale-110 transition-all duration-300">
-            😐
-          </button>
-          <button className="rounded-full bg-brand/10 px-3 py-2 hover:scale-110 transition-all duration-300">
-            😃
-          </button>
+          {[
+            { value: "happy", emoji: "😃", label: "Yes" },
+            { value: "neutral", emoji: "😐", label: "Partly" },
+            { value: "sad", emoji: "😞", label: "No" },
+          ].map((reaction) => {
+            const isSelected = selectedReaction === reaction.value;
+
+            return (
+              <motion.button
+                key={reaction.value}
+                type="button"
+                aria-label={reaction.label}
+                aria-pressed={isSelected}
+                onClick={() => setSelectedReaction(reaction.value)}
+                animate={{ scale: isSelected ? 1.08 : 1 }}
+                transition={{ duration: 0.2 }}
+                className={`rounded-full px-3 py-2 transition-all duration-300 cursor-pointer ${
+                  isSelected
+                    ? "bg-brand/20 text-white ring-1 ring-brand/60 shadow-[0_0_12px_rgba(51,228,246,0.35)]"
+                    : "bg-brand/10 hover:scale-105"
+                }`}
+              >
+                {reaction.emoji}
+              </motion.button>
+            );
+          })}
         </div>
+        {selectedReaction && (
+          <p className="mt-4 text-xs sm:text-sm text-brand-100">
+            Feedback recorded. Thank you.
+          </p>
+        )}
       </div>
     </motion.div>
   );
