@@ -28,18 +28,14 @@ const SearchBar = ({ SingleCollection, emptySubmitTo, initialQuery = "" }) => {
   };
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center  max-w-4xl mx-auto">
       <form
         onSubmit={handleSubmit}
         className={`
-          relative flex items-center rounded-2xl border border-brand-400/25 bg-brand-400/10 text-white
+          relative flex w-full mb-8 items-center rounded-2xl border border-brand-400/25 bg-brand-400/10 text-white
           shadow-[0_18px_45px_-30px_rgba(51,228,246,0.65)] backdrop-blur-lg transition-all duration-300
           focus-within:border-brand-400/45 focus-within:bg-brand-400/15
-          ${
-            SingleCollection
-              ? "w-full mt-16 mb-4"
-              : "w-full sm:w-[80%] md:w-[70%] lg:w-[60%] mt-0 mb-10"
-          }
+          
         `}
       >
         <div className="absolute left-4 text-brand">
@@ -51,7 +47,7 @@ const SearchBar = ({ SingleCollection, emptySubmitTo, initialQuery = "" }) => {
           value={query}
           onChange={handleInputChange}
           placeholder="Search for articles..."
-          className="w-full bg-transparent p-4 pl-12 pr-10 text-white placeholder-white/60 focus:outline-none"
+          className=" w-full p-4 pl-12 pr-10 bg-transparent text-white placeholder-white/60 focus:outline-none"
         />
 
         {query && (

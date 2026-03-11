@@ -46,10 +46,10 @@ const SearchResults = () => {
 
   return (
     <>
-      <div className="px-10 pt-28 sm:px-0">
+      <div className="max-w-4xl mx-auto px-4 pt-32 sm:px-0">
         <SearchBar emptySubmitTo={-1} initialQuery={searchQuery} />
       </div>
-      <div className="max-w-4xl relative mx-auto px-4 py-20">
+      <div className="max-w-4xl relative mx-auto px-4 py-0">
         <h2 className="text-lg font-semibold text-gray-400 mb-6">
           Search results for:{" "}
           <span className="font-bold text-white">{searchQuery}</span>
@@ -61,7 +61,7 @@ const SearchResults = () => {
             to={`/collections/${slugify(article.sectionTitle)}/${slugify(
               article.title,
             )}`}
-            className="block border-[0.5px] border-gray-200 hover:border-brand-400 rounded-xl px-6 py-4 mb-4 transition-colors duration-200 group"
+            className="block border-[0.5px] bg-gray-900/80 hover:bg-brand-900/50 border-gray-200 hover:border-brand-400 rounded-xl px-6 py-4 mb-4 transition-colors duration-200 group"
           >
             <h3 className="text-lg text-white font-semibold group-hover:text-brand-500 mb-1">
               {highlightQuery(article.title, searchQuery)}
