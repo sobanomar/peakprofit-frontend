@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Shield, ChevronDown } from "lucide-react";
 import { rulebookData } from "../../lib/RulebookData";
 import { Link } from "react-router";
+import PageTopHero from "../../components/PageTopHero";
 
 function InfoBox({ type = "info", children }) {
   const styles = {
@@ -207,32 +208,12 @@ export default function Rulebook() {
       <div className="pointer-events-none absolute -right-72 top-1/3 z-0 h-[28rem] w-[28rem] rounded-full bg-purple-500/20 blur-[140px]" />
 
       <div className="absolute theme-ambient-glow -right-80 -top-80 opacity-40 z-50" />
-      <motion.div
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="relative z-10 border-y  border-white/10 bg-gradient-to-br from-brand-800/30 via-[#1c0d37] to-[#130025] pt-20"
-      >
-        <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-4 sm:mb-6">
-            <Shield className="h-12 w-12 text-brand flex-shrink-0" />
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white break-words">
-              PEAKPROFIT FUNDING™
-            </h1>
-          </div>
-
-          <p className="text-lg sm:text-xl text-white/85 mb-2">
-            Official Master Rulebook
-          </p>
-          <p className="text-xs sm:text-sm text-brand-200/90 mb-4">
-            Risk Disclosures & Platform Terms
-          </p>
-
-          <div className="inline-block rounded-lg border border-brand-400/30 bg-brand-400/10 px-3 py-2 sm:px-4 text-xs sm:text-sm text-brand-100 backdrop-blur-sm">
-            Effective Immediately — All Traders Are Bound by These Terms
-          </div>
-        </div>
-      </motion.div>
+      <PageTopHero
+        icon={Shield}
+        subtitle="Official Master Rulebook"
+        description="Risk Disclosures & Platform Terms"
+        badgeText="Effective Immediately — All Traders Are Bound by These Terms"
+      />
 
       <div className="relative  z-10 max-w-6xl mx-auto px-4 py-6 sm:py-8 sm:px-6 lg:px-8 space-y-4 sm:space-y-6">
         {rulebookData.sections.map((section, idx) => (

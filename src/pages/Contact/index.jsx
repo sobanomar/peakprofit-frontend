@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Headset, Mail, MapPin } from "lucide-react";
 import axiosInstance from "../../api/axios";
+import PageTopHero from "../../components/PageTopHero";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -54,32 +55,12 @@ export default function Contact() {
       <div className="pointer-events-none absolute -right-72 top-1/3 z-0 h-[28rem] w-[28rem] rounded-full bg-purple-500/20 blur-[140px]" />
       <div className="absolute theme-ambient-glow -right-80 -top-80 opacity-40 z-0" />
 
-      <motion.div
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="relative z-10 border-y border-white/10 bg-gradient-to-br from-brand-800/30 via-[#1c0d37] to-[#130025] pt-20"
-      >
-        <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:px-8">
-          <div className="mb-4 sm:mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <Headset className="h-12 w-12 text-brand flex-shrink-0" />
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white break-words">
-              PEAKPROFIT FUNDING™
-            </h1>
-          </div>
-
-          <p className="text-lg sm:text-xl text-white/85 mb-2">
-            Contact Support
-          </p>
-          <p className="text-xs sm:text-sm text-brand-200/90 mb-4">
-            Questions, Technical Help & Account Assistance
-          </p>
-
-          <div className="inline-block rounded-lg border border-brand-400/30 bg-brand-400/10 px-3 py-2 sm:px-4 text-xs sm:text-sm text-brand-100 backdrop-blur-sm">
-            Typical response time: within 24 hours
-          </div>
-        </div>
-      </motion.div>
+      <PageTopHero
+        icon={Headset}
+        subtitle="Contact Support"
+        description="Questions, Technical Help & Account Assistance"
+        badgeText="Typical response time: within 24 hours"
+      />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-6 sm:py-8 sm:px-6 lg:px-8">
         <motion.div

@@ -42,7 +42,7 @@ const NewsLetter = () => {
         />
         <button
           type="submit"
-          className="w-full md:w-auto bg-gradient-to-r from-brand-600 to-purple-600/60 text-white text-sm font-semibold px-6 py-3 rounded-full whitespace-nowrap lg:px-4 lg:text-xs"
+          className="w-full md:w-auto cursor-pointer  bg-gradient-to-r from-brand-600 to-purple-600/60 text-white text-sm font-semibold px-6 py-3 rounded-full whitespace-nowrap lg:px-4 lg:text-xs"
           disabled={loading}
         >
           {loading ? "Subscribing..." : "Subscribe"}
