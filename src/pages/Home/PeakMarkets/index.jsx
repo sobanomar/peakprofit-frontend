@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, easeInOut } from "framer-motion";
 import {
   Zap,
   LineChart,
@@ -12,7 +12,7 @@ import TradingVideo from "../../../assets/videos/peakMarkets.mp4";
 import { MacbookScroll } from "../../../components/ui/macbook-scroll";
 import FeatureCard from "./FeatureCard";
 import MainHeading from "../../../components/MainHeading";
-import MobileHorizontalFeatures from "./MobileHorizontalFeatures";
+// import MobileHorizontalFeatures from "./MobileHorizontalFeatures";
 
 // --- Components ---
 
@@ -57,35 +57,35 @@ const features = [
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.08, // Faster stagger for snappier feel
-      delayChildren: 0.1,
-    },
-  },
-};
+// const containerVariants = {
+//   hidden: { opacity: 0 },
+//   show: {
+//     opacity: 1,
+//     transition: {
+//       staggerChildren: 0.08, // Faster stagger for snappier feel
+//       delayChildren: 0.1,
+//     },
+//   },
+// };
 
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 15, // Reduced distance for smoother arrival
-    scale: 0.98,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 80, // Lower stiffness = less "jerk"
-      damping: 15, // Higher damping = less oscillation
-      mass: 1,
-    },
-  },
-};
+// const cardVariants = {
+//   hidden: {
+//     opacity: 0,
+//     y: 15, // Reduced distance for smoother arrival
+//     scale: 0.98,
+//   },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     scale: 1,
+//     transition: {
+//       type: "spring",
+//       stiffness: 80, // Lower stiffness = less "jerk"
+//       damping: 15, // Higher damping = less oscillation
+//       mass: 1,
+//     },
+//   },
+// };
 
 // --- Main Component ---
 
@@ -94,18 +94,20 @@ const PeakMarkets = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
     layoutEffect: false,
+    offset: ["start start", "end end"],
   });
 
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 50,
-    damping: 30,
-    restDelta: 0.0001,
-    restSpeed: 0.0001,
+  // const smoothProgress = useSpring(scrollYProgress, {
+  //   stiffness: 50,
+  //   damping: 30,
+  //   restDelta: 0.0001,
+  //   restSpeed: 0.0001,
+  // });
+
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-84%"], {
+    ease: easeInOut,
   });
 
-  // Calculate horizontal shift. "-80%" is an estimate;
-  // it depends on how many items you have and their width.
-  const x = useTransform(smoothProgress, [0, 1], ["0%", "-84%"]);
   return (
     <section
       ref={targetRef}
