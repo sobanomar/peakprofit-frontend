@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navigateToSignup } from "../utils/navigateToSignUp";
 import { ArrowRight, ArrowUpRight, X } from "lucide-react";
@@ -16,6 +16,7 @@ export default function GiveawayModal() {
   // 1. All State at the top
   const [open, setOpen] = useState(false); // Start false for the timer
   const [progress, setProgress] = useState(0);
+  const lockedScrollY = useRef(0);
 
   // 2. Logic Effect (Runs once on mount)
   useEffect(() => {
@@ -47,13 +48,36 @@ export default function GiveawayModal() {
 
   // 3. Scroll Locking Effect (Must be before any return)
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+    if (!open) return;
+
+    const originalBodyOverflow = document.body.style.overflow;
+    const originalBodyPosition = document.body.style.position;
+    const originalBodyTop = document.body.style.top;
+    const originalBodyWidth = document.body.style.width;
+    const originalBodyLeft = document.body.style.left;
+    const originalBodyRight = document.body.style.right;
+    const originalHtmlOverflow = document.documentElement.style.overflow;
+
+    lockedScrollY.current = window.scrollY;
+
+    // Robust lock across browsers + smooth-scroll libs.
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${lockedScrollY.current}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = originalBodyOverflow;
+      document.body.style.position = originalBodyPosition;
+      document.body.style.top = originalBodyTop;
+      document.body.style.width = originalBodyWidth;
+      document.body.style.left = originalBodyLeft;
+      document.body.style.right = originalBodyRight;
+      document.documentElement.style.overflow = originalHtmlOverflow;
+      window.scrollTo(0, lockedScrollY.current);
     };
   }, [open]);
 
@@ -135,7 +159,10 @@ export default function GiveawayModal() {
                 }}
               />
 
-              <div className="relative p-6 max-h-[65vh] overflow-y-auto no-scrollbar">
+              <div
+                data-lenis-prevent
+                className="relative p-6 max-h-[65vh] overflow-y-auto overscroll-contain no-scrollbar"
+              >
                 {/* Header row */}
                 <div className="flex items-center justify-between mb-5">
                   <div className="flex items-center gap-3">
