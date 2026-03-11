@@ -38,7 +38,7 @@ const ArticlePage = () => {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="max-w-4xl mx-auto px-4 sm:px-6"
+      className="max-w-6xl mx-auto"
     >
       {/* Breadcrumb */}
       <nav className="mb-6 flex flex-wrap items-center gap-2 text-xs sm:text-sm text-white/60">

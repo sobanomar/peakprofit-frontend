@@ -28,7 +28,7 @@ const SearchBar = ({ SingleCollection, emptySubmitTo, initialQuery = "" }) => {
   };
 
   return (
-    <div className="flex items-center  max-w-4xl mx-auto">
+    <div className="flex items-center  max-w-6xl mx-auto">
       <form
         onSubmit={handleSubmit}
         className={`

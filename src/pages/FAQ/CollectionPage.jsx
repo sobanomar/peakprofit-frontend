@@ -11,7 +11,7 @@ const CollectionPage = () => {
   const faqSections = useFAQ();
 
   const category = faqSections.find(
-    (section) => slugify(section.title) === slug
+    (section) => slugify(section.title) === slug,
   );
 
   if (!category) {
@@ -30,7 +30,7 @@ const CollectionPage = () => {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="max-w-4xl relative mx-auto px-4 sm:px-6"
+      className="max-w-6xl relative mx-auto"
     >
       {/* Breadcrumb */}
       <nav className="mb-4 flex flex-wrap items-center gap-2 text-xs sm:text-sm text-white/60">

@@ -18,7 +18,7 @@ const PageTopHero = ({
       className={`relative isolate z-10 border-b-[0.5px] border-white/10 bg-gradient-to-br from-brand-800/30 via-[#1c0d37] to-[#130025] pt-20 ${className}`}
     >
       <InteractiveGlowingBg opacity={0.3} />
-      <div className="relative z-10 max-w-6xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:px-8 ">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8 sm:py-12 sm:px-6 lg:px-8 ">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-4 sm:mb-6">
           {Icon ? (
             <Icon className="h-12 w-12 text-brand flex-shrink-0" />

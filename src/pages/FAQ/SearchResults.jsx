@@ -46,10 +46,10 @@ const SearchResults = () => {
 
   return (
     <>
-      <div className="max-w-4xl mx-auto px-4 pt-32 sm:px-0">
+      <div className="max-w-6xl mx-auto px-4 pt-32 sm:px-0">
         <SearchBar emptySubmitTo={-1} initialQuery={searchQuery} />
       </div>
-      <div className="max-w-4xl relative mx-auto px-4 py-0">
+      <div className="max-w-6xl relative mx-auto px-4 py-0">
         <h2 className="text-lg font-semibold text-gray-400 mb-6">
           Search results for:{" "}
           <span className="font-bold text-white">{searchQuery}</span>

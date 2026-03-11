@@ -22,7 +22,7 @@ const FAQSingleCollectionLayout = () => {
         badgeText="Support Documentation & Platform Guidance"
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 py-6 sm:py-8 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-6 sm:py-8 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}

@@ -26,7 +26,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className="">
       <div className="relative overflow-x-hidden ">
         <HomeHero onStartChallengeClick={handleChallengeClick} />
 
@@ -63,7 +63,7 @@ const Home = () => {
       {/* <RawSpreads /> */}
 
       {/* <StillNotConvinced /> */}
-    </>
+    </div>
   );
 };
 
