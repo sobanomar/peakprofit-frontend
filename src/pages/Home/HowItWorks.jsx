@@ -10,15 +10,15 @@ import { motion } from "framer-motion";
 
 const HowItWorks = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="py-20 text-center flex justify-center z-10 relative "
-    >
+    <div className="py-20 text-center flex justify-center z-10 relative ">
       <div className="absolute top-0 left-0 w-full h-64 -z-10  bg-linear-to-b from-[#130025] to-transparent" />
-      <div className="max-w-7xl px-6">
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        className="max-w-7xl px-6"
+      >
         <MainHeading>HOW IT WORKS</MainHeading>
         {/* <div className="grid grid-cols-1 place-items-center md:grid-cols-4 gap-6 p-8 ">
       
@@ -80,8 +80,8 @@ const HowItWorks = () => {
         </div>
       </div> */}
         <GlowingCardsGrid />
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

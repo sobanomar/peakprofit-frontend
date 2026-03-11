@@ -39,7 +39,7 @@ export default function HomeHero({ onStartChallengeClick }) {
   // Then in t
 
   return (
-    <div className="relative w-full min-h-screen flex  flex-col justify-center items-center px-6 lg:px-12 overflow-hidden text-white ">
+    <div className="relative w-full h-screen md:min-h-screen flex flex-col justify-center items-center px-6 lg:px-12 pt-24 md:pt-28 overflow-hidden text-white">
       {/* Background Video */}
       <video
         autoPlay
@@ -57,7 +57,7 @@ export default function HomeHero({ onStartChallengeClick }) {
       <div className="absolute bottom-0 left-0 w-full h-64 -z-5 bg-linear-to-b from-transparent to-[#130025]" />
 
       {/* Content */}
-      <div className="z-10 text-center mt-32 lg:mt-28 flex flex-col justify-center items-center">
+      <div className="z-10 text-center flex flex-col justify-center items-center">
         <motion.div
           initial={{ opacity: 0, y: -24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -77,7 +77,6 @@ export default function HomeHero({ onStartChallengeClick }) {
             />
           </h1>
 
-          {/* Subheading */}
           <p className="my-4 text-base md:text-lg lg:text-xl text-white max-w-3xl">
             Your capital shouldn't limit your potential. <br /> We provide the
             funding — you deliver the performance.
