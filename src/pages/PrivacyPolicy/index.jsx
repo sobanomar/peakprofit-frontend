@@ -96,22 +96,24 @@ const sections = [
 
 const PrivacyPolicy = () => {
   return (
-    <div className="text-white p-6 md:p-8 lg:pt-20 max-w-6xl mx-auto">
-      <h1 className="text-3xl md:text-6xl font-bold text-center mb-8 pb-4 border-b border-purple-500">
-        Privacy Policy
-      </h1>
+    <div className="text-white p-6 md:p-8 mt-28 max-w-6xl mx-auto items-center">
+      <div className="w-full flex items-center justify-center">
+        <h1 className="text-4xl md:text-6xl font-bold text-center mb-8 pb-4 border-b border-brand-500 w-fit">
+          Privacy Policy
+        </h1>
+      </div>
 
       {sections.map((section, index) => (
         <div key={index} className="mb-6">
           <h2
             className={`${
               index === 0 ? "text-3xl" : "text-2xl"
-            } font-semibold mb-3`}
+            } font-semibold text-brand-500 mb-3`}
           >
             {section.title}
           </h2>
           {section.content.map((paragraph, pIndex) => (
-            <p key={pIndex} className="mb-2 last:mb-0">
+            <p key={pIndex} className="mb-2 text-gray-200 last:mb-0">
               {paragraph}
             </p>
           ))}
@@ -119,7 +121,13 @@ const PrivacyPolicy = () => {
       ))}
 
       <p className="text-center mt-8">
-        For more information, feel free to contact us at Support@PeakProfit.com
+        For more information, feel free to contact us at{" "}
+        <a
+          href="mailto:Support@PeakProfit.com"
+          className="underline text-brand-500"
+        >
+          Support@PeakProfitFunding.com
+        </a>
       </p>
     </div>
   );
