@@ -242,7 +242,7 @@ export default function Rulebook() {
 
           <div className="px-6 py-5 sm:px-8 sm:py-6">
             {/* Header row */}
-            <div className="mb-5 flex items-start justify-between gap-4">
+            <div className="mb-5 flex flex-col sm:flex-row items-start justify-between gap-4">
               <div>
                 <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-white/50">
                   PeakProfit Funding™ — Legal Documentation

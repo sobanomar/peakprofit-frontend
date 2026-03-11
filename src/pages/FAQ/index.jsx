@@ -61,7 +61,7 @@ const ArticleListing = () => {
                   }
                   className="block"
                 >
-                  <div className="group flex items-center gap-4 rounded-2xl border border-brand/10 bg-brand/[0.04] p-5 sm:p-6 backdrop-blur-sm transition-all duration-300 hover:border-brand/35 hover:bg-brand/[0.08]">
+                  <div className="group flex flex-col sm:flex-row  sm:items-center gap-4 rounded-2xl border border-brand/10 bg-brand/[0.04] p-5 sm:p-6 backdrop-blur-sm transition-all duration-300 hover:border-brand/35 hover:bg-brand/[0.08]">
                     <div className="flex h-14 w-14 sm:h-16 sm:w-16 flex-shrink-0 items-center justify-center rounded-xl border border-brand/30 bg-brand/10">
                       {renderSectionIcon(section.icon)}
                     </div>
