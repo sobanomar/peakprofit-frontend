@@ -257,12 +257,13 @@ const TradingJourney = () => {
         <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left: Challenge List */}
           <motion.div
+            data-lenis-prevent
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
             className="space-y-4 max-h-[450px] md:max-h-[720px] lg:max-h-[650px] overflow-y-auto no-scrollbar pr-2 
-                       scrollbar-thin scrollbar-thumb-brand-400/20 scrollbar-track-transparent
+                       overscroll-y-contain scrollbar-thin scrollbar-thumb-brand-400/20 scrollbar-track-transparent
                        hover:scrollbar-thumb-brand-400/40"
           >
             {challenges.map((challenge) => (
@@ -277,7 +278,10 @@ const TradingJourney = () => {
           </motion.div>
 
           {/* Right: Challenge Details - Sticky with Better Height */}
-          <div className="lg:sticky lg:top-24  overflow-y-auto no-scrollbar">
+          <div
+            data-lenis-prevent
+            className="lg:sticky lg:top-24 overflow-y-auto overscroll-y-contain no-scrollbar"
+          >
             {selectedChallenge ? (
               <ChallengeDetails
                 handleChallengeStart={handleChallengeStart}

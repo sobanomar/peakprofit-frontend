@@ -201,7 +201,10 @@ function BottomSheet({ challenge, onClose, onStart }) {
         </div>
 
         {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto px-5 pb-4 custom-scrollbar">
+        <div
+          data-lenis-prevent
+          className="flex-1 overflow-y-auto overscroll-y-contain px-5 pb-4 custom-scrollbar"
+        >
           <p className="text-zinc-400 text-sm leading-relaxed mb-5">
             Prove your trading expertise in real market conditions. Pass this
             challenge to unlock a{" "}

@@ -61,7 +61,7 @@ const JoinCommunity = () => {
           className="w-full block sm:hidden my-12"
         >
           <motion.a
-            href="https://discord.gg/8NaNxdmXYg"
+            href="https://discord.gg/peakprofit"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -119,7 +119,7 @@ const JoinCommunity = () => {
           className="w-full hidden sm:block"
         >
           <motion.a
-            href="https://discord.gg/8NaNxdmXYg"
+            href="https://discord.gg/peakprofit"
             target="_blank"
             rel="noopener noreferrer"
           >
