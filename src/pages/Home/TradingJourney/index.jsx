@@ -259,6 +259,7 @@ const TradingJourney = () => {
           <motion.div
             data-lenis-prevent
             variants={containerVariants}
+            data-lenis-prevent
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
